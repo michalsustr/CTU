@@ -1,0 +1,91 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package ovecky.entity;
+
+import java.awt.Dimension;
+import java.awt.Point;
+import java.util.ArrayList;
+
+/**
+ *
+ * @author michal
+ */
+public class EntityManager extends ArrayList<Entity>{
+	private Dimension screenSize, mapSize;
+	private Point mapPosition;
+
+	private static EntityManager instance;
+
+	public static EntityManager getManager(Dimension screenSize, Dimension mapSize, Point mapPosition) {
+		if(instance == null) {
+			instance = new EntityManager(screenSize, mapSize, mapPosition);
+		}
+		return instance;
+	}
+
+	public static EntityManager getManager() {
+		if(instance == null) {
+			throw new RuntimeException("No manager has been created yet");
+		}
+		return instance;
+	}
+
+	public EntityManager(Dimension screenSize, Dimension mapSize, Point mapPosition) {
+		this.screenSize = screenSize;
+		this.mapSize = mapSize;
+		this.mapPosition = mapPosition;
+	}
+
+	/**
+	 * Search for other entities from specified "center" to the distance of "radius"
+	 * @param center
+	 * @param radius
+	 * @return list of entities within specified radius
+	 */
+	public ArrayList<Entity> lookupEntities(Entity center, Integer radius) {
+		Point coor = center.getCoordinate();
+		ArrayList<Entity> arr = new ArrayList<Entity>();
+		for(Entity obj : this) {
+			if(coor.distance(obj.getCoordinate()) <= radius && !obj.equals(center)) {
+				arr.add(obj);
+			}
+		}
+		return arr;
+	}
+
+	/**
+	 * Determine whether given entity can be displayed on screen
+	 * @param obj
+	 * @return
+	 */
+	public boolean isDisplayable(Entity obj) {
+		Point coor = obj.getCoordinate();
+		Dimension size = obj.getSize();
+
+
+		return !(
+			// right edge
+			coor.x > mapPosition.x + screenSize.width ||
+			// bottom edge
+			coor.y > mapPosition.y + screenSize.height ||
+			// left edge
+			coor.x+size.width < mapPosition.x ||
+			// top edge
+			coor.y+size.height < mapPosition.y
+		);
+	}
+
+	public void moveMapPosition(int dx, int dy) {
+		mapPosition.translate(dx, dy);
+	}
+
+	public Point getPositionOnMap(Point point) {
+		return new Point(
+			point.x-mapPosition.x,
+			point.y-mapPosition.y
+		);
+	}
+}

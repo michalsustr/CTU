@@ -1,0 +1,10 @@
+K 10
+svn:ignore
+V 43
+manifest.mf
+build.xml
+nbproject
+build
+dist
+
+END

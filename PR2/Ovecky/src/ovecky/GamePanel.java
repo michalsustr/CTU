@@ -1,0 +1,191 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ovecky;
+
+import ovecky.entity.Entity;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionListener;
+import java.util.Iterator;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import ovecky.entity.Dog;
+import ovecky.entity.Hoarding;
+import ovecky.entity.Rock;
+import ovecky.entity.Sheep;
+
+/**
+ *
+ * @author michal
+ */
+public class GamePanel extends JPanel 
+		implements Runnable, KeyListener, MouseMotionListener {
+
+	private static GamePanel instance;
+
+	public static GamePanel getInstance(Dimension screenSize) {
+		if(instance == null) {
+			instance = new GamePanel(screenSize);
+		}
+		return instance;
+	}
+
+	public static GamePanel getInstance() {
+		if(instance == null) {
+			throw new RuntimeException("No manager has been created yet");
+		}
+		return instance;
+	}
+
+	private Manager manager;
+	private JPanel menu;
+	private JPanel win;
+
+	private GamePanel(Dimension screenSize) {
+		super();
+
+		// green bckg
+		setBackground(new Color(0xBB, 0xFF, 0xBB));
+
+		this.setDoubleBuffered(true);
+
+		// create game menu
+		menu = new JPanel();
+		menu.setSize(300, 200);
+		menu.setLocation(500, 500);
+		menu.setBackground(Color.yellow);
+		menu.add(new JLabel("Paused"));
+		menu.setVisible(false);
+		add(menu);
+
+		win = new JPanel();
+		win.setSize(300, 200);
+		win.setLocation(500, 500);
+		win.setBackground(Color.yellow);
+		win.add(new JLabel("GAME WON!"));
+		win.setVisible(false);
+		add(win);
+
+		// temporary setting up game
+		GameOptions opt = new GameOptions();
+
+		manager = Manager.getInstance(screenSize, opt.getMapSize(), (ovecky.Point) opt.getMapPosition());
+
+		createGame(opt);
+	}
+
+	@Override
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		for (Entity obj : manager.getEntities()) {
+			obj.run();
+		}
+		Iterator i = manager.getEntities().iterator();
+		while(i.hasNext()) {
+			Entity obj = (Entity) i.next();
+			if(obj.toBeRemoved) {
+				i.remove();
+				manager.removeEntity(obj);
+				continue;
+			}
+			if (manager.isDisplayable(obj)) {
+				obj.paint(g);
+			}
+		}
+	}
+	private boolean paused = false;
+
+	public void run() {
+		while (true) {
+			if (!paused) {
+				// this calls paintComponent each loop
+				repaint();
+			}
+
+			try {
+				Thread.sleep(25L);
+			} catch (InterruptedException ex) {
+				Logger.getLogger(MainGameFrame.class.getName()).log(Level.SEVERE, null, ex);
+			}
+		}
+	}
+
+	private boolean useMouse = false;
+	private void createGame(GameOptions opt) {
+		// create sheeps
+		for (Point pt : opt.getSheep()) {
+			manager.addEntity(new Sheep(pt));
+		}
+		useMouse = opt.getUseMouse();
+
+		manager.addEntity(new Dog(
+			opt.getDog(), 
+			opt.getUseMouse() ? null : KeyOptions.getPlayer1()
+		));
+
+		manager.addEntity(new Rock(
+			new Point(100,100),
+			new Dimension(200,50)
+		));
+
+		Hoarding hoarding = new Hoarding(
+			new Point(400,400),
+			new Dimension(300,300),
+			Manager.Edge.RIGHT
+		);
+		manager.addEntity(hoarding);
+		for(Entity fence : hoarding.getFences()) {
+			manager.addEntity(fence);
+		}
+		manager.addEntity(new Dog(opt.getDog(), KeyOptions.getPlayer2()));
+	}
+
+	public void keyPressed(KeyEvent e) {
+		// pause the game on ESC
+		if (e.getKeyCode() == KeyOptions.PAUSE_GAME) {
+			paused = !paused;
+			toggleMenu();
+		}
+		if(!useMouse) {
+			Manager.getInstance().keyPressed(e);
+		}
+	}
+
+	public void keyReleased(KeyEvent e) {
+		if(!useMouse) {
+			Manager.getInstance().keyReleased(e);
+		}
+	}
+
+	public void keyTyped(KeyEvent e) {
+	}
+
+	public void mouseMoved(MouseEvent e) {
+		if(useMouse) {
+			Manager.getInstance().mouseMoved(e);
+		}
+	}
+
+	public void mouseDragged(MouseEvent e) {
+		if(useMouse) {
+			Manager.getInstance().mouseDragged(e);
+		}
+	}
+
+	private void toggleMenu() {
+		menu.setVisible(paused);
+	}
+
+	public void endOfGame() {
+		win.setVisible(true);
+		paused = true;
+	}
+}

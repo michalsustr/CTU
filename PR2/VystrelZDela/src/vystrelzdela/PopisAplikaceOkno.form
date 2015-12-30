@@ -1,0 +1,50 @@
+<?xml version="1.1" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
+    <Property name="title" type="java.lang.String" value="Na co se zam&#x11b;&#x159;it"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,125,0,0,1,-36"/>
+    <SyntheticProperty name="formSizePolicy" type="int" value="0"/>
+    <SyntheticProperty name="generateSize" type="boolean" value="true"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+  <SubComponents>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane">
+      <Properties>
+        <Property name="autoscrolls" type="boolean" value="true"/>
+      </Properties>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
+          <BorderConstraints direction="Center"/>
+        </Constraint>
+      </Constraints>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JEditorPane" name="jEditorPane1">
+          <Properties>
+            <Property name="contentType" type="java.lang.String" value="text/html"/>
+            <Property name="text" type="java.lang.String" value="&lt;html&gt;&#xa;    &lt;head&gt;&#xa;&#xa;    &lt;/head&gt;&#xa;    &lt;body&gt;&#xa;        &lt;div style=&quot;margin:10px&quot;&gt;&#xa;&#xa;            &lt;h1&gt;Na co se zam&#x11b;&#x159;it: &lt;/h1&gt;&#xa;            &lt;b&gt;Spu&#x161;t&#x11b;n&#xed; appletu mimo webov&#xfd; pohl&#xed;&#x17e;e&#x10d;&lt;/b&gt;&#xa;            &lt;ul&gt;&#xa;                &lt;li&gt;-&gt; t&#x159;&#xed;da VystrelZDela obsahuje spou&#x161;t&#x11b;c&#xed; metodu main&lt;/li&gt;&#xa;                &lt;li&gt;-&gt; v metod&#x11b; main je vytvo&#x159;en nov&#xfd; JFrame, do kter&#xe9;ho je applet vlo&#x17e;en&lt;/li&gt;&#xa;                &lt;li&gt;-&gt; d&#xe1;le jsou zavol&#xe1;ny metody init() a start() tak, jak by to ud&#x11b;lal webov&#xfd; prohl&#xed;&#x17e;e&#x10d;&lt;/li&gt;&#xa;                &lt;li&gt;=&gt; p&#x159;esto&#x17e;e se jedn&#xe1; o applet, lze program spustit v OS jako b&#x11b;znou aplikaci&lt;/li&gt;&#xa;            &lt;/ul&gt;&#xa;&#xa;            &lt;b&gt;Metoda paint(Graphics g)&lt;/b&gt;&#xa;            &lt;ul&gt;&#xa;                &lt;li&gt;-&gt; nejprve zavolat metodu paint z p&#x159;edka&lt;/li&gt;&#xa;                &lt;li&gt;=&gt; komponenty (tla&#x10d;&#xed;tka apod.) jsou vykresleny nad grafikou&lt;/li&gt;&#xa;            &lt;/ul&gt;&#xa;&#xa;            &lt;b&gt;Zamezen&#xed; blik&#xe1;n&#xed; obrazovky, b&#x11b;hem p&#x159;ekreslov&#xe1;n&#xed;&lt;/b&gt;&#xa;            &lt;ul&gt;&#xa;                &lt;li&gt;-&gt; pou&#x17e;&#xed;t&#xed; dvojit&#xe9;ho bufferu - p&#x159;eps&#xe1;n&#xed; metody update(Graphics g)&lt;/li&gt;&#xa;                &lt;li&gt;=&gt; p&#x159;i nat&#xe1;&#x10d;en&#xed; d&#x11b;la se nesek&#xe1; obraz&lt;/li&gt;&#xa;            &lt;/ul&gt;&#xa;&#xa;            &lt;b&gt;Vnit&#x159;n&#xed; tr&#xed;da m&#x16f;&#x17e;e p&#x159;istupovat k prom&#x11b;nn&#xfd;m vn&#x11b;j&#x161;&#xed; t&#x159;&#xed;dy&lt;/b&gt;&#xa;            &lt;ul&gt;&#xa;                &lt;li&gt;=&gt; uvnit&#x159; t&#x159;&#xed;dy Strela je mo&#x17e;n&#xe9; volat prom&#x11b;nn&#xe9; t&#x159;&#xed;dy Tank&lt;/li&gt;&#xa;                &lt;li&gt;=&gt; nelze vytvo&#x159;it st&#x159;elu dokud nebude existovat tank&lt;/li&gt;&#xa;            &lt;/ul&gt;&#xa;&#xa;            &lt;b&gt;Vl&#xe1;kna&lt;/b&gt;&#xa;            &lt;ul&gt;&#xa;                &lt;li&gt;-&gt; po stisku tla&#x10d;&#xed;tka &quot;St&#x159;&#xed;lej&quot; je zavol&#xe1;na metoda vystrel z t&#x159;&#xed;dy Tank&lt;/li&gt;&#xa;                &lt;li&gt;-&gt; po ka&#x17e;d&#xe9;m zavol&#xe1;n&#xed; t&#xe9;to metody je vytvo&#x159;eno a spu&#x161;t&#x11b;no nov&#xe9; vl&#xe1;kno&lt;/li&gt;&#xa;                &lt;li&gt;-&gt; nov&#xe9; vl&#xe1;kno provede metodu run() t&#x159;&#xed;dy Strela&lt;/li&gt;&#xa;                &lt;li&gt;=&gt; je mo&#x17e;n&#xe9; vyst&#x159;elit z d&#x11b;la n&#x11b;kolik st&#x159;el najednou, tzn. nen&#xed; nutn&#xe9; &#x10d;ekat a&#x17e; se p&#x159;edchoz&#xed; st&#x159;ela p&#x159;estane pohybovat&lt;/li&gt;&#xa;            &lt;/ul&gt;&#xa;&#xa;            &lt;b&gt;W3C XHTML 1.1 validn&#xed; hypertextov&#xfd; dokument&lt;/b&gt;&#xa;            &lt;ul&gt;&#xa;                &lt;li&gt;-&gt; p&#x159;ilo&#x17e;en&#xfd; soubor XHTMLvalidni.html vyu&#x17e;&#xed;v&#xe1; pro zobrazen&#xed; appletu uvnit&#x159; webov&#xe9;ho prohl&#xed;&#x17e;e&#x10d;e tag &quot;object&quot; nam&#xed;sto &quot;applet&quot;&lt;/li&gt;&#xa;                &lt;li&gt;-&gt; v soubru je definov&#xe1;no zobrazen&#xed; pro IE a non-IE prohl&#xed;&#x17e;e&#x10d;e&lt;/li&gt;&#xa;            &lt;/ul&gt;&#xa;        &lt;/div&gt;&#xa;&#xa;    &lt;/body&gt;&#xa;&lt;/html&gt;"/>
+            <Property name="caretPosition" type="int" value="0"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
