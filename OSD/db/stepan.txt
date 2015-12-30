@@ -1,0 +1,24 @@
+IMPORT DAT
+#########
+mysqlimport --local --user=root --password --fields-terminated-by=, --default-character-set=utf8 osd /home/michal/Code/OSD/db/ucty.txt
+
+VYKONANIE PRIKAZU
+#################
+#!/bin/bash
+
+query="SELECT ... FROM ..."
+
+mysql --user=root --password --database=osd << eof
+$query
+eof
+
+PRIKAZY
+######
+
+a) select IFNULL(sum(transakce),0)+(select sum(pocatecni_zustatek) from ucty where jmeno='$1' and prijmeni='$2') as zustatek from ucty left join transakce using(cislo_uctu) where jmeno='$1' and prijmeni='$2'
+b) select pocatecni_zustatek+IFNULL(SUM(transakce), 0) FROM ucty LEFT JOIN transakce USING(cislo_uctu) WHERE cislo_uctu='904' 
+c) select jmeno, prijmeni, COUNT(transakce) AS cnt FROM ucty LEFT JOIN transakce USING(cislo_uctu) group by jmeno, prijmeni ORDER BY cnt DESC LIMIT 1
+
+INE
+###
+tutorial: http://www.linuxsoft.cz/article.php?id_article=731

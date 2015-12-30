@@ -1,0 +1,11 @@
+Michal,Sustr,123,1200
+Matus,Cvengros,124,0
+Jozko,Mrkvicka,125,45
+Jan,Novak,126,543
+Julia,Nezabudkova,564,254
+Peter,Pan,127,120
+Harry,Potter,938,50
+Tom,Riddle,120,503
+Arthur,Dent,094,5000
+Louis,Armstrong,904,3000
+Louis,Armstrong,504,3000

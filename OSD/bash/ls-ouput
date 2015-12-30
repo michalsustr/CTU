@@ -1,0 +1,25 @@
+--- expected output
++++ script stdout
+@@ --- lines 1-4 ; +++ line 1 @@
+-/tmp/tmp.BFnp8SevEK/work/skript.sh sh
++Directory /tmp/tmp.BFnp8SevEK/work must end with trailing slash
+-/tmp/tmp.BFnp8SevEK/work/skript2.sh bash
+-/tmp/tmp.BFnp8SevEK/work/skript3.sh bash
+-/tmp/tmp.BFnp8SevEK/work/skript4.sh ash
+
+
+--- expected output
++++ script stdout
+@@ --- no lines ; +++ lines 1-3 @@
++/tmp/tmp.PqaJsc4XtY/work/bin/runme.rb ruby
++/tmp/tmp.PqaJsc4XtY/work/ji ne/perlovy.pl perl
++/tmp/tmp.PqaJsc4XtY/work/ji ne/pokus.awk awk
+@@ --- no lines ; +++ lines 8-2 @@
++/tmp/tmp.PqaJsc4XtY/work/work/bez pripony bash
++/tmp/tmp.PqaJsc4XtY/work/work/hello.l lua
+...
+
+--- expected output
++++ script stdout
+@@ --- no lines ; +++ line 1 @@
++/tmp/tmp.qqbewuvy0g/work/ji ne/perlovy.pl perl

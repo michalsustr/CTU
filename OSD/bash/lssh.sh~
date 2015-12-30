@@ -1,0 +1,68 @@
+#!/bin/bash
+
+usage()
+{
+cat << EOF
+usage: $0 [options] [directory]
+
+Searches for script files and displays what interpreters are used to evalute them.
+
+OPTIONS:
+   -h        Show this message
+   -n        Non-recursive search
+   -f name   List only files that are interpreted by "name"
+   -v        Ouput the number of the homework
+EOF
+}
+
+RECURSIVE=
+FILTER=
+while getopts “hnf:” OPTION
+do
+    case $OPTION in
+        h)
+            usage
+            exit 1
+            ;;
+        n)
+            RECURSIVE="-maxdepth 1"
+            ;;
+        f)
+            FILTER=$OPTARG
+            ;;
+        \?)
+             exit 1
+             ;;
+        :)
+             exit 1
+             ;;
+    esac
+done
+
+shift $((OPTIND-1))
+if [ -z $1 ]; then
+    DIR="."
+else
+    DIR=$1
+fi
+
+
+# get list of files
+find $DIR $RECURSIVE -type f |
+while read filename; do
+    # first line of each file
+    firstline=$(head -n 1 $filename)
+    # does it begin with #!
+    if [[ ${firstline:0:2} = "#!" ]]; then
+        # get the interpreter
+        interpreter=$(basename $firstline)
+        
+        # test if interpreter is the one we look for
+        if [[ -z $FILTER || $FILTER = $interpreter ]]; then
+            readlink -f $filename | tr -d '\n' # full path
+            echo -n ' '
+            echo $interpreter
+        fi
+    fi
+done
+
