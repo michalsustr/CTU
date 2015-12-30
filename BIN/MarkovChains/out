@@ -1,0 +1,1961 @@
+**************************************** 
+*                                      * 
+*      BioProspector Search Result     * 
+*                                      * 
+**************************************** 
+
+Try #1	3.324	TATTATAACA TGTTATAATA	 	183
+Try #2	3.315	TGGTATAATA TATTATACCA	 	202
+Try #3	3.310	TGTTATAATA TATTATAACA	 	204
+Try #4	3.192	ATTATAAAAT ATTTTATAAT	 	176
+Try #5	3.334	TATTATAACA TGTTATAATA	 	193
+Try #6	3.238	TGGTATAATA TATTATACCA	 	179
+Try #7	3.148	TATAATAAAA TTTTATTATA	 	187
+Try #8	3.166	TTTATTATAA TTATAATAAA	 	155
+Try #9	3.189	TTATTATATA TATATAATAA	 	193
+Try #10	3.201	TTATTATAAA TTTATAATAA	 	173
+Try #11	3.271	GGTATAATAA TTATTATACC	 	193
+Try #12	3.315	TGGTATAATA TATTATACCA	 	186
+Try #13	3.210	TTTATTATAA TTATAATAAA	 	191
+Try #14	3.302	GGTATAATAA TTATTATACC	 	187
+Try #15	3.245	TTTATAATAA TTATTATAAA	 	170
+Try #16	3.051	ATTATAATAA TTATTATAAT	 	146
+Try #17	3.223	ATTATAACAT ATGTTATAAT	 	197
+Try #18	3.317	TATTATAAAA TTTTATAATA	 	179
+Try #19	3.281	TGTTATAATA TATTATAACA	 	165
+Try #20	3.328	TATTATAACA TGTTATAATA	 	195
+Try #21	3.061	TTTATAATAA TTATTATAAA	 	169
+Try #22	3.307	TATTATACCA TGGTATAATA	 	162
+Try #23	3.290	TTATTATAAC GTTATAATAA	 	206
+Try #24	3.267	TATATAATAA TTATTATATA	 	175
+Try #25	3.218	TATTATAAAA TTTTATAATA	 	183
+Try #26	3.201	TTTATAATAA TTATTATAAA	 	169
+Try #27	3.276	TTATTATACC GGTATAATAA	 	206
+Try #28	3.216	ATTTTATCAT ATGATAAAAT	 	161
+Try #29	3.314	TATTATAGCA TGCTATAATA	 	175
+Try #30	3.194	TTTTATTATA TATAATAAAA	 	177
+Try #31	3.254	ATGTTATAAT ATTATAACAT	 	181
+Try #32	3.123	TTTTATTATA TATAATAAAA	 	179
+Try #33	3.198	TTTTATTATA TATAATAAAA	 	183
+Try #34	3.292	ATTATACCAT ATGGTATAAT	 	177
+Try #35	3.335	TGTTATAATA TATTATAACA	 	161
+Try #36	3.200	TTTTATAATA TATTATAAAA	 	193
+Try #37	3.289	ATTATAACAA TTGTTATAAT	 	126
+Try #38	3.295	GGTATAATAA TTATTATACC	 	186
+Try #39	3.156	TTTATAATAA TTATTATAAA	 	188
+Try #40	3.068	TTATAATAAA TTTATTATAA	 	166
+
+The highest scoring 5 motifs are:
+Motif #1: (TGTTATAATA/TATTATAACA)
+******************************
+Width (10, 0); Gap [0, 0]; MotifScore 3.335; Sites 161
+
+Blk1    A      C      G      T         Con  rCon Deg  rDeg 
+1      0.00   8.70   0.00  91.30        T    A    T    A
+2     29.19   0.00  70.80   0.00        G    C    R    Y
+3     28.57  20.50  19.25  31.68        T    A    W    W
+4      0.00   0.00   0.00  99.99        T    A    T    A
+5     99.99   0.00   0.00   0.00        A    T    A    T
+6     22.98  13.04  13.66  50.31        T    A    T    A
+7     77.64   0.00  22.36   0.00        A    T    A    T
+8     70.80  15.53   4.97   8.70        A    T    A    T
+9      1.87   0.00   0.00  98.13        T    A    T    A
+10    62.11   9.94  19.88   8.08        A    T    A    T
+
+>abrB	len 57	site #1	f 48
+TGTTATGCTC
+>abrB	len 59	site #1	f 36
+TGTTATGCTA
+>acsA	len 71	site #1	f 38
+TACTATAATA
+>addBA	len 69	site #1	f 36
+CGATAAAATA
+>alkA	len 66	site #1	f 33
+TGATAAACTA
+>amhX	len 60	site #1	f 28
+TGCTATATTA
+>amyE	len 68	site #1	f 21
+TGATAGAGTG
+>antE	len 44	site #1	f 24
+TGGTAAAATT
+>aprE	len 78	site #1	f 25
+TACTAAAATA
+>araABDLMNPQ-abfA	len 51	site #1	f 26
+TACTATAATA
+>araABDLMNPQ-abfA	len 51	site #2	r 19
+TATTATACTG
+>araR	len 47	site #1	f 25
+TGATATACTG
+>argCJBD-carAB-argF	len 62	site #1	f 29
+TGTTATAATG
+>arsR-yqcK-arsBC	len 61	site #1	r 45
+TATTATACTC
+>spoVFAB-asd-dapG-dapA	len 60	site #1	f 27
+TGGTAAAATA
+>bglPH-yxiE	len 51	site #1	f 33
+TGCTAAAGTA
+>bsrB	len 50	site #1	r 41
+TAATATAGTA
+>ykuJK-ykzF-ykuL-ccpC	len 55	site #1	f 26
+TATTAGAATG
+>cggR-gapA-pgk-tpiA-pgm-eno	len 57	site #1	f 29
+TGTTAAAATA
+>citA	len 66	site #1	f 38
+TACTATAATA
+>citG	len 58	site #1	f 38
+TGATATACTG
+>citR	len 66	site #1	r 26
+TACTATAATA
+>clpE	len 45	site #1	r 34
+TAGTATACTC
+>clpX	len 51	site #1	f 31
+TGGTAAAATG
+>comC	len 70	site #1	f 37
+TGCTACAATC
+>comFABC-yvyF-flgM-yvyG-flgKL	len 66	site #1	r 10
+TATTAAAATA
+>comK	len 70	site #1	f 37
+TGATAGATTA
+>comQX	len 70	site #1	f 38
+TAGTAAAATG
+>csbA	len 45	site #1	f 25
+TACTATAATC
+>cspB	len 69	site #1	f 36
+TGGTAGAGTA
+>cysHP-sat-cysC-ylnDEF	len 56	site #1	f 16
+TGTTAGAATT
+>cysK	len 50	site #1	f 27
+TGATAGATTA
+>dctSRP	len 51	site #1	r 44
+TACTAGAATG
+>degSU	len 51	site #1	f 20
+TGCTAGAGTA
+>murE-mraY-murD-spoVE-murG-murB-divIB-ylxWX-sbp	len 66	site #1	f 36
+TGATATACTG
+>lepA-hemN-hrcA-grpE-dnaKJ-yqeTUV	len 54	site #1	f 29
+TGATACAATC
+>dppABCDE	len 66	site #1	f 43
+TGTTAGAATA
+>deoR-dra-nupC-pdp	len 71	site #1	r 69
+TGTTAAGATA
+>drm-punA	len 48	site #1	f 27
+CGATACAATA
+>ftsAZ	len 66	site #1	f 33
+TAATAGAATA
+>fur	len 49	site #1	f 26
+TGTTATAATG
+>gapB-speD	len 59	site #1	f 34
+TGTTATACTA
+>gabP	len 50	site #1	r 49
+TATTATGATA
+>gabP	len 51	site #1	r 39
+TATTATGATA
+>gabR	len 52	site #1	f 32
+TGGTATGATG
+>gabTD	len 58	site #1	r 21
+TGGTATGATG
+>glnRA	len 67	site #1	r 31
+TGTTATATTA
+>glpD	len 65	site #1	f 32
+TGGTATAATG
+>glpFK	len 66	site #1	f 33
+TGATACAATT
+>gltX-cysES-yazC-yacOP	len 64	site #1	f 33
+TGGTAGAATA
+>guaA	len 65	site #1	f 32
+TGTTAGAATT
+>gyrA	len 65	site #1	f 32
+TGATATAATG
+>hemAXCDBL	len 69	site #1	f 36
+TGTTATAATT
+>hemZ	len 47	site #1	r 17
+TGCTAAAATC
+>htrA	len 52	site #1	f 36
+TGATAAACTC
+>hut	len 64	site #1	f 34
+TAATATAATA
+>kinB-kapB	len 45	site #1	f 23
+TGTTATAATA
+>kinC	len 65	site #1	f 32
+TGGTACAATA
+>lepA-hemN-hrcA-grpE-dnaKJ-yqeTUV	len 71	site #1	f 44
+TGATATAATC
+>licBCAH	len 47	site #1	f 26
+TAATATGATG
+>lonA-ysxC	len 62	site #1	r 20
+TGATATGAAA
+>lonA-ysxC	len 65	site #1	r 41
+CATTATAATA
+>lysC	len 66	site #1	f 33
+TGATAAAATG
+>mrgA	len 65	site #1	f 47
+TGATATAATT
+>mtrAB	len 56	site #1	f 30
+TGCTAGAATC
+>nfrA-ywcH	len 46	site #1	f 32
+TGATAAAAAG
+>ylxS-nusA-ylxRQ-infB-ylxP-rbfA	len 65	site #1	f 33
+TGGTATAGTT
+>odhAB	len 65	site #1	f 49
+TGGTAAAATA
+>kinE-ogt	len 60	site #1	f 22
+TGGTAAGCTA
+>opuAABC	len 53	site #1	f 32
+TGTTACGGTA
+>opuE	len 44	site #1	f 24
+TGTTAGGTTA
+>pckA	len 75	site #1	f 44
+TGTTATACTA
+>pbpD-yuxK	len 66	site #1	f 33
+TGGTACGATA
+>pbpF	len 66	site #1	r 26
+TGATATACTA
+>cggR-gapA-pgk-tpiA-pgm-eno	len 59	site #1	f 33
+CGCTATAATG
+>phoB-ydhF	len 50	site #1	r 24
+TGTTAAGCTA
+>phoPR	len 45	site #1	f 25
+CGCTAAAATA
+>phoPR	len 46	site #1	f 27
+TGTTAAGATG
+>phoPR	len 57	site #1	r 12
+TATTAGGATA
+>pmi	len 61	site #1	f 37
+TGATATAATA
+>ptsGHI	len 47	site #1	f 29
+TGATATAATA
+>ptsGHI	len 53	site #1	f 30
+TGCTACAATA
+>pucH	len 45	site #1	r 25
+TACTATGATC
+>purEKBCSQLFMNHD	len 66	site #1	f 33
+TGTTAAGATA
+>rapA-phrA	len 70	site #1	f 37
+TGATAAAATA
+>rapB	len 55	site #1	f 35
+TGATAAAATA
+>rapC-phrC	len 41	site #1	f 23
+TGATAAAATA
+>rapD	len 48	site #1	f 27
+TGATATGATA
+>rapH-phrH	len 47	site #1	f 33
+TGATAGAATA
+>resABCDE	len 56	site #1	f 36
+TGATATAATT
+>resABCDE	len 49	site #1	f 28
+TGATAAAATG
+>rpmH	len 52	site #1	r 41
+TAATAGGATA
+>rrnA-16S-trnA-Ile-trnA-Ala-rrnA-23S-rrnA-5S	len 68	site #1	r 43
+TATTAGAATA
+>rrnA-16S-trnA-Ile-trnA-Ala-rrnA-23S-rrnA-5S	len 60	site #1	f 31
+TGTTATGATA
+>trnB	len 66	site #1	f 33
+TGTTATATTA
+>trnB	len 64	site #1	f 31
+TGTTATATTA
+>rrnD	len 64	site #1	f 30
+TGTTATATTA
+>rrnD	len 64	site #1	f 31
+TGTTATATTA
+>rrnO-16S-trnO-Ile-trnO-Ala-rrnO-23S-rrnO-5S	len 64	site #1	f 31
+TGGTATAATC
+>rsbRSTUVW-sigB-rsbX	len 67	site #1	f 34
+CGATATAATA
+>sacB-yveBA	len 56	site #1	f 30
+TAATAGAATG
+>yaaJ-scr	len 54	site #1	r 53
+TATTACGATG
+>sda	len 48	site #1	f 28
+TGGTAGATTA
+>secA-prfB	len 54	site #1	f 28
+TGATATGATA
+>sinIR	len 61	site #1	r 48
+TATTATAATC
+>sinIR	len 61	site #1	f 35
+TGCTATAATA
+>gapB-speD	len 47	site #1	r 35
+TAGTATACTG
+>spo0A	len 59	site #1	f 26
+CGGTAAAATA
+>spo0A	len 55	site #1	f 31
+CGGTAAAATA
+>spo0B-obg	len 68	site #1	f 35
+TGTTATAATT
+>spo0F	len 65	site #1	f 32
+TATTATAATT
+>spoIIE	len 68	site #1	f 35
+CGCTATAATG
+>spoIIIE	len 45	site #1	f 26
+TGCTATAATA
+>tagDEF	len 47	site #1	f 26
+TGCTATAATT
+>tetLB	len 64	site #1	r 46
+TGATATGATC
+>thrZ-ywhA	len 39	site #1	f 25
+TAGTAAGATA
+>rrnD	len 52	site #1	f 26
+TAGTATAATG
+>trpEDCFBA-hisC-tyrA-aroE	len 56	site #1	f 33
+TAATACGATA
+>trxA	len 58	site #1	f 25
+TGCTATACTA
+>valS-folC	len 52	site #1	f 28
+TACTATAATA
+>xpt-pbuX	len 46	site #1	f 36
+TATTACAATA
+>xynA	len 61	site #1	r 48
+CAGTATAATA
+>yaaA-recF-yaaB-gyrB	len 71	site #1	f 39
+TGCTAAAATA
+>skf	len 69	site #1	r 65
+CGATACGATA
+>ycdHI-yceA	len 78	site #1	f 33
+TATTATGATA
+>yceCDEFGH	len 48	site #1	f 32
+TGATATAATA
+>yciABC	len 77	site #1	r 56
+TGTTACGATT
+>yfkJIH	len 53	site #1	f 30
+TACTAAGATA
+>yhaG	len 62	site #1	f 28
+TGGTATACTG
+>ykuFG	len 64	site #1	f 26
+TGATAGAATA
+>ykvW	len 45	site #1	f 24
+TGCTATAATA
+>nrdIEF-ymaB	len 56	site #1	f 32
+TAGTATACTA
+>ccdA-yneIJ	len 48	site #1	f 28
+TGGTACAATA
+>ccdA-yneIJ	len 48	site #1	r 36
+TACTATACTC
+>yocH	len 50	site #1	f 29
+TGTTACGATA
+>ypuE-ribDEAHT	len 53	site #1	f 28
+CGCTATAATA
+>yqxD-dnaG-sigA	len 48	site #1	f 26
+TATTATAATA
+>ytkD	len 46	site #1	f 26
+TGGTATGATG
+>ytrABCDEF	len 48	site #1	r 39
+TAATACAATA
+>ywcJ	len 51	site #1	f 27
+TGCTATACTA
+>ezrA	len 79	site #1	r 56
+TATTATGATA
+>ezrA	len 76	site #1	r 28
+TATTATGATA
+>yxaAB	len 52	site #1	f 28
+TGGTACATTG
+>yhcL	len 67	site #1	r 47
+TACTATATTA
+>cymR-yrvO-trmU	len 60	site #1	f 33
+TGTTATAATA
+>yjbCD	len 60	site #1	r 44
+TATTATACTA
+>yhcYZ-yhdA	len 61	site #1	f 35
+TGGTATAATC
+>liaGFSR	len 61	site #1	f 41
+TAATAGAATG
+>mhqNOP	len 61	site #1	r 44
+TAGTAAAATA
+>narK-fnr	len 67	site #1	f 34
+CGTTACAATA
+>spoIIIJ-jag	len 53	site #1	f 29
+TGCTAAAATA
+>tuaABCDEFGH	len 51	site #1	f 30
+TGCTAAACTG
+>mtnKA	len 70	site #1	f 53
+TGATAAATTA
+>mtnWXBD	len 65	site #1	r 62
+TGATAAGAAA
+>yrkO	len 61	site #1	f 20
+TGTTAAGATT
+>yclHI	len 61	site #1	r 54
+TGATAAATTA
+>ykcBC	len 61	site #1	f 26
+TGTTACACTA
+>yngABC	len 61	site #1	f 36
+CGCTATAGTA
+>thyB-dfrA-ypkP	len 68	site #1	f 42
+TGTTACACTA
+>yvcE	len 61	site #1	f 36
+TGGTATAATG
+>yoeB	len 61	site #1	r 42
+TGTTACAATA
+******************************
+
+Motif #2: (TATTATAACA/TGTTATAATA)
+******************************
+Width (10, 0); Gap [0, 0]; MotifScore 3.334; Sites 193
+
+Blk1    A      C      G      T         Con  rCon Deg  rDeg 
+1      0.52  22.80   9.84  66.84        T    A    T    A
+2     100.00   0.00   0.00   0.00        A    T    A    T
+3      0.00   0.00  18.65  81.34        T    A    T    A
+4      0.00  20.73   4.66  74.61        T    A    T    A
+5     62.17   3.63  16.58  17.62        A    T    A    T
+6      0.00   0.00   0.00  100.00        T    A    T    A
+7     100.00   0.00   0.00   0.00        A    T    A    T
+8     30.57  25.91  23.32  20.21        A    T    M    K
+9     23.83  49.74   0.00  26.43        C    G    Y    R
+10    61.14  20.21  18.65   0.00        A    T    A    T
+
+>abnA 	len 56	site #1	r 43
+TATTGTAGTC
+>abrB	len 57	site #1	r 57
+GAGCATAACA
+>abrB	len 59	site #1	r 45
+TAGCATAACA
+>acsA	len 71	site #1	r 47
+TATTATAGTA
+>adaAB	len 68	site #1	f 2
+CATTCTAACC
+>addBA	len 69	site #1	r 45
+TATTTTATCG
+>alkA	len 66	site #1	r 42
+TAGTTTATCA
+>aprE	len 78	site #1	r 54
+TATTGTAATA
+>araABDLMNPQ-abfA	len 51	site #1	r 35
+TATTATAGTA
+>araABDLMNPQ-abfA	len 51	site #2	r 19
+TATTATACTG
+>araR	len 47	site #1	r 34
+CAGTATATCA
+>argCJBD-carAB-argF	len 62	site #1	r 38
+CATTATAACA
+>arsR-yqcK-arsBC	len 61	site #1	r 45
+TATTATACTC
+>spoVFAB-asd-dapG-dapA	len 60	site #1	r 36
+TATTTTACCA
+>ccdA-yneIJ	len 50	site #1	r 22
+CATTATACTC
+>cggR-gapA-pgk-tpiA-pgm-eno	len 57	site #1	r 38
+TATTTTAACA
+>citA	len 66	site #1	r 47
+TATTATAGTA
+>citG	len 58	site #1	r 47
+CAGTATATCA
+>citR	len 66	site #1	f 17
+TATTATAGTA
+>citZ-icd-mdh	len 67	site #1	r 43
+CATTATAAAC
+>clpE	len 45	site #1	f 25
+GAGTATACTA
+>clpX	len 51	site #1	r 40
+CATTTTACCA
+>comC	len 70	site #1	r 46
+GATTGTAGCA
+>comFABC-yvyF-flgM-yvyG-flgKL	len 66	site #1	f 1
+TATTTTAATA
+>comGABCDEFG-yqzE	len 67	site #1	r 43
+TATTGTAGAA
+>comQX	len 70	site #1	r 47
+CATTTTACTA
+>csbA	len 45	site #1	r 34
+GATTATAGTA
+>cssRS	len 58	site #1	r 41
+CATTATAAAC
+>dctSRP	len 51	site #1	f 35
+CATTCTAGTA
+>degSU	len 51	site #1	f 25
+GAGTATATAG
+>degSU	len 68	site #1	f 54
+TAGTATATAA
+>murE-mraY-murD-spoVE-murG-murB-divIB-ylxWX-sbp	len 66	site #1	r 45
+CAGTATATCA
+>lepA-hemN-hrcA-grpE-dnaKJ-yqeTUV	len 54	site #1	r 38
+GATTGTATCA
+>dppABCDE	len 66	site #1	r 52
+TATTCTAACA
+>deoR-dra-nupC-pdp	len 71	site #1	r 54
+TAGCATAACC
+>drm-punA	len 48	site #1	r 36
+TATTGTATCG
+>fapR-plsX-fabDG	len 64	site #1	r 34
+TAGTATATAA
+>fbp	len 52	site #1	f 35
+TATCATATAA
+>ftsH	len 50	site #1	f 25
+TATGGTACTA
+>fur	len 49	site #1	r 35
+CATTATAACA
+>gapB-speD	len 59	site #1	r 43
+TAGTATAACA
+>gabP	len 50	site #1	f 40
+TATCATAATA
+>gabP	len 51	site #1	f 30
+TATCATAATA
+>gabR	len 52	site #1	r 41
+CATCATACCA
+>gabTD	len 58	site #1	f 12
+CATCATACCA
+>glpD	len 65	site #1	r 41
+CATTATACCA
+>glpTQ	len 64	site #1	r 37
+TATCATAGTC
+>ybgJ-ybgH	len 76	site #1	f 40
+CATTATACAG
+>gltAB	len 66	site #1	f 42
+GATTATAGAG
+>gltR	len 60	site #1	r 36
+TATGATAGCA
+>gltX-cysES-yazC-yacOP	len 64	site #1	r 42
+TATTCTACCA
+>gntRKPZ	len 64	site #1	r 40
+TATGATAACG
+>gtaB	len 48	site #1	r 35
+TATGATATCG
+>guaD	len 50	site #1	r 36
+TAGTATAGCC
+>gudB	len 51	site #1	r 37
+TAGTATACAC
+>gyrA	len 65	site #1	r 41
+CATTATATCA
+>hemZ	len 47	site #1	f 8
+GATTTTAGCA
+>htrA	len 52	site #1	r 40
+TATCATAAAC
+>hut	len 64	site #1	r 43
+TATTATATTA
+>infC-rpmI-rplT-ysdA	len 40	site #1	r 31
+TATTCTACAC
+>kinB-kapB	len 45	site #1	r 32
+TATTATAACA
+>kinC	len 65	site #1	r 41
+TATTGTACCA
+>kinC	len 65	site #2	f 5
+TATTTTACTC
+>lepA-hemN-hrcA-grpE-dnaKJ-yqeTUV	len 71	site #1	r 53
+GATTATATCA
+>licBCAH	len 47	site #1	r 35
+CATCATATTA
+>licR	len 43	site #1	f 24
+CATTATAGAA
+>lonA-ysxC	len 62	site #1	r 38
+TAGTATACCC
+>lonA-ysxC	len 65	site #1	f 32
+TATTATAATG
+>lysC	len 66	site #1	r 42
+CATTTTATCA
+>mecA	len 66	site #1	r 12
+CATCTTAACC
+>menBEC	len 64	site #1	r 40
+TATTATAAAC
+>mta	len 46	site #1	r 36
+TATCGTAAAC
+>mtrAB	len 56	site #1	r 39
+GATTCTAGCA
+>nadBCA	len 64	site #1	f 19
+TATTTTATCC
+>nfrA-ywcH	len 46	site #1	r 36
+TATCATATCC
+>nifS-yrxA	len 66	site #1	r 42
+TATTTTATCC
+>nrgAB	len 66	site #1	r 42
+CATTATAGAG
+>odhAB	len 65	site #1	r 58
+TATTTTACCA
+>kinE-ogt	len 60	site #1	r 31
+TAGCTTACCA
+>opuBABCD	len 56	site #1	r 36
+CATTATAGAA
+>pabBAC-sul-folBK-yazB-yacF-lysS	len 51	site #1	r 39
+AATTGTAAAG
+>pckA	len 75	site #1	r 53
+TAGTATAACA
+>pckA	len 75	site #2	f 20
+TAGTATAGAC
+>pbpD-yuxK	len 66	site #1	r 42
+TATCGTACCA
+>pbpF	len 66	site #1	f 17
+TAGTATATCA
+>pdhABCD	len 77	site #1	r 33
+TATTTTAGCC
+>perR	len 47	site #1	f 15
+TATCGTAGAA
+>cggR-gapA-pgk-tpiA-pgm-eno	len 59	site #1	r 42
+CATTATAGCG
+>pheST	len 44	site #1	r 34
+TATTATAGAG
+>phoB-ydhF	len 50	site #1	f 15
+TAGCTTAACA
+>phoPR	len 45	site #1	r 34
+TATTTTAGCG
+>phoPR	len 46	site #1	r 13
+TATTTTAGCG
+>rapE-phrE	len 62	site #1	r 47
+CATTATAATC
+>pmi	len 61	site #1	r 46
+TATTATATCA
+>pssA-ybfM-psd	len 47	site #1	r 34
+TATTTTATCC
+>pssA-ybfM-psd	len 46	site #1	r 33
+TATTATACAA
+>pta	len 44	site #1	r 33
+TAGCATACTC
+>ptsGHI	len 47	site #1	r 38
+TATTATATCA
+>ptsGHI	len 53	site #1	r 39
+TATTGTAGCA
+>yurHG	len 48	site #1	r 36
+CATTATAGAA
+>pucH	len 45	site #1	f 16
+GATCATAGTA
+>purEKBCSQLFMNHD	len 66	site #1	r 42
+TATCTTAACA
+>rapA-phrA	len 70	site #1	r 46
+TATTTTATCA
+>rapB	len 55	site #1	r 39
+TATCATAATG
+>rapC-phrC	len 41	site #1	r 32
+TATTTTATCA
+>rapD	len 48	site #1	r 36
+TATCATATCA
+>rapH-phrH	len 47	site #1	r 42
+TATTCTATCA
+>recA	len 66	site #1	r 59
+TATGTTACCA
+>resABCDE	len 49	site #1	r 37
+CATTTTATCA
+>rpmH	len 52	site #1	r 38
+TAGGATACCA
+>rpoB	len 46	site #1	f 32
+TATTGTAAAA
+>ywjF-acdA-rpoE	len 65	site #1	r 48
+CATTATAAAC
+>rpsD	len 65	site #1	r 41
+CATTATATAA
+>rrnA-16S-trnA-Ile-trnA-Ala-rrnA-23S-rrnA-5S	len 60	site #1	r 40
+TATCATAACA
+>rrnO-16S-trnO-Ile-trnO-Ala-rrnO-23S-rrnO-5S	len 64	site #1	r 40
+GATTATACCA
+>rsbRSTUVW-sigB-rsbX	len 67	site #1	r 43
+TATTATATCG
+>sacPA-ywdA	len 52	site #1	r 28
+CATGATAGCG
+>yaaJ-scr	len 54	site #1	f 44
+CATCGTAATA
+>sdhCAB	len 63	site #1	r 39
+CATTTTACTC
+>secA-prfB	len 54	site #1	r 37
+TATCATATCA
+>sigH	len 64	site #1	r 40
+TATTATACAG
+>sinIR	len 61	site #1	r 48
+TATTATAATC
+>sinIR	len 61	site #1	r 44
+TATTATAGCA
+>gapB-speD	len 47	site #1	r 35
+TAGTATACTG
+>spo0A	len 59	site #1	r 35
+TATTTTACCG
+>spo0A	len 55	site #1	r 40
+TATTTTACCG
+>spoIIE	len 68	site #1	r 44
+CATTATAGCG
+>spoIIIE	len 45	site #1	r 35
+TATTATAGCA
+>tagDEF	len 47	site #1	r 30
+TAGCATACCG
+>tetLB	len 64	site #1	f 37
+GATCATATCA
+>thrZ-ywhA	len 39	site #1	r 34
+TATCTTACTA
+>rrnD	len 52	site #1	r 35
+CATTATACTA
+>trpEDCFBA-hisC-tyrA-aroE	len 56	site #1	r 42
+TATCGTATTA
+>trxA	len 58	site #1	r 34
+TAGTATAGCA
+>ureABC	len 47	site #1	r 33
+CATTATATAG
+>valS-folC	len 52	site #1	r 37
+TATTATAGTA
+>veg	len 63	site #1	r 39
+TATTGTACAA
+>wapA-yxxG	len 45	site #1	f 4
+TATTGTAATG
+>xpt-pbuX	len 46	site #1	r 45
+TATTGTAATA
+>xynA	len 61	site #1	f 39
+TATTATACTG
+>xynPB	len 59	site #1	r 40
+TATTATAAAA
+>yaaA-recF-yaaB-gyrB	len 71	site #1	r 48
+TATTTTAGCA
+>skf	len 69	site #1	f 56
+TATCGTATCG
+>ycdHI-yceA	len 78	site #1	r 42
+TATCATAATA
+>yceCDEFGH	len 48	site #1	r 41
+TATTATATCA
+>yciABC	len 77	site #1	r 72
+TATCATAAAA
+>rtpA-ycbK	len 46	site #1	f 28
+TATTATAAAC
+>yfkJIH	len 53	site #1	r 39
+TATCTTAGTA
+>yfmPO	len 47	site #1	r 36
+CATTATACAC
+>yhaG	len 62	site #1	r 37
+CAGTATACCA
+>yhfL	len 83	site #1	r 34
+CATTATAGAG
+>ykuFG	len 64	site #1	r 27
+CATTATATCC
+>ykvW	len 45	site #1	r 33
+TATTATAGCA
+>ylxM-ffh	len 63	site #1	f 43
+TATCGTAAAG
+>nrdIEF-ymaB	len 56	site #1	r 41
+TAGTATACTA
+>ccdA-yneIJ	len 48	site #1	r 37
+TATTGTACCA
+>ccdA-yneIJ	len 48	site #1	f 27
+GAGTATAGTA
+>yocH	len 50	site #1	r 38
+TATCGTAACA
+>ypuE-ribDEAHT	len 53	site #1	r 37
+TATTATAGCG
+>yqxD-dnaG-sigA	len 48	site #1	r 35
+TATTATAATA
+>ytkD	len 46	site #1	r 35
+CATCATACCA
+>ytrABCDEF	len 48	site #1	f 30
+TATTGTATTA
+>eps	len 51	site #1	r 39
+GATTATAAAA
+>ywcJ	len 51	site #1	r 36
+TAGTATAGCA
+>ywfK	len 44	site #1	r 35
+TATTGTACTC
+>ywjF-acdA-rpoE	len 44	site #1	f 27
+TATCATAAAG
+>yqxM-sipW-tasA	len 47	site #1	f 26
+GATTATACTC
+>ezrA	len 79	site #1	f 47
+TATCATAATA
+>ezrA	len 76	site #1	r 25
+TATGATACCA
+>yhcL	len 67	site #1	f 33
+TAGTGTAATA
+>cymR-yrvO-trmU	len 60	site #1	r 42
+TATTATAACA
+>yjbCD	len 60	site #1	r 44
+TATTATACTA
+>yhcYZ-yhdA	len 61	site #1	r 44
+GATTATACCA
+>liaGFSR	len 61	site #1	r 45
+TATTATAAAG
+>yvaB	len 61	site #1	r 46
+TATTATAGAG
+>mhqNOP	len 61	site #1	f 35
+TATTTTACTA
+>narK-fnr	len 67	site #1	r 43
+TATTGTAACG
+>narK-fnr	len 61	site #1	r 47
+TATCATACAA
+>spoIIIJ-jag	len 53	site #1	r 38
+TATTTTAGCA
+>tuaABCDEFGH	len 51	site #1	r 39
+CAGTTTAGCA
+>mtnKA	len 70	site #1	r 43
+CATGGTAACA
+>ytmIJKLMNO-ytnIJ-ribR-ytnLM	len 76	site #1	f 45
+TAGTATAAAC
+>ytlI	len 75	site #1	r 47
+TAGTATAAAC
+>ytlI	len 75	site #1	r 47
+TAGTATAAAC
+>bceAB	len 63	site #1	r 48
+CATTATAAAA
+>gmuBACDREFG	len 61	site #1	r 44
+TATTATAGTC
+>ykcBC	len 61	site #1	r 35
+TAGTGTAACA
+>thyB-dfrA-ypkP	len 68	site #1	r 51
+TAGTGTAACA
+>yvcE	len 61	site #1	r 45
+CATTATACCA
+>ydjM	len 61	site #1	r 45
+GATTATACAC
+>yoeB	len 61	site #1	f 33
+TATTGTAACA
+>yoeB	len 61	site #2	f 13
+TATTGTAATC
+>yetL	len 61	site #1	r 46
+GATTATAAAG
+******************************
+
+Motif #3: (TATTATAACA/TGTTATAATA)
+******************************
+Width (10, 0); Gap [0, 0]; MotifScore 3.328; Sites 195
+
+Blk1    A      C      G      T         Con  rCon Deg  rDeg 
+1      0.00  22.56  10.26  67.18        T    A    T    A
+2     99.48   0.00   0.00   0.52        A    T    A    T
+3      0.00   0.00  18.97  81.02        T    A    T    A
+4      0.00  19.49   5.64  74.87        T    A    T    A
+5     58.46   6.15  15.90  19.49        A    T    A    T
+6      0.00   0.00   0.00  100.00        T    A    T    A
+7     100.00   0.00   0.00   0.00        A    T    A    T
+8     29.23  29.23  22.56  18.98        A    T    M    K
+9     23.59  50.77   0.00  25.64        C    G    Y    R
+10    66.66  20.00  13.33   0.00        A    T    A    T
+
+>abnA 	len 56	site #1	r 43
+TATTGTAGTC
+>abrB	len 57	site #1	r 57
+GAGCATAACA
+>abrB	len 59	site #1	r 45
+TAGCATAACA
+>acsA	len 71	site #1	r 47
+TATTATAGTA
+>adaAB	len 68	site #1	f 2
+CATTCTAACC
+>addBA	len 69	site #1	r 45
+TATTTTATCG
+>alkA	len 66	site #1	r 42
+TAGTTTATCA
+>amhX	len 60	site #1	f 33
+TATTATATAC
+>aprE	len 78	site #1	r 54
+TATTGTAATA
+>araABDLMNPQ-abfA	len 51	site #1	r 35
+TATTATAGTA
+>araABDLMNPQ-abfA	len 51	site #2	r 19
+TATTATACTG
+>araR	len 47	site #1	r 34
+CAGTATATCA
+>argCJBD-carAB-argF	len 62	site #1	r 38
+CATTATAACA
+>arsR-yqcK-arsBC	len 61	site #1	r 45
+TATTATACTC
+>spoVFAB-asd-dapG-dapA	len 60	site #1	r 36
+TATTTTACCA
+>bglC	len 68	site #1	r 44
+CATTGTAAAA
+>ccdA-yneIJ	len 50	site #1	r 22
+CATTATACTC
+>ykuJK-ykzF-ykuL-ccpC	len 55	site #1	r 35
+CATTCTAATA
+>cggR-gapA-pgk-tpiA-pgm-eno	len 57	site #1	r 38
+TATTTTAACA
+>citA	len 66	site #1	r 47
+TATTATAGTA
+>citG	len 58	site #1	r 47
+CAGTATATCA
+>citR	len 66	site #1	f 17
+TATTATAGTA
+>citZ-icd-mdh	len 67	site #1	r 43
+CATTATAAAC
+>clpE	len 45	site #1	f 25
+GAGTATACTA
+>clpX	len 51	site #1	r 40
+CATTTTACCA
+>comC	len 70	site #1	r 46
+GATTGTAGCA
+>comFABC-yvyF-flgM-yvyG-flgKL	len 66	site #1	f 1
+TATTTTAATA
+>comGABCDEFG-yqzE	len 67	site #1	r 43
+TATTGTAGAA
+>comQX	len 70	site #1	r 47
+CATTTTACTA
+>csbA	len 45	site #1	r 34
+GATTATAGTA
+>cssRS	len 73	site #1	f 51
+TATCATAAAC
+>cssRS	len 58	site #1	r 41
+CATTATAAAC
+>dctSRP	len 51	site #1	f 35
+CATTCTAGTA
+>degSU	len 68	site #1	r 44
+TATGATACCA
+>murE-mraY-murD-spoVE-murG-murB-divIB-ylxWX-sbp	len 66	site #1	r 45
+CAGTATATCA
+>lepA-hemN-hrcA-grpE-dnaKJ-yqeTUV	len 54	site #1	r 38
+GATTGTATCA
+>dppABCDE	len 66	site #1	r 52
+TATTCTAACA
+>deoR-dra-nupC-pdp	len 71	site #1	f 60
+TATCTTAACA
+>drm-punA	len 48	site #1	r 36
+TATTGTATCG
+>fapR-plsX-fabDG	len 64	site #1	r 34
+TAGTATATAA
+>fbp	len 52	site #1	f 35
+TATCATATAA
+>ftsAZ	len 66	site #1	r 42
+TATTCTATTA
+>ftsH	len 50	site #1	f 25
+TATGGTACTA
+>fur	len 49	site #1	r 35
+CATTATAACA
+>gapB-speD	len 59	site #1	r 43
+TAGTATAACA
+>gabP	len 50	site #1	f 40
+TATCATAATA
+>gabP	len 51	site #1	f 30
+TATCATAATA
+>gabR	len 52	site #1	r 41
+CATCATACCA
+>gabTD	len 58	site #1	f 12
+CATCATACCA
+>glpD	len 65	site #1	r 41
+CATTATACCA
+>glpTQ	len 64	site #1	r 37
+TATCATAGTC
+>ybgJ-ybgH	len 76	site #1	f 40
+CATTATACAG
+>gltR	len 60	site #1	r 36
+TATGATAGCA
+>gltX-cysES-yazC-yacOP	len 64	site #1	r 42
+TATTCTACCA
+>gntRKPZ	len 64	site #1	r 40
+TATGATAACG
+>gtaB	len 48	site #1	f 29
+TATCATAAAA
+>guaD	len 50	site #1	r 36
+TAGTATAGCC
+>gudB	len 51	site #1	r 37
+TAGTATACAC
+>gyrA	len 65	site #1	r 41
+CATTATATCA
+>gyrA	len 65	site #2	r 21
+GATTATACAC
+>hemZ	len 47	site #1	f 8
+GATTTTAGCA
+>htrA	len 52	site #1	r 40
+TATCATAAAC
+>hut	len 64	site #1	r 43
+TATTATATTA
+>infC-rpmI-rplT-ysdA	len 40	site #1	r 31
+TATTCTACAC
+>kinB-kapB	len 45	site #1	r 32
+TATTATAACA
+>kinC	len 65	site #1	r 41
+TATTGTACCA
+>kinC	len 65	site #2	f 5
+TATTTTACTC
+>lepA-hemN-hrcA-grpE-dnaKJ-yqeTUV	len 71	site #1	r 53
+GATTATATCA
+>licBCAH	len 47	site #1	f 32
+GATGATAGCA
+>licR	len 43	site #1	f 24
+CATTATAGAA
+>lonA-ysxC	len 62	site #1	r 38
+TAGTATACCC
+>lonA-ysxC	len 65	site #1	f 8
+TATTGTACAA
+>lysC	len 66	site #1	r 42
+CATTTTATCA
+>maeN	len 53	site #1	r 39
+CAGTCTACAA
+>mecA	len 66	site #1	r 12
+CATCTTAACC
+>menBEC	len 64	site #1	r 40
+TATTATAAAC
+>mta	len 46	site #1	r 36
+TATCGTAAAC
+>mtrAB	len 56	site #1	r 39
+GATTCTAGCA
+>nadBCA	len 64	site #1	f 19
+TATTTTATCC
+>nfrA-ywcH	len 46	site #1	r 36
+TATCATATCC
+>nifS-yrxA	len 66	site #1	r 42
+TATTTTATCC
+>nrgAB	len 66	site #1	r 42
+CATTATAGAG
+>odhAB	len 65	site #1	r 58
+TATTTTACCA
+>kinE-ogt	len 60	site #1	r 31
+TAGCTTACCA
+>opuBABCD	len 56	site #1	r 36
+CATTATAGAA
+>pckA	len 75	site #1	r 53
+TAGTATAACA
+>pckA	len 75	site #2	f 20
+TAGTATAGAC
+>pbpD-yuxK	len 66	site #1	r 42
+TATCGTACCA
+>pbpF	len 66	site #1	f 17
+TAGTATATCA
+>pdhABCD	len 77	site #1	r 69
+TAGGGTACCC
+>perR	len 47	site #1	f 15
+TATCGTAGAA
+>cggR-gapA-pgk-tpiA-pgm-eno	len 59	site #1	r 42
+CATTATAGCG
+>pheST	len 44	site #1	r 34
+TATTATAGAG
+>phoB-ydhF	len 50	site #1	f 15
+TAGCTTAACA
+>phoPR	len 45	site #1	r 34
+TATTTTAGCG
+>phoPR	len 46	site #1	r 13
+TATTTTAGCG
+>rapE-phrE	len 62	site #1	f 38
+GATTATAATG
+>pmi	len 61	site #1	r 46
+TATTATATCA
+>pssA-ybfM-psd	len 47	site #1	r 34
+TATTTTATCC
+>pssA-ybfM-psd	len 46	site #1	r 33
+TATTATACAA
+>pta	len 44	site #1	r 33
+TAGCATACTC
+>ptsGHI	len 47	site #1	r 38
+TATTATATCA
+>ptsGHI	len 53	site #1	r 39
+TATTGTAGCA
+>yurHG	len 48	site #1	r 36
+CATTATAGAA
+>pucH	len 45	site #1	f 16
+GATCATAGTA
+>purEKBCSQLFMNHD	len 66	site #1	r 42
+TATCTTAACA
+>rapA-phrA	len 70	site #1	r 46
+TATTTTATCA
+>rapB	len 55	site #1	r 44
+TATTTTATCA
+>rapC-phrC	len 41	site #1	r 32
+TATTTTATCA
+>rapD	len 48	site #1	r 36
+TATCATATCA
+>rapH-phrH	len 47	site #1	r 42
+TATTCTATCA
+>recA	len 66	site #1	r 59
+TATGTTACCA
+>resABCDE	len 49	site #1	r 37
+CATTTTATCA
+>rpmH	len 52	site #1	r 38
+TAGGATACCA
+>rpoB	len 46	site #1	r 43
+CATTTTACAA
+>ywjF-acdA-rpoE	len 65	site #1	r 48
+CATTATAAAC
+>rpsD	len 65	site #1	r 41
+CATTATATAA
+>rrnA-16S-trnA-Ile-trnA-Ala-rrnA-23S-rrnA-5S	len 68	site #1	f 34
+TATTCTAATA
+>rrnA-16S-trnA-Ile-trnA-Ala-rrnA-23S-rrnA-5S	len 60	site #1	r 40
+TATCATAACA
+>rrnO-16S-trnO-Ile-trnO-Ala-rrnO-23S-rrnO-5S	len 64	site #1	r 40
+GATTATACCA
+>rsbRSTUVW-sigB-rsbX	len 67	site #1	r 43
+TATTATATCG
+>sacPA-ywdA	len 52	site #1	r 28
+CATGATAGCG
+>yaaJ-scr	len 54	site #1	f 44
+CATCGTAATA
+>sdhCAB	len 63	site #1	r 39
+CATTTTACTC
+>secA-prfB	len 54	site #1	r 37
+TATCATATCA
+>fla-che	len 52	site #1	r 20
+TTGTTTAACA
+>sigH	len 64	site #1	r 40
+TATTATACAG
+>sinIR	len 61	site #1	f 39
+GATTATAATA
+>sinIR	len 61	site #1	r 44
+TATTATAGCA
+>gapB-speD	len 47	site #1	r 35
+TAGTATACTG
+>spo0A	len 59	site #1	r 35
+TATTTTACCG
+>spo0A	len 55	site #1	r 40
+TATTTTACCG
+>spoIIE	len 68	site #1	r 44
+CATTATAGCG
+>spoIIIE	len 45	site #1	r 35
+TATTATAGCA
+>tagDEF	len 47	site #1	r 30
+TAGCATACCG
+>tetLB	len 64	site #1	f 37
+GATCATATCA
+>thrZ-ywhA	len 39	site #1	r 34
+TATCTTACTA
+>rrnD	len 52	site #1	r 35
+CATTATACTA
+>trpEDCFBA-hisC-tyrA-aroE	len 56	site #1	r 42
+TATCGTATTA
+>trxA	len 58	site #1	r 34
+TAGTATAGCA
+>valS-folC	len 52	site #1	r 37
+TATTATAGTA
+>veg	len 63	site #1	r 39
+TATTGTACAA
+>xpt-pbuX	len 46	site #1	r 45
+TATTGTAATA
+>xynA	len 61	site #1	f 39
+TATTATACTG
+>xynPB	len 59	site #1	r 40
+TATTATAAAA
+>yaaA-recF-yaaB-gyrB	len 71	site #1	r 48
+TATTTTAGCA
+>skf	len 69	site #1	f 56
+TATCGTATCG
+>ycdHI-yceA	len 78	site #1	r 42
+TATCATAATA
+>yceCDEFGH	len 48	site #1	r 41
+TATTATATCA
+>yciABC	len 77	site #1	r 72
+TATCATAAAA
+>rtpA-ycbK	len 46	site #1	f 28
+TATTATAAAC
+>yfkJIH	len 53	site #1	r 39
+TATCTTAGTA
+>yfmPO	len 47	site #1	r 36
+CATTATACAC
+>yhaG	len 62	site #1	r 37
+CAGTATACCA
+>yhfL	len 83	site #1	r 34
+CATTATAGAG
+>ykuFG	len 64	site #1	r 35
+TATTCTATCA
+>ykvW	len 45	site #1	r 33
+TATTATAGCA
+>ylxM-ffh	len 63	site #1	r 39
+TAGTTTACAC
+>nrdIEF-ymaB	len 56	site #1	r 41
+TAGTATACTA
+>ccdA-yneIJ	len 48	site #1	r 37
+TATTGTACCA
+>ccdA-yneIJ	len 48	site #1	f 27
+GAGTATAGTA
+>yocH	len 50	site #1	r 38
+TATCGTAACA
+>ypuE-ribDEAHT	len 53	site #1	r 37
+TATTATAGCG
+>yqxD-dnaG-sigA	len 48	site #1	r 35
+TATTATAATA
+>ytkD	len 46	site #1	r 35
+CATCATACCA
+>ytrABCDEF	len 48	site #1	f 30
+TATTGTATTA
+>eps	len 51	site #1	r 39
+GATTATAAAA
+>ywcJ	len 51	site #1	r 36
+TAGTATAGCA
+>ywfK	len 44	site #1	r 35
+TATTGTACTC
+>yqxM-sipW-tasA	len 47	site #1	f 26
+GATTATACTC
+>ezrA	len 79	site #1	f 47
+TATCATAATA
+>ezrA	len 76	site #1	r 25
+TATGATACCA
+>yhcL	len 67	site #1	f 33
+TAGTGTAATA
+>cymR-yrvO-trmU	len 60	site #1	r 42
+TATTATAACA
+>yjbCD	len 60	site #1	r 44
+TATTATACTA
+>yhcYZ-yhdA	len 61	site #1	r 44
+GATTATACCA
+>liaGFSR	len 61	site #1	r 45
+TATTATAAAG
+>yvaB	len 61	site #1	r 46
+TATTATAGAG
+>mhqNOP	len 61	site #1	f 35
+TATTTTACTA
+>narK-fnr	len 67	site #1	r 43
+TATTGTAACG
+>narK-fnr	len 61	site #1	r 47
+TATCATACAA
+>spoIIIJ-jag	len 53	site #1	r 38
+TATTTTAGCA
+>tuaABCDEFGH	len 51	site #1	r 39
+CAGTTTAGCA
+>mtnKA	len 70	site #1	r 43
+CATGGTAACA
+>ytmIJKLMNO-ytnIJ-ribR-ytnLM	len 76	site #1	f 45
+TAGTATAAAC
+>ytlI	len 75	site #1	r 47
+TAGTATAAAC
+>ytlI	len 75	site #1	r 47
+TAGTATAAAC
+>bceAB	len 63	site #1	r 48
+CATTATAAAA
+>gmuBACDREFG	len 61	site #1	r 44
+TATTATAGTC
+>ykcBC	len 61	site #1	r 35
+TAGTGTAACA
+>thyB-dfrA-ypkP	len 68	site #1	r 51
+TAGTGTAACA
+>yvcE	len 61	site #1	r 45
+CATTATACCA
+>ydjM	len 61	site #1	r 45
+GATTATACAC
+>yoeB	len 61	site #1	f 33
+TATTGTAACA
+>yoeB	len 61	site #2	f 13
+TATTGTAATC
+******************************
+
+Motif #4: (TATTATAACA/TGTTATAATA)
+******************************
+Width (10, 0); Gap [0, 0]; MotifScore 3.324; Sites 183
+
+Blk1    A      C      G      T         Con  rCon Deg  rDeg 
+1      0.00  26.23  10.38  63.39        T    A    Y    R
+2     100.00   0.00   0.00   0.00        A    T    A    T
+3      0.00   0.00  23.50  76.50        T    A    T    A
+4      8.75  14.75  14.75  61.75        T    A    T    A
+5     78.14   1.09  20.76   0.00        A    T    A    T
+6      0.00   0.00   0.00  100.00        T    A    T    A
+7     100.00   0.00   0.00   0.00        A    T    A    T
+8     34.97  27.32  23.50  14.21        A    T    M    K
+9     37.70  41.53   0.00  20.77        C    G    M    K
+10    60.11  21.86  18.03   0.00        A    T    A    T
+
+>abnA 	len 56	site #1	r 43
+TATTGTAGTC
+>abrB	len 57	site #1	r 57
+GAGCATAACA
+>abrB	len 59	site #1	r 45
+TAGCATAACA
+>acsA	len 71	site #1	r 47
+TATTATAGTA
+>amhX	len 60	site #1	f 33
+TATTATATAC
+>aprE	len 78	site #1	r 54
+TATTGTAATA
+>aprX	len 50	site #1	f 28
+GAGTATACAG
+>araABDLMNPQ-abfA	len 51	site #1	r 19
+TATTATACTG
+>araR	len 47	site #1	r 34
+CAGTATATCA
+>argCJBD-carAB-argF	len 62	site #1	r 38
+CATTATAACA
+>arsR-yqcK-arsBC	len 61	site #1	r 45
+TATTATACTC
+>spoVFAB-asd-dapG-dapA	len 60	site #1	f 25
+TATGGTAAAA
+>bglC	len 68	site #1	r 44
+CATTGTAAAA
+>bsrB	len 50	site #1	r 38
+TATAGTACAC
+>ccdA-yneIJ	len 50	site #1	r 22
+CATTATACTC
+>citA	len 66	site #1	f 41
+TATAATAACA
+>citG	len 58	site #1	r 47
+CAGTATATCA
+>citR	len 66	site #1	f 17
+TATTATAGTA
+>citZ-icd-mdh	len 67	site #1	r 43
+CATTATAAAC
+>clpE	len 45	site #1	r 34
+TAGTATACTC
+>clpX	len 51	site #1	f 29
+TATGGTAAAA
+>comC	len 70	site #1	r 46
+GATTGTAGCA
+>comGABCDEFG-yqzE	len 67	site #1	r 43
+TATTGTAGAA
+>csbA	len 45	site #1	r 34
+GATTATAGTA
+>cssRS	len 73	site #1	f 51
+TATCATAAAC
+>cssRS	len 58	site #1	r 41
+CATTATAAAC
+>cysK	len 50	site #1	f 32
+GATTATATAC
+>dctSRP	len 51	site #1	f 35
+CATTCTAGTA
+>degSU	len 68	site #1	r 44
+TATGATACCA
+>degSU	len 68	site #2	f 54
+TAGTATATAA
+>murE-mraY-murD-spoVE-murG-murB-divIB-ylxWX-sbp	len 66	site #1	r 45
+CAGTATATCA
+>dnaAN	len 66	site #1	r 42
+TATAATACCA
+>lepA-hemN-hrcA-grpE-dnaKJ-yqeTUV	len 54	site #1	r 38
+GATTGTATCA
+>deoR-dra-nupC-pdp	len 71	site #1	r 54
+TAGCATAACC
+>drm-punA	len 48	site #1	r 36
+TATTGTATCG
+>fabHAF	len 55	site #1	f 25
+TAGGATAGAA
+>fapR-plsX-fabDG	len 64	site #1	r 34
+TAGTATATAA
+>fbp	len 52	site #1	f 35
+TATCATATAA
+>ftsAZ	len 66	site #1	f 36
+TAGAATAGAA
+>ftsH	len 50	site #1	f 25
+TATGGTACTA
+>fur	len 49	site #1	r 35
+CATTATAACA
+>gapB-speD	len 59	site #1	r 43
+TAGTATAACA
+>gapB-speD	len 59	site #2	f 50
+GATAGTAACA
+>gabP	len 50	site #1	f 23
+TATGATAGAG
+>gabP	len 51	site #1	f 13
+TATGATAGAG
+>gabR	len 52	site #1	r 41
+CATCATACCA
+>gabTD	len 58	site #1	f 12
+CATCATACCA
+>galE	len 50	site #1	r 36
+CATTATATAG
+>glpD	len 65	site #1	r 41
+CATTATACCA
+>glpTQ	len 64	site #1	r 58
+CATGATAGCG
+>ybgJ-ybgH	len 76	site #1	f 40
+CATTATACAG
+>gltAB	len 66	site #1	f 42
+GATTATAGAG
+>gltR	len 60	site #1	r 36
+TATGATAGCA
+>gltX-cysES-yazC-yacOP	len 64	site #1	r 42
+TATTCTACCA
+>gntRKPZ	len 64	site #1	r 40
+TATGATAACG
+>gtaB	len 48	site #1	f 29
+TATCATAAAA
+>guaD	len 50	site #1	r 36
+TAGTATAGCC
+>gudB	len 51	site #1	r 37
+TAGTATACAC
+>gyrA	len 65	site #1	r 41
+CATTATATCA
+>hbs	len 59	site #1	r 35
+TAGAGTAACA
+>hemZ	len 47	site #1	r 35
+TAGTGTACAG
+>htrA	len 52	site #1	f 34
+TATGATAAAC
+>hut	len 64	site #1	r 43
+TATTATATTA
+>ydjK	len 47	site #1	f 30
+TATGATAATA
+>kinB-kapB	len 45	site #1	r 32
+TATTATAACA
+>kinC	len 65	site #1	r 41
+TATTGTACCA
+>lepA-hemN-hrcA-grpE-dnaKJ-yqeTUV	len 71	site #1	r 53
+GATTATATCA
+>licBCAH	len 47	site #1	f 32
+GATGATAGCA
+>licR	len 43	site #1	f 24
+CATTATAGAA
+>lonA-ysxC	len 62	site #1	r 38
+TAGTATACCC
+>lonA-ysxC	len 65	site #1	r 38
+TATAATACAA
+>menBEC	len 64	site #1	r 40
+TATTATAAAC
+>mmsA-iolBCDEF-idh-iolHI-fbaB	len 48	site #1	r 23
+CATAATACCC
+>mta	len 46	site #1	r 36
+TATCGTAAAC
+>nfrA-ywcH	len 46	site #1	f 30
+TATGATAAAA
+>nrgAB	len 66	site #1	r 42
+CATTATAGAG
+>opuBABCD	len 56	site #1	r 36
+CATTATAGAA
+>pckA	len 75	site #1	r 53
+TAGTATAACA
+>pckA	len 75	site #2	f 20
+TAGTATAGAC
+>pbpD-yuxK	len 66	site #1	r 42
+TATCGTACCA
+>pbpF	len 66	site #1	f 17
+TAGTATATCA
+>pdhABCD	len 77	site #1	r 69
+TAGGGTACCC
+>perR	len 47	site #1	f 15
+TATCGTAGAA
+>cggR-gapA-pgk-tpiA-pgm-eno	len 59	site #1	r 42
+CATTATAGCG
+>pheST	len 44	site #1	r 34
+TATTATAGAG
+>phoA	len 71	site #1	f 44
+CATGATAAAC
+>rapE-phrE	len 62	site #1	r 47
+CATTATAATC
+>pmi	len 61	site #1	r 46
+TATTATATCA
+>pssA-ybfM-psd	len 46	site #1	r 33
+TATTATACAA
+>pta	len 44	site #1	r 33
+TAGCATACTC
+>ptsGHI	len 47	site #1	r 38
+TATTATATCA
+>ptsGHI	len 53	site #1	r 39
+TATTGTAGCA
+>yurHG	len 48	site #1	r 36
+CATTATAGAA
+>pucH	len 45	site #1	f 19
+CATAGTAGCA
+>rapA-phrA	len 70	site #1	f 35
+TATGATAAAA
+>rapB	len 55	site #1	f 33
+TATGATAAAA
+>rapC-phrC	len 41	site #1	f 21
+CATGATAAAA
+>rapD	len 48	site #1	r 36
+TATCATATCA
+>rbsRKDACB	len 68	site #1	f 33
+CATGATAATC
+>rpmH	len 52	site #1	r 38
+TAGGATACCA
+>rpoB	len 46	site #1	f 32
+TATTGTAAAA
+>ywjF-acdA-rpoE	len 65	site #1	r 48
+CATTATAAAC
+>rpsD	len 65	site #1	r 41
+CATTATATAA
+>rrnA-16S-trnA-Ile-trnA-Ala-rrnA-23S-rrnA-5S	len 68	site #1	r 40
+TAGAATAACA
+>rrnA-16S-trnA-Ile-trnA-Ala-rrnA-23S-rrnA-5S	len 60	site #1	r 40
+TATCATAACA
+>rrnO-16S-trnO-Ile-trnO-Ala-rrnO-23S-rrnO-5S	len 64	site #1	r 40
+GATTATACCA
+>rsbRSTUVW-sigB-rsbX	len 67	site #1	r 43
+TATTATATCG
+>sacPA-ywdA	len 52	site #1	r 28
+CATGATAGCG
+>sacXY	len 69	site #1	f 31
+CAGCATAAAA
+>yaaJ-scr	len 54	site #1	f 44
+CATCGTAATA
+>secA-prfB	len 54	site #1	r 37
+TATCATATCA
+>sigH	len 64	site #1	r 40
+TATTATACAG
+>sigM-yhdLK	len 48	site #1	r 38
+TATAGTACCC
+>sinIR	len 61	site #1	f 39
+GATTATAATA
+>sinIR	len 61	site #1	r 44
+TATTATAGCA
+>gapB-speD	len 47	site #1	f 26
+CAGTATACTA
+>spo0B-obg	len 68	site #1	f 45
+CATAATACAC
+>spo0F	len 65	site #1	r 38
+TATAATAGTC
+>spoIIE	len 68	site #1	r 44
+CATTATAGCG
+>spoIIIE	len 45	site #1	r 35
+TATTATAGCA
+>tagDEF	len 47	site #1	r 30
+TAGCATACCG
+>tetLB	len 64	site #1	f 37
+GATCATATCA
+>rrnD	len 52	site #1	r 35
+CATTATACTA
+>trxA	len 58	site #1	r 34
+TAGTATAGCA
+>ureABC	len 47	site #1	r 33
+CATTATATAG
+>valS-folC	len 52	site #1	r 37
+TATTATAGTA
+>veg	len 63	site #1	r 39
+TATTGTACAA
+>wapA-yxxG	len 45	site #1	f 4
+TATTGTAATG
+>xpt-pbuX	len 46	site #1	r 45
+TATTGTAATA
+>xynA	len 61	site #1	f 39
+TATTATACTG
+>xynPB	len 59	site #1	r 40
+TATTATAAAA
+>yaaA-recF-yaaB-gyrB	len 71	site #1	r 43
+TAGCATAGTC
+>skf	len 69	site #1	f 7
+TAGGATAATA
+>ycdHI-yceA	len 78	site #1	r 42
+TATCATAATA
+>yceCDEFGH	len 48	site #1	r 41
+TATTATATCA
+>yciABC	len 77	site #1	r 72
+TATCATAAAA
+>rtpA-ycbK	len 46	site #1	f 28
+TATTATAAAC
+>yfmPO	len 47	site #1	r 36
+CATTATACAC
+>yhaG	len 62	site #1	r 37
+CAGTATACCA
+>yhfL	len 83	site #1	r 34
+CATTATAGAG
+>ykuFG	len 64	site #1	r 27
+CATTATATCC
+>ykvW	len 45	site #1	r 33
+TATTATAGCA
+>ylxM-ffh	len 63	site #1	f 43
+TATCGTAAAG
+>nrdIEF-ymaB	len 56	site #1	r 41
+TAGTATACTA
+>ccdA-yneIJ	len 48	site #1	r 37
+TATTGTACCA
+>ccdA-yneIJ	len 48	site #1	f 27
+GAGTATAGTA
+>yocH	len 50	site #1	r 38
+TATCGTAACA
+>ypuE-ribDEAHT	len 53	site #1	r 37
+TATTATAGCG
+>yqxD-dnaG-sigA	len 48	site #1	r 35
+TATTATAATA
+>ytkD	len 46	site #1	r 35
+CATCATACCA
+>eps	len 51	site #1	r 39
+GATTATAAAA
+>ywcJ	len 51	site #1	r 36
+TAGTATAGCA
+>ywfK	len 44	site #1	r 35
+TATTGTACTC
+>ywjF-acdA-rpoE	len 44	site #1	f 27
+TATCATAAAG
+>yqxM-sipW-tasA	len 47	site #1	f 26
+GATTATACTC
+>ezrA	len 79	site #1	r 53
+TATGATACCA
+>ezrA	len 76	site #1	r 25
+TATGATACCA
+>yrrT-mtn-yrhABC	len 70	site #1	r 53
+TATAATACCA
+>yhcL	len 67	site #1	f 33
+TAGTGTAATA
+>cymR-yrvO-trmU	len 60	site #1	r 42
+TATTATAACA
+>yjbCD	len 60	site #1	r 44
+TATTATACTA
+>yjbCD	len 60	site #2	f 7
+TAGGATACTG
+>yhcYZ-yhdA	len 61	site #1	r 44
+GATTATACCA
+>liaGFSR	len 61	site #1	r 45
+TATTATAAAG
+>yvaB	len 61	site #1	r 46
+TATTATAGAG
+>lytE	len 61	site #1	f 39
+TATAATAGAA
+>narK-fnr	len 67	site #1	r 43
+TATTGTAACG
+>narK-fnr	len 61	site #1	r 47
+TATCATACAA
+>mtnKA	len 70	site #1	r 43
+CATGGTAACA
+>ytmIJKLMNO-ytnIJ-ribR-ytnLM	len 76	site #1	f 45
+TAGTATAAAC
+>ytlI	len 75	site #1	r 47
+TAGTATAAAC
+>ytlI	len 75	site #1	r 47
+TAGTATAAAC
+>bceAB	len 63	site #1	r 48
+CATTATAAAA
+>gmuBACDREFG	len 61	site #1	r 44
+TATTATAGTC
+>ykcBC	len 61	site #1	r 35
+TAGTGTAACA
+>ywsC-ywtABC	len 61	site #1	r 44
+CAGTATATAG
+>thyB-dfrA-ypkP	len 68	site #1	r 51
+TAGTGTAACA
+>hpr	len 61	site #1	f 50
+CATAATAGAG
+>yvcE	len 61	site #1	r 45
+CATTATACCA
+>ydjM	len 61	site #1	r 45
+GATTATACAC
+>yoeB	len 61	site #1	f 33
+TATTGTAACA
+>yoeB	len 61	site #2	f 13
+TATTGTAATC
+>yetL	len 61	site #1	r 46
+GATTATAAAG
+******************************
+
+Motif #5: (TATTATAAAA/TTTTATAATA)
+******************************
+Width (10, 0); Gap [0, 0]; MotifScore 3.317; Sites 179
+
+Blk1    A      C      G      T         Con  rCon Deg  rDeg 
+1      0.00  22.90  13.97  63.13        T    A    T    A
+2     100.00   0.00   0.00   0.00        A    T    A    T
+3      0.00   0.56  20.67  78.77        T    A    T    A
+4     20.67  13.97  15.64  49.72        T    A    T    A
+5     75.42   0.00  24.58   0.00        A    T    A    T
+6      0.56   0.00   0.00  99.44        T    A    T    A
+7     99.44   0.00   0.56   0.00        A    T    A    T
+8     41.34  31.28  27.37   0.00        A    T    V    B
+9     41.34  35.19   0.00  23.46        A    T    M    K
+10    55.86  24.58  19.55   0.00        A    T    A    T
+
+>abnA 	len 56	site #1	r 43
+TATTGTAGTC
+>abrB	len 57	site #1	r 57
+GAGCATAACA
+>abrB	len 59	site #1	r 45
+TAGCATAACA
+>acsA	len 71	site #1	r 47
+TATTATAGTA
+>adaAB	len 68	site #1	r 44
+CACTATAACC
+>antE	len 44	site #1	f 22
+GATGGTAAAA
+>aprE	len 78	site #1	r 54
+TATTGTAATA
+>aprX	len 50	site #1	f 28
+GAGTATACAG
+>araABDLMNPQ-abfA	len 51	site #1	r 19
+TATTATACTG
+>araE	len 45	site #1	r 34
+TAGAATAATC
+>argCJBD-carAB-argF	len 62	site #1	r 38
+CATTATAACA
+>arsR-yqcK-arsBC	len 61	site #1	r 45
+TATTATACTC
+>spoVFAB-asd-dapG-dapA	len 60	site #1	f 25
+TATGGTAAAA
+>bglC	len 68	site #1	r 44
+CATTGTAAAA
+>bsrB	len 50	site #1	r 38
+TATAGTACAC
+>ccdA-yneIJ	len 50	site #1	r 22
+CATTATACTC
+>citA	len 66	site #1	r 47
+TATTATAGTA
+>citR	len 66	site #1	f 17
+TATTATAGTA
+>citZ-icd-mdh	len 67	site #1	r 43
+CATTATAAAC
+>clpE	len 45	site #1	f 25
+GAGTATACTA
+>clpX	len 51	site #1	f 29
+TATGGTAAAA
+>comC	len 70	site #1	r 46
+GATTGTAGCA
+>comGABCDEFG-yqzE	len 67	site #1	r 43
+TATTGTAGAA
+>csbA	len 45	site #1	r 34
+GATTATAGTA
+>cspB	len 69	site #1	f 39
+TAGAGTAAAG
+>cssRS	len 73	site #1	f 51
+TATCATAAAC
+>cssRS	len 58	site #1	r 41
+CATTATAAAC
+>cysK	len 50	site #1	f 41
+CATAATACCC
+>degSU	len 68	site #1	r 44
+TATGATACCA
+>dnaAN	len 66	site #1	r 42
+TATAATACCA
+>deoR-dra-nupC-pdp	len 71	site #1	r 54
+TAGCATAACC
+>fabHAF	len 55	site #1	f 25
+TAGGATAGAA
+>fbp	len 52	site #1	r 38
+GATAGTACCG
+>ftsAZ	len 66	site #1	f 36
+TAGAATAGAA
+>ftsH	len 50	site #1	f 25
+TATGGTACTA
+>fur	len 49	site #1	r 35
+CATTATAACA
+>gapB-speD	len 59	site #1	r 43
+TAGTATAACA
+>gapB-speD	len 59	site #2	f 50
+GATAGTAACA
+>gabP	len 50	site #1	f 23
+TATGATAGAG
+>gabP	len 51	site #1	f 13
+TATGATAGAG
+>gabR	len 52	site #1	r 41
+CATCATACCA
+>gabTD	len 58	site #1	f 12
+CATCATACCA
+>glpD	len 65	site #1	r 41
+CATTATACCA
+>glpTQ	len 57	site #1	r 42
+CATAATAAAA
+>glpTQ	len 64	site #1	r 58
+CATGATAGCG
+>ybgJ-ybgH	len 76	site #1	f 40
+CATTATACAG
+>gltAB	len 66	site #1	f 42
+GATTATAGAG
+>gltR	len 60	site #1	r 36
+TATGATAGCA
+>glyA	len 47	site #1	f 38
+GATGGTAAAC
+>gntRKPZ	len 64	site #1	r 40
+TATGATAACG
+>groESL	len 62	site #1	r 38
+TATAATAAAG
+>gtaB	len 48	site #1	f 29
+TATCATAAAA
+>guaD	len 50	site #1	r 36
+TAGTATAGCC
+>gudB	len 51	site #1	r 37
+TAGTATACAC
+>gyrA	len 65	site #1	r 21
+GATTATACAC
+>hbs	len 59	site #1	r 35
+TAGAGTAACA
+>hemZ	len 47	site #1	r 35
+TAGTGTACAG
+>htrA	len 52	site #1	f 34
+TATGATAAAC
+>hut	len 64	site #1	f 37
+TATAATACTC
+>iolRS	len 45	site #1	r 29
+TATAATAAAA
+>ydjK	len 47	site #1	f 30
+TATGATAATA
+>kinB-kapB	len 45	site #1	r 32
+TATTATAACA
+>kinC	len 65	site #1	r 41
+TATTGTACCA
+>lepA-hemN-hrcA-grpE-dnaKJ-yqeTUV	len 71	site #1	r 39
+GATTGTAAAG
+>licBCAH	len 47	site #1	f 32
+GATGATAGCA
+>licR	len 43	site #1	f 24
+CATTATAGAA
+>lmrAB	len 57	site #1	f 37
+GATAATAGAC
+>lonA-ysxC	len 62	site #1	r 38
+TAGTATACCC
+>lonA-ysxC	len 65	site #1	r 38
+TATAATACAA
+>lytR	len 45	site #1	f 28
+CATAATGAAA
+>menBEC	len 64	site #1	r 40
+TATTATAAAC
+>mmsA-iolBCDEF-idh-iolHI-fbaB	len 48	site #1	r 23
+CATAATACCC
+>mta	len 46	site #1	r 36
+TATCGTAAAC
+>nfrA-ywcH	len 46	site #1	f 30
+TATGATAAAA
+>nrgAB	len 66	site #1	r 42
+CATTATAGAG
+>kinE-ogt	len 60	site #1	f 38
+TATTGAAGAA
+>opuBABCD	len 56	site #1	r 36
+CATTATAGAA
+>pckA	len 75	site #1	r 53
+TAGTATAACA
+>pckA	len 75	site #2	f 20
+TAGTATAGAC
+>pbpD-yuxK	len 66	site #1	r 42
+TATCGTACCA
+>pdhABCD	len 77	site #1	f 58
+TAGGGTACCC
+>perR	len 47	site #1	f 15
+TATCGTAGAA
+>cggR-gapA-pgk-tpiA-pgm-eno	len 59	site #1	r 42
+CATTATAGCG
+>pheST	len 44	site #1	r 34
+TATTATAGAG
+>phoA	len 71	site #1	f 44
+CATGATAAAC
+>rapE-phrE	len 62	site #1	r 47
+CATTATAATC
+>pssA-ybfM-psd	len 46	site #1	r 33
+TATTATACAA
+>pst	len 51	site #1	r 38
+TAGAGTAAAG
+>pta	len 44	site #1	r 33
+TAGCATACTC
+>ptsGHI	len 47	site #1	r 33
+TATCATACAA
+>ptsGHI	len 53	site #1	r 39
+TATTGTAGCA
+>yurHG	len 48	site #1	r 36
+CATTATAGAA
+>pucH	len 45	site #1	f 16
+GATCATAGTA
+>rapA-phrA	len 70	site #1	f 35
+TATGATAAAA
+>rapB	len 55	site #1	f 33
+TATGATAAAA
+>rapC-phrC	len 41	site #1	f 21
+CATGATAAAA
+>rapG-phrG	len 40	site #1	r 32
+GATAGTAACA
+>rbsRKDACB	len 68	site #1	f 33
+CATGATAATC
+>rpmH	len 52	site #1	r 38
+TAGGATACCA
+>rpoB	len 46	site #1	f 32
+TATTGTAAAA
+>ywjF-acdA-rpoE	len 65	site #1	r 48
+CATTATAAAC
+>rrnA-16S-trnA-Ile-trnA-Ala-rrnA-23S-rrnA-5S	len 68	site #1	r 40
+TAGAATAACA
+>rrnA-16S-trnA-Ile-trnA-Ala-rrnA-23S-rrnA-5S	len 60	site #1	r 40
+TATCATAACA
+>rrnO-16S-trnO-Ile-trnO-Ala-rrnO-23S-rrnO-5S	len 64	site #1	r 40
+GATTATACCA
+>rsbRSTUVW-sigB-rsbX	len 67	site #1	f 37
+TATAATAGTG
+>sacPA-ywdA	len 52	site #1	r 28
+CATGATAGCG
+>sacXY	len 69	site #1	f 31
+CAGCATAAAA
+>yaaJ-scr	len 54	site #1	f 44
+CATCGTAATA
+>secA-prfB	len 54	site #1	f 31
+TATGATAATG
+>sigH	len 64	site #1	r 40
+TATTATACAG
+>sigM-yhdLK	len 48	site #1	r 38
+TATAGTACCC
+>sinIR	len 61	site #1	f 42
+TATAATAAAG
+>sinIR	len 61	site #1	r 44
+TATTATAGCA
+>gapB-speD	len 47	site #1	r 35
+TAGTATACTG
+>spo0B-obg	len 68	site #1	f 45
+CATAATACAC
+>spo0F	len 65	site #1	r 38
+TATAATAGTC
+>spoIIE	len 68	site #1	r 44
+CATTATAGCG
+>spoIIIE	len 45	site #1	r 35
+TATTATAGCA
+>tagDEF	len 47	site #1	r 30
+TAGCATACCG
+>rrnD	len 52	site #1	r 35
+CATTATACTA
+>trxA	len 58	site #1	r 34
+TAGTATAGCA
+>valS-folC	len 52	site #1	r 37
+TATTATAGTA
+>veg	len 63	site #1	r 39
+TATTGTACAA
+>wapA-yxxG	len 45	site #1	f 4
+TATTGTAATG
+>xpt-pbuX	len 46	site #1	r 45
+TATTGTAATA
+>xynA	len 61	site #1	f 39
+TATTATACTG
+>xynPB	len 59	site #1	r 40
+TATTATAAAA
+>yaaA-recF-yaaB-gyrB	len 71	site #1	r 43
+TAGCATAGTC
+>skf	len 69	site #1	r 59
+GATAATACCA
+>ycdHI-yceA	len 78	site #1	r 42
+TATCATAATA
+>yceCDEFGH	len 48	site #1	f 35
+TATAATAACA
+>yciABC	len 77	site #1	r 72
+TATCATAAAA
+>rtpA-ycbK	len 46	site #1	r 34
+TATAATACTC
+>yfmPO	len 47	site #1	r 36
+CATTATACAC
+>yhaG	len 62	site #1	r 37
+CAGTATACCA
+>yhfL	len 83	site #1	r 34
+CATTATAGAG
+>ykvW	len 45	site #1	r 33
+TATTATAGCA
+>ylxM-ffh	len 63	site #1	f 43
+TATCGTAAAG
+>nrdIEF-ymaB	len 56	site #1	r 41
+TAGTATACTA
+>ccdA-yneIJ	len 48	site #1	r 37
+TATTGTACCA
+>ccdA-yneIJ	len 48	site #2	r 48
+TATAATAGTC
+>ccdA-yneIJ	len 48	site #1	f 27
+GAGTATAGTA
+>yocH	len 50	site #1	r 38
+TATCGTAACA
+>ypuE-ribDEAHT	len 53	site #1	r 37
+TATTATAGCG
+>yqxD-dnaG-sigA	len 48	site #1	r 32
+TATAATACAA
+>ytkD	len 46	site #1	r 35
+CATCATACCA
+>eps	len 51	site #1	r 39
+GATTATAAAA
+>ywcJ	len 51	site #1	r 36
+TAGTATAGCA
+>ywfK	len 44	site #1	r 35
+TATTGTACTC
+>ywjF-acdA-rpoE	len 44	site #1	f 27
+TATCATAAAG
+>yqxM-sipW-tasA	len 47	site #1	f 26
+GATTATACTC
+>ezrA	len 79	site #1	r 53
+TATGATACCA
+>ezrA	len 76	site #1	r 25
+TATGATACCA
+>yrrT-mtn-yrhABC	len 70	site #1	r 53
+TATAATACCA
+>yhcL	len 67	site #1	f 33
+TAGTGTAATA
+>cymR-yrvO-trmU	len 60	site #1	r 42
+TATTATAACA
+>yjbCD	len 60	site #1	r 44
+TATTATACTA
+>yhcYZ-yhdA	len 61	site #1	r 44
+GATTATACCA
+>liaGFSR	len 61	site #1	f 39
+TATAATAGAA
+>yvaB	len 61	site #1	r 46
+TATTATAGAG
+>mhqNOP	len 61	site #1	r 49
+GATAATAGTA
+>lytE	len 61	site #1	f 39
+TATAATAGAA
+>narK-fnr	len 67	site #1	r 43
+TATTGTAACG
+>narK-fnr	len 61	site #1	r 47
+TATCATACAA
+>mtnKA	len 70	site #1	r 43
+CATGGTAACA
+>ytmIJKLMNO-ytnIJ-ribR-ytnLM	len 76	site #1	f 45
+TAGTATAAAC
+>ytlI	len 75	site #1	r 47
+TAGTATAAAC
+>ytlI	len 75	site #1	r 47
+TAGTATAAAC
+>bceAB	len 63	site #1	r 48
+CATTATAAAA
+>gmuBACDREFG	len 61	site #1	r 44
+TATTATAGTC
+>yrkPQR	len 61	site #1	r 41
+CATAGTAATA
+>ykcBC	len 61	site #1	r 35
+TAGTGTAACA
+>yngABC	len 61	site #1	f 39
+TATAGTAATC
+>thyB-dfrA-ypkP	len 68	site #1	r 51
+TAGTGTAACA
+>hpr	len 61	site #1	f 50
+CATAATAGAG
+>yvcE	len 61	site #1	r 45
+CATTATACCA
+>ydjM	len 61	site #1	r 45
+GATTATACAC
+>yoeB	len 61	site #1	f 33
+TATTGTAACA
+>yetL	len 61	site #1	r 46
+GATTATAAAG
+******************************
+
+Total time 0:0:5.
