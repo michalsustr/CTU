@@ -1,0 +1,6 @@
+
+--This line, and those below, will be ignored--
+
+M    src/matrixcalculator/Main.java
+M    src/matrixcalculator/Matrix.java
+M    src/matrixcalculator/ParserException.java

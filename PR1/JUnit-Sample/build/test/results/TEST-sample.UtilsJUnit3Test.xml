@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="jolly" name="sample.UtilsJUnit3Test" tests="3" time="1.094" timestamp="2010-12-12T12:19:32">
+  <properties>
+    <property name="libs.jsp-compiler.javadoc" value="" />
+    <property name="netbeans.autoupdate.country" value="US" />
+    <property name="javac.test.classpath" value=":build/classes:/usr/local/netbeans/java/modules/ext/junit-3.8.2.jar:/usr/local/netbeans/platform/modules/ext/junit-4.5.jar" />
+    <property name="libs.jsf20.maven-pom" value="" />
+    <property name="libs.DataBindingME.src" value="" />
+    <property name="libs.j2me_ant_ext.javadoc" value="" />
+    <property name="libs.proguard.javadoc" value="" />
+    <property name="libs.junit.javadoc" value="/usr/local/netbeans/java/docs/junit-3.8.2-api.zip" />
+    <property name="libs.nsicom-ant-utils.src" value="" />
+    <property name="libs.nokiaS80-ant-utils.javadoc" value="" />
+    <property name="ant.core.lib" value="/usr/local/netbeans/java/ant/lib/ant.jar" />
+    <property name="libs.swing-app-framework.src" value="" />
+    <property name="libs.jakarta_slide_ant_webdav.javadoc" value="" />
+    <property name="javadoc.windowtitle" value="" />
+    <property name="libs.toplink.classpath" value="/usr/local/netbeans/java/modules/ext/toplink/toplink-essentials.jar:/usr/local/netbeans/java/modules/ext/toplink/toplink-essentials-agent.jar" />
+    <property name="libs.jsp-compilation.javadoc" value="" />
+    <property name="user.dir" value="/data/Code/JUnit-Sample" />
+    <property name="libs.hibernate-persistence.javadoc" value="" />
+    <property name="libs.JMUnit4CLDC10.javadoc" value="/usr/local/netbeans/mobility/modules/docs/jmunit-1.2.1-api.zip" />
+    <property name="java.vm.version" value="17.1-b03" />
+    <property name="libs.DataBindingME.classpath" value="/usr/local/netbeans/mobility/modules/ext/netbeans_databindingme.jar" />
+    <property name="libs.jstl11.maven-pom" value="" />
+    <property name="libs.nsicom-ant-utils.classpath" value="/usr/local/netbeans/mobility/ant/nblib/org-netbeans-modules-j2me-cdc-project-nsicom.jar" />
+    <property name="libs.MySQLDriver.classpath" value="/usr/local/netbeans/ide/modules/ext/mysql-connector-java-5.1.6-bin.jar" />
+    <property name="libs.jstl11.src" value="" />
+    <property name="javadoc.notree" value="false" />
+    <property name="netbeans.autoupdate.version" value="1.23" />
+    <property name="libs.javaee-web-api-6.0.classpath" value="/usr/local/netbeans/enterprise/modules/ext/javaee-web-api-6.0.jar" />
+    <property name="libs.DataBindingME-PIM.maven-pom" value="" />
+    <property name="libs.hibernate-support.maven-pom" value="" />
+    <property name="libs.hibernate-support.javadoc" value="" />
+    <property name="libs.NetBeans MIDP Components.maven-pom" value="" />
+    <property name="jdk.home" value="/usr/lib/jvm/java-6-sun" />
+    <property name="libs.javac-api.src" value="" />
+    <property name="javadoc.noindex" value="false" />
+    <property name="sun.os.patch.level" value="unknown" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="libs.semc-ant-utils.classpath" value="/usr/local/netbeans/mobility/modules/ext/org-netbeans-modules-j2me-cdc-project-semc.jar" />
+    <property name="nb.show.statistics.ui" value="usageStatisticsEnabled" />
+    <property name="libs.nokiadeployment.classpath" value="/usr/local/netbeans/mobility/modules/org-netbeans-modules-mobility-deployment-nokia.jar" />
+    <property name="netbeans.autoupdate.variant" value="" />
+    <property name="have.tests" value="true" />
+    <property name="libs.nokiaS80-ant-utils.maven-pom" value="" />
+    <property name="org.xml.sax.driver" value="com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser" />
+    <property name="libs.nb_svg_midp_components.src" value="/usr/local/netbeans/mobility/sources/nb_svg_midp_components-src.zip" />
+    <property name="libs.NetBeans MIDP Components WMA.src" value="/usr/local/netbeans/mobility/sources/netbeans_midp_components_wma-src.zip" />
+    <property name="libs.javac-api.javadoc" value="" />
+    <property name="os.name" value="Linux" />
+    <property name="libs.beans-binding.classpath" value="/usr/local/netbeans/java/modules/ext/beansbinding-1.2.1.jar" />
+    <property name="libs.DataBindingME-SVG.javadoc" value="/usr/local/netbeans/mobility/modules/docs/netbeans_databindingme_svg-api.zip" />
+    <property name="libs.restapi.javadoc" value="/usr/local/netbeans/enterprise/docs/jsr311-api-1.1.1-javadoc.zip" />
+    <property name="libs.JWSAntTasks.maven-pom" value="" />
+    <property name="libs.spring-webmvc3.0.src" value="" />
+    <property name="libs.restapi.classpath" value="/usr/local/netbeans/enterprise/modules/ext/rest/jsr311-api-1.1.1.jar" />
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi" />
+    <property name="libs.nsicom-ant-utils.javadoc" value="" />
+    <property name="libs.jaxb.maven-pom" value="" />
+    <property name="os.arch" value="amd64" />
+    <property name="libs.eclipselink.src" value="" />
+    <property name="user.name" value="michal" />
+    <property name="libs.jsf12.javadoc" value="/usr/local/netbeans/enterprise/docs/javaee6-doc-api.zip" />
+    <property name="ant.file.JUnitSampleSol" value="/home/michal/Code/JUnit-Sample/build.xml" />
+    <property name="libs.spring-webmvc3.0.maven-pom" value="" />
+    <property name="libs.swing-layout.maven-pom" value="" />
+    <property name="build.classes.dir" value="build/classes" />
+    <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
+    <property name="build.sysclasspath" value="ignore" />
+    <property name="libs.jaxws21.javadoc" value="/usr/local/netbeans/java/docs/jaxws-api-doc.zip" />
+    <property name="includes" value="**" />
+    <property name="platforms.default_fx_platform.java" value="/usr/lib/jvm/java-6-sun-1.6.0.22/jre/bin/java" />
+    <property name="user.country" value="US" />
+    <property name="libs.jstl11.javadoc" value="/usr/local/netbeans/enterprise/docs/javaee6-doc-api.zip" />
+    <property name="libs.JMUnit4CLDC11.src" value="" />
+    <property name="javadoc.encoding" value="UTF-8" />
+    <property name="javac.classpath" value="" />
+    <property name="netbeans.system_http_non_proxy_hosts" value="" />
+    <property name="netbeans.home" value="/usr/local/netbeans/platform" />
+    <property name="build.compiler.emacs" value="true" />
+    <property name="libs.javaee-web-api-6.0.src" value="" />
+    <property name="libs.ejb3-persistence.src" value="" />
+    <property name="libs.nokiaS80-ant-utils.src" value="" />
+    <property name="libs.cdc-pp-awt-layout.javadoc" value="" />
+    <property name="libs.j2me_ant_ext.classpath" value="/usr/local/netbeans/mobility/modules/org-netbeans-modules-mobility-antext.jar:/usr/local/netbeans/java/modules/org-netbeans-modules-classfile.jar" />
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-6-sun-1.6.0.22/jre/lib/endorsed" />
+    <property name="libs.groovy-all.src" value="" />
+    <property name="netbeans.dynamic.classpath" value="/usr/local/netbeans/platform/core/core.jar:/usr/local/netbeans/platform/core/org-openide-filesystems.jar:/usr/local/netbeans/platform/core/locale/org-openide-filesystems_ja.jar:/usr/local/netbeans/platform/core/locale/core_ja.jar:/usr/local/netbeans/platform/core/locale/org-openide-filesystems_pt_BR.jar:/usr/local/netbeans/platform/core/locale/org-openide-filesystems_zh_CN.jar:/usr/local/netbeans/platform/core/locale/core_pt_BR.jar:/usr/local/netbeans/platform/core/locale/core_zh_CN.jar:/usr/local/netbeans/nb/core/org-netbeans-upgrader.jar:/usr/local/netbeans/nb/core/locale/org-netbeans-upgrader_pt_BR.jar:/usr/local/netbeans/nb/core/locale/core_nb.jar:/usr/local/netbeans/nb/core/locale/core_nb_pt_BR.jar:/usr/local/netbeans/nb/core/locale/core_nb_ja.jar:/usr/local/netbeans/nb/core/locale/org-netbeans-upgrader_zh_CN.jar:/usr/local/netbeans/nb/core/locale/org-netbeans-upgrader_ja.jar:/usr/local/netbeans/nb/core/locale/core_nb_zh_CN.jar" />
+    <property name="libs.cdc-agui-swing-layout.maven-pom" value="" />
+    <property name="libs.cdc-pp-awt-layout.src" value="/usr/local/netbeans/mobility/sources/cdc-pp-awt-layout-src.zip" />
+    <property name="java.vm.specification.version" value="1.0" />
+    <property name="libs.jakarta_slide_ant_webdav.src" value="" />
+    <property name="ant.file.JUnitSampleSol-impl" value="/home/michal/Code/JUnit-Sample/nbproject/build-impl.xml" />
+    <property name="libs.javaee-api-6.0.classpath" value="/usr/local/netbeans/enterprise/modules/ext/javaee-api-6.0.jar" />
+    <property name="libs.sjmc-ant-utils.maven-pom" value="" />
+    <property name="libs.groovy-all.maven-pom" value="" />
+    <property name="libs.JMUnit4CLDC10.maven-pom" value="" />
+    <property name="libs.hibernate-persistence.classpath" value="/usr/local/netbeans/java/modules/ext/hibernate/antlr-2.7.6.jar:/usr/local/netbeans/java/modules/ext/hibernate/asm.jar:/usr/local/netbeans/java/modules/ext/hibernate/asm-attrs.jar:/usr/local/netbeans/java/modules/ext/hibernate/cglib-2.1.3.jar:/usr/local/netbeans/java/modules/ext/hibernate/commons-collections-2.1.1.jar:/usr/local/netbeans/ide/modules/ext/commons-logging-1.1.jar:/usr/local/netbeans/java/modules/ext/hibernate/dom4j-1.6.1.jar:/usr/local/netbeans/java/modules/ext/hibernate/ehcache-1.2.3.jar:/usr/local/netbeans/java/modules/ext/hibernate/jdbc2_0-stdext.jar:/usr/local/netbeans/java/modules/ext/hibernate/jta.jar:/usr/local/netbeans/java/modules/ext/hibernate/hibernate3.jar:/usr/local/netbeans/java/modules/ext/hibernate/hibernate-tools.jar:/usr/local/netbeans/java/modules/ext/hibernate/hibernate-annotations.jar:/usr/local/netbeans/java/modules/ext/hibernate/hibernate-commons-annotations.jar:/usr/local/netbeans/java/modules/ext/hibernate/hibernate-entitymanager.jar:/usr/local/netbeans/java/modules/ext/hibernate/javassist.jar:/usr/local/netbeans/java/modules/ext/hibernate/ejb3-persistence.jar" />
+    <property name="libs.jaxws21.src" value="" />
+    <property name="libs.swing-app-framework.classpath" value="/usr/local/netbeans/java/modules/ext/appframework-1.0.3.jar:/usr/local/netbeans/java/modules/ext/swing-worker-1.1.jar" />
+    <property name="netbeans.autoupdate.language" value="en" />
+    <property name="libs.jakarta_slide_ant_webdav.classpath" value="/usr/local/netbeans/mobility/modules/ext/commons-httpclient-3.0.1.jar:/usr/local/netbeans/ide/modules/ext/commons-logging-1.1.jar:/usr/local/netbeans/java/modules/ext/jdom-1.0.jar:/usr/local/netbeans/mobility/modules/ext/jakarta-slide-webdavlib-2.1.jar:/usr/local/netbeans/mobility/modules/ext/jakarta-slide-ant-webdav-2.1.jar" />
+    <property name="java.vendor" value="Sun Microsystems Inc." />
+    <property name="libs.JMUnit4CLDC10.src" value="" />
+    <property name="libs.javaee-api-6.0.javadoc" value="/usr/local/netbeans/enterprise/docs/javaee6-doc-api.zip" />
+    <property name="javac.debug" value="true" />
+    <property name="javadoc.splitindex" value="true" />
+    <property name="file.separator" value="/" />
+    <property name="libs.IdentityAntTasks.src" value="" />
+    <property name="libs.ActiveSync.classpath" value="/usr/local/netbeans/mobility/modules/ext/nbactivesync-5.0.jar" />
+    <property name="libs.junit_4.maven-pom" value="" />
+    <property name="netbeans.buildnumber" value="201007282301" />
+    <property name="libs.JWSAntTasks.javadoc" value="" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="libs.junit.classpath" value="/usr/local/netbeans/java/modules/ext/junit-3.8.2.jar" />
+    <property name="libs.jaxb.javadoc" value="/usr/local/netbeans/ide/docs/jaxb-api-doc.zip" />
+    <property name="libs.struts.classpath" value="/usr/local/netbeans/enterprise/modules/ext/struts/antlr-2.7.2.jar:/usr/local/netbeans/enterprise/modules/ext/struts/bsf-2.3.0.jar:/usr/local/netbeans/enterprise/modules/ext/struts/commons-beanutils-1.7.0.jar:/usr/local/netbeans/enterprise/modules/ext/struts/commons-chain-1.1.jar:/usr/local/netbeans/enterprise/modules/ext/struts/commons-digester-1.8.jar:/usr/local/netbeans/enterprise/modules/ext/struts/commons-fileupload-1.1.1.jar:/usr/local/netbeans/enterprise/modules/ext/struts/commons-io-1.1.jar:/usr/local/netbeans/enterprise/modules/ext/struts/commons-logging-1.0.4.jar:/usr/local/netbeans/enterprise/modules/ext/struts/commons-validator-1.3.1.jar:/usr/local/netbeans/enterprise/modules/ext/struts/jstl-1.0.2.jar:/usr/local/netbeans/enterprise/modules/ext/struts/oro-2.0.8.jar:/usr/local/netbeans/enterprise/modules/ext/struts/standard-1.0.2.jar:/usr/local/netbeans/enterprise/modules/ext/struts/struts-core-1.3.8.jar:/usr/local/netbeans/enterprise/modules/ext/struts/struts-el-1.3.8.jar:/usr/local/netbeans/enterprise/modules/ext/struts/struts-extras-1.3.8.jar:/usr/local/netbeans/enterprise/modules/ext/struts/struts-faces-1.3.8.jar:/usr/local/netbeans/enterprise/modules/ext/struts/struts-mailreader-dao-1.3.8.jar:/usr/local/netbeans/enterprise/modules/ext/struts/struts-scripting-1.3.8.jar:/usr/local/netbeans/enterprise/modules/ext/struts/struts-taglib-1.3.8.jar:/usr/local/netbeans/enterprise/modules/ext/struts/struts-tiles-1.3.8.jar" />
+    <property name="ant.home" value="/usr/local/netbeans/java/ant" />
+    <property name="libs.junit_4.src" value="/usr/local/netbeans/java/docs/junit-4.5-src.jar" />
+    <property name="libs.ricoh-ant-utils.maven-pom" value="" />
+    <property name="libs.absolutelayout.maven-pom" value="" />
+    <property name="ant.java.version" value="1.6" />
+    <property name="java.library.path" value="/usr/lib/jvm/java-6-sun-1.6.0.22/jre/lib/amd64/server:/usr/lib/jvm/java-6-sun-1.6.0.22/jre/lib/amd64:/usr/lib/jvm/java-6-sun-1.6.0.22/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib" />
+    <property name="javadoc.author" value="false" />
+    <property name="libs.metro.maven-pom" value="" />
+    <property name="libs.IdentityAntTasks.classpath" value="/usr/local/netbeans/identity/ant/nblib/org-netbeans-modules-identity-ant.jar:/usr/local/netbeans/identity/modules/org-netbeans-modules-identity-profile-api.jar" />
+    <property name="java.util.logging.config.class" value="org.netbeans.core.startup.TopLogging" />
+    <property name="libs.PostgreSQLDriver.src" value="" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="basedir" value="/home/michal/Code/JUnit-Sample" />
+    <property name="libs.ActiveSync.src" value="" />
+    <property name="jar.compress" value="false" />
+    <property name="libs.NetBeans MIDP Components PDA.src" value="/usr/local/netbeans/mobility/sources/netbeans_midp_components_pda-src.zip" />
+    <property name="libs.jstl11.classpath" value="/usr/local/netbeans/enterprise/modules/ext/standard.jar:/usr/local/netbeans/enterprise/modules/ext/jstl.jar" />
+    <property name="path.separator" value=":" />
+    <property name="libs.javaee-web-api-6.0.javadoc" value="/usr/local/netbeans/enterprise/docs/javaee6-doc-api.zip" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="libs.semc-ant-utils.javadoc" value="" />
+    <property name="libs.jaxws21.classpath" value="/usr/local/netbeans/ide/modules/ext/jaxb/jaxb-impl.jar:/usr/local/netbeans/ide/modules/ext/jaxb/jaxb-xjc.jar:/usr/local/netbeans/java/modules/ext/jaxws22/FastInfoset.jar:/usr/local/netbeans/java/modules/ext/jaxws22/gmbal-api-only.jar:/usr/local/netbeans/java/modules/ext/jaxws22/http.jar:/usr/local/netbeans/java/modules/ext/jaxws22/jaxws-rt.jar:/usr/local/netbeans/java/modules/ext/jaxws22/jaxws-tools.jar:/usr/local/netbeans/java/modules/ext/jaxws22/management-api.jar:/usr/local/netbeans/java/modules/ext/jaxws22/mimepull.jar:/usr/local/netbeans/java/modules/ext/jaxws22/policy.jar:/usr/local/netbeans/java/modules/ext/jaxws22/saaj-impl.jar:/usr/local/netbeans/java/modules/ext/jaxws22/stax-ex.jar:/usr/local/netbeans/java/modules/ext/jaxws22/streambuffer.jar:/usr/local/netbeans/java/modules/ext/jaxws22/woodstox.jar:/usr/local/netbeans/java/modules/ext/jaxws22/api/jaxws-api.jar:/usr/local/netbeans/java/modules/ext/jaxws22/api/jsr181-api.jar:/usr/local/netbeans/java/modules/ext/jaxws22/api/jsr250-api.jar:/usr/local/netbeans/java/modules/ext/jaxws22/api/saaj-api.jar:/usr/local/netbeans/ide/modules/ext/jaxb/activation.jar:/usr/local/netbeans/ide/modules/ext/jaxb/api/jaxb-api.jar:/usr/local/netbeans/ide/modules/ext/jaxb/api/jsr173_api.jar" />
+    <property name="libs.struts.src" value="" />
+    <property name="compile.on.save" value="true" />
+    <property name="apple.awt.graphics.UseQuartz" value="true" />
+    <property name="user.language" value="en" />
+    <property name="libs.spring-framework.classpath" value="/usr/local/netbeans/ide/modules/ext/commons-logging-1.1.jar:/usr/local/netbeans/java/modules/ext/cglib-2.2.jar:/usr/local/netbeans/java/modules/ext/spring/spring-2.5.6.SEC01.jar" />
+    <property name="libs.eclipselink.maven-pom" value="" />
+    <property name="libs.spring-framework300.maven-pom" value="" />
+    <property name="run.test.classpath" value=":build/classes:/usr/local/netbeans/java/modules/ext/junit-3.8.2.jar:/usr/local/netbeans/platform/modules/ext/junit-4.5.jar:build/test/classes" />
+    <property name="ant.project.invoked-targets" value="test" />
+    <property name="useJavaUtilZip" value="true" />
+    <property name="libs.swing-layout.javadoc" value="/usr/local/netbeans/platform/docs/swing-layout-1.0.4-doc.zip" />
+    <property name="libs.swing-app-framework.javadoc" value="/usr/local/netbeans/java/docs/appframework-1.0.3-doc.zip" />
+    <property name="libs.ejb3-persistence.maven-pom" value="" />
+    <property name="libs.proguard.classpath" value="/usr/local/netbeans/mobility/external/proguard/proguard4.4.jar" />
+    <property name="libs.DataBindingME-SVG.classpath" value="/usr/local/netbeans/mobility/modules/ext/netbeans_databindingme_svg.jar" />
+    <property name="https.nonProxyHosts" value="localhost|127.0.0.1|jolly" />
+    <property name="libs.PostgreSQLDriver.maven-pom" value="" />
+    <property name="java.class.version" value="50.0" />
+    <property name="libs.javaee-endorsed-api-6.0.src" value="" />
+    <property name="libs.cdc-ant-utils.classpath" value="/usr/local/netbeans/mobility/modules/ext/org-netbeans-modules-j2me-cdc-project.jar" />
+    <property name="netbeans.system_http_proxy" value="DIRECT" />
+    <property name="libs.eclipselink.javadoc" value="/usr/local/netbeans/enterprise/docs/javaee6-doc-api.zip" />
+    <property name="libs.NetBeans MIDP Components WMA.maven-pom" value="" />
+    <property name="libs.jsp-compilation.maven-pom" value="" />
+    <property name="user.properties.file" value="/home/michal/.netbeans/6.9/build.properties" />
+    <property name="platforms.default_fx_platform.bootclasspath" value="/usr/local/netbeans/javafx/javafx-sdk/lib/shared/javafxc.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/shared/javafxrt.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/rt15.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/javafx-geom.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/javafx-ui-common.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/javafx-ui-desktop.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/javafx-ui-swing.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/javafx-ext-swing.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/fxdloader.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/websvc.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/javafx-ui-controls.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/javafx-ui-charts.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/javafx-common.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/javafx-io.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/eula.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/javafx-anim.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/decora-runtime.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/decora-j2d.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/decora-jsw.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/decora-sse.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/decora-d3d.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/decora-j2d-rsl.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/decora-ogl.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/decora-j2d-jogl.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/javafx-sg-common.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/javafx-sg-swing.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/jogl-common.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/jogl-awt.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/jmc.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/desktop/script-api.jar:/usr/local/netbeans/javafx/javafx-sdk/lib/mobile/javafxapi-cldc.jar" />
+    <property name="libs.spring-framework.src" value="" />
+    <property name="libs.javac-api.maven-pom" value="" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="libs.JWSAntTasks.classpath" value="/usr/local/netbeans/java/ant/extra/org-netbeans-modules-javawebstart-anttasks.jar" />
+    <property name="libs.spring-framework300.src" value="" />
+    <property name="libs.ant-contrib.classpath" value="/usr/local/netbeans/mobility/modules/ext/ant-contrib-1.0b3.jar" />
+    <property name="platforms.default_fx_platform.compiler" value="modern" />
+    <property name="version-output" value="java version &quot;1.6" />
+    <property name="javadoc.preview" value="true" />
+    <property name="java.home" value="/usr/lib/jvm/java-6-sun-1.6.0.22/jre" />
+    <property name="libs.jsp-compilation.src" value="" />
+    <property name="libs.ricoh-ant-utils.src" value="" />
+    <property name="libs.spring-webmvc.src" value="" />
+    <property name="libs.ant-contrib.javadoc" value="" />
+    <property name="debug.test.classpath" value=":build/classes:/usr/local/netbeans/java/modules/ext/junit-3.8.2.jar:/usr/local/netbeans/platform/modules/ext/junit-4.5.jar:build/test/classes" />
+    <property name="libs.javaee-endorsed-api-6.0.classpath" value="/usr/local/netbeans/enterprise/modules/ext/javaee6-endorsed/javax.annotation.jar:/usr/local/netbeans/enterprise/modules/ext/javaee6-endorsed/jaxb-api-osgi.jar:/usr/local/netbeans/enterprise/modules/ext/javaee6-endorsed/webservices-api-osgi.jar" />
+    <property name="libs.javaee-api-6.0.src" value="" />
+    <property name="netbeans.importclass" value="org.netbeans.upgrade.AutoUpgrade" />
+    <property name="ant.project.default-target" value="default" />
+    <property name="libs.savaje-ant-utils.classpath" value="/usr/local/netbeans/mobility/modules/ext/org-netbeans-modules-j2me-cdc-project-savaje.jar" />
+    <property name="libs.toplink.maven-pom" value="" />
+    <property name="libs.DataBindingME.maven-pom" value="" />
+    <property name="libs.PostgreSQLDriver.javadoc" value="" />
+    <property name="libs.restlib.classpath" value="/usr/local/netbeans/enterprise/modules/ext/rest/asm-3.1.jar:/usr/local/netbeans/enterprise/modules/ext/rest/jackson-core-asl-1.1.1.jar:/usr/local/netbeans/enterprise/modules/ext/rest/jersey-client-1.1.5.1.jar:/usr/local/netbeans/enterprise/modules/ext/rest/jersey-core-1.1.5.1.jar:/usr/local/netbeans/enterprise/modules/ext/rest/jersey-json-1.1.5.1.jar:/usr/local/netbeans/enterprise/modules/ext/rest/jersey-server-1.1.5.1.jar:/usr/local/netbeans/enterprise/modules/ext/rest/jersey-spring-1.1.5.1.jar:/usr/local/netbeans/enterprise/modules/ext/rest/jettison-1.1.jar:/usr/local/netbeans/enterprise/modules/ext/rest/oauth-client-1.1.5.1.jar:/usr/local/netbeans/enterprise/modules/ext/rest/oauth-signature-1.1.5.1.jar:/usr/local/netbeans/ide/modules/ext/jaxb/activation.jar:/usr/local/netbeans/ide/modules/ext/jaxb/api/jaxb-api.jar:/usr/local/netbeans/ide/modules/ext/jaxb/api/jsr173_api.jar" />
+    <property name="libs.JMUnit4CLDC11.javadoc" value="/usr/local/netbeans/mobility/modules/docs/jmunit-1.2.1-api.zip" />
+    <property name="libs.nsicom-ant-utils.maven-pom" value="" />
+    <property name="libs.MySQLDriver.maven-pom" value="" />
+    <property name="libs.savaje-ant-utils.src" value="" />
+    <property name="http.nonProxyHosts" value="localhost|127.0.0.1|jolly" />
+    <property name="libs.junit_4.javadoc" value="/usr/local/netbeans/java/docs/junit-4.5-api.zip" />
+    <property name="libs.spring-webmvc.javadoc" value="" />
+    <property name="libs.toplink.src" value="" />
+    <property name="libs.javaee-web-api-6.0.maven-pom" value="" />
+    <property name="libs.cdc-pp-awt-layout.classpath" value="/usr/local/netbeans/mobility/modules/ext/cdc-pp-awt-layout.jar" />
+    <property name="libs.cdc-agui-swing-layout.src" value="/usr/local/netbeans/mobility/sources/cdc-agui-swing-layout-src.zip" />
+    <property name="run.classpath" value=":build/classes" />
+    <property name="libs.hibernate-support.src" value="" />
+    <property name="libs.javaee-endorsed-api-6.0.javadoc" value="/usr/local/netbeans/enterprise/docs/javaee6-doc-api.zip" />
+    <property name="libs.JMUnit4CLDC11.classpath" value="/usr/local/netbeans/mobility/modules/ext/jmunit4cldc11-1.2.1.jar" />
+    <property name="libs.nb_svg_midp_components.classpath" value="/usr/local/netbeans/mobility/modules/ext/nb_svg_midp_components.jar" />
+    <property name="libs.spring-webmvc3.0.javadoc" value="" />
+    <property name="libs.NetBeans MIDP Components PDA.classpath" value="/usr/local/netbeans/mobility/modules/ext/netbeans_midp_components_pda.jar" />
+    <property name="libs.semc-ant-utils.maven-pom" value="" />
+    <property name="libs.nokiadeployment.maven-pom" value="" />
+    <property name="libs.restapi.src" value="" />
+    <property name="libs.NetBeans MIDP Components.javadoc" value="/usr/local/netbeans/mobility/modules/docs/netbeans_midp_components_basic-api.zip" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Server Compiler" />
+    <property name="javac.deprecation" value="false" />
+    <property name="javadoc.use" value="true" />
+    <property name="jna.boot.library.path" value="/home/michal/.netbeans/6.9/var/cache/jna" />
+    <property name="sun.java2d.noddraw" value="true" />
+    <property name="libs.jsp-compiler.classpath" value="/usr/local/netbeans/enterprise/ant/extra/jspcompile.jar" />
+    <property name="libs.spring-webmvc.classpath" value="/usr/local/netbeans/enterprise/modules/ext/spring/spring-webmvc-2.5.6.SEC01.jar" />
+    <property name="javac.compilerargs" value="" />
+    <property name="ant.file" value="/home/michal/Code/JUnit-Sample/build.xml" />
+    <property name="libs.beans-binding.maven-pom" value="" />
+    <property name="libs.jsf12.classpath" value="/usr/local/netbeans/enterprise/modules/ext/jsf-1_2/commons-beanutils.jar:/usr/local/netbeans/enterprise/modules/ext/jsf-1_2/commons-collections.jar:/usr/local/netbeans/enterprise/modules/ext/jsf-1_2/commons-digester.jar:/usr/local/netbeans/enterprise/modules/ext/jsf-1_2/commons-logging.jar:/usr/local/netbeans/enterprise/modules/ext/jsf-1_2/jsf-api.jar:/usr/local/netbeans/enterprise/modules/ext/jsf-1_2/jsf-impl.jar" />
+    <property name="sun.awt.exception.handler" value="org.netbeans.core.startup.TopLogging$AWTHandler" />
+    <property name="libs.restapi.maven-pom" value="" />
+    <property name="libs.beans-binding.src" value="" />
+    <property name="ant.file.type.JUnitSampleSol" value="file" />
+    <property name="libs.NetBeans MIDP Components PDA.javadoc" value="/usr/local/netbeans/mobility/modules/docs/netbeans_midp_components_pda-api.zip" />
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="libs.DataBindingME-PIM.javadoc" value="/usr/local/netbeans/mobility/modules/docs/netbeans_databindingme_pim-api.zip" />
+    <property name="libs.swing-layout.src" value="/usr/local/netbeans/platform/docs/swing-layout-1.0.4-src.zip" />
+    <property name="libs.j2me_ant_ext.src" value="" />
+    <property name="org.openide.major.version" value="IDE/1" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="netbeans.user" value="/home/michal/.netbeans/6.9" />
+    <property name="javadoc.additionalparam" value="" />
+    <property name="libs.ricoh-ant-utils.classpath" value="/usr/local/netbeans/mobility/modules/ext/org-netbeans-modules-j2me-cdc-project-ricoh.jar:/usr/local/netbeans/mobility/modules/ext/RicohAntTasks-2.0.jar:/usr/local/netbeans/mobility/modules/ext/commons-httpclient-3.0.jar:/usr/local/netbeans/ide/modules/ext/commons-logging-1.1.jar:/usr/local/netbeans/mobility/modules/ext/commons-codec-1.3.jar" />
+    <property name="java.io.tmpdir" value="/tmp" />
+    <property name="java.vendor.url" value="http://java.sun.com/" />
+    <property name="libs.jsp-compiler.src" value="" />
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-6-sun-1.6.0.22/jre/lib/amd64" />
+    <property name="have.sources" value="true" />
+    <property name="debug.classpath" value=":build/classes" />
+    <property name="javadoc.private" value="false" />
+    <property name="test.src.dir" value="test" />
+    <property name="libs.jsf20.classpath" value="/usr/local/netbeans/enterprise/modules/ext/jsf-2_0/jsf-api.jar:/usr/local/netbeans/enterprise/modules/ext/jsf-2_0/jsf-impl.jar" />
+    <property name="meta.inf.dir" value="src/META-INF" />
+    <property name="javadoc.encoding.used" value="UTF-8" />
+    <property name="libs.DataBindingME-SVG.src" value="" />
+    <property name="dist.jar" value="dist/JUnitSampleSol.jar" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="ant.project.name" value="JUnitSampleSol" />
+    <property name="netbeans.hash.code" value="unique=NB_CND_FX_GFMOD_GROOVY_JAVA_MOB_PHP_RUBY_WEBEE0275504c0-a1f7-4e5d-ae63-09b3379198ff_d4c93e5d-1fdb-4e20-bc16-d270ccda6935" />
+    <property name="libs.j2me_ant_ext.maven-pom" value="" />
+    <property name="sun.cpu.isalist" value="" />
+    <property name="libs.CopyLibs.javadoc" value="" />
+    <property name="libs.ActiveSync.javadoc" value="" />
+    <property name="org.openide.specification.version" value="6.2" />
+    <property name="libs.DataBindingME-PIM.classpath" value="/usr/local/netbeans/mobility/modules/ext/netbeans_databindingme_pim.jar" />
+    <property name="libs.hibernate-support.classpath" value="/usr/local/netbeans/java/modules/ext/hibernate/antlr-2.7.6.jar:/usr/local/netbeans/java/modules/ext/hibernate/asm.jar:/usr/local/netbeans/java/modules/ext/hibernate/asm-attrs.jar:/usr/local/netbeans/java/modules/ext/hibernate/cglib-2.1.3.jar:/usr/local/netbeans/java/modules/ext/hibernate/commons-collections-2.1.1.jar:/usr/local/netbeans/ide/modules/ext/commons-logging-1.1.jar:/usr/local/netbeans/java/modules/ext/hibernate/dom4j-1.6.1.jar:/usr/local/netbeans/java/modules/ext/hibernate/ehcache-1.2.3.jar:/usr/local/netbeans/java/modules/ext/hibernate/jdbc2_0-stdext.jar:/usr/local/netbeans/java/modules/ext/hibernate/jta.jar:/usr/local/netbeans/java/modules/ext/hibernate/hibernate3.jar:/usr/local/netbeans/java/modules/ext/hibernate/hibernate-tools.jar:/usr/local/netbeans/java/modules/ext/hibernate/hibernate-annotations.jar:/usr/local/netbeans/java/modules/ext/hibernate/hibernate-commons-annotations.jar:/usr/local/netbeans/java/modules/ext/hibernate/hibernate-entitymanager.jar:/usr/local/netbeans/java/modules/ext/hibernate/javassist.jar" />
+    <property name="user.home" value="/home/michal" />
+    <property name="debug-args-line" value="-Xdebug" />
+    <property name="libs.NetBeans MIDP Components.classpath" value="/usr/local/netbeans/mobility/modules/ext/netbeans_midp_components_basic.jar" />
+    <property name="libs.javaee-api-6.0.maven-pom" value="" />
+    <property name="libs.JWSAntTasks.src" value="" />
+    <property name="libs.CopyLibs.maven-pom" value="" />
+    <property name="libs.spring-framework300.javadoc" value="" />
+    <property name="libs.hibernate-persistence.maven-pom" value="" />
+    <property name="libs.absolutelayout.javadoc" value="" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="libs.swing-app-framework.maven-pom" value="" />
+    <property name="libs.jakarta_slide_ant_webdav.maven-pom" value="" />
+    <property name="libs.NetBeans MIDP Components WMA.classpath" value="/usr/local/netbeans/mobility/modules/ext/netbeans_midp_components_wma.jar" />
+    <property name="libs.sjmc-ant-utils.src" value="" />
+    <property name="libs.cdc-agui-swing-layout.javadoc" value="" />
+    <property name="java.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="libs.javac-api.classpath" value="/usr/local/netbeans/java/modules/ext/javac-api-nb-7.0-b07.jar" />
+    <property name="ant.file.type.JUnitSampleSol-impl" value="file" />
+    <property name="platforms.default_fx_platform.home" value="/usr/lib/jvm/java-6-sun-1.6.0.22/jre" />
+    <property name="libs.nokiaS80-ant-utils.classpath" value="/usr/local/netbeans/mobility/modules/ext/org-netbeans-modules-j2me-cdc-project-nokiaS80.jar" />
+    <property name="java.version" value="1.6.0_22" />
+    <property name="libs.NetBeans MIDP Components WMA.javadoc" value="/usr/local/netbeans/mobility/modules/docs/netbeans_midp_components_wma-api.zip" />
+    <property name="javadoc.version" value="false" />
+    <property name="libs.MySQLDriver.javadoc" value="" />
+    <property name="org.openide.version" value="deprecated" />
+    <property name="libs.ActiveSync.maven-pom" value="" />
+    <property name="source.encoding" value="UTF-8" />
+    <property name="libs.junit.maven-pom" value="" />
+    <property name="libs.metro.javadoc" value="/usr/local/netbeans/enterprise/docs/metro-1.4-doc.zip" />
+    <property name="libs.struts.maven-pom" value="" />
+    <property name="netbeans.home+have.tests" value="true" />
+    <property name="libs.jaxb.src" value="" />
+    <property name="libs.IdentityAntTasks.maven-pom" value="" />
+    <property name="work.dir" value="/home/michal/Code/JUnit-Sample" />
+    <property name="libs.cdc-ant-utils.src" value="" />
+    <property name="libs.jaxb.classpath" value="/usr/local/netbeans/ide/modules/ext/jaxb/jaxb-impl.jar:/usr/local/netbeans/ide/modules/ext/jaxb/jaxb-xjc.jar:/usr/local/netbeans/ide/modules/ext/jaxb/jaxb1-impl.jar:/usr/local/netbeans/ide/modules/ext/jaxb/activation.jar:/usr/local/netbeans/ide/modules/ext/jaxb/api/jaxb-api.jar:/usr/local/netbeans/ide/modules/ext/jaxb/api/jsr173_api.jar" />
+    <property name="php.global.include.path" value="" />
+    <property name="do.depend" value="false" />
+    <property name="dist.javadoc.dir" value="dist/javadoc" />
+    <property name="libs.spring-webmvc3.0.classpath" value="/usr/local/netbeans/java/modules/ext/spring-3.0/spring-webmvc-3.0.2.RELEASE.jar" />
+    <property name="libs.swing-layout.classpath" value="/usr/local/netbeans/platform/modules/ext/swing-layout-1.0.4.jar" />
+    <property name="libs.restlib.src" value="" />
+    <property name="javac.source" value="1.5" />
+    <property name="build.generated.dir" value="build/generated" />
+    <property name="line.separator" value="
+" />
+    <property name="libs.proguard.src" value="" />
+    <property name="libs.hibernate-persistence.src" value="" />
+    <property name="java.specification.version" value="1.6" />
+    <property name="libs.nb_svg_midp_components.javadoc" value="/usr/local/netbeans/mobility/modules/docs/nb_svg_midp_components-api.zip" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="libs.jaxws21.maven-pom" value="" />
+    <property name="libs.cdc-ant-utils.javadoc" value="" />
+    <property name="libs.spring-framework.maven-pom" value="" />
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-6-sun-1.6.0.22/jre/lib/resources.jar:/usr/lib/jvm/java-6-sun-1.6.0.22/jre/lib/rt.jar:/usr/lib/jvm/java-6-sun-1.6.0.22/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-6-sun-1.6.0.22/jre/lib/jsse.jar:/usr/lib/jvm/java-6-sun-1.6.0.22/jre/lib/jce.jar:/usr/lib/jvm/java-6-sun-1.6.0.22/jre/lib/charsets.jar:/usr/lib/jvm/java-6-sun-1.6.0.22/jre/classes" />
+    <property name="javac.target" value="1.5" />
+    <property name="build.test.classes.dir" value="build/test/classes" />
+    <property name="src.dir" value="src" />
+    <property name="libs.IdentityAntTasks.javadoc" value="" />
+    <property name="libs.jsf20.src" value="" />
+    <property name="libs.proguard.maven-pom" value="" />
+    <property name="libs.jsf12.src" value="" />
+    <property name="libs.DataBindingME-SVG.maven-pom" value="" />
+    <property name="libs.nokiadeployment.src" value="" />
+    <property name="libs.savaje-ant-utils.javadoc" value="" />
+    <property name="libs.struts.javadoc" value="/usr/local/netbeans/enterprise/docs/struts-1.3.8-javadoc.zip" />
+    <property name="libs.cdc-ant-utils.maven-pom" value="" />
+    <property name="libs.cdc-agui-swing-layout.classpath" value="/usr/local/netbeans/mobility/modules/ext/cdc-agui-swing-layout.jar" />
+    <property name="dist.dir" value="dist" />
+    <property name="libs.groovy-all.javadoc" value="" />
+    <property name="libs.groovy-all.classpath" value="/usr/local/netbeans/groovy/modules/ext/groovy-all.jar" />
+    <property name="libs.sjmc-ant-utils.classpath" value="/usr/local/netbeans/mobility/modules/ext/org-netbeans-modules-j2me-cdc-project-sjmc.jar" />
+    <property name="libs.JMUnit4CLDC10.classpath" value="/usr/local/netbeans/mobility/modules/ext/jmunit4cldc10-1.2.1.jar" />
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob" />
+    <property name="default.javac.source" value="1.6" />
+    <property name="javac.compilerargs.jaxws" value="" />
+    <property name="libs.MySQLDriver.src" value="" />
+    <property name="sun.jnu.encoding" value="UTF-8" />
+    <property name="platforms.default_fx_platform.fxhome" value="/usr/local/netbeans/javafx/javafx-sdk" />
+    <property name="libs.ant-contrib.maven-pom" value="" />
+    <property name="libs.nokiadeployment.javadoc" value="" />
+    <property name="build.test.results.dir" value="build/test/results" />
+    <property name="java.runtime.version" value="1.6.0_22-b04" />
+    <property name="libs.ejb3-persistence.javadoc" value="" />
+    <property name="libs.NetBeans MIDP Components.src" value="/usr/local/netbeans/mobility/sources/netbeans_midp_components_basic-src.zip" />
+    <property name="libs.sjmc-ant-utils.javadoc" value="" />
+    <property name="default.javac.target" value="1.6" />
+    <property name="libs.junit_4.classpath" value="/usr/local/netbeans/platform/modules/ext/junit-4.5.jar" />
+    <property name="user.timezone" value="" />
+    <property name="libs.ant-contrib.src" value="" />
+    <property name="libs.javaee-endorsed-api-6.0.maven-pom" value="" />
+    <property name="netbeans.dirs" value="/usr/local/netbeans/nb:/usr/local/netbeans/ergonomics:/usr/local/netbeans/ide:/usr/local/netbeans/java:/usr/local/netbeans/bin/../xml:/usr/local/netbeans/apisupport:/usr/local/netbeans/bin/../webcommon:/usr/local/netbeans/websvccommon:/usr/local/netbeans/enterprise:/usr/local/netbeans/mobility:/usr/local/netbeans/profiler:/usr/local/netbeans/ruby:/usr/local/netbeans/bin/../python:/usr/local/netbeans/php:/usr/local/netbeans/bin/../visualweb:/usr/local/netbeans/bin/../soa:/usr/local/netbeans/identity:/usr/local/netbeans/bin/../uml:/usr/local/netbeans/harness:/usr/local/netbeans/cnd:/usr/local/netbeans/dlight:/usr/local/netbeans/groovy:/usr/local/netbeans/bin/../extra:/usr/local/netbeans/javafx:/usr/local/netbeans/bin/../javacard:" />
+    <property name="libs.jsf20.javadoc" value="/usr/local/netbeans/enterprise/docs/javaee6-doc-api.zip" />
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-6-sun-1.6.0.22/jre/lib/ext:/usr/java/packages/lib/ext" />
+    <property name="libs.metro.src" value="" />
+    <property name="libs.savaje-ant-utils.maven-pom" value="" />
+    <property name="libs.semc-ant-utils.src" value="" />
+    <property name="libs.absolutelayout.classpath" value="/usr/local/netbeans/java/modules/ext/AbsoluteLayout.jar" />
+    <property name="excludes" value="" />
+    <property name="libs.metro.classpath" value="/usr/local/netbeans/ide/modules/ext/jaxb/activation.jar:/usr/local/netbeans/enterprise/modules/ext/metro/webservices-api.jar:/usr/local/netbeans/enterprise/modules/ext/metro/webservices-extra-api.jar:/usr/local/netbeans/enterprise/modules/ext/metro/webservices-extra.jar:/usr/local/netbeans/enterprise/modules/ext/metro/webservices-rt.jar:/usr/local/netbeans/enterprise/modules/ext/metro/webservices-tools.jar" />
+    <property name="libs.restlib.maven-pom" value="" />
+    <property name="libs.DataBindingME.javadoc" value="/usr/local/netbeans/mobility/modules/docs/netbeans_databindingme-api.zip" />
+    <property name="apple.laf.useScreenMenuBar" value="true" />
+    <property name="java.class.path" value="/home/michal/Code/JUnit-Sample/build/classes:/usr/local/netbeans/java/modules/ext/junit-3.8.2.jar:/usr/local/netbeans/platform/modules/ext/junit-4.5.jar:/home/michal/Code/JUnit-Sample/build/test/classes:/usr/local/netbeans/java/ant/lib/ant-launcher.jar:/usr/local/netbeans/java/ant/lib/ant.jar:/usr/local/netbeans/java/ant/patches/72080.jar" />
+    <property name="libs.absolutelayout.src" value="" />
+    <property name="libs.cdc-pp-awt-layout.maven-pom" value="" />
+    <property name="os.version" value="2.6.35-23-generic" />
+    <property name="application.args" value="" />
+    <property name="libs.JMUnit4CLDC11.maven-pom" value="" />
+    <property name="libs.toplink.javadoc" value="/usr/local/netbeans/enterprise/docs/javaee6-doc-api.zip" />
+    <property name="sun.desktop" value="gnome" />
+    <property name="libs.nb_svg_midp_components.maven-pom" value="" />
+    <property name="libs.ricoh-ant-utils.javadoc" value="" />
+    <property name="libs.NetBeans MIDP Components PDA.maven-pom" value="" />
+    <property name="libs.restlib.javadoc" value="/usr/local/netbeans/enterprise/docs/jersey-client-1.1.5.1-javadoc.zip:/usr/local/netbeans/enterprise/docs/jersey-core-1.1.5.1-javadoc.zip:/usr/local/netbeans/enterprise/docs/jersey-json-1.1.5.1-javadoc.zip:/usr/local/netbeans/enterprise/docs/jersey-spring-1.1.5.1-javadoc.zip:/usr/local/netbeans/enterprise/docs/oauth-client-1.1.5.1-javadoc.zip:/usr/local/netbeans/enterprise/docs/oauth-signature-1.1.5.1-javadoc.zip" />
+    <property name="libs.eclipselink.classpath" value="/usr/local/netbeans/java/modules/ext/eclipselink/eclipselink-2.0.2.jar:/usr/local/netbeans/java/modules/ext/eclipselink/eclipselink-javax.persistence-2.0.jar" />
+    <property name="libs.beans-binding.javadoc" value="/usr/local/netbeans/java/docs/beansbinding-1.2.1-doc.zip" />
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment" />
+    <property name="java.vm.vendor" value="Sun Microsystems Inc." />
+    <property name="libs.CopyLibs.classpath" value="/usr/local/netbeans/java/ant/extra/org-netbeans-modules-java-j2seproject-copylibstask.jar" />
+    <property name="libs.spring-framework300.classpath" value="/usr/local/netbeans/ide/modules/ext/commons-logging-1.1.jar:/usr/local/netbeans/java/modules/ext/cglib-2.2.jar:/usr/local/netbeans/java/modules/ext/spring-3.0/spring-aop-3.0.2.RELEASE.jar:/usr/local/netbeans/java/modules/ext/spring-3.0/spring-asm-3.0.2.RELEASE.jar:/usr/local/netbeans/java/modules/ext/spring-3.0/spring-aspects-3.0.2.RELEASE.jar:/usr/local/netbeans/java/modules/ext/spring-3.0/spring-beans-3.0.2.RELEASE.jar:/usr/local/netbeans/java/modules/ext/spring-3.0/spring-context-3.0.2.RELEASE.jar:/usr/local/netbeans/java/modules/ext/spring-3.0/spring-context-support-3.0.2.RELEASE.jar:/usr/local/netbeans/java/modules/ext/spring-3.0/spring-core-3.0.2.RELEASE.jar:/usr/local/netbeans/java/modules/ext/spring-3.0/spring-expression-3.0.2.RELEASE.jar:/usr/local/netbeans/java/modules/ext/spring-3.0/spring-instrument-3.0.2.RELEASE.jar:/usr/local/netbeans/java/modules/ext/spring-3.0/spring-instrument-tomcat-3.0.2.RELEASE.jar:/usr/local/netbeans/java/modules/ext/spring-3.0/spring-jdbc-3.0.2.RELEASE.jar:/usr/local/netbeans/java/modules/ext/spring-3.0/spring-jms-3.0.2.RELEASE.jar:/usr/local/netbeans/java/modules/ext/spring-3.0/spring-orm-3.0.2.RELEASE.jar:/usr/local/netbeans/java/modules/ext/spring-3.0/spring-oxm-3.0.2.RELEASE.jar:/usr/local/netbeans/java/modules/ext/spring-3.0/spring-test-3.0.2.RELEASE.jar:/usr/local/netbeans/java/modules/ext/spring-3.0/spring-tx-3.0.2.RELEASE.jar:/usr/local/netbeans/java/modules/ext/spring-3.0/spring-web-3.0.2.RELEASE.jar:/usr/local/netbeans/java/modules/ext/spring-3.0/spring-webmvc-portlet-3.0.2.RELEASE.jar:/usr/local/netbeans/java/modules/ext/spring-3.0/spring-webmvc-3.0.2.RELEASE.jar:/usr/local/netbeans/java/modules/ext/spring-3.0/spring-struts-3.0.2.RELEASE.jar" />
+    <property name="libs.jsp-compiler.maven-pom" value="" />
+    <property name="libs.spring-webmvc.maven-pom" value="" />
+    <property name="run.jvmargs" value="" />
+    <property name="libs.ejb3-persistence.classpath" value="/usr/local/netbeans/java/modules/ext/hibernate/ejb3-persistence.jar" />
+    <property name="libs.spring-framework.javadoc" value="" />
+    <property name="libs.DataBindingME-PIM.src" value="" />
+    <property name="libs.PostgreSQLDriver.classpath" value="/usr/local/netbeans/ide/modules/ext/postgresql-8.3-603.jdbc3.jar" />
+    <property name="libs.jsf12.maven-pom" value="" />
+    <property name="libs.junit.src" value="" />
+    <property name="build.dir" value="build" />
+    <property name="libs.CopyLibs.src" value="" />
+    <property name="libs.jsp-compilation.classpath" value="/usr/local/netbeans/java/ant/lib/ant.jar:/usr/local/netbeans/enterprise/modules/ext/servlet2.5-jsp2.1-api.jar:/usr/local/netbeans/enterprise/modules/ext/glassfish-jspparser-2.0.jar:/usr/local/netbeans/enterprise/modules/ext/glassfish-logging-2.0.jar:/usr/local/netbeans/ide/modules/ext/commons-logging-1.1.jar:/usr/local/netbeans/java/ant/lib/ant-launcher.jar" />
+    <property name="ant.version" value="Apache Ant version 1.8.1 compiled on April 30 2010" />
+    <property name="file.encoding" value="UTF-8" />
+    <property name="build.classes.excludes" value="**/*.java,**/*.form" />
+    <property name="javadoc.nonavbar" value="false" />
+    <property name="platform.active" value="default_platform" />
+  </properties>
+  <testcase classname="sample.UtilsJUnit3Test" name="testHelloWorld" time="0.0060" />
+  <testcase classname="sample.UtilsJUnit3Test" name="testWithTimeout" time="1.002" />
+  <testcase classname="sample.UtilsJUnit3Test" name="testExpectedException" time="0.0010" />
+  <system-out><![CDATA[* UtilsJUnit3Test: setUp() method
+* UtilsJUnit3Test: test method 1 - testHelloWorld()
+* UtilsJUnit3Test: tearDown() method
+* UtilsJUnit3Test: setUp() method
+* UtilsJUnit3Test: test method 2 - testWithTimeout()
+computing 4062!
+4062! = 632171000787627329483023924772024728585586580450552301016630073770823033422970389601641732494539398138259732843948198754864211979703916067578800103766012582488217832139078231162598699425103829880402695630267428161133104398511358169214632529014945431556424454268437129606589078912572744678295444929334095907178573055348757730052287522614141190243114461216775130962949346416214968810934638373088485984424643360259580879132361005338576468225931398041828888755403556922623766362517491178519877273815535981874675790126829019466516600168287690868173786912705305387301098645947391571803777800801623447053588826273023076235179513805017142618741042898702178267750248105079572144603049817965866618706968870481502778225935142547165613134958857328658499353024473993025934833595310691638237862226820484309635768422053386231551530776769043996117196456041605390849090570734496846989126251258156863922768031774227890508046308352653192395034141596928086519237940388411342471762450728337379080143651160834406366661049085152850062240201776665074034267751782242885253665093727913638146107975402604838961818821942206510237781982371813746020358754932282345403389858956439839166123286883800938328257172375088306731916263346353606502031175745489154887568284015651999070704465956042512043634430808390490215686479513436157752094802079025223538957987691746567204749236650999057212317517833239822873316526101517990166569302655451899625139928550053190448844303116421215244183387991606854618523724615312739033254411498656750882585837535512496561379597083761717177070529003868715647992282574072903642289059751583884562882630261078765753996912847022854266573539670506903995037966800877010293334725750296440090872080196715106766174186131572418206840257861644772203473950361953512851034654388488661589803347386252595601459886742663034139328264308554408277471779622741905318702910530039489911098509647627993395663660711793714795651017490709663370633891947367016672954592775561709086990118916425906915791545127320451240924903468928693476970149519638217507794054741857277888218641771532012942085800346767982095039364913378262134539447350600296262482451753676725768486681754723934262994440328900162542004608606013099054117911334716234214485013194819791486241114575141633523184393882035608992389075203899181457213690153786368880085907350122374266551668405906461158813288870586278967157572555136485651430912575533585064288237050971368979519725152867145331200393401983736949627290233924588038680221108751821602463260008811403369277811827668816147388790563009218825536254632238637973234775094828801208591375251446671277680404578450841099054051519740354089247865032499085175291233930997273435225288247228135998694397655442656298664971562280736680964332238128307015948284410773721471509520224057465088236083549203467305167410756729321754996668478545673255766521056966506300200429267124310943821045860491717694583282303844824807968917876955393181569188426663591175960403269830205629874081309918447628745174775587829424191665525531068813080560969931455812535514538198483889003104345516204554919375017398878547420712685971075289223893766874840950291480112878174482931021248880344750687799123659435736889161273049888685800292950601506380479413460177164635792267518250006415675305527666994932774764387546171182859747653564146532204137286422027360254901496438387901121954237405640275750050652467314934379417193913401741088660826681714933315534569144138011390722855826643451986719350957260263368380230470490121235819223529340715732910864075705511222886812426763977705319024758482143750897199266378409908691017092190589794072898621315056288054121801976135440197509900057407825770195722289394802896516545129487356125444841903482331515772981604927858848166951145695710976713403377841011518190889805641389927959066901232660922461996752735280949439822684019730052517711402233993503263137757357120118235727313422971025807790290434121135409291833996086226769840633023525089087550629499978760332339957115878568406729494447780735344758908430660075240689306951016586364352265236559592607034158375565322011101015789369986339944994388495096210887850395384774494909369953795073036769048765953092334945278730556056945534227785477926597909743171139235581916830365871117753184980903251457364257061965701719778053649775905837289248776860273736722839549072355787977639157490750483143509186570897591764380596000753438175273224715958607345246940018415794281806866847797458336745888133413630745945217516579627911855309922389638504740095096829692920697800793786351432273208730981276078156388364500868253670866400804022301025888534645407625526938876974371551467249974733321446424367610131361228157368966588573816579005567208571945173449501020013863913978282207329981726101686354364369692958661875982031015172150160946585667609915459323373374959340278963201770893276199358284620042142132198578026053158369784151183584848664675252417928175766484317997938167691877400294373267525089878813522561922261704908438848511943377804423027042382775947817224000630939416270156007298626830388633929804051365122111243270771039850529844443737523215285563374345632576052497273907904104865248516817634185798201045974824570370681655266129593622767913552115309094759572975996658203707154460323626716519165522571617709472397261385899440654185715520112171660545941577996585722029049479964365505217667588841888034920421760279979130513748874077131790478039959982714382493101495424653969314753825861033928557846233157865745380545995559388616407262231816215675789012362748885582102299246148470664485821454144971371106291920912430983419433359875019764850131121182274476505542853663775851124358667897902989158043540443824022430145592918009833506058347730857476538479887297538684863601271418183629833016234853163891306201891802125571776655210280236628421822591367371128159290546504188041589009422896256603158455895128248324109955487483236877017243688112966161422141917057195833312198136363343979715467392607501216230695503221163012218029243826928119376101448176878321772120319770248872161265955384585324158497996276346301112846060016821142568479709876840821750452509502040627321569070631305546888387356375225762093142971870037697661860260848826617313048166121675840081368688373287133953638009423787117559840315854771954942735963977420771986709830971229906510730867299684608716630819968576570980499818861182316716318829500320411606200115967162514640377731825392362594338891122390479966702959789864655002367856779644219000778600152061398654583579780634828904138630589849374147041845046171150240005386092761701532910079190217324081759095148399691113717019435562169650594754015528123641318881979208464703537065849106091726678107952345893005236208834455320965691644986221764391729191158124699788743391908923811272083207854603816261994216046931523635586759063711875450602633438794114353616724570196684809517855487736372714815728220090105062293432124134204643720840084900530469849455639566051693491465315207893574480475489246330754244785115079877659072111909313166165214729842282974439791600847034556458434201916253859453274707955901551660498393631855054917061641028001560328999249407154314281688963978372672634781336514888170030205154969942798485588727282391749704928295285844177235121370361199354483077466855928129508782535290138959295638139535842000826275609942031284643312364411187172978069561454063558538720188825577951817322611589775891844435939968871262461693989923904431506881522041103918860497649209584963045015484618294837438740863945350213912093737671919134193032155536663002454427686326689375298768790094116066373542993790891998632994103909416096930748391303001690060096030268058101166340616010030518015532749566708754300800650806647318708064588942361783580784881028419772194580958499368195912079472915845841763475040153177182120717916185016962325086114038553641376092414415868041114438597354670543750167561552207884400241865193913771695617541038036958385360129610885610776791328033765732609137896915047528273433496536545516140430955692860374253286487638613120406587212502757249103017130268462888981262453154013087607011568533197021760138792458972774411810182539453028001400678075438596969539746668194214973647120789397298605102416854808689815995108431036522572495230704260172319303753536658871144157422393537879024224777062714705738131497650970973434668447574671205048166088068500867684402877126579440407891729684663991982496577314421183561453239963703321806399823191191835359529198656511731243055791214891677375120158118759973912609687062159484737378824356954642502134666898576392770396524709137382692079369314573774328413274367920037339474419793829164166961562706004722242659874178092467064394135033098325718676814316631737432604649455578296996766210047979730476998776514007928058476246692158264703786287778090264433683005373326488957782740910983843817412152830513084789864971765016169391235976237588932943456749056313311531871038800338103139692044172356779730963569996198758970886074359360437051714857581178802121374847737740862905453886876240284376556398851038757651720799092948229188603892756593379005778773947067372850016843087191254090871236993522402408184627574444944247045602607271780048705717741548720981898953947963503129405615535090473214483014421350961683185458538256999941217323622526680487029798569014134704559853371984093853494743818058490230211249988096389227791967554943361880441554108633113846356517140431231421432368965337641941809144691199193642494986633744796393531424236560811407913728378135332647135102130548389258058056609497682460583811068640423209185317244942869495247217375408499372569604365333947664217516518766462318934958759594755154772350922022377669807248137328369991998533190958571084693021123621246077661728634312452420263762807016192936947889965498096245017240571331244431024455763631255039301636594576353295664587451090054868100865061912282467066873661652929708729907657749316957385139237041577510262341863892505450967721733612618941880540593660800411929734654822605519495911086720671434204951158038387327035306960583680995848371440855286358184633287417868825457580135078326427740842131967830482314956627739809018472217021466667026183308070677991155089087317952502462962852122709786574064230264700452131897674207189106728584824404961056093021567014042498087731422657865944048926003625803536542147840425524987036870019408037538458561451064932232564045207846001438418986865901261596295166085305869310263039484463628836207807922882915466099866438255488212719706307561806225436593121355682062328412980427023841550402909919990383404633112386502148084211076910380746678771681042722816126347612063915890194792561312433969849512188934960047650332295544535824028888289091377174185507375742448542650570956852508523893805805058374979866473742270787050526825351659821245345550844175428490884827571818439276279561056256006537406862875078241438350817911120985849804995276264964910041982835262104037300771025887571953739487794302586028472047822929573802018029421684487758064123004179173080419813954180403328842753735270579292980987314998951477215548046068507380161320447317712871582672256081427261584830664035308193116947069848123598648792088153786133679944454222767742468481138509024881051020017830787393737749368980945861858003398525539590895921517656063802623430447046110539169793970138774904571896391156637740709483471681816201740459014104010984404940906212939304013377801439690910787355258765530100555341566543708924240055043559354639173477129756370018224817302547548993487513588261431179000296413490661067291639500509720027759396734651372724778565603892864582076195671668694558613082133881538309993424044196993081019915849962089112740929205414211607233773561553533540493244550485750113865674287784307947093199353965474141068772045505735019677461258652885034565783095741085936375938025745000888205729454299040433537195943503181950243965591782473338179094069462526626809490227843950173607848486956708973371474370884773525368034040058381156047331649598259200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+* UtilsJUnit3Test: tearDown() method
+* UtilsJUnit3Test: setUp() method
+* UtilsJUnit3Test: test method 3 - testExpectedException()
+* UtilsJUnit3Test: tearDown() method
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
