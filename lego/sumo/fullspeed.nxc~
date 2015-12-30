@@ -1,0 +1,19 @@
+task main() {
+	SetSensorLight(IN_3);
+	int light;
+		
+	light = Sensor(IN_3);
+	TextOut(0, LCD_LINE1, StrCat("Light:", NumToStr(light)));
+	Wait(2000);
+	
+	OnFwd(OUT_AC, 100);
+	// 2,5sek
+	// light: normal: 50, lifted: 68
+	
+
+	while(true) {
+		light = Sensor(IN_3);
+		TextOut(0, LCD_LINE1, StrCat("Light:", NumToStr(light)));
+	}
+	
+}

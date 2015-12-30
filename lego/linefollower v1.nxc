@@ -1,0 +1,190 @@
+#define LIGHT SENSOR_1
+#define TOUCH_LEFT SENSOR_3
+#define TOUCH_RIGHT SENSOR_4
+#define LEFT OUT_A
+#define RIGHT OUT_C
+#define BOTH OUT_AC
+
+
+int boundary;
+int white;
+int black;
+
+#define STEP_LENGTH 5
+
+task monitorLineState();
+sub Error(string message);
+string getStateAsText(int state);
+
+#define STATE_BOUNDARY 0
+#define STATE_ON_BLACK 1
+#define STATE_CROSSED 2
+#define STATE_LEFT_TURN 3
+int lineState = 0;
+
+bool stopMonitorLineState = false;
+
+sub loadTheLine(void) {
+	TextOut(0, LCD_LINE1, "Loading the line");
+	Wait(1000);
+	int i = 1;
+	long oldRotationCount, rotationCount;
+	int light;
+	
+	while(true) {
+		// move forward, find if line was crossed more times
+		StartTask(monitorLineState);
+		RotateMotorEx(BOTH, 30, 60, 0, true, true);
+		stopMonitorLineState = true;
+		TextOut(0, LCD_LINE2, StrCat("Line state:", getStateAsText(lineState)));
+		Wait(1500);
+		oldRotationCount = MotorRotationCount(LEFT);
+		
+		// determine which way to look for the boundary based on the line state
+		if(lineState == STATE_ON_BLACK || lineState == STATE_CROSSED) {
+			OnFwd(LEFT, 25);
+			OnRev(RIGHT, 25);
+		} else if(lineState == STATE_LEFT_TURN) {
+			OnFwd(RIGHT, 25);
+			OnRev(LEFT, 25);
+		} else if(lineState == STATE_BOUNDARY) {
+			OnFwd(BOTH, 25);
+		}
+		
+		int count = 0;
+		bool crossed = false;
+		while(true) {
+			light = LIGHT;
+			if(count > 1000 && lineState == STATE_CROSSED) { // look another direction
+				OnFwd(LEFT, 25);
+				OnRev(RIGHT, 25);
+			} else {
+				count++;
+			}
+			
+			TextOut(0, LCD_LINE3, StrCat("Light:", NumToStr(light)));
+			if(abs(light-boundary) <= 2) { // sensor is close to the boundary
+				if(lineState == STATE_CROSSED && !crossed) {
+					crossed = true;
+				} else if(lineState == STATE_CROSSED && crossed) {
+					Off(BOTH);
+					break;
+				} else {
+					Off(BOTH);
+					break;
+				}
+			}
+		}
+		rotationCount = MotorRotationCount(LEFT) - oldRotationCount;
+		NumOut(0, LCD_LINE4, rotationCount);
+		Wait(1500);
+		i++;
+	}
+	TextOut(0, LCD_LINE8, "Finished loading");
+	Wait(10000);
+}
+
+task monitorLineState() {
+	lineState = STATE_BOUNDARY;
+	int light;
+	stopMonitorLineState = false;
+	int boundaryCrossedCnt = 0;
+	
+	while(true) {
+		if(stopMonitorLineState == true) {
+			break;
+		}
+		light = LIGHT;
+		TextOut(0, LCD_LINE3, StrCat("Light:", NumToStr(light)));
+		
+		if(abs(light-boundary) < 2) {
+			lineState = STATE_BOUNDARY;
+		} else {
+			switch(lineState) {
+				case STATE_BOUNDARY:
+					if(light < boundary) { // moving towards black
+						lineState = STATE_ON_BLACK;
+						boundaryCrossedCnt++;
+						TextOut(0, LCD_LINE5, StrCat("Crossed:", NumToStr(boundaryCrossedCnt)));
+					} else { // moving towards white
+						if(boundaryCrossedCnt % 2 == 0) {
+							lineState = STATE_LEFT_TURN;
+						} else {
+							lineState = STATE_CROSSED;
+						}
+						boundaryCrossedCnt++;
+						TextOut(0, LCD_LINE5, StrCat("Crossed:", NumToStr(boundaryCrossedCnt)));
+					}
+					break;
+				case STATE_ON_BLACK:
+					if(light > boundary) { // moving towards white
+						lineState = STATE_CROSSED;
+						boundaryCrossedCnt++;
+						TextOut(0, LCD_LINE5, StrCat("Crossed:", NumToStr(boundaryCrossedCnt)));
+					}
+					break;
+				case STATE_CROSSED:
+					if(light < boundary) { // black again
+						lineState = STATE_ON_BLACK;
+						boundaryCrossedCnt++;
+						TextOut(0, LCD_LINE5, StrCat("Crossed:", NumToStr(boundaryCrossedCnt)));
+					}
+					break;
+				case STATE_LEFT_TURN:
+					if(light < boundary) { // black again
+						lineState = STATE_ON_BLACK;
+						boundaryCrossedCnt++;
+						TextOut(0, LCD_LINE5, StrCat("Crossed:", NumToStr(boundaryCrossedCnt)));
+					}
+					break;
+			}
+		}
+	}
+}
+
+sub runFromMemory(void) {
+	TextOut(0, LCD_LINE1, "Running from mem");
+	Wait(2000);
+}
+
+task main() {
+	TextOut(0, LCD_LINE1, "Press left bttn");
+	TextOut(0, LCD_LINE2, "to load the line");
+	TextOut(0, LCD_LINE4, "Press right bttn");
+	TextOut(0, LCD_LINE5, "to run from mem ");
+	
+	while(!(ButtonPressed(BTNRIGHT, false) || ButtonPressed(BTNLEFT, false))) {
+		Wait(300);
+	}
+	ClearScreen();
+
+
+	SetSensorLight(IN_1);
+	SetSensorTouch(IN_4);
+	SetSensorTouch(IN_3);
+	boundary = 50;
+	white = 66;
+	black = 33;
+
+
+	if(ButtonPressed(BTNLEFT, false)) {
+		loadTheLine();
+	} else if (ButtonPressed(BTNRIGHT, false)) {
+		runFromMemory();
+	}
+}
+string getStateAsText(int state) {
+	switch(state) {
+		case STATE_BOUNDARY: return "boundary";
+		case STATE_ON_BLACK: return "on black";
+		case STATE_CROSSED: return "crossed";
+		case STATE_LEFT_TURN: return "left turn";
+	}
+}
+
+sub Error(string message) {
+	TextOut(0, LCD_LINE6, "ERROR: ");
+	TextOut(0, LCD_LINE7, message);
+	PlayTone(392, 500);
+	Wait(5000);
+}

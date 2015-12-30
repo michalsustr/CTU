@@ -1,0 +1,277 @@
+#define LIGHT SENSOR_1
+#define TOUCH_LEFT SENSOR_3
+#define TOUCH_RIGHT SENSOR_4
+#define LEFT OUT_A
+#define RIGHT OUT_C
+#define BOTH OUT_AC
+
+#define BOUNDARY_STEP 3
+
+/**
+ * The value of the light sensor for which the robot
+ * will be on the boundary of black and white.
+ * It is better than average of white+black.
+ * This boundary is found in the beginning of the run
+ * in the findBoundary function.
+ *
+ * Value will probably range 40-60
+ */
+int boundary;
+
+int black;
+int white;
+
+
+mutex move;
+
+
+sub goStraight(int power) {
+	Acquire(move);
+	OnFwd(BOTH, power);
+	Release(move);
+}
+
+sub turnLeft(int power) {
+	Acquire(move);
+	if(power >= 0) {
+		OnFwd(LEFT, power);
+	} else {
+		OnRev(LEFT, power);
+	}
+	Release(move);
+}
+sub turnRight(int power) {
+	Acquire(move);
+	if(power >= 0) {
+		OnFwd(RIGHT, power);
+	} else {
+		OnRev(RIGHT, power);
+	}
+	Release(move);
+}
+sub turnLeftRight(int left, int right) {
+	Acquire(move);
+	if(left >= 0) {
+		OnFwd(LEFT, left);
+	} else {
+		OnRev(LEFT, left);
+	}
+	if(right >= 0) {
+		OnFwd(RIGHT, right);
+	} else {
+		OnRev(RIGHT, right);
+	}
+	Release(move);
+}
+
+int cnt = 0;
+
+sub avoidObstacle(void)
+{
+   Acquire(move);
+
+   // go backwards
+   OnRev(BOTH, 100);
+   Wait(100);
+   Off(BOTH);
+
+   OnRev(RIGHT, 40);
+   OnFwd(LEFT, 40);
+   Wait(500);
+   Off(BOTH);
+
+   OnFwd(RIGHT, 70);
+   OnFwd(LEFT, 46);
+
+   int light;
+   while(true) {
+      light = LIGHT;
+
+
+      // the line was found
+      if(light < boundary) {
+          break;
+      }
+
+   }
+   // adjust position
+   OnFwd(BOTH, 100);     // závisí na šíøce èáry, na kterou najede po objetí pøekážky.
+   Wait(100);             // èím širší, tím vìtší skok je tøeba
+   Off(BOTH);
+   Wait(100);
+   
+   int light2;
+
+
+      OnRev(RIGHT, 25);
+      OnFwd(LEFT, 70);
+      if(cnt == 0) {
+	Wait(600);
+        cnt++;
+      } else {
+      	Wait(800);
+      }
+/*   while(true) {
+      light2 = LIGHT;
+	
+	
+   
+      // the line was found
+      if(light2 < boundary) {
+          break;
+      }
+   }*/
+   Off(BOTH);
+
+   Release(move);
+   PlayTone(300, 500);
+}
+					// tp 40
+int Kp = 115;                           // 115
+int Ki = 0;                             // 0
+int Kd = 700;                           // 600
+
+
+
+task followLine()
+{
+	int lightValue;
+	int error;
+	int turn;
+	
+	int Tp = 45;                             //40
+	int integral = 0;                        //0
+	int lastError = 0;                       //0
+	int derivative = 0;                      //0
+	
+	int powerLeft, powerRight;
+	
+  int limitWhite = 10;
+  int whiteCount = 0;
+
+  while(true) {
+		lightValue = LIGHT;
+		NumOut(1, LCD_LINE1, lightValue);
+
+    error = lightValue - boundary;
+		integral += error;
+		derivative = error - lastError;
+		
+		turn = (Kp*error + Ki*integral + Kd*derivative) / 100;
+		
+		powerLeft = (Tp - turn);
+		powerRight = (Tp + turn)*130/100;
+		
+		TextOut(0, LCD_LINE3, StrCat("Left:", NumToStr(powerLeft)));
+		TextOut(0, LCD_LINE4, StrCat("Right:", NumToStr(powerRight)));
+		
+		if(powerLeft == powerRight) {
+			goStraight(powerLeft);
+
+		} else {
+			turnLeftRight(powerLeft, powerRight);
+
+		}
+		
+		lastError = error;
+		
+		int touched = TOUCH_LEFT | TOUCH_RIGHT;
+		if(touched) {
+		   avoidObstacle();
+		}
+  }
+}
+
+task adjustVars()
+{
+	SetButtonPressCount(BTNLEFT, 0);
+	SetButtonPressCount(BTNRIGHT, 0);
+	int leftCount = 0, rightCount = 0;
+	while(true) {
+		if(ButtonPressed(BTNLEFT, false)) {
+			Kd = Kd - (ButtonPressCount(BTNLEFT) - leftCount);
+			leftCount = ButtonPressCount(BTNLEFT);
+		}
+		if(ButtonPressed(BTNRIGHT, false)) {
+			Kd = Kd + (ButtonPressCount(BTNRIGHT) - rightCount);
+			rightCount = ButtonPressCount(BTNRIGHT);
+		}
+		NumOut(1, LCD_LINE6, Kd);
+	}
+
+}
+
+/**
+ * @see boundary
+ */
+sub findBoundary()
+{
+	// at the start, the robot will be placed on the black line
+	black = LIGHT;
+	
+	/*
+	 * Robot goes rotates clockwise 45dg, reading light data.
+	 * At 45dg, it should be on white space already.
+	 * Boundary itself is the most rapidly changing value,
+	 * on the graph of color sensor from black to white, it has 
+	 * the greatest derivation. This max value is then found in the records.
+	 */
+	
+	int lightData[];
+	int step = 0;
+	int reps = /*ceil*/(45 / BOUNDARY_STEP);
+	repeat( reps ) {
+		lightData[step] = LIGHT;
+		RotateMotorEx(BOTH, 10, BOUNDARY_STEP, true, true, true);
+		step++;
+	}
+	lightData[step] = LIGHT;
+	
+	// save white
+	white = LIGHT;
+	
+	// find max value and index from lightData
+	int max = 0;
+	int maxStep = 0;
+	int diff;
+	for(int i = 0; i < step; i++) {
+		diff = abs(lightData[i] - lightData[ (i+1) ]);
+		if(diff > max) {
+			max = diff;
+			maxStep = i;
+		}
+	}
+	
+	// set the boundary as the average of the values
+	// with the greatest difference of light 
+	boundary = /*ceil*/((lightData[maxStep] + lightData[ (maxStep + 1) ]) / 2);
+
+	// go back at the boundary
+	RotateMotorEx(BOTH, 10, -/*ceil*/(45 - (maxStep)*BOUNDARY_STEP), true, true, true);
+}
+
+
+
+task main()
+{
+	SetSensorLight(IN_1);
+	SetSensorTouch(IN_3);
+	SetSensorTouch(IN_4);
+
+	//findBoundary();
+	boundary = 62;
+	white = 76;
+	black = 48;
+	               /*
+ int i = 0;
+ int tick;
+ int firstTick = CurrentTick();
+ while(true) {
+             i++;
+             tick = CurrentTick();
+             
+ }                                */
+
+	Precedes(followLine, adjustVars);
+}
+

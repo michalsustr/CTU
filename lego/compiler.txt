@@ -1,0 +1,4 @@
+# Error: ';' expected
+File "/data/Code/lego/linefollower.nxc" ; line 41
+#    int tick =
+#----------------------------------------------------------

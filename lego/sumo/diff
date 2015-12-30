@@ -1,0 +1,32 @@
+13c13
+< #define BOUNDARY 35
+---
+> #define BOUNDARY 30
+28c28
+< //	SetSensorTouch(TOUCH);
+---
+> 	SetSensorTouch(TOUCH);
+62c62
+< //		touch = Sensor(TOUCH);
+---
+> 		touch = 1;//Sensor(TOUCH);
+65c65
+< 		if(light < BOUNDARY) {
+---
+> 		if(light < BOUNDARY && touch) {
+133,134c133
+< 				OnRev(LEFT, 100);
+< 				OnRev(RIGHT, 100);
+---
+> 				OnRev(BOTH, 100);
+136,137c135
+< 				OnRev(LEFT, 100);
+< 				OnRev(RIGHT, 100);
+---
+> 				OnRev(BOTH, 100);
+143,145c141
+< 			OnFwd(LEFT, 100);
+< 			OnFwd(RIGHT, 100);
+< 
+---
+> 			OnFwd(BOTH, 100);

@@ -1,0 +1,16 @@
+task main()
+{
+	SetSensorUltrasonic(IN_1);
+	
+	OnFwd(OUT_A, 100);
+	OnRev(OUT_C, 100);
+	
+	int dist;
+	while(true) {
+		dist = SENSOR_1;
+		if(dist != 255) {
+			Off(OUT_AC);
+			PlayTone(300, 500);
+		}
+	}
+}

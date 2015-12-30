@@ -1,0 +1,24 @@
+task main()
+{
+	SetSensorLowspeed(IN_2);
+	
+	OnFwd(OUT_A, 50);
+	OnRev(OUT_C, 50);
+	// 2.1 sek
+	PlayTone(500, 500);
+	
+	int dist;
+	while(true) {
+		dist = SensorUS(IN_2);
+		if(dist < 30) {
+			Off(OUT_AC);
+			PlayTone(300, 50);
+		}
+		if(dist != 255) {
+			ClearScreen();
+		}
+		TextOut(0, LCD_LINE1, StrCat("Dist:", NumToStr(dist)));
+	}
+	
+	Wait(2000);
+}

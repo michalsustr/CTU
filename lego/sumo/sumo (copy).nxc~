@@ -1,0 +1,167 @@
+#define LEFT OUT_A
+#define RIGHT OUT_C
+#define BOTH OUT_AC
+
+#define LIGHT IN_1
+#define ULTRASONIC IN_4
+#define TOUCH IN_2
+#define TOUCH_RIGHT IN_3
+
+// defines which action is going to be done when the robot finishes turning at the start
+#define FIRST_ACTION 3
+
+#define BOUNDARY 30
+
+sub goFwd() {
+	OnFwd(LEFT, 100);
+	OnFwd(RIGHT, 100);
+}
+
+sub stopAll() {
+	Off(LEFT);
+	Off(RIGHT);
+}
+
+task main() {
+	SetSensorLight(LIGHT);
+	SetSensorLowspeed(ULTRASONIC);
+	SetSensorTouch(TOUCH);
+//	SetSensorTouch(TOUCH_RIGHT);
+//	SetSensorMode(TOUCH_RIGHT, SENSOR_MODE_RAW);
+
+	int light, touch, distance;
+	int pushed = 0;
+	unsigned long lastPushed, lastGoFwd;
+	// 0 - find oponent
+	// 1 - go forward (get to the opponent)
+	// 2 - go backward (oponent pushes from the back)
+	// 3 - go forward to the opponent from the side
+	int action = FIRST_ACTION;
+	int lastAction = 0;
+	lastGoFwd = CurrentTick();
+	
+	Wait(1000);
+	
+	// go back
+/*	OnRev(BOTH, 100);
+	Wait(150);
+	Off(LEFT);
+	Off(RIGHT);*/
+	
+	// turn around
+	OnFwd(LEFT, 100);
+	OnRev(RIGHT, 100);
+	Wait(900);
+	Off(LEFT);
+	Off(RIGHT);
+	
+	while(true) {
+		light = Sensor(LIGHT);
+//		touch_left = Sensor(TOUCH_LEFT);
+//		touch_right = Sensor(TOUCH_LEFT);
+		touch = 1;//Sensor(TOUCH);
+		
+		
+		if(light < BOUNDARY && touch) {
+			// go back to the center
+			OnFwd(LEFT, 100);
+			OnFwd(RIGHT, 100);
+			Wait(1200);
+			Off(LEFT);
+			Off(RIGHT);
+			
+			lastAction = action;
+			action = 0;
+		}
+		
+		/*if(touch_bottom > 500) { // the robot arrived at the edge, touch sensor is released
+			lastAction = action;
+			action = 1;
+		}*/
+		/*
+		if(touch_left < 500 || touch_right < 500) { // pushed from back
+			if(!pushed) {
+				pushed = 1;
+				lastAction = action;
+				action = 2;
+			}
+			
+			lastPushed = CurrentTick();
+		} else {
+			if(pushed && (CurrentTick() - lastPushed) > 1000) { // robot pushed the oponent away, go back to the center and look for another one
+				pushed = 0;
+
+				// go back to the center
+				OnFwd(LEFT, 100);
+				OnFwd(RIGHT, 100);
+				Wait(300);
+				
+				lastAction = action;
+				action = 0;
+				
+				Off(LEFT);
+				Off(RIGHT);
+			}
+		}*/
+		
+		if(action == 0) { // find opponent
+			lastAction = 0;
+			// start turning the robot
+			OnFwd(LEFT, 70);
+			OnRev(RIGHT, 70);
+
+			distance = SensorUS(ULTRASONIC);
+			
+			if(distance < 50) {
+				Off(LEFT);
+				Off(RIGHT);
+				lastAction = action;
+				action = 1;
+				lastGoFwd = CurrentTick();
+			}
+		}
+		
+		if(action == 1) { // go forward to the oponent
+			// robot is going in circles, change motor power regularly
+			int go =  (CurrentTick() - lastGoFwd) / 5000 % 2;
+			lastAction = 1;
+		
+			if(go) {
+				OnRev(LEFT, 100);
+				OnRev(RIGHT, 60);
+				Wait(1000);
+				OnRev(BOTH, 100);
+			} else {
+				OnRev(BOTH, 100);
+			}
+		}
+		
+		if(action == 2) { // go backwards to the oponent
+			lastAction = 2;
+			OnFwd(BOTH, 100);
+		}
+		
+		if(action == 3) { // go forward to the oponent from the side
+			PlayTone(300, 500);
+			lastAction = 3;
+			OnFwd(LEFT, 100);
+			OnRev(RIGHT, 100);
+			Wait(225);
+
+			OnRev(LEFT, 100);
+			OnRev(RIGHT, 100);
+			Wait(800);
+			
+			OnFwd(RIGHT, 100);
+			OnRev(LEFT, 100);
+			Wait(550);
+			
+			action = 1;
+		}
+	}
+	
+	
+	Wait(5000);
+}
+
+

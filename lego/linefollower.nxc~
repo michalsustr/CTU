@@ -1,0 +1,129 @@
+#define LIGHT SENSOR_1
+#define TOUCH_LEFT SENSOR_3
+#define TOUCH_RIGHT SENSOR_4
+#define LEFT OUT_A
+#define RIGHT OUT_C
+#define BOTH OUT_AC
+
+
+int boundary;
+int white;
+int black;
+
+#define STEP_LENGTH 5
+
+sub Error(string message);
+string getStateAsText(int state);
+
+#define STATE_BOUNDARY 0
+#define STATE_ON_BLACK 1
+#define STATE_CROSSED 2
+#define STATE_LEFT_TURN 3
+int lineState = 0;
+
+bool stopMonitorLineState = false;
+
+sub loadTheLine(void) {
+	TextOut(0, LCD_LINE1, "Loading the line");
+	Wait(1000);
+	int i = 1;
+	long oldRotationCount, middleRotationCount, endRotationCount, rotationCount;
+	int light;
+	
+	while(i == 1) {
+		// move forward, find if line was crossed more times
+		RotateMotorEx(BOTH, 30, 60, 0, true, true);
+		Wait(1500);
+		oldRotationCount = MotorRotationCount(LEFT);
+		
+		int light;
+		int boundaries = 0;
+		int tick = CurrentTick();
+		int lineType = 0;
+		/*
+		
+		*/
+		// turn clock-wise
+		OnFwd(LEFT, 25);
+		OnRev(RIGHT, 25);
+		while(true) {
+			light = LIGHT;
+			TextOut(0, LCD_LINE3, StrCat("Light:", NumToStr(light)));
+			TextOut(0, LCD_LINE4, StrCat("Rot:", NumToStr(MotorRotationCount(LEFT))));
+			
+			if(abs(light - boundary) == 0) { // boundary found
+				if(!middleRotationCount) {
+					middleRotationCount = MotorRotationCount(LEFT);
+				}
+				if(middleRotationCount && (MotorRotationCount(LEFT) - middleRotationCount) > 5) {
+					endRotationCount = MotorRotationCount(LEFT);
+					lineType = 2;
+					break;
+				}
+			}
+		}
+		Off(BOTH);
+		
+		switch(lineType) {
+			case 2:
+				rotationCount = endRotationCount - oldRotationCount;
+				break;
+			default:
+				Error("Wrong rot type");
+				StopAllTasks();
+		}
+
+		NumOut(0, LCD_LINE5, rotationCount);
+		Wait(1500);
+		i++;
+	}
+	TextOut(0, LCD_LINE8, "Finished loading");
+	Wait(10000);
+}
+
+sub runFromMemory(void) {
+	TextOut(0, LCD_LINE1, "Running from mem");
+	Wait(2000);
+}
+
+task main() {
+	TextOut(0, LCD_LINE1, "Press left bttn");
+	TextOut(0, LCD_LINE2, "to load the line");
+	TextOut(0, LCD_LINE4, "Press right bttn");
+	TextOut(0, LCD_LINE5, "to run from mem ");
+	
+	while(!(ButtonPressed(BTNRIGHT, false) || ButtonPressed(BTNLEFT, false))) {
+		Wait(300);
+	}
+	ClearScreen();
+
+
+	SetSensorLight(IN_1);
+	SetSensorTouch(IN_4);
+	SetSensorTouch(IN_3);
+	boundary = 50;
+	white = 66;
+	black = 33;
+
+
+	if(ButtonPressed(BTNLEFT, false)) {
+		loadTheLine();
+	} else if (ButtonPressed(BTNRIGHT, false)) {
+		runFromMemory();
+	}
+}
+string getStateAsText(int state) {
+	switch(state) {
+		case STATE_BOUNDARY: return "boundary";
+		case STATE_ON_BLACK: return "on black";
+		case STATE_CROSSED: return "crossed";
+		case STATE_LEFT_TURN: return "left turn";
+	}
+}
+
+sub Error(string message) {
+	TextOut(0, LCD_LINE6, "ERROR: ");
+	TextOut(0, LCD_LINE7, message);
+	PlayTone(392, 500);
+	Wait(5000);
+}
