@@ -1,0 +1,177 @@
+1. Running translator
+Parsing... [0.000s CPU, 0.020s wall-clock]
+Instantiating...
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.019s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 109 rules.
+Computing model... [0.010s CPU, 0.004s wall-clock]
+149 relevant atoms
+117 auxiliary atoms
+266 final queue length
+374 total queue pushes
+Completing instantiation... [0.000s CPU, 0.004s wall-clock]
+Instantiating: [0.020s CPU, 0.031s wall-clock]
+Computing fact groups...
+Finding invariants... 37 initial candidates
+[0.010s CPU, 0.011s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+8 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.013s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.010s CPU, 0.000s wall-clock]
+Translating task: [0.010s CPU, 0.004s wall-clock]
+0 implied effects removed
+12 effect conditions simplified
+0 implied preconditions added
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Detecting unreachable propositions...
+0 operators removed
+8 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.001s wall-clock]
+Writing translation key... [0.000s CPU, 0.000s wall-clock]
+Writing mutex key... [0.000s CPU, 0.001s wall-clock]
+Writing output... [0.010s CPU, 0.001s wall-clock]
+Done! [0.050s CPU, 0.072s wall-clock]
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+16 variables of 16 necessary
+72 of 72 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+3. Running search
+Simplifying transitions... done!
+Initializing HSP/FF heuristic...
+Reading invariants from file...
+done
+Generating landmarks using the RPG/SAS+ approach
+approx. reasonable orders
+approx. obedient reasonable orders
+Removed 0 reasonable or obedient reasonable orders
+Generated 29 landmarks, of which 2 are disjunctive
+          72 edges
+13 initial landmarks, 6 goal landmarks
+Landmarks generation time: 0 seconds
+Search iteration 1
+Using the following heuristic(s):
+FF heuristic with preferred operators
+Landmark heuristic with preferred operators
+Initializing HSP/FF heuristic...
+Initializing landmarks count heuristic...
+Conducting best first search.
+Best heuristic value: 816/1172 [expanded 1 state(s)]
+Best heuristic value: 754/1111 [expanded 4 state(s)]
+Best heuristic value: 692/1050 [expanded 7 state(s)]
+Best heuristic value: 682/1050 [expanded 8 state(s)]
+Best heuristic value: 560/929 [expanded 10 state(s)]
+Best heuristic value: 438/687 [expanded 15 state(s)]
+Best heuristic value: 437/676 [expanded 16 state(s)]
+Best heuristic value: 427/676 [expanded 17 state(s)]
+Best heuristic value: 245/314 [expanded 19 state(s)]
+Best heuristic value: 63/133 [expanded 21 state(s)]
+Best heuristic value: 62/122 [expanded 22 state(s)]
+Best heuristic value: 31/61 [expanded 23 state(s)]
+Solution found!
+load_board_basic r b0 t2 (60)
+load_board_basic r b1 t1 (60)
+take_saw r (10)
+cut_board_basic r b1 triangle (120)
+cut_board_basic r b0 circle (120)
+lay_saw r (10)
+take_brush r (10)
+brush_board_basic r b1 yellow (180)
+brush_board_basic r b0 red (180)
+lay_brush r (10)
+unload_board_basic r b1 t1 (60)
+unload_board_basic r b0 t2 (60)
+Plan length: 12 step(s), cost: 880.
+Expanded 24 state(s).
+Generated 97 state(s).
+Search time: 0 seconds
+Total time: 0 seconds
+Search iteration 2
+Using the following heuristic(s):
+FF heuristic with preferred operators
+Landmark heuristic with preferred operators
+Initializing landmarks count heuristic...
+Conducting weighted A* search, weight is 5, bound is 880.
+Best heuristic value: 816/1172 [expanded 1 state(s)]
+Best heuristic value: 754/1111 [expanded 4 state(s)]
+Best heuristic value: 692/1050 [expanded 7 state(s)]
+Best heuristic value: 682/1050 [expanded 8 state(s)]
+Best heuristic value: 560/929 [expanded 12 state(s)]
+Best heuristic value: 438/687 [expanded 15 state(s)]
+Best heuristic value: 437/676 [expanded 16 state(s)]
+Best heuristic value: 427/676 [expanded 17 state(s)]
+Best heuristic value: 245/314 [expanded 18 state(s)]
+Best heuristic value: 224/253 [expanded 20 state(s)]
+Best heuristic value: 214/253 [expanded 21 state(s)]
+Best heuristic value: 32/72 [expanded 22 state(s)]
+Best heuristic value: 31/61 [expanded 23 state(s)]
+Best heuristic value: 31/57 [expanded 756 state(s)]
+Best heuristic value: 31/46 [expanded 757 state(s)]
+Solution found!
+upgrade_advanced r (200)
+load_board_advanced r b0 t2 (45)
+load_board_advanced r b1 t1 (45)
+take_saw r (10)
+cut_board_advanced r b1 triangle (90)
+cut_board_advanced r b0 circle (90)
+lay_saw r (10)
+take_brush r (10)
+brush_board_advanced r b1 yellow (135)
+brush_board_advanced r b0 red (135)
+lay_brush r (10)
+unload_board_advanced r b1 t1 (45)
+unload_board_advanced r b0 t2 (45)
+Plan length: 13 step(s), cost: 870.
+Expanded 1083 state(s).
+Generated 5968 state(s).
+Search time: 0.26 seconds
+Total time: 0.26 seconds
+Search iteration 3
+Using the following heuristic(s):
+FF heuristic with preferred operators
+Landmark heuristic with preferred operators
+Initializing landmarks count heuristic...
+Conducting weighted A* search, weight is 3, bound is 870.
+Best heuristic value: 816/1172 [expanded 1 state(s)]
+Best heuristic value: 754/1111 [expanded 4 state(s)]
+Best heuristic value: 692/1050 [expanded 7 state(s)]
+Best heuristic value: 682/1050 [expanded 8 state(s)]
+Best heuristic value: 560/929 [expanded 12 state(s)]
+Best heuristic value: 438/687 [expanded 15 state(s)]
+Best heuristic value: 437/676 [expanded 16 state(s)]
+Best heuristic value: 427/676 [expanded 17 state(s)]
+Best heuristic value: 245/314 [expanded 18 state(s)]
+Best heuristic value: 224/253 [expanded 20 state(s)]
+Best heuristic value: 214/253 [expanded 21 state(s)]
+Best heuristic value: 32/72 [expanded 24 state(s)]
+Best heuristic value: 31/61 [expanded 25 state(s)]
+Best heuristic value: 31/57 [expanded 749 state(s)]
+Best heuristic value: 31/46 [expanded 754 state(s)]
+Completely explored state space -- no solution!
+Expanded 1181 state(s).
+Generated 7894 state(s).
+Search time: 0.38 seconds
+Total time: 0.64 seconds
+-------------------------------------------------------
+lama2008.p01.runtime: 00:00:01.259

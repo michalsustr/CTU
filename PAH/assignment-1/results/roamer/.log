@@ -1,0 +1,28 @@
+[SCRIPT] 1. Running LAMA translator
+../../domain/domain.pddl ../../problems/.pddl
+Traceback (most recent call last):
+  File "./src/translate/translate.py", line 10, in <module>
+    import fact_groups
+  File "/home/michal/Code/PAH/assignment-1/planners/roamer/src/translate/fact_groups.py", line 5, in <module>
+    import invariant_finder
+  File "/home/michal/Code/PAH/assignment-1/planners/roamer/src/translate/invariant_finder.py", line 8, in <module>
+    import invariants
+  File "/home/michal/Code/PAH/assignment-1/planners/roamer/src/translate/invariants.py", line 4, in <module>
+    import tools
+  File "/home/michal/Code/PAH/assignment-1/planners/roamer/src/translate/tools.py", line 1, in <module>
+    def cartesian_product(sequences):
+KeyboardInterrupt
+ 
+[SCRIPT] 2. Running preprocessor
+./plan: line 20: output.sas: No such file or directory
+[SCRIPT] 3. Copy to the pool
+mv: cannot stat `output': No such file or directory
+mv: cannot stat `all.groups': No such file or directory
+rm: cannot remove `test.groups': No such file or directory
+[INFO] Use 4 instances of stochastic searches
+Failed to match magic word 'begin_metric'.
+Got ''.
+rm: cannot remove `./lama_.solution': No such file or directory
+rm: cannot remove `./lama_.solution_group': No such file or directory
+-------------------------------------------------------
+roamer..runtime: 00:00:00.707

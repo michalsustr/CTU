@@ -1,0 +1,6 @@
+-----------------------------------------------------
+
+The supplied domain/problem file appear to violate part of the PDDL
+language specification.  Specifically:
+
+The planner will continue, but you may wish to fix your files accordingly

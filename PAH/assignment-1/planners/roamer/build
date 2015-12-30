@@ -1,0 +1,8 @@
+#! /bin/sh
+
+cd src/preprocess && \
+(make || exit 1)
+cd ../.. && \
+cd src/search && \
+(make release || exit 1)
+cd ../..

@@ -1,0 +1,245 @@
+1. Running translator
+Parsing... [0.010s CPU, 0.026s wall-clock]
+Instantiating...
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.007s wall-clock]
+Preparing model... [0.000s CPU, 0.003s wall-clock]
+Generated 109 rules.
+Computing model... [0.010s CPU, 0.007s wall-clock]
+149 relevant atoms
+117 auxiliary atoms
+266 final queue length
+374 total queue pushes
+Completing instantiation... [0.000s CPU, 0.007s wall-clock]
+Instantiating: [0.020s CPU, 0.026s wall-clock]
+Computing fact groups...
+Finding invariants... 37 initial candidates
+[0.020s CPU, 0.014s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+8 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.020s CPU, 0.017s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.001s wall-clock]
+Translating task: [0.010s CPU, 0.008s wall-clock]
+0 implied effects removed
+12 effect conditions simplified
+0 implied preconditions added
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Detecting unreachable propositions...
+0 operators removed
+8 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.001s wall-clock]
+Writing translation key... [0.000s CPU, 0.015s wall-clock]
+Writing mutex key... [0.000s CPU, 0.001s wall-clock]
+Writing output... [0.000s CPU, 0.005s wall-clock]
+Done! [0.060s CPU, 0.101s wall-clock]
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+16 variables of 16 necessary
+72 of 72 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+3. Running search
+Dispatcher selected state size 1.
+This is a nonunit task.
+Simplifying transitions... done!
+Initializing heuristic cache... done!
+insert bound
+insert bound
+insert bound
+insert bound
+insert bound
+insert bound
+Starting search: lazy(alt(single(sum(g(),weight(hff,10))),single(sum(g(),weight(hff,10)),pref_only=true),boost=2000),preferred=(hff),reopen_closed=false,cost_type=1)
+Conducting lazy best first search, (real) bound = 2147483647
+Initializing FF heuristic...
+Initializing additive heuristic...
+Simplifying 162 unary operators... done! [132 unary operators]
+Best heuristic value: 13 [g=0, 1 evaluated, 0 expanded, t=0.01s]
+Best heuristic value: 11 [g=1, 3 evaluated, 2 expanded, t=0.01s]
+Best heuristic value: 10 [g=2, 6 evaluated, 5 expanded, t=0.01s]
+Best heuristic value: 8 [g=4, 9 evaluated, 8 expanded, t=0.01s]
+Best heuristic value: 7 [g=5, 11 evaluated, 10 expanded, t=0.01s]
+Best heuristic value: 6 [g=6, 12 evaluated, 11 expanded, t=0.01s]
+Best heuristic value: 5 [g=8, 14 evaluated, 13 expanded, t=0.01s]
+Best heuristic value: 3 [g=9, 15 evaluated, 14 expanded, t=0.01s]
+Best heuristic value: 2 [g=10, 16 evaluated, 15 expanded, t=0.01s]
+Best heuristic value: 1 [g=11, 17 evaluated, 16 expanded, t=0.01s]
+Solution found!
+Actual search time: 0s [t=0.01s]
+load_board_basic r b0 t1 (60)
+load_board_basic r b1 t2 (60)
+take_saw r (10)
+cut_board_basic r b0 circle (120)
+cut_board_basic r b1 triangle (120)
+lay_saw r (10)
+take_brush r (10)
+brush_board_basic r b0 red (180)
+brush_board_basic r b1 yellow (180)
+lay_brush r (10)
+unload_board_basic r b0 t1 (60)
+unload_board_basic r b1 t2 (60)
+Plan length: 12 step(s).
+Plan cost: 880
+Initial state h value: 13.
+Expanded 17 state(s).
+Reopened 0 state(s).
+Evaluated 18 state(s).
+Evaluations: 18
+Generated 83 state(s).
+Best solution cost so far: 880
+Solution found - keep searching
+insert bound
+Starting search: lazy(alt(single(sum(g(),weight(hadd,7))),single(sum(g(),weight(hadd,7)),pref_only=true),single(sum(g(),weight(hcg,7))),single(sum(g(),weight(hcg,7)),pref_only=true),single(sum(g(),weight(hcea,7))),single(sum(g(),weight(hcea,7)),pref_only=true),single(sum(g(),weight(hgoalcount,7))),single(sum(g(),weight(hgoalcount,7)),pref_only=true),boost=1000),preferred=(hcea,hgoalcount),reopen_closed=false,cost_type=1)
+Conducting lazy best first search, (real) bound = 880
+Initializing context-enhanced additive heuristic...
+Switch from bucket-based to heap-based queue at key = 200, num_pushes = 10
+Initializing causal graph heuristic...
+Switch from bucket-based to heap-based queue at key = 201, num_pushes = 1
+Switch from bucket-based to heap-based queue at key = 193, num_pushes = 1
+Switch from bucket-based to heap-based queue at key = 409, num_pushes = 1
+Switch from bucket-based to heap-based queue at key = 193, num_pushes = 1
+Switch from bucket-based to heap-based queue at key = 409, num_pushes = 1
+Switch from bucket-based to heap-based queue at key = 193, num_pushes = 1
+Switch from bucket-based to heap-based queue at key = 192, num_pushes = 1
+Switch from bucket-based to heap-based queue at key = 693, num_pushes = 3
+Switch from bucket-based to heap-based queue at key = 192, num_pushes = 1
+Switch from bucket-based to heap-based queue at key = 193, num_pushes = 1
+Switch from bucket-based to heap-based queue at key = 693, num_pushes = 3
+Initializing goal count heuristic...
+Initializing additive heuristic...
+Simplifying 162 unary operators... done! [132 unary operators]
+Switch from bucket-based to heap-based queue at key = 200, num_pushes = 16
+Best heuristic value: 2000/1906/6/2000 [g=0, 1 evaluated, 0 expanded, t=0.01s]
+Switch from bucket-based to heap-based queue at key = 253, num_pushes = 1
+Switch from bucket-based to heap-based queue at key = 314, num_pushes = 1
+Best heuristic value: 1700/1662/6/1700 [g=1, 3 evaluated, 2 expanded, t=0.01s]
+Best heuristic value: 1400/1418/6/1400 [g=2, 7 evaluated, 6 expanded, t=0.01s]
+Switch from bucket-based to heap-based queue at key = 314, num_pushes = 1
+Best heuristic value: 1180/1198/5/1180 [g=4, 11 evaluated, 10 expanded, t=0.01s]
+Best heuristic value: 1140/1154/5/1140 [g=5, 12 evaluated, 11 expanded, t=0.01s]
+Best heuristic value: 940/956/4/940 [g=5, 14 evaluated, 13 expanded, t=0.01s]
+Best heuristic value: 880/890/4/880 [g=6, 15 evaluated, 14 expanded, t=0.01s]
+Best heuristic value: 860/868/4/860 [g=7, 16 evaluated, 15 expanded, t=0.01s]
+Best heuristic value: 500/506/3/500 [g=8, 17 evaluated, 16 expanded, t=0.01s]
+Best heuristic value: 140/144/2/140 [g=9, 18 evaluated, 17 expanded, t=0.01s]
+Best heuristic value: 120/122/2/120 [g=10, 19 evaluated, 18 expanded, t=0.01s]
+Best heuristic value: 60/61/1/60 [g=11, 20 evaluated, 19 expanded, t=0.01s]
+Switch from bucket-based to heap-based queue at key = 253, num_pushes = 1
+Completely explored state space -- no solution!
+Actual search time: 0.03s [t=0.04s]
+Initial state h value: 2000/1906/6/2000.
+Expanded 466 state(s).
+Reopened 0 state(s).
+Evaluated 960 state(s).
+Evaluations: 3840
+Generated 1938 state(s).
+Best solution cost so far: 880
+No solution found - keep searching
+insert bound
+Starting search: lazy(alt(tiebreaking(sum(g(),weight(hadd,3)),hadd),tiebreaking(sum(g(),weight(hadd,3)),hadd,pref_only=true),tiebreaking(sum(g(),weight(hcg,3)),hcg),tiebreaking(sum(g(),weight(hcg,3)),hcg,pref_only=true),tiebreaking(sum(g(),weight(hcea,3)),hcea),tiebreaking(sum(g(),weight(hcea,3)),hcea,pref_only=true),tiebreaking(sum(g(),weight(hgoalcount,3)),hgoalcount),tiebreaking(sum(g(),weight(hgoalcount,3)),hgoalcount,pref_only=true),boost=5000),preferred=(hcea,hgoalcount),reopen_closed=false,cost_type=0)
+Conducting lazy best first search, (real) bound = 880
+Best heuristic value: 2000/1906/6/2000 [g=0, 1 evaluated, 0 expanded, t=0.04s]
+Best heuristic value: 1700/1662/6/1700 [g=60, 4 evaluated, 3 expanded, t=0.04s]
+Best heuristic value: 1400/1418/6/1400 [g=120, 7 evaluated, 6 expanded, t=0.04s]
+Best heuristic value: 1180/1198/5/1180 [g=250, 12 evaluated, 11 expanded, t=0.04s]
+Best heuristic value: 1140/1154/5/1140 [g=260, 13 evaluated, 12 expanded, t=0.04s]
+Best heuristic value: 780/792/4/780 [g=450, 19 evaluated, 18 expanded, t=0.04s]
+Best heuristic value: 760/770/4/760 [g=460, 20 evaluated, 19 expanded, t=0.04s]
+Best heuristic value: 700/709/3/700 [g=520, 22 evaluated, 21 expanded, t=0.04s]
+Best heuristic value: 470/478/2/470 [g=650, 25 evaluated, 24 expanded, t=0.04s]
+Best heuristic value: 440/445/2/440 [g=660, 26 evaluated, 25 expanded, t=0.04s]
+Best heuristic value: 430/434/2/430 [g=670, 27 evaluated, 26 expanded, t=0.04s]
+Best heuristic value: 70/72/1/70 [g=850, 29 evaluated, 28 expanded, t=0.04s]
+Best heuristic value: 60/61/1/60 [g=860, 30 evaluated, 29 expanded, t=0.04s]
+Best heuristic value: 55/57/1/55 [g=855, 298 evaluated, 229 expanded, t=0.05s]
+Best heuristic value: 45/46/1/45 [g=865, 299 evaluated, 230 expanded, t=0.05s]
+Solution found!
+Actual search time: 0.01s [t=0.05s]
+upgrade_advanced r (200)
+load_board_advanced r b1 t1 (45)
+load_board_advanced r b0 t2 (45)
+take_saw r (10)
+cut_board_advanced r b0 circle (90)
+cut_board_advanced r b1 triangle (90)
+lay_saw r (10)
+take_brush r (10)
+brush_board_advanced r b0 red (135)
+brush_board_advanced r b1 yellow (135)
+lay_brush r (10)
+unload_board_advanced r b1 t1 (45)
+unload_board_advanced r b0 t2 (45)
+Plan length: 13 step(s).
+Plan cost: 870
+Initial state h value: 2000/1906/6/2000.
+Expanded 325 state(s).
+Reopened 0 state(s).
+Evaluated 417 state(s).
+Evaluations: 1668
+Generated 1398 state(s).
+Best solution cost so far: 870
+Solution found - keep searching
+insert bound
+Starting search: eager(alt(tiebreaking(sum(g(),weight(hadd,10)),hadd),tiebreaking(sum(g(),weight(hadd,10)),hadd,pref_only=true),tiebreaking(sum(g(),weight(hcg,10)),hcg),tiebreaking(sum(g(),weight(hcg,10)),hcg,pref_only=true),tiebreaking(sum(g(),weight(hcea,10)),hcea),tiebreaking(sum(g(),weight(hcea,10)),hcea,pref_only=true),tiebreaking(sum(g(),weight(hgoalcount,10)),hgoalcount),tiebreaking(sum(g(),weight(hgoalcount,10)),hgoalcount,pref_only=true),boost=500),preferred=(hcea,hgoalcount),reopen_closed=true,pathmax=true,cost_type=0)
+Conducting best first search with reopening closed nodes, (real) bound = 870
+Using pathmax correction
+Best heuristic value: 2000/1906/6/2000 [g=0, 1 evaluated, 0 expanded, t=0.05s]
+Best heuristic value: 1700/1662/6/1700 [g=60, 2 evaluated, 1 expanded, t=0.05s]
+Best heuristic value: 1520/1456/6/1520 [g=200, 6 evaluated, 1 expanded, t=0.05s]
+Best heuristic value: 1400/1418/6/1400 [g=120, 9 evaluated, 2 expanded, t=0.05s]
+Best heuristic value: 1295/1272/6/1295 [g=260, 10 evaluated, 2 expanded, t=0.05s]
+Best heuristic value: 1070/1088/6/1070 [g=320, 13 evaluated, 3 expanded, t=0.05s]
+Best heuristic value: 1060/1078/5/1060 [g=310, 19 evaluated, 5 expanded, t=0.06s]
+Best heuristic value: 700/716/4/700 [g=490, 24 evaluated, 6 expanded, t=0.06s]
+Best heuristic value: 550/566/4/550 [g=690, 30 evaluated, 8 expanded, t=0.06s]
+Best heuristic value: 490/500/4/490 [g=700, 32 evaluated, 9 expanded, t=0.06s]
+Best heuristic value: 380/386/3/380 [g=630, 34 evaluated, 10 expanded, t=0.06s]
+Best heuristic value: 140/144/2/140 [g=750, 45 evaluated, 11 expanded, t=0.06s]
+Best heuristic value: 120/122/2/120 [g=760, 49 evaluated, 12 expanded, t=0.06s]
+Best heuristic value: 60/61/1/60 [g=820, 50 evaluated, 13 expanded, t=0.06s]
+Best heuristic value: 55/57/1/55 [g=835, 684 evaluated, 233 expanded, 6 reopened, t=0.06s]
+Best heuristic value: 45/46/1/45 [g=845, 686 evaluated, 234 expanded, 6 reopened, t=0.06s]
+Completely explored state space -- no solution!
+Actual search time: 0.02s [t=0.07s]
+Initial state h value: 2000/1906/6/2000.
+Expanded 692 state(s).
+Reopened 143 state(s).
+Evaluated 1181 state(s).
+Evaluations: 6108
+Generated 2336 state(s).
+Pathmax corrections: 546
+search space hash size: 1181
+search space hash bucket count: 1543
+Best solution cost so far: 870
+No solution found - keep searching
+Actual search time: 0.06s [t=0.07s]
+Cumulative statistics:
+Initial state h value: .
+Expanded 1500 state(s).
+Reopened 143 state(s).
+Evaluated 2576 state(s).
+Evaluations: 11634
+Generated 5755 state(s).
+Search time: 0.06s
+Total time: 0.07s
+Peak memory: 5408 KB
+-------------------------------------------------------
+fd-autotune-1.p01.runtime: 00:00:01.603

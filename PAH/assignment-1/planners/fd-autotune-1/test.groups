@@ -1,0 +1,168 @@
+var0:
+  0: Atom boardloadedontable(b3, t2)
+  1: Atom boardloadedontable(b5, t2)
+  2: Atom boardloadedontable(b1, t2)
+  3: Atom boardloadedontable(b4, t2)
+  4: Atom boardloadedontable(b2, t2)
+  5: Atom tableisfree(t2)
+  6: Atom boardloadedontable(b0, t2)
+var1:
+  0: Atom boardloadedontable(b4, t1)
+  1: Atom tableisfree(t1)
+  2: Atom boardloadedontable(b2, t1)
+  3: Atom boardloadedontable(b0, t1)
+  4: Atom boardloadedontable(b5, t1)
+  5: Atom boardloadedontable(b3, t1)
+  6: Atom boardloadedontable(b1, t1)
+var2:
+  0: Atom boardhasshape(b4, circle)
+  1: Atom boardhasshape(b4, hexagon)
+  2: Atom boardhasshape(b4, square)
+  3: Atom boardhasnoshape(b4)
+  4: Atom boardhasshape(b4, triangle)
+var3:
+  0: Atom boardhasshape(b5, triangle)
+  1: Atom boardhasnoshape(b5)
+  2: Atom boardhasshape(b5, square)
+  3: Atom boardhasshape(b5, hexagon)
+  4: Atom boardhasshape(b5, circle)
+var4:
+  0: Atom boardhasshape(b3, circle)
+  1: Atom boardhasnoshape(b3)
+  2: Atom boardhasshape(b3, square)
+  3: Atom boardhasshape(b3, triangle)
+  4: Atom boardhasshape(b3, hexagon)
+var5:
+  0: Atom boardhasnoshape(b2)
+  1: Atom boardhasshape(b2, circle)
+  2: Atom boardhasshape(b2, triangle)
+  3: Atom boardhasshape(b2, square)
+  4: Atom boardhasshape(b2, hexagon)
+var6:
+  0: Atom boardhasshape(b1, circle)
+  1: Atom boardhasshape(b1, hexagon)
+  2: Atom boardhasshape(b1, triangle)
+  3: Atom boardhasnoshape(b1)
+  4: Atom boardhasshape(b1, square)
+var7:
+  0: Atom boardhasshape(b0, square)
+  1: Atom boardhasshape(b0, hexagon)
+  2: Atom boardhasnoshape(b0)
+  3: Atom boardhasshape(b0, triangle)
+  4: Atom boardhasshape(b0, circle)
+var8:
+  0: Atom boardhascolor(b1, yellow)
+  1: Atom boardhascolor(b1, blue)
+  2: Atom boardhascolor(b1, red)
+  3: Atom boardhasnocolor(b1)
+var9:
+  0: Atom boardhascolor(b2, red)
+  1: Atom boardhascolor(b2, yellow)
+  2: Atom boardhasnocolor(b2)
+  3: Atom boardhascolor(b2, blue)
+var10:
+  0: Atom boardhascolor(b4, yellow)
+  1: Atom boardhasnocolor(b4)
+  2: Atom boardhascolor(b4, red)
+  3: Atom boardhascolor(b4, blue)
+var11:
+  0: Atom boardhascolor(b0, blue)
+  1: Atom boardhascolor(b0, yellow)
+  2: Atom boardhasnocolor(b0)
+  3: Atom boardhascolor(b0, red)
+var12:
+  0: Atom boardhascolor(b5, red)
+  1: Atom boardhascolor(b5, yellow)
+  2: Atom boardhasnocolor(b5)
+  3: Atom boardhascolor(b5, blue)
+var13:
+  0: Atom boardhascolor(b3, blue)
+  1: Atom boardhasnocolor(b3)
+  2: Atom boardhascolor(b3, yellow)
+  3: Atom boardhascolor(b3, red)
+var14:
+  0: Atom robotisadvanced(r)
+  1: Atom robotisexpert(r)
+  2: Atom robotisbasic(r)
+var15:
+  0: Atom robothassaw(r)
+  1: Atom robothasbrush(r)
+  2: Atom robothasnotool(r)
+var16:
+  0: Atom isoninputpile(b4)
+  1: Atom isonoutputpile(b4)
+  2: <none of those>
+var17:
+  0: Atom isonoutputpile(b3)
+  1: Atom isoninputpile(b3)
+  2: <none of those>
+var18:
+  0: Atom isoninputpile(b0)
+  1: Atom isonoutputpile(b0)
+  2: <none of those>
+var19:
+  0: Atom isoninputpile(b5)
+  1: Atom isonoutputpile(b5)
+  2: <none of those>
+var20:
+  0: Atom isonoutputpile(b1)
+  1: Atom isoninputpile(b1)
+  2: <none of those>
+var21:
+  0: Atom isonoutputpile(b2)
+  1: Atom isoninputpile(b2)
+  2: <none of those>
+var22:
+  0: Atom boardisloaded(b0)
+  1: <none of those>
+var23:
+  0: Atom boardisloaded(b5)
+  1: <none of those>
+var24:
+  0: Atom iscut(b3)
+  1: <none of those>
+var25:
+  0: Atom iscolored(b0)
+  1: <none of those>
+var26:
+  0: Atom iscolored(b4)
+  1: <none of those>
+var27:
+  0: Atom iscut(b2)
+  1: <none of those>
+var28:
+  0: Atom iscolored(b2)
+  1: <none of those>
+var29:
+  0: Atom boardisloaded(b3)
+  1: <none of those>
+var30:
+  0: Atom iscolored(b1)
+  1: <none of those>
+var31:
+  0: Atom iscut(b1)
+  1: <none of those>
+var32:
+  0: Atom iscut(b0)
+  1: <none of those>
+var33:
+  0: Atom iscut(b4)
+  1: <none of those>
+var34:
+  0: Atom boardisloaded(b4)
+  1: <none of those>
+var35:
+  0: Atom iscolored(b5)
+  1: <none of those>
+var36:
+  0: Atom boardisloaded(b1)
+  1: <none of those>
+var37:
+  0: Atom iscolored(b3)
+  1: <none of those>
+var38:
+  0: Atom boardisloaded(b2)
+  1: <none of those>
+var39:
+  0: Atom iscut(b5)
+  1: <none of those>

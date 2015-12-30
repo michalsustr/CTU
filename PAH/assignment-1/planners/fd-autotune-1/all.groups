@@ -1,0 +1,325 @@
+begin_groups
+70
+group
+2
+5 0 boardhasnoshape 1 b2 
+27 0 iscut 1 b2 
+group
+1
+14 2 robotisbasic 1 r 
+group
+2
+7 2 boardhasnoshape 1 b0 
+32 0 iscut 1 b0 
+group
+4
+16 1 isonoutputpile 1 b4 
+1 0 boardloadedontable 2 b4 t1 
+0 3 boardloadedontable 2 b4 t2 
+16 0 isoninputpile 1 b4 
+group
+5
+7 2 boardhasnoshape 1 b0 
+7 3 boardhasshape 2 b0 triangle 
+7 0 boardhasshape 2 b0 square 
+7 4 boardhasshape 2 b0 circle 
+7 1 boardhasshape 2 b0 hexagon 
+group
+4
+17 0 isonoutputpile 1 b3 
+1 5 boardloadedontable 2 b3 t1 
+0 0 boardloadedontable 2 b3 t2 
+17 1 isoninputpile 1 b3 
+group
+2
+17 1 isoninputpile 1 b3 
+29 0 boardisloaded 1 b3 
+group
+2
+3 1 boardhasnoshape 1 b5 
+39 0 iscut 1 b5 
+group
+2
+20 1 isoninputpile 1 b1 
+36 0 boardisloaded 1 b1 
+group
+1
+8 3 boardhasnocolor 1 b1 
+group
+5
+6 3 boardhasnoshape 1 b1 
+6 2 boardhasshape 2 b1 triangle 
+6 4 boardhasshape 2 b1 square 
+6 0 boardhasshape 2 b1 circle 
+6 1 boardhasshape 2 b1 hexagon 
+group
+1
+12 2 boardhasnocolor 1 b5 
+group
+1
+14 2 robotisbasic 1 r 
+group
+2
+28 0 iscolored 1 b2 
+9 2 boardhasnocolor 1 b2 
+group
+2
+16 0 isoninputpile 1 b4 
+34 0 boardisloaded 1 b4 
+group
+1
+5 0 boardhasnoshape 1 b2 
+group
+2
+26 0 iscolored 1 b4 
+10 1 boardhasnocolor 1 b4 
+group
+3
+1 2 boardloadedontable 2 b2 t1 
+0 4 boardloadedontable 2 b2 t2 
+21 1 isoninputpile 1 b2 
+group
+1
+3 1 boardhasnoshape 1 b5 
+group
+4
+13 3 boardhascolor 2 b3 red 
+13 0 boardhascolor 2 b3 blue 
+13 2 boardhascolor 2 b3 yellow 
+13 1 boardhasnocolor 1 b3 
+group
+2
+18 0 isoninputpile 1 b0 
+22 0 boardisloaded 1 b0 
+group
+5
+5 0 boardhasnoshape 1 b2 
+5 2 boardhasshape 2 b2 triangle 
+5 3 boardhasshape 2 b2 square 
+5 1 boardhasshape 2 b2 circle 
+5 4 boardhasshape 2 b2 hexagon 
+group
+4
+18 1 isonoutputpile 1 b0 
+1 3 boardloadedontable 2 b0 t1 
+0 6 boardloadedontable 2 b0 t2 
+18 0 isoninputpile 1 b0 
+group
+1
+20 1 isoninputpile 1 b1 
+group
+1
+18 0 isoninputpile 1 b0 
+group
+1
+7 2 boardhasnoshape 1 b0 
+group
+2
+4 1 boardhasnoshape 1 b3 
+24 0 iscut 1 b3 
+group
+2
+19 0 isoninputpile 1 b5 
+23 0 boardisloaded 1 b5 
+group
+4
+19 1 isonoutputpile 1 b5 
+1 4 boardloadedontable 2 b5 t1 
+0 1 boardloadedontable 2 b5 t2 
+19 0 isoninputpile 1 b5 
+group
+3
+14 2 robotisbasic 1 r 
+14 0 robotisadvanced 1 r 
+14 1 robotisexpert 1 r 
+group
+1
+16 0 isoninputpile 1 b4 
+group
+4
+20 0 isonoutputpile 1 b1 
+1 6 boardloadedontable 2 b1 t1 
+0 2 boardloadedontable 2 b1 t2 
+20 1 isoninputpile 1 b1 
+group
+3
+15 1 robothasbrush 1 r 
+15 0 robothassaw 1 r 
+15 2 robothasnotool 1 r 
+group
+1
+2 3 boardhasnoshape 1 b4 
+group
+3
+1 0 boardloadedontable 2 b4 t1 
+0 3 boardloadedontable 2 b4 t2 
+16 0 isoninputpile 1 b4 
+group
+5
+4 1 boardhasnoshape 1 b3 
+4 3 boardhasshape 2 b3 triangle 
+4 2 boardhasshape 2 b3 square 
+4 0 boardhasshape 2 b3 circle 
+4 4 boardhasshape 2 b3 hexagon 
+group
+3
+15 1 robothasbrush 1 r 
+15 0 robothassaw 1 r 
+15 2 robothasnotool 1 r 
+group
+1
+10 1 boardhasnocolor 1 b4 
+group
+2
+21 1 isoninputpile 1 b2 
+38 0 boardisloaded 1 b2 
+group
+5
+3 1 boardhasnoshape 1 b5 
+3 0 boardhasshape 2 b5 triangle 
+3 2 boardhasshape 2 b5 square 
+3 4 boardhasshape 2 b5 circle 
+3 3 boardhasshape 2 b5 hexagon 
+group
+1
+6 3 boardhasnoshape 1 b1 
+group
+2
+37 0 iscolored 1 b3 
+13 1 boardhasnocolor 1 b3 
+group
+3
+1 3 boardloadedontable 2 b0 t1 
+0 6 boardloadedontable 2 b0 t2 
+18 0 isoninputpile 1 b0 
+group
+3
+1 5 boardloadedontable 2 b3 t1 
+0 0 boardloadedontable 2 b3 t2 
+17 1 isoninputpile 1 b3 
+group
+2
+6 3 boardhasnoshape 1 b1 
+31 0 iscut 1 b1 
+group
+4
+12 0 boardhascolor 2 b5 red 
+12 3 boardhascolor 2 b5 blue 
+12 1 boardhascolor 2 b5 yellow 
+12 2 boardhasnocolor 1 b5 
+group
+1
+4 1 boardhasnoshape 1 b3 
+group
+7
+1 3 boardloadedontable 2 b0 t1 
+1 6 boardloadedontable 2 b1 t1 
+1 2 boardloadedontable 2 b2 t1 
+1 5 boardloadedontable 2 b3 t1 
+1 0 boardloadedontable 2 b4 t1 
+1 4 boardloadedontable 2 b5 t1 
+1 1 tableisfree 1 t1 
+group
+1
+17 1 isoninputpile 1 b3 
+group
+1
+21 1 isoninputpile 1 b2 
+group
+4
+21 0 isonoutputpile 1 b2 
+1 2 boardloadedontable 2 b2 t1 
+0 4 boardloadedontable 2 b2 t2 
+21 1 isoninputpile 1 b2 
+group
+1
+11 2 boardhasnocolor 1 b0 
+group
+7
+0 6 boardloadedontable 2 b0 t2 
+0 2 boardloadedontable 2 b1 t2 
+0 4 boardloadedontable 2 b2 t2 
+0 0 boardloadedontable 2 b3 t2 
+0 3 boardloadedontable 2 b4 t2 
+0 1 boardloadedontable 2 b5 t2 
+0 5 tableisfree 1 t2 
+group
+4
+11 3 boardhascolor 2 b0 red 
+11 0 boardhascolor 2 b0 blue 
+11 1 boardhascolor 2 b0 yellow 
+11 2 boardhasnocolor 1 b0 
+group
+2
+2 3 boardhasnoshape 1 b4 
+33 0 iscut 1 b4 
+group
+1
+19 0 isoninputpile 1 b5 
+group
+1
+9 2 boardhasnocolor 1 b2 
+group
+1
+13 1 boardhasnocolor 1 b3 
+group
+2
+30 0 iscolored 1 b1 
+8 3 boardhasnocolor 1 b1 
+group
+5
+2 3 boardhasnoshape 1 b4 
+2 4 boardhasshape 2 b4 triangle 
+2 2 boardhasshape 2 b4 square 
+2 0 boardhasshape 2 b4 circle 
+2 1 boardhasshape 2 b4 hexagon 
+group
+2
+25 0 iscolored 1 b0 
+11 2 boardhasnocolor 1 b0 
+group
+4
+10 2 boardhascolor 2 b4 red 
+10 3 boardhascolor 2 b4 blue 
+10 0 boardhascolor 2 b4 yellow 
+10 1 boardhasnocolor 1 b4 
+group
+4
+9 0 boardhascolor 2 b2 red 
+9 3 boardhascolor 2 b2 blue 
+9 1 boardhascolor 2 b2 yellow 
+9 2 boardhasnocolor 1 b2 
+group
+2
+14 2 robotisbasic 1 r 
+14 0 robotisadvanced 1 r 
+group
+3
+1 4 boardloadedontable 2 b5 t1 
+0 1 boardloadedontable 2 b5 t2 
+19 0 isoninputpile 1 b5 
+group
+2
+35 0 iscolored 1 b5 
+12 2 boardhasnocolor 1 b5 
+group
+4
+8 2 boardhascolor 2 b1 red 
+8 1 boardhascolor 2 b1 blue 
+8 0 boardhascolor 2 b1 yellow 
+8 3 boardhasnocolor 1 b1 
+group
+3
+14 2 robotisbasic 1 r 
+14 0 robotisadvanced 1 r 
+14 1 robotisexpert 1 r 
+group
+2
+14 2 robotisbasic 1 r 
+14 0 robotisadvanced 1 r 
+group
+3
+1 6 boardloadedontable 2 b1 t1 
+0 2 boardloadedontable 2 b1 t2 
+20 1 isoninputpile 1 b1 
+end_groups

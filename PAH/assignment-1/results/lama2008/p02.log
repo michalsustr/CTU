@@ -1,0 +1,394 @@
+1. Running translator
+Parsing... [0.010s CPU, 0.034s wall-clock]
+Instantiating...
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.004s wall-clock]
+Preparing model... [0.010s CPU, 0.002s wall-clock]
+Generated 109 rules.
+Computing model... [0.000s CPU, 0.005s wall-clock]
+201 relevant atoms
+150 auxiliary atoms
+351 final queue length
+512 total queue pushes
+Completing instantiation... [0.010s CPU, 0.006s wall-clock]
+Instantiating: [0.030s CPU, 0.019s wall-clock]
+Computing fact groups...
+Finding invariants... 37 initial candidates
+[0.010s CPU, 0.011s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.001s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+9 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.014s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.001s wall-clock]
+Translating task: [0.010s CPU, 0.006s wall-clock]
+0 implied effects removed
+18 effect conditions simplified
+0 implied preconditions added
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.001s wall-clock]
+Detecting unreachable propositions...
+0 operators removed
+10 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.002s wall-clock]
+Writing translation key... [0.000s CPU, 0.000s wall-clock]
+Writing mutex key... [0.000s CPU, 0.001s wall-clock]
+Writing output... [0.000s CPU, 0.001s wall-clock]
+Done! [0.060s CPU, 0.079s wall-clock]
+2. Running preprocessor
+Building causal graph...
+The causal graph is not acyclic.
+22 variables of 22 necessary
+105 of 105 operators necessary.
+0 of 0 axiom rules necessary.
+Building domain transition graphs...
+solveable in poly time 0
+Building successor generator...
+Writing output...
+done
+
+3. Running search
+Simplifying transitions... done!
+Initializing HSP/FF heuristic...
+Reading invariants from file...
+done
+Generating landmarks using the RPG/SAS+ approach
+approx. reasonable orders
+approx. obedient reasonable orders
+Removed 0 reasonable or obedient reasonable orders
+Generated 42 landmarks, of which 3 are disjunctive
+          107 edges
+19 initial landmarks, 9 goal landmarks
+Landmarks generation time: 0 seconds
+Search iteration 1
+Using the following heuristic(s):
+FF heuristic with preferred operators
+Landmark heuristic with preferred operators
+Initializing HSP/FF heuristic...
+Initializing landmarks count heuristic...
+Conducting best first search.
+Best heuristic value: 1213/1898 [expanded 1 state(s)]
+Best heuristic value: 1151/1837 [expanded 4 state(s)]
+Best heuristic value: 1089/1776 [expanded 7 state(s)]
+Best heuristic value: 1089/1534 [expanded 12 state(s)]
+Best heuristic value: 1089/1414 [expanded 19 state(s)]
+Best heuristic value: 1089/1172 [expanded 23 state(s)]
+Best heuristic value: 1089/930 [expanded 27 state(s)]
+Best heuristic value: 1089/869 [expanded 32 state(s)]
+Best heuristic value: 1089/808 [expanded 38 state(s)]
+Best heuristic value: 993/808 [expanded 39 state(s)]
+Best heuristic value: 961/808 [expanded 40 state(s)]
+Best heuristic value: 715/687 [expanded 41 state(s)]
+Best heuristic value: 714/676 [expanded 42 state(s)]
+Best heuristic value: 612/676 [expanded 43 state(s)]
+Best heuristic value: 245/314 [expanded 46 state(s)]
+Best heuristic value: 63/133 [expanded 48 state(s)]
+Best heuristic value: 62/122 [expanded 49 state(s)]
+Best heuristic value: 31/61 [expanded 50 state(s)]
+Solution found!
+load_board_basic r b2 t2 (60)
+load_board_basic r b0 t1 (60)
+take_brush r (10)
+brush_board_basic r b2 yellow (180)
+lay_brush r (10)
+take_saw r (10)
+cut_board_basic r b0 circle (120)
+cut_board_basic r b2 square (120)
+lay_saw r (10)
+unload_board_basic r b2 t2 (60)
+load_board_basic r b1 t2 (60)
+take_saw r (10)
+cut_board_basic r b1 triangle (120)
+lay_saw r (10)
+take_brush r (10)
+brush_board_basic r b1 yellow (180)
+brush_board_basic r b0 red (180)
+lay_brush r (10)
+unload_board_basic r b1 t2 (60)
+unload_board_basic r b0 t1 (60)
+Plan length: 20 step(s), cost: 1340.
+Expanded 51 state(s).
+Generated 208 state(s).
+Search time: 0 seconds
+Total time: 0 seconds
+Search iteration 2
+Using the following heuristic(s):
+FF heuristic with preferred operators
+Landmark heuristic with preferred operators
+Initializing landmarks count heuristic...
+Conducting weighted A* search, weight is 5, bound is 1340.
+Best heuristic value: 1213/1898 [expanded 1 state(s)]
+Best heuristic value: 1151/1837 [expanded 4 state(s)]
+Best heuristic value: 1089/1837 [expanded 7 state(s)]
+Best heuristic value: 1089/1776 [expanded 9 state(s)]
+Best heuristic value: 1089/1534 [expanded 13 state(s)]
+Best heuristic value: 1089/1413 [expanded 18 state(s)]
+Best heuristic value: 1089/1051 [expanded 27 state(s)]
+Best heuristic value: 1089/990 [expanded 32 state(s)]
+Best heuristic value: 1089/929 [expanded 36 state(s)]
+Best heuristic value: 993/929 [expanded 37 state(s)]
+Best heuristic value: 961/929 [expanded 38 state(s)]
+Best heuristic value: 715/687 [expanded 41 state(s)]
+Best heuristic value: 714/676 [expanded 42 state(s)]
+Best heuristic value: 612/676 [expanded 43 state(s)]
+Best heuristic value: 245/314 [expanded 46 state(s)]
+Best heuristic value: 224/253 [expanded 48 state(s)]
+Best heuristic value: 214/253 [expanded 49 state(s)]
+Best heuristic value: 32/72 [expanded 50 state(s)]
+Best heuristic value: 31/61 [expanded 51 state(s)]
+Best heuristic value: 31/57 [expanded 2152 state(s)]
+Best heuristic value: 31/46 [expanded 2563 state(s)]
+Solution found!
+load_board_basic r b2 t1 (60)
+load_board_basic r b1 t2 (60)
+upgrade_advanced r (200)
+take_saw r (10)
+cut_board_advanced r b2 square (90)
+cut_board_advanced r b1 triangle (90)
+lay_saw r (10)
+take_brush r (10)
+brush_board_advanced r b2 yellow (135)
+lay_brush r (10)
+unload_board_advanced r b2 t1 (45)
+load_board_advanced r b0 t1 (45)
+take_saw r (10)
+cut_board_advanced r b0 circle (90)
+lay_saw r (10)
+take_brush r (10)
+brush_board_advanced r b1 yellow (135)
+lay_brush r (10)
+unload_board_advanced r b1 t2 (45)
+take_brush r (10)
+brush_board_advanced r b0 red (135)
+lay_brush r (10)
+unload_board_advanced r b0 t1 (45)
+Plan length: 23 step(s), cost: 1275.
+Expanded 3074 state(s).
+Generated 13563 state(s).
+Search time: 0.74 seconds
+Total time: 0.74 seconds
+Search iteration 3
+Using the following heuristic(s):
+FF heuristic with preferred operators
+Landmark heuristic with preferred operators
+Initializing landmarks count heuristic...
+Conducting weighted A* search, weight is 3, bound is 1275.
+Best heuristic value: 1213/1898 [expanded 1 state(s)]
+Best heuristic value: 1151/1837 [expanded 4 state(s)]
+Best heuristic value: 1089/1837 [expanded 7 state(s)]
+Best heuristic value: 1089/1776 [expanded 9 state(s)]
+Best heuristic value: 1089/1534 [expanded 13 state(s)]
+Best heuristic value: 1089/1413 [expanded 18 state(s)]
+Best heuristic value: 1089/1051 [expanded 27 state(s)]
+Best heuristic value: 1089/990 [expanded 32 state(s)]
+Best heuristic value: 1089/929 [expanded 36 state(s)]
+Best heuristic value: 993/929 [expanded 37 state(s)]
+Best heuristic value: 961/929 [expanded 39 state(s)]
+Best heuristic value: 715/687 [expanded 42 state(s)]
+Best heuristic value: 714/676 [expanded 43 state(s)]
+Best heuristic value: 612/676 [expanded 44 state(s)]
+Best heuristic value: 245/495 [expanded 48 state(s)]
+Best heuristic value: 224/434 [expanded 50 state(s)]
+Best heuristic value: 214/434 [expanded 51 state(s)]
+Best heuristic value: 63/133 [expanded 54 state(s)]
+Best heuristic value: 62/122 [expanded 55 state(s)]
+Best heuristic value: 32/72 [expanded 90 state(s)]
+Best heuristic value: 32/57 [expanded 2162 state(s)]
+Best heuristic value: 31/46 [expanded 2163 state(s)]
+Solution found!
+load_board_basic r b1 t1 (60)
+load_board_basic r b0 t2 (60)
+upgrade_advanced r (200)
+take_saw r (10)
+cut_board_advanced r b0 circle (90)
+cut_board_advanced r b1 triangle (90)
+lay_saw r (10)
+take_brush r (10)
+brush_board_advanced r b0 red (135)
+lay_brush r (10)
+unload_board_advanced r b0 t2 (45)
+load_board_advanced r b2 t2 (45)
+take_saw r (10)
+cut_board_advanced r b2 square (90)
+lay_saw r (10)
+take_brush r (10)
+brush_board_advanced r b1 yellow (135)
+brush_board_advanced r b2 yellow (135)
+lay_brush r (10)
+unload_board_advanced r b2 t2 (45)
+unload_board_advanced r b1 t1 (45)
+Plan length: 21 step(s), cost: 1255.
+Expanded 2171 state(s).
+Generated 7428 state(s).
+Search time: 0.34 seconds
+Total time: 1.08 seconds
+Search iteration 4
+Using the following heuristic(s):
+FF heuristic with preferred operators
+Landmark heuristic with preferred operators
+Initializing landmarks count heuristic...
+Conducting weighted A* search, weight is 2, bound is 1255.
+Best heuristic value: 1213/1898 [expanded 1 state(s)]
+Best heuristic value: 1151/1837 [expanded 4 state(s)]
+Best heuristic value: 1089/1837 [expanded 7 state(s)]
+Best heuristic value: 1089/1776 [expanded 9 state(s)]
+Best heuristic value: 1089/1534 [expanded 13 state(s)]
+Best heuristic value: 1089/1413 [expanded 16 state(s)]
+Best heuristic value: 1089/1051 [expanded 30 state(s)]
+Best heuristic value: 1089/990 [expanded 34 state(s)]
+Best heuristic value: 1089/929 [expanded 38 state(s)]
+Best heuristic value: 993/929 [expanded 39 state(s)]
+Best heuristic value: 961/929 [expanded 40 state(s)]
+Best heuristic value: 715/687 [expanded 43 state(s)]
+Best heuristic value: 714/676 [expanded 44 state(s)]
+Best heuristic value: 612/676 [expanded 45 state(s)]
+Best heuristic value: 245/314 [expanded 50 state(s)]
+Best heuristic value: 224/253 [expanded 52 state(s)]
+Best heuristic value: 214/253 [expanded 53 state(s)]
+Best heuristic value: 63/133 [expanded 54 state(s)]
+Best heuristic value: 62/122 [expanded 55 state(s)]
+Best heuristic value: 32/57 [expanded 2202 state(s)]
+Best heuristic value: 31/46 [expanded 2203 state(s)]
+Solution found!
+load_board_basic r b0 t1 (60)
+upgrade_advanced r (200)
+load_board_advanced r b2 t2 (45)
+take_saw r (10)
+cut_board_advanced r b2 square (90)
+cut_board_advanced r b0 circle (90)
+lay_saw r (10)
+take_brush r (10)
+brush_board_advanced r b0 red (135)
+lay_brush r (10)
+unload_board_advanced r b0 t1 (45)
+load_board_advanced r b1 t1 (45)
+take_saw r (10)
+cut_board_advanced r b1 triangle (90)
+lay_saw r (10)
+take_brush r (10)
+brush_board_advanced r b1 yellow (135)
+brush_board_advanced r b2 yellow (135)
+lay_brush r (10)
+unload_board_advanced r b2 t2 (45)
+unload_board_advanced r b1 t1 (45)
+Plan length: 21 step(s), cost: 1240.
+Expanded 3314 state(s).
+Generated 13258 state(s).
+Search time: 0.62 seconds
+Total time: 1.7 seconds
+Search iteration 5
+Using the following heuristic(s):
+FF heuristic 
+Landmark heuristic 
+Initializing landmarks count heuristic...
+Conducting weighted A* search, weight is 1, bound is 1240.
+Best heuristic value: 1213/1898 [expanded 1 state(s)]
+Best heuristic value: 1151/1837 [expanded 4 state(s)]
+Best heuristic value: 1089/1837 [expanded 7 state(s)]
+Best heuristic value: 1089/1776 [expanded 9 state(s)]
+Best heuristic value: 1089/1655 [expanded 40 state(s)]
+Best heuristic value: 1089/1534 [expanded 46 state(s)]
+Best heuristic value: 1089/1292 [expanded 67 state(s)]
+Best heuristic value: 1089/977 [expanded 75 state(s)]
+Best heuristic value: 1089/705 [expanded 87 state(s)]
+Best heuristic value: 1089/659 [expanded 95 state(s)]
+Best heuristic value: 1089/613 [expanded 103 state(s)]
+Best heuristic value: 993/613 [expanded 105 state(s)]
+Best heuristic value: 961/613 [expanded 107 state(s)]
+Best heuristic value: 715/522 [expanded 111 state(s)]
+Best heuristic value: 714/511 [expanded 113 state(s)]
+Best heuristic value: 612/511 [expanded 115 state(s)]
+Best heuristic value: 612/477 [expanded 143 state(s)]
+Best heuristic value: 612/431 [expanded 151 state(s)]
+Best heuristic value: 612/340 [expanded 184 state(s)]
+Best heuristic value: 612/329 [expanded 186 state(s)]
+Best heuristic value: 584/329 [expanded 187 state(s)]
+Best heuristic value: 522/329 [expanded 206 state(s)]
+Best heuristic value: 522/159 [expanded 224 state(s)]
+Best heuristic value: 522/148 [expanded 225 state(s)]
+Best heuristic value: 464/148 [expanded 226 state(s)]
+Best heuristic value: 402/148 [expanded 251 state(s)]
+Best heuristic value: 63/103 [expanded 255 state(s)]
+Best heuristic value: 62/92 [expanded 256 state(s)]
+Best heuristic value: 31/46 [expanded 512 state(s)]
+Solution found!
+upgrade_advanced r (200)
+load_board_advanced r b1 t2 (45)
+load_board_advanced r b0 t1 (45)
+take_saw r (10)
+cut_board_advanced r b1 triangle (90)
+cut_board_advanced r b0 circle (90)
+lay_saw r (10)
+take_brush r (10)
+brush_board_advanced r b1 yellow (135)
+lay_brush r (10)
+unload_board_advanced r b1 t2 (45)
+load_board_advanced r b2 t2 (45)
+take_saw r (10)
+cut_board_advanced r b2 square (90)
+lay_saw r (10)
+take_brush r (10)
+brush_board_advanced r b2 yellow (135)
+brush_board_advanced r b0 red (135)
+lay_brush r (10)
+unload_board_advanced r b2 t2 (45)
+unload_board_advanced r b0 t1 (45)
+Plan length: 21 step(s), cost: 1225.
+Expanded 515 state(s).
+Generated 1802 state(s).
+Search time: 0.04 seconds
+Total time: 1.74 seconds
+Search iteration 6
+No more new weight, weight is 1
+Using the following heuristic(s):
+FF heuristic 
+Landmark heuristic 
+Initializing landmarks count heuristic...
+Conducting weighted A* search, weight is 1, bound is 1225.
+Best heuristic value: 1213/1898 [expanded 1 state(s)]
+Best heuristic value: 1151/1837 [expanded 4 state(s)]
+Best heuristic value: 1089/1837 [expanded 7 state(s)]
+Best heuristic value: 1089/1776 [expanded 9 state(s)]
+Best heuristic value: 1089/1655 [expanded 40 state(s)]
+Best heuristic value: 1089/1534 [expanded 46 state(s)]
+Best heuristic value: 1089/1292 [expanded 67 state(s)]
+Best heuristic value: 1089/977 [expanded 75 state(s)]
+Best heuristic value: 1089/705 [expanded 87 state(s)]
+Best heuristic value: 1089/659 [expanded 95 state(s)]
+Best heuristic value: 1089/613 [expanded 103 state(s)]
+Best heuristic value: 993/613 [expanded 105 state(s)]
+Best heuristic value: 961/613 [expanded 107 state(s)]
+Best heuristic value: 715/522 [expanded 111 state(s)]
+Best heuristic value: 714/511 [expanded 113 state(s)]
+Best heuristic value: 612/511 [expanded 115 state(s)]
+Best heuristic value: 612/477 [expanded 143 state(s)]
+Best heuristic value: 612/431 [expanded 151 state(s)]
+Best heuristic value: 612/340 [expanded 184 state(s)]
+Best heuristic value: 612/329 [expanded 186 state(s)]
+Best heuristic value: 584/329 [expanded 187 state(s)]
+Best heuristic value: 522/329 [expanded 206 state(s)]
+Best heuristic value: 522/159 [expanded 224 state(s)]
+Best heuristic value: 522/148 [expanded 225 state(s)]
+Best heuristic value: 464/148 [expanded 226 state(s)]
+Best heuristic value: 402/148 [expanded 251 state(s)]
+Best heuristic value: 63/103 [expanded 255 state(s)]
+Best heuristic value: 62/92 [expanded 510 state(s)]
+Best heuristic value: 31/46 [expanded 512 state(s)]
+Best heuristic value: 31/42 [expanded 4436 state(s)]
+Completely explored state space -- no solution!
+Expanded 6201 state(s).
+Generated 16940 state(s).
+Search time: 0.64 seconds
+Total time: 2.38 seconds
+-------------------------------------------------------
+lama2008.p02.runtime: 00:00:02.860

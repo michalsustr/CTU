@@ -1,0 +1,83 @@
+10
+
+dir
+311
+svn://svn@pleiades.plg.inf.uc3m.es/ipc2011/data/planners/seq-sat/seq-sat-probe/src
+svn://svn@pleiades.plg.inf.uc3m.es/ipc2011/data
+
+
+
+2011-02-09T14:00:29.328530Z
+31
+clinares
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+d20b41da-46d6-47e2-bace-dc164e2d8693
+
+heuristic
+dir
+
+app
+dir
+
+pddl
+dir
+
+parser-ff
+dir
+
+search
+dir
+
+SConscript
+file
+
+
+
+
+2012-03-09T11:01:05.000000Z
+72b620706e278bfd989bf2c0db909488
+2011-02-09T14:00:29.328530Z
+31
+clinares
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+220
+
+util
+dir
+
+inference
+dir
+

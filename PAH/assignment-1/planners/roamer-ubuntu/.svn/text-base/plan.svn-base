@@ -1,0 +1,37 @@
+#!/bin/bash
+# Author: Qiang Lu, USTC
+# This is the script for running domains. 
+
+POOL="./"
+RES="./"
+LAMAPREFIX="lama_"
+LAMAGROUPSUFFIX="_group"
+LAMATRANSLATE="./src/translate/translate.py"
+LAMAPREPROCESS="./src/preprocess/preprocess"
+WATCHDOG="./src/search/watchdog.sh"
+EQSEARCH="./src/search/search"
+
+lama_parse(){
+    echo "[SCRIPT] 1. Running LAMA translator"
+    echo $1 $2
+    "$LAMATRANSLATE" "$1" "$2"
+    echo " "
+    echo "[SCRIPT] 2. Running preprocessor"
+    "$LAMAPREPROCESS" < output.sas
+    echo "[SCRIPT] 3. Copy to the pool"
+    rm -f output.sas
+    mv output "$POOL$LAMAPREFIX$3"
+    mv all.groups "$POOL$LAMAPREFIX$3$LAMAGROUPSUFFIX"
+    rm test.groups
+    return 1 	
+}
+
+convex_solve() {
+  lama_parse "$1" "$2" "$3" 
+  "$EQSEARCH" fFlLis4 "$POOL$LAMAPREFIX$3" "$POOL$LAMAPREFIX$3$LAMAGROUPSUFFIX" "$3" 
+}
+
+convex_solve $1 $2 $3
+
+rm "$POOL$LAMAPREFIX$3"
+rm "$POOL$LAMAPREFIX$3$LAMAGROUPSUFFIX"
