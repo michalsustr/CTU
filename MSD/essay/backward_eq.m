@@ -1,0 +1,41 @@
+%% A, Backward Euler
+figure;
+ranges=[5 20 50 1000];
+
+for n=ranges
+dx = 1/n;
+options=odeset('Reltol',dx*100,'Stats','on');
+[x,y]=ode15s('eqA', [0 1], 1,options);
+    
+real_function=exp(-15*x);
+error=sum((real_function-y).^2)/n
+
+subplot(2,2, find(ranges==n));
+grid on, hold on;
+title(['(A) Backward Euler method, h=' num2str(dx) ', error=' num2str(error)]);
+plot(x,y,'b');
+plot(x,real_function,'r');
+legend('Calculated solution', 'Exact solution');
+end
+
+%% B, Backward Euler
+figure;
+ranges=2*pi*[1 5 10 100];
+
+for n=ranges
+dx = 2*pi/n;
+options=odeset('MaxStep', dx, 'Reltol',dx*10,'Stats','on');
+[x,y]=ode15s('eqB', [0 2*pi], [1 0], options);
+
+real_function=cos(x);
+y=y(:,1);
+error=sum((real_function-y).^2)/n
+
+subplot(2,2, find(ranges==n));
+grid on, hold on;
+title(['(B) Backward Euler method, h=' num2str(dx) ', error=' num2str(error)]);
+plot(x,y,'b');
+plot(x,real_function,'r');
+legend('Calculated solution', 'Exact solution');
+end
+
