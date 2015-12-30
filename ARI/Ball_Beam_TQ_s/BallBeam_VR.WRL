@@ -1,0 +1,198 @@
+#VRML V2.0 utf8
+
+#Created with V-Realm Builder v2.0
+#Integrated Data Systems Inc.
+#www.ids-net.com
+
+
+DEF Viewpoint2 Viewpoint {
+	orientation	-0.562499 -0.826798 0  0.439823
+	position	-3.4967 2.039 8.2725
+	description	"View 3"
+}
+Viewpoint {
+	fieldOfView	0.785398
+	jump	TRUE
+	orientation	-0.607305 0.794407 -0.00990009  0.408407
+	position	3.2033 1.939 8.8725
+	description	"View 1"
+}
+DEF Viewpoint1 Viewpoint {
+	fieldOfView	0.785398
+	jump	TRUE
+	orientation	-0.99888 0.0454036 -0.0133146  0.244758
+	position	0.1033 1.839 8.9725
+	description	"View 2"
+}
+Background {
+	groundAngle	[  ]
+	groundColor	0.87 0 0
+	skyAngle	[  ]
+	skyColor	0.41 0 0
+}
+DEF Beam Transform {
+	translation	0 0.3 0.7
+	scale	0.999999 1 0.999999
+	children [ 
+	    DEF Shape Shape {
+		    appearance	Appearance {
+			    material	Material {
+			    }
+
+			    texture	ImageTexture {
+				    url	"texture/rameno.jpg"
+			    }
+
+		    }
+
+		    geometry	Box {
+			    size	8.6 0.2 0.3
+		    }
+
+	    }
+
+	    DEF ball Transform {
+		    translation	4.1 0.39 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Sphere {
+				    radius	0.2
+			    }
+
+		    }
+	    }
+
+	    DEF rail1 Transform {
+		    translation	0 0.2 0.1
+		    rotation	0 0 1  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	8.6
+				    radius	0.02
+				    side	TRUE
+				    top	TRUE
+			    }
+
+		    }
+	    }
+
+	    DEF rail2 Transform {
+		    translation	0 0.2 -0.1
+		    rotation	0 0 1  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	8.6
+				    radius	0.02
+			    }
+
+		    }
+	    }
+
+	    DEF boarder_right Transform {
+		    translation	4.35 0.2 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.04
+					    diffuseColor	0.11 0.11 0.11
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.1 0.6 0.3
+			    }
+
+		    }
+	    }
+
+	    DEF boarder_left Transform {
+		    translation	-4.35 0.2 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	0.04 0.04 0.04
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.1 0.6 0.3
+			    }
+
+		    }
+	    }
+	]
+}
+DEF Body Transform {
+	children [ 
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+				    ambientIntensity	0.2
+			    }
+
+			    texture	ImageTexture {
+				    url	"texture/body.jpg"
+			    }
+
+		    }
+
+		    geometry	Box {
+			    size	5 2.821 1.1
+		    }
+
+	    }
+
+	    DEF Bottom Transform {
+		    translation	0 -1.9 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	0.04 0.04 0.04
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	5.5 1 1.6
+			    }
+
+		    }
+	    }
+	]
+}
+DEF Box Transform {
+	translation	0 0 -0.12
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+			}
+
+		}
+
+		geometry	Box {
+			size	5.03 2.83 1.3
+		}
+
+	}
+}

@@ -1,0 +1,40 @@
+function translun() 
+% matica A
+A = [0 0 0 1 0 0;
+     0 0 0 0 1 0;
+     0 0 0 0 0 1;
+     7.3809 0 0 0 2 0;
+     0 -2.1904 0 -2 0 0;
+     0 0 -3.1904 0 0 0];
+
+ % je system stabilny?
+[V,D] = eig(A);
+disp('1) system stabilny');
+disp(diag(D));
+
+% ktorym vstupom je system riditelny?
+disp('Ktorym vstupom je riditelny?');
+
+B1 = [0; 0; 0; 1; 0; 0];
+
+disp(is_controllable(A, B1));
+disp(is_controllable(A, [0; 0; 0; 0; 1; 0]));
+disp(is_controllable(A, [0; 0; 0; 0; 0; 1]));
+
+% prenos na stav
+syms('s');
+x = (s*eye(rank(A))-A)^-1;
+g1 = 
+
+end
+
+function ret = is_controllable(A,B)
+    C = [B];
+    
+    for i=1:rank(A)-1
+       C = [C A^i*B];
+    end
+    disp(rank(A));
+    disp(rank(C));
+    ret = rank(A) == rank(C);
+end

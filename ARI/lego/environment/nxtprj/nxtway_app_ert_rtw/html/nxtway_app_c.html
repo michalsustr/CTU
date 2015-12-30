@@ -1,0 +1,646 @@
+<HTML>
+<HEAD>
+<TITLE>RTW Report - nxtway_app.c </TITLE>
+<STYLE> .LN { font-style: italic; color: #888888 } </STYLE>
+<STYLE> .CT { font-style: italic; color: #117755 } </STYLE>
+<STYLE> .PP { font-style: bold;   color: #992211 } </STYLE>
+<STYLE> .KW { font-style: bold;   color: #112266 } </STYLE>
+<STYLE> .DT { font-style: bold;   color: #112266 } </STYLE>
+<SCRIPT language="JavaScript" type="text/javascript">
+<!--
+function rtwHilite(aBlock,aParentSID) {
+ aParentSID = "";
+ try {
+    window.location.href="matlab: if ~isempty(which('private/rtwbindmodel')), rtwprivate rtwbindmodel '/home/jirka/Plocha/nxt/nxtway_gs/models/nxtway_gs_controller.mdl' '/home/jirka/Plocha/nxt/ecrobotNXT/environment/nxtprj/nxtway_app_ert_rtw' '', end; rtwprivate code2model "+aBlock+" "+aParentSID+";"
+ } catch (e) { 
+ }
+} // end rtwHilite
+//-->
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#eeeeee" TEXT="#1122aa" ONLOAD="if (top) { if (top.rtwFileOnLoad) top.rtwFileOnLoad(window);} ">
+<P>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="6" WIDTH="100%" HEIGHT="100%"><TR><TD WIDTH="100%" VALIGN="top" BGCOLOR="#ffffff">
+<H4>File: <A HREF="file:///home/jirka/Plocha/nxt/ecrobotNXT/environment/nxtprj/nxtway_app_ert_rtw/nxtway_app.c" TARGET="rtwreport_document_frame">/home/jirka/Plocha/nxt/ecrobotNXT/environment/nxtprj/nxtway_app_ert_rtw/nxtway_app.c</A></H4>
+<PRE id="RTWcode">
+<SPAN><SPAN CLASS="LN"><A NAME="1">    1   </A></SPAN><SPAN CLASS="CT">/*</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">    2   </SPAN><SPAN CLASS="CT"> * File: nxtway_app.c</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">    3   </SPAN><SPAN CLASS="CT"> *</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">    4   </SPAN><SPAN CLASS="CT"> * Real-Time Workshop code generated for Simulink model nxtway_app.</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">    5   </SPAN><SPAN CLASS="CT"> *</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">    6   </SPAN><SPAN CLASS="CT"> * Model version                        : 1.729</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">    7   </SPAN><SPAN CLASS="CT"> * Real-Time Workshop file version      : 7.6  (R2010b)  03-Aug-2010</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">    8   </SPAN><SPAN CLASS="CT"> * Real-Time Workshop file generated on : Tue Mar  1 17:04:33 2011</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">    9   </SPAN><SPAN CLASS="CT"> * TLC version                          : 7.6 (Jul 13 2010)</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   10   </SPAN><SPAN CLASS="CT"> * C/C++ source code generated on       : Tue Mar  1 17:04:33 2011</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   11   </SPAN><SPAN CLASS="CT"> *</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   12   </SPAN><SPAN CLASS="CT"> * Target selection: ert.tlc</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   13   </SPAN><SPAN CLASS="CT"> * Embedded hardware selection: ARM7</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   14   </SPAN><SPAN CLASS="CT"> * Code generation objectives: Unspecified</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   15   </SPAN><SPAN CLASS="CT"> * Validation result: Not run</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   16   </SPAN><SPAN CLASS="CT"> */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   17   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   18   </SPAN><FONT COLOR="#992211">#</FONT><SPAN CLASS="PP">include</SPAN> <FONT COLOR="#992211">&quot;nxtway_app.h&quot;</FONT>
+</SPAN><SPAN><SPAN CLASS="LN">   19   </SPAN><FONT COLOR="#992211">#</FONT><SPAN CLASS="PP">include</SPAN> <FONT COLOR="#992211">&quot;nxtway_app_private.h&quot;</FONT>
+</SPAN><SPAN><SPAN CLASS="LN">   20   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   21   </SPAN><SPAN CLASS="CT">/* Block signals (auto storage) */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   22   </SPAN><A HREF="nxtway_app_h.html#type_BlockIO" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_BlockIO')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">BlockIO</FONT></A> <A NAME="var_rtB">rtB</A>;
+</SPAN><SPAN><SPAN CLASS="LN">   23   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   24   </SPAN><SPAN CLASS="CT">/* Block states (auto storage) */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   25   </SPAN><A HREF="nxtway_app_h.html#type_D_Work" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_D_Work')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">D_Work</FONT></A> <A NAME="var_rtDWork">rtDWork</A>;
+</SPAN><SPAN><SPAN CLASS="LN">   26   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   27   </SPAN><SPAN CLASS="CT">/* Output and update for exported function: task_init */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   28   </SPAN><SPAN CLASS="DT">void</SPAN> <A NAME="fcn_task_init">task_init</A>(<SPAN CLASS="DT">void</SPAN>)
+</SPAN><SPAN><SPAN CLASS="LN">   29   </SPAN><B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">   30   </SPAN>  <SPAN CLASS="CT">/* S-Function (fcncallgen): '&lt;S1&gt;/expFcn' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   31   </SPAN><SPAN CLASS="CT">   *  SubSystem: '<A href="javascript:rtwHilite('nxtway_gs_controller:35')"><FONT color="#117755"><I>&lt;S5&gt;/task_init</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   32   </SPAN><SPAN CLASS="CT">   */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   33   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   34   </SPAN>  <SPAN CLASS="CT">/* DataStoreWrite: '<A href="javascript:rtwHilite('nxtway_gs_controller:42')"><FONT color="#117755"><I>&lt;S6&gt;/Data Store Write7</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   35   </SPAN><SPAN CLASS="CT">   *  DataStoreRead: '<A href="javascript:rtwHilite('nxtway_gs_controller:37:1')"><FONT color="#117755"><I>&lt;S10&gt;/Data Store Read</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   36   </SPAN><SPAN CLASS="CT">   *  DataTypeConversion: '<A href="javascript:rtwHilite('nxtway_gs_controller:44')"><FONT color="#117755"><I>&lt;S6&gt;/Data Type Conversion1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   37   </SPAN><SPAN CLASS="CT">   */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   38   </SPAN>  <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.battery = (<A HREF="rtwtypes_h.html#type_real32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">real32_T</FONT></A>)ecrobot_get_battery_voltage();
+</SPAN><SPAN><SPAN CLASS="LN">   39   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   40   </SPAN>  <SPAN CLASS="CT">/* DataStoreWrite: '<A href="javascript:rtwHilite('nxtway_gs_controller:41')"><FONT color="#117755"><I>&lt;S6&gt;/Data Store Write5</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   41   </SPAN><SPAN CLASS="CT">   *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:38')"><FONT color="#117755"><I>&lt;S6&gt;/Constant1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   42   </SPAN><SPAN CLASS="CT">   */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   43   </SPAN>  <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.flag_mode = FALSE;
+</SPAN><SPAN><SPAN CLASS="LN">   44   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   45   </SPAN>  <SPAN CLASS="CT">/* DataStoreWrite: '<A href="javascript:rtwHilite('nxtway_gs_controller:40')"><FONT color="#117755"><I>&lt;S6&gt;/Data Store Write1</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   46   </SPAN><SPAN CLASS="CT">   *  DataStoreRead: '<A href="javascript:rtwHilite('nxtway_gs_controller:46:1')"><FONT color="#117755"><I>&lt;S11&gt;/Data Store Read</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   47   </SPAN><SPAN CLASS="CT">   *  DataTypeConversion: '<A href="javascript:rtwHilite('nxtway_gs_controller:45')"><FONT color="#117755"><I>&lt;S6&gt;/Data Type Conversion2</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   48   </SPAN><SPAN CLASS="CT">   */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   49   </SPAN>  <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.gyro_offset = (<A HREF="rtwtypes_h.html#type_real32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">real32_T</FONT></A>)ecrobot_get_gyro_sensor(NXT_PORT_S4);
+</SPAN><SPAN><SPAN CLASS="LN">   50   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   51   </SPAN>  <SPAN CLASS="CT">/* DataStoreWrite: '<A href="javascript:rtwHilite('nxtway_gs_controller:43')"><FONT color="#117755"><I>&lt;S6&gt;/Data Store Write8</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   52   </SPAN><SPAN CLASS="CT">   *  DataStoreRead: '<A href="javascript:rtwHilite('nxtway_gs_controller:48:1')"><FONT color="#117755"><I>&lt;S13&gt;/Data Store Read</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   53   </SPAN><SPAN CLASS="CT">   */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   54   </SPAN>  <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.start_time = ecrobot_get_systick_ms();
+</SPAN><SPAN><SPAN CLASS="LN">   55   </SPAN><B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">   56   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   57   </SPAN><SPAN CLASS="CT">/* Start for exported function: task_ts1 */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   58   </SPAN><SPAN CLASS="DT">void</SPAN> <A NAME="fcn_task_ts1_Start">task_ts1_Start</A>(<SPAN CLASS="DT">void</SPAN>)
+</SPAN><SPAN><SPAN CLASS="LN">   59   </SPAN><B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">   60   </SPAN>  <SPAN CLASS="CT">/* Start for S-Function (fcncallgen): '&lt;S2&gt;/expFcn' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   61   </SPAN><SPAN CLASS="CT">   *  Start for SubSystem: '<A href="javascript:rtwHilite('nxtway_gs_controller:49')"><FONT color="#117755"><I>&lt;S5&gt;/task_ts1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   62   </SPAN><SPAN CLASS="CT">   */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   63   </SPAN><B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">   64   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   65   </SPAN><SPAN CLASS="CT">/* Output and update for exported function: task_ts1 */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   66   </SPAN><SPAN CLASS="DT">void</SPAN> <A NAME="fcn_task_ts1">task_ts1</A>(<SPAN CLASS="DT">void</SPAN>)
+</SPAN><SPAN><SPAN CLASS="LN">   67   </SPAN><B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">   68   </SPAN>  <SPAN CLASS="CT">/* local block i/o variables */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   69   </SPAN>  <A HREF="rtwtypes_h.html#type_int16_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">int16_T</FONT></A> rtb_DataTypeConversion2_gl;
+</SPAN><SPAN><SPAN CLASS="LN">   70   </SPAN>  <A HREF="rtwtypes_h.html#type_int8_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int8_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">int8_T</FONT></A> rtb_DataTypeConversion;
+</SPAN><SPAN><SPAN CLASS="LN">   71   </SPAN>  <A HREF="rtwtypes_h.html#type_int8_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int8_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">int8_T</FONT></A> rtb_DataTypeConversion6;
+</SPAN><SPAN><SPAN CLASS="LN">   72   </SPAN>  <A HREF="rtwtypes_h.html#type_boolean_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_boolean_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">boolean_T</FONT></A> rtb_DataStoreRead;
+</SPAN><SPAN><SPAN CLASS="LN">   73   </SPAN>  <A HREF="rtwtypes_h.html#type_real32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">real32_T</FONT></A> rtb_UnitDelay;
+</SPAN><SPAN><SPAN CLASS="LN">   74   </SPAN>  <A HREF="rtwtypes_h.html#type_real32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">real32_T</FONT></A> rtb_IntegralGain;
+</SPAN><SPAN><SPAN CLASS="LN">   75   </SPAN>  <A HREF="rtwtypes_h.html#type_real32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">real32_T</FONT></A> rtb_UnitDelay_l;
+</SPAN><SPAN><SPAN CLASS="LN">   76   </SPAN>  <A HREF="rtwtypes_h.html#type_boolean_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_boolean_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">boolean_T</FONT></A> rtb_DataStoreRead1_j;
+</SPAN><SPAN><SPAN CLASS="LN">   77   </SPAN>  <A HREF="rtwtypes_h.html#type_boolean_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_boolean_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">boolean_T</FONT></A> rtb_DataStoreRead2_i;
+</SPAN><SPAN><SPAN CLASS="LN">   78   </SPAN>  <A HREF="rtwtypes_h.html#type_int8_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int8_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">int8_T</FONT></A> rtb_DataTypeConversion_m[2];
+</SPAN><SPAN><SPAN CLASS="LN">   79   </SPAN>  <A HREF="rtwtypes_h.html#type_int8_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int8_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">int8_T</FONT></A> rtb_DataTypeConversion2_c;
+</SPAN><SPAN><SPAN CLASS="LN">   80   </SPAN>  <A HREF="rtwtypes_h.html#type_real32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">real32_T</FONT></A> rtb_DataTypeConversion4;
+</SPAN><SPAN><SPAN CLASS="LN">   81   </SPAN>  <A HREF="rtwtypes_h.html#type_real32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">real32_T</FONT></A> rtb_DataTypeConversion3;
+</SPAN><SPAN><SPAN CLASS="LN">   82   </SPAN>  <A HREF="rtwtypes_h.html#type_real32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">real32_T</FONT></A> rtb_theta;
+</SPAN><SPAN><SPAN CLASS="LN">   83   </SPAN>  <A HREF="rtwtypes_h.html#type_real32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">real32_T</FONT></A> rtb_Sum_a;
+</SPAN><SPAN><SPAN CLASS="LN">   84   </SPAN>  <A HREF="rtwtypes_h.html#type_real32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">real32_T</FONT></A> rtb_Sum_b;
+</SPAN><SPAN><SPAN CLASS="LN">   85   </SPAN>  <A HREF="rtwtypes_h.html#type_real32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">real32_T</FONT></A> rtb_psidot;
+</SPAN><SPAN><SPAN CLASS="LN">   86   </SPAN>  <A HREF="rtwtypes_h.html#type_real32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">real32_T</FONT></A> rtb_Gain2_d;
+</SPAN><SPAN><SPAN CLASS="LN">   87   </SPAN>  <A HREF="rtwtypes_h.html#type_real32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">real32_T</FONT></A> rtb_Sum_g;
+</SPAN><SPAN><SPAN CLASS="LN">   88   </SPAN>  <A HREF="rtwtypes_h.html#type_uint8_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint8_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">uint8_T</FONT></A> rtb_UnitDelay_lv;
+</SPAN><SPAN><SPAN CLASS="LN">   89   </SPAN>  <A HREF="rtwtypes_h.html#type_int8_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int8_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">int8_T</FONT></A> rtb_Switch;
+</SPAN><SPAN><SPAN CLASS="LN">   90   </SPAN>  <A HREF="rtwtypes_h.html#type_int32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">int32_T</FONT></A> i;
+</SPAN><SPAN><SPAN CLASS="LN">   91   </SPAN>  <A HREF="rtwtypes_h.html#type_real32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">real32_T</FONT></A> rtb_UnitDelay_l_0[4];
+</SPAN><SPAN><SPAN CLASS="LN">   92   </SPAN>  <A HREF="rtwtypes_h.html#type_real32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">real32_T</FONT></A> rtb_theta_0[4];
+</SPAN><SPAN><SPAN CLASS="LN">   93   </SPAN>  <A HREF="rtwtypes_h.html#type_int8_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int8_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">int8_T</FONT></A> rtb_Switch1_idx;
+</SPAN><SPAN><SPAN CLASS="LN">   94   </SPAN>  <A HREF="rtwtypes_h.html#type_real32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">real32_T</FONT></A> u;
+</SPAN><SPAN><SPAN CLASS="LN">   95   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   96   </SPAN>  <SPAN CLASS="CT">/* S-Function (fcncallgen): '&lt;S2&gt;/expFcn' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   97   </SPAN><SPAN CLASS="CT">   *  SubSystem: '<A href="javascript:rtwHilite('nxtway_gs_controller:49')"><FONT color="#117755"><I>&lt;S5&gt;/task_ts1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   98   </SPAN><SPAN CLASS="CT">   */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">   99   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  100   </SPAN>  <SPAN CLASS="CT">/* DataStoreRead: '<A href="javascript:rtwHilite('nxtway_gs_controller:274')"><FONT color="#117755"><I>&lt;S7&gt;/Data Store Read</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  101   </SPAN>  rtb_DataStoreRead = <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.flag_start;
+</SPAN><SPAN><SPAN CLASS="LN">  102   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  103   </SPAN>  <SPAN CLASS="CT">/* Outputs for enable SubSystem: '<A href="javascript:rtwHilite('nxtway_gs_controller:51')"><FONT color="#117755"><I>&lt;S7&gt;/Balance &amp; Drive Control</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  104   </SPAN><SPAN CLASS="CT">   *  EnablePort: '<A href="javascript:rtwHilite('nxtway_gs_controller:52')"><FONT color="#117755"><I>&lt;S14&gt;/Enable</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  105   </SPAN><SPAN CLASS="CT">   */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  106   </SPAN>  <SPAN CLASS="KW">if</SPAN> (<A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.flag_start) <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  107   </SPAN>    <SPAN CLASS="CT">/* UnitDelay: '<A href="javascript:rtwHilite('nxtway_gs_controller:198')"><FONT color="#117755"><I>&lt;S28&gt;/Unit Delay</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  108   </SPAN>    rtb_UnitDelay = <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.UnitDelay_DSTATE;
+</SPAN><SPAN><SPAN CLASS="LN">  109   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  110   </SPAN>    <SPAN CLASS="CT">/* Gain: '<A href="javascript:rtwHilite('nxtway_gs_controller:203')"><FONT color="#117755"><I>&lt;S17&gt;/Integral Gain</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  111   </SPAN>    rtb_IntegralGain = -0.44721359F * <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.UnitDelay_DSTATE;
+</SPAN><SPAN><SPAN CLASS="LN">  112   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  113   </SPAN>    <SPAN CLASS="CT">/* UnitDelay: '<A href="javascript:rtwHilite('nxtway_gs_controller:133')"><FONT color="#117755"><I>&lt;S34&gt;/Unit Delay</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  114   </SPAN>    rtb_UnitDelay_l = <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.UnitDelay_DSTATE_j;
+</SPAN><SPAN><SPAN CLASS="LN">  115   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  116   </SPAN>    <SPAN CLASS="CT">/* DataStoreRead: '<A href="javascript:rtwHilite('nxtway_gs_controller:225')"><FONT color="#117755"><I>&lt;S14&gt;/Data Store Read1</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  117   </SPAN>    rtb_DataStoreRead1_j = <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.flag_avoid;
+</SPAN><SPAN><SPAN CLASS="LN">  118   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  119   </SPAN>    <SPAN CLASS="CT">/* Switch: '<A href="javascript:rtwHilite('nxtway_gs_controller:243')"><FONT color="#117755"><I>&lt;S41&gt;/Switch</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  120   </SPAN><SPAN CLASS="CT">     *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:239')"><FONT color="#117755"><I>&lt;S41&gt;/Constant</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  121   </SPAN><SPAN CLASS="CT">     *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:240')"><FONT color="#117755"><I>&lt;S41&gt;/Constant1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  122   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  123   </SPAN>    <SPAN CLASS="KW">if</SPAN> (<A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.flag_avoid) <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  124   </SPAN>      rtb_Switch = 0;
+</SPAN><SPAN><SPAN CLASS="LN">  125   </SPAN>    <B>}</B> <SPAN CLASS="KW">else</SPAN> <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  126   </SPAN>      rtb_Switch = 100;
+</SPAN><SPAN><SPAN CLASS="LN">  127   </SPAN>    <B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">  128   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  129   </SPAN>    <SPAN CLASS="CT">/* Switch: '<A href="javascript:rtwHilite('nxtway_gs_controller:244')"><FONT color="#117755"><I>&lt;S41&gt;/Switch2</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  130   </SPAN><SPAN CLASS="CT">     *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:241')"><FONT color="#117755"><I>&lt;S41&gt;/Constant2</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  131   </SPAN><SPAN CLASS="CT">     *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:242')"><FONT color="#117755"><I>&lt;S41&gt;/Constant3</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  132   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  133   </SPAN>    <SPAN CLASS="KW">if</SPAN> (<A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.flag_avoid) <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  134   </SPAN>      rtb_DataTypeConversion2_c = 100;
+</SPAN><SPAN><SPAN CLASS="LN">  135   </SPAN>    <B>}</B> <SPAN CLASS="KW">else</SPAN> <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  136   </SPAN>      rtb_DataTypeConversion2_c = 0;
+</SPAN><SPAN><SPAN CLASS="LN">  137   </SPAN>    <B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">  138   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  139   </SPAN>    <SPAN CLASS="CT">/* Switch: '<A href="javascript:rtwHilite('nxtway_gs_controller:267')"><FONT color="#117755"><I>&lt;S20&gt;/Switch2</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  140   </SPAN><SPAN CLASS="CT">     *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:247')"><FONT color="#117755"><I>&lt;S20&gt;/Constant1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  141   </SPAN><SPAN CLASS="CT">     *  DataStoreRead: '<A href="javascript:rtwHilite('nxtway_gs_controller:248')"><FONT color="#117755"><I>&lt;S20&gt;/Data Store Read1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  142   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  143   </SPAN>    <SPAN CLASS="KW">if</SPAN> (<A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.flag_auto) <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  144   </SPAN>      rtb_Switch1_idx = rtb_DataTypeConversion2_c;
+</SPAN><SPAN><SPAN CLASS="LN">  145   </SPAN>    <B>}</B> <SPAN CLASS="KW">else</SPAN> <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  146   </SPAN>      rtb_Switch = 0;
+</SPAN><SPAN><SPAN CLASS="LN">  147   </SPAN>      rtb_Switch1_idx = 0;
+</SPAN><SPAN><SPAN CLASS="LN">  148   </SPAN>    <B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">  149   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  150   </SPAN>    <SPAN CLASS="CT">/* DataStoreRead: '<A href="javascript:rtwHilite('nxtway_gs_controller:249')"><FONT color="#117755"><I>&lt;S20&gt;/Data Store Read2</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  151   </SPAN>    rtb_DataStoreRead2_i = <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.flag_mode;
+</SPAN><SPAN><SPAN CLASS="LN">  152   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  153   </SPAN>    <SPAN CLASS="CT">/* S-Function Block: <A href="javascript:rtwHilite('nxtway_gs_controller:53')"><FONT color="#117755"><I>&lt;S14&gt;/Bluetooth Rx Read</I></FONT></A> */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  154   </SPAN>    ecrobot_read_bt_packet(<A HREF="nxtway_app_c.html#var_rtB" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtB');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtB</FONT></A>.BluetoothRxRead, 32);
+</SPAN><SPAN><SPAN CLASS="LN">  155   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  156   </SPAN>    <SPAN CLASS="CT">/* DataTypeConversion: '<A href="javascript:rtwHilite('nxtway_gs_controller:255')"><FONT color="#117755"><I>&lt;S42&gt;/Data Type Conversion</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  157   </SPAN>    <SPAN CLASS="KW">for</SPAN> (i = 0; i &lt; 2; i++) <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  158   </SPAN>      rtb_DataTypeConversion_m[i] = (<A HREF="rtwtypes_h.html#type_int8_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int8_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">int8_T</FONT></A>)<A HREF="nxtway_app_c.html#var_rtB" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtB');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtB</FONT></A>.BluetoothRxRead[i];
+</SPAN><SPAN><SPAN CLASS="LN">  159   </SPAN>    <B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">  160   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  161   </SPAN>    <SPAN CLASS="CT">/* Switch: '<A href="javascript:rtwHilite('nxtway_gs_controller:260')"><FONT color="#117755"><I>&lt;S42&gt;/Switch</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  162   </SPAN><SPAN CLASS="CT">     *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:254')"><FONT color="#117755"><I>&lt;S42&gt;/Constant</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  163   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  164   </SPAN>    <SPAN CLASS="KW">if</SPAN> (rtb_DataStoreRead1_j) <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  165   </SPAN>      rtb_DataTypeConversion2_c = 100;
+</SPAN><SPAN><SPAN CLASS="LN">  166   </SPAN>    <B>}</B> <SPAN CLASS="KW">else</SPAN> <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  167   </SPAN>      rtb_DataTypeConversion2_c = rtb_DataTypeConversion_m[0];
+</SPAN><SPAN><SPAN CLASS="LN">  168   </SPAN>    <B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">  169   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  170   </SPAN>    <SPAN CLASS="CT">/* Gain: '<A href="javascript:rtwHilite('nxtway_gs_controller:256')"><FONT color="#117755"><I>&lt;S42&gt;/Gain1</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  171   </SPAN>    rtb_DataTypeConversion2_c = (<A HREF="rtwtypes_h.html#type_int8_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int8_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">int8_T</FONT></A>)(-rtb_DataTypeConversion2_c);
+</SPAN><SPAN><SPAN CLASS="LN">  172   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  173   </SPAN>    <SPAN CLASS="CT">/* Switch: '<A href="javascript:rtwHilite('nxtway_gs_controller:266')"><FONT color="#117755"><I>&lt;S20&gt;/Switch1</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  174   </SPAN>    <SPAN CLASS="KW">if</SPAN> (!rtb_DataStoreRead2_i) <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  175   </SPAN>      rtb_Switch = rtb_DataTypeConversion2_c;
+</SPAN><SPAN><SPAN CLASS="LN">  176   </SPAN>      rtb_Switch1_idx = rtb_DataTypeConversion_m[1];
+</SPAN><SPAN><SPAN CLASS="LN">  177   </SPAN>    <B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">  178   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  179   </SPAN>    <SPAN CLASS="CT">/* Sum: '<A href="javascript:rtwHilite('nxtway_gs_controller:143')"><FONT color="#117755"><I>&lt;S35&gt;/Sum</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  180   </SPAN><SPAN CLASS="CT">     *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:128')"><FONT color="#117755"><I>&lt;S26&gt;/Constant6</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  181   </SPAN><SPAN CLASS="CT">     *  DataTypeConversion: '<A href="javascript:rtwHilite('nxtway_gs_controller:228')"><FONT color="#117755"><I>&lt;S14&gt;/Data Type Conversion2</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  182   </SPAN><SPAN CLASS="CT">     *  Gain: '<A href="javascript:rtwHilite('nxtway_gs_controller:137')"><FONT color="#117755"><I>&lt;S26&gt;/Gain1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  183   </SPAN><SPAN CLASS="CT">     *  Gain: '<A href="javascript:rtwHilite('nxtway_gs_controller:141')"><FONT color="#117755"><I>&lt;S35&gt;/Gain2</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  184   </SPAN><SPAN CLASS="CT">     *  Gain: '<A href="javascript:rtwHilite('nxtway_gs_controller:142')"><FONT color="#117755"><I>&lt;S35&gt;/Gain3</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  185   </SPAN><SPAN CLASS="CT">     *  Product: '<A href="javascript:rtwHilite('nxtway_gs_controller:135')"><FONT color="#117755"><I>&lt;S26&gt;/Divide</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  186   </SPAN><SPAN CLASS="CT">     *  UnitDelay: '<A href="javascript:rtwHilite('nxtway_gs_controller:144')"><FONT color="#117755"><I>&lt;S35&gt;/Unit Delay</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  187   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  188   </SPAN>    rtb_Sum_g = (<A HREF="rtwtypes_h.html#type_real32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">real32_T</FONT></A>)rtb_Switch / 100.0F * 7.5F * 0.004F + 0.996F *
+</SPAN><SPAN><SPAN CLASS="LN">  189   </SPAN>      <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.UnitDelay_DSTATE_e;
+</SPAN><SPAN><SPAN CLASS="LN">  190   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  191   </SPAN>    <SPAN CLASS="CT">/* DataTypeConversion: '<A href="javascript:rtwHilite('nxtway_gs_controller:229')"><FONT color="#117755"><I>&lt;S14&gt;/Data Type Conversion3</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  192   </SPAN><SPAN CLASS="CT">     *  DataStoreRead: '<A href="javascript:rtwHilite('nxtway_gs_controller:270:1')"><FONT color="#117755"><I>&lt;S21&gt;/Data Store Read</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  193   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  194   </SPAN>    rtb_DataTypeConversion3 = (<A HREF="rtwtypes_h.html#type_real32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">real32_T</FONT></A>)ecrobot_get_motor_rev(NXT_PORT_C);
+</SPAN><SPAN><SPAN CLASS="LN">  195   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  196   </SPAN>    <SPAN CLASS="CT">/* DataTypeConversion: '<A href="javascript:rtwHilite('nxtway_gs_controller:230')"><FONT color="#117755"><I>&lt;S14&gt;/Data Type Conversion4</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  197   </SPAN><SPAN CLASS="CT">     *  DataStoreRead: '<A href="javascript:rtwHilite('nxtway_gs_controller:271:1')"><FONT color="#117755"><I>&lt;S22&gt;/Data Store Read</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  198   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  199   </SPAN>    rtb_DataTypeConversion4 = (<A HREF="rtwtypes_h.html#type_real32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">real32_T</FONT></A>)ecrobot_get_motor_rev(NXT_PORT_B);
+</SPAN><SPAN><SPAN CLASS="LN">  200   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  201   </SPAN>    <SPAN CLASS="CT">/* Gain: '<A href="javascript:rtwHilite('nxtway_gs_controller:175')"><FONT color="#117755"><I>&lt;S27&gt;/Gain</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  202   </SPAN><SPAN CLASS="CT">     *  Gain: '<A href="javascript:rtwHilite('nxtway_gs_controller:188')"><FONT color="#117755"><I>&lt;S27&gt;/deg2rad</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  203   </SPAN><SPAN CLASS="CT">     *  Gain: '<A href="javascript:rtwHilite('nxtway_gs_controller:189')"><FONT color="#117755"><I>&lt;S27&gt;/deg2rad1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  204   </SPAN><SPAN CLASS="CT">     *  Sum: '<A href="javascript:rtwHilite('nxtway_gs_controller:184')"><FONT color="#117755"><I>&lt;S27&gt;/Sum1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  205   </SPAN><SPAN CLASS="CT">     *  Sum: '<A href="javascript:rtwHilite('nxtway_gs_controller:186')"><FONT color="#117755"><I>&lt;S27&gt;/Sum4</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  206   </SPAN><SPAN CLASS="CT">     *  Sum: '<A href="javascript:rtwHilite('nxtway_gs_controller:187')"><FONT color="#117755"><I>&lt;S27&gt;/Sum6</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  207   </SPAN><SPAN CLASS="CT">     *  UnitDelay: '<A href="javascript:rtwHilite('nxtway_gs_controller:173')"><FONT color="#117755"><I>&lt;S38&gt;/Unit Delay</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  208   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  209   </SPAN>    rtb_theta = ((0.0174532924F * rtb_DataTypeConversion3 +
+</SPAN><SPAN><SPAN CLASS="LN">  210   </SPAN>                  <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.UnitDelay_DSTATE_h) + (0.0174532924F *
+</SPAN><SPAN><SPAN CLASS="LN">  211   </SPAN>      rtb_DataTypeConversion4 + <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.UnitDelay_DSTATE_h)) * 0.5F;
+</SPAN><SPAN><SPAN CLASS="LN">  212   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  213   </SPAN>    <SPAN CLASS="CT">/* Sum: '<A href="javascript:rtwHilite('nxtway_gs_controller:180')"><FONT color="#117755"><I>&lt;S39&gt;/Sum</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  214   </SPAN><SPAN CLASS="CT">     *  Gain: '<A href="javascript:rtwHilite('nxtway_gs_controller:178')"><FONT color="#117755"><I>&lt;S39&gt;/Gain2</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  215   </SPAN><SPAN CLASS="CT">     *  Gain: '<A href="javascript:rtwHilite('nxtway_gs_controller:179')"><FONT color="#117755"><I>&lt;S39&gt;/Gain3</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  216   </SPAN><SPAN CLASS="CT">     *  UnitDelay: '<A href="javascript:rtwHilite('nxtway_gs_controller:181')"><FONT color="#117755"><I>&lt;S39&gt;/Unit Delay</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  217   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  218   </SPAN>    rtb_Sum_a = 0.2F * rtb_theta + 0.8F * <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.UnitDelay_DSTATE_hp;
+</SPAN><SPAN><SPAN CLASS="LN">  219   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  220   </SPAN>    <SPAN CLASS="CT">/* DataTypeConversion: '<A href="javascript:rtwHilite('nxtway_gs_controller:231')"><FONT color="#117755"><I>&lt;S14&gt;/Data Type Conversion5</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  221   </SPAN><SPAN CLASS="CT">     *  DataStoreRead: '<A href="javascript:rtwHilite('nxtway_gs_controller:233:1')"><FONT color="#117755"><I>&lt;S19&gt;/Data Store Read</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  222   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  223   </SPAN>    rtb_psidot = (<A HREF="rtwtypes_h.html#type_real32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">real32_T</FONT></A>)ecrobot_get_gyro_sensor(NXT_PORT_S4);
+</SPAN><SPAN><SPAN CLASS="LN">  224   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  225   </SPAN>    <SPAN CLASS="CT">/* DataStoreWrite: '<A href="javascript:rtwHilite('nxtway_gs_controller:158')"><FONT color="#117755"><I>&lt;S36&gt;/Data Store Write1</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  226   </SPAN><SPAN CLASS="CT">     *  DataStoreRead: '<A href="javascript:rtwHilite('nxtway_gs_controller:157')"><FONT color="#117755"><I>&lt;S36&gt;/Data Store Read2</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  227   </SPAN><SPAN CLASS="CT">     *  Gain: '<A href="javascript:rtwHilite('nxtway_gs_controller:159')"><FONT color="#117755"><I>&lt;S36&gt;/Gain1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  228   </SPAN><SPAN CLASS="CT">     *  Gain: '<A href="javascript:rtwHilite('nxtway_gs_controller:160')"><FONT color="#117755"><I>&lt;S36&gt;/Gain4</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  229   </SPAN><SPAN CLASS="CT">     *  Sum: '<A href="javascript:rtwHilite('nxtway_gs_controller:161')"><FONT color="#117755"><I>&lt;S36&gt;/Sum</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  230   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  231   </SPAN>    <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.gyro_offset = 0.999F * <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.gyro_offset + 0.001F * rtb_psidot;
+</SPAN><SPAN><SPAN CLASS="LN">  232   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  233   </SPAN>    <SPAN CLASS="CT">/* Gain: '<A href="javascript:rtwHilite('nxtway_gs_controller:190')"><FONT color="#117755"><I>&lt;S27&gt;/deg2rad2</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  234   </SPAN><SPAN CLASS="CT">     *  DataStoreRead: '<A href="javascript:rtwHilite('nxtway_gs_controller:156')"><FONT color="#117755"><I>&lt;S36&gt;/Data Store Read1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  235   </SPAN><SPAN CLASS="CT">     *  Sum: '<A href="javascript:rtwHilite('nxtway_gs_controller:185')"><FONT color="#117755"><I>&lt;S27&gt;/Sum2</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  236   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  237   </SPAN>    rtb_psidot = (rtb_psidot - <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.gyro_offset) * 0.0174532924F;
+</SPAN><SPAN><SPAN CLASS="LN">  238   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  239   </SPAN>    <SPAN CLASS="CT">/* Gain: '<A href="javascript:rtwHilite('nxtway_gs_controller:110')"><FONT color="#117755"><I>&lt;S25&gt;/Gain</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  240   </SPAN><SPAN CLASS="CT">     *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:126')"><FONT color="#117755"><I>&lt;S26&gt;/Constant2</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  241   </SPAN><SPAN CLASS="CT">     *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:127')"><FONT color="#117755"><I>&lt;S26&gt;/Constant3</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  242   </SPAN><SPAN CLASS="CT">     *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:101')"><FONT color="#117755"><I>&lt;S30&gt;/Constant</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  243   </SPAN><SPAN CLASS="CT">     *  DataStoreRead: '<A href="javascript:rtwHilite('nxtway_gs_controller:193')"><FONT color="#117755"><I>&lt;S17&gt;/Data Store Read1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  244   </SPAN><SPAN CLASS="CT">     *  Gain: '<A href="javascript:rtwHilite('nxtway_gs_controller:200')"><FONT color="#117755"><I>&lt;S17&gt;/Feedback Gain</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  245   </SPAN><SPAN CLASS="CT">     *  Gain: '<A href="javascript:rtwHilite('nxtway_gs_controller:102')"><FONT color="#117755"><I>&lt;S30&gt;/Gain3</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  246   </SPAN><SPAN CLASS="CT">     *  Gain: '<A href="javascript:rtwHilite('nxtway_gs_controller:165')"><FONT color="#117755"><I>&lt;S37&gt;/Gain</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  247   </SPAN><SPAN CLASS="CT">     *  Product: '<A href="javascript:rtwHilite('nxtway_gs_controller:112')"><FONT color="#117755"><I>&lt;S25&gt;/Product</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  248   </SPAN><SPAN CLASS="CT">     *  Sum: '<A href="javascript:rtwHilite('nxtway_gs_controller:205')"><FONT color="#117755"><I>&lt;S17&gt;/Sum</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  249   </SPAN><SPAN CLASS="CT">     *  Sum: '<A href="javascript:rtwHilite('nxtway_gs_controller:207')"><FONT color="#117755"><I>&lt;S17&gt;/Sum2</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  250   </SPAN><SPAN CLASS="CT">     *  Sum: '<A href="javascript:rtwHilite('nxtway_gs_controller:103')"><FONT color="#117755"><I>&lt;S30&gt;/Sum2</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  251   </SPAN><SPAN CLASS="CT">     *  Sum: '<A href="javascript:rtwHilite('nxtway_gs_controller:166')"><FONT color="#117755"><I>&lt;S37&gt;/Sum</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  252   </SPAN><SPAN CLASS="CT">     *  UnitDelay: '<A href="javascript:rtwHilite('nxtway_gs_controller:167')"><FONT color="#117755"><I>&lt;S37&gt;/Unit Delay</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  253   </SPAN><SPAN CLASS="CT">     *  UnitDelay: '<A href="javascript:rtwHilite('nxtway_gs_controller:173')"><FONT color="#117755"><I>&lt;S38&gt;/Unit Delay</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  254   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  255   </SPAN>    rtb_UnitDelay_l_0[0] = rtb_UnitDelay_l;
+</SPAN><SPAN><SPAN CLASS="LN">  256   </SPAN>    rtb_UnitDelay_l_0[1] = 0.0F;
+</SPAN><SPAN><SPAN CLASS="LN">  257   </SPAN>    rtb_UnitDelay_l_0[2] = rtb_Sum_g;
+</SPAN><SPAN><SPAN CLASS="LN">  258   </SPAN>    rtb_UnitDelay_l_0[3] = 0.0F;
+</SPAN><SPAN><SPAN CLASS="LN">  259   </SPAN>    rtb_theta_0[0] = rtb_theta;
+</SPAN><SPAN><SPAN CLASS="LN">  260   </SPAN>    rtb_theta_0[1] = <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.UnitDelay_DSTATE_h;
+</SPAN><SPAN><SPAN CLASS="LN">  261   </SPAN>    rtb_theta_0[2] = (rtb_Sum_a - <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.UnitDelay_DSTATE_m) * 250.0F;
+</SPAN><SPAN><SPAN CLASS="LN">  262   </SPAN>    rtb_theta_0[3] = rtb_psidot;
+</SPAN><SPAN><SPAN CLASS="LN">  263   </SPAN>    rtb_Sum_b = 0.0F;
+</SPAN><SPAN><SPAN CLASS="LN">  264   </SPAN>    <SPAN CLASS="KW">for</SPAN> (i = 0; i &lt; 4; i++) <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  265   </SPAN>      rtb_Sum_b += (rtb_UnitDelay_l_0[i] - rtb_theta_0[i]) *
+</SPAN><SPAN><SPAN CLASS="LN">  266   </SPAN>        <A HREF="nxtway_app_data_c.html#var_rtConstP" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtConstP');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtConstP</FONT></A>.FeedbackGain_Gain[i];
+</SPAN><SPAN><SPAN CLASS="LN">  267   </SPAN>    <B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">  268   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  269   </SPAN>    rtb_Sum_b = (rtb_IntegralGain + rtb_Sum_b) / (0.001089F * <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.battery -
+</SPAN><SPAN><SPAN CLASS="LN">  270   </SPAN>      0.625F) * 100.0F;
+</SPAN><SPAN><SPAN CLASS="LN">  271   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  272   </SPAN>    <SPAN CLASS="CT">/* DataTypeConversion: '<A href="javascript:rtwHilite('nxtway_gs_controller:227')"><FONT color="#117755"><I>&lt;S14&gt;/Data Type Conversion1</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  273   </SPAN>    rtb_IntegralGain = (<A HREF="rtwtypes_h.html#type_real32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">real32_T</FONT></A>)rtb_Switch1_idx;
+</SPAN><SPAN><SPAN CLASS="LN">  274   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  275   </SPAN>    <SPAN CLASS="CT">/* Gain: '<A href="javascript:rtwHilite('nxtway_gs_controller:138')"><FONT color="#117755"><I>&lt;S26&gt;/Gain2</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  276   </SPAN><SPAN CLASS="CT">     *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:125')"><FONT color="#117755"><I>&lt;S26&gt;/Constant1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  277   </SPAN><SPAN CLASS="CT">     *  Product: '<A href="javascript:rtwHilite('nxtway_gs_controller:136')"><FONT color="#117755"><I>&lt;S26&gt;/Divide1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  278   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  279   </SPAN>    rtb_Gain2_d = rtb_IntegralGain / 100.0F * 25.0F;
+</SPAN><SPAN><SPAN CLASS="LN">  280   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  281   </SPAN>    <SPAN CLASS="CT">/* DataTypeConversion: '<A href="javascript:rtwHilite('nxtway_gs_controller:226')"><FONT color="#117755"><I>&lt;S14&gt;/Data Type Conversion</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  282   </SPAN><SPAN CLASS="CT">     *  Saturate: '<A href="javascript:rtwHilite('nxtway_gs_controller:113')"><FONT color="#117755"><I>&lt;S25&gt;/Saturation</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  283   </SPAN><SPAN CLASS="CT">     *  Sum: '<A href="javascript:rtwHilite('nxtway_gs_controller:115')"><FONT color="#117755"><I>&lt;S25&gt;/Sum</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  284   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  285   </SPAN>    u = rtb_Sum_b + rtb_Gain2_d;
+</SPAN><SPAN><SPAN CLASS="LN">  286   </SPAN>    rtb_DataTypeConversion = (<A HREF="rtwtypes_h.html#type_int8_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int8_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">int8_T</FONT></A>)(u &gt;= 100.0F ? 100.0F : u &lt;= -100.0F ?
+</SPAN><SPAN><SPAN CLASS="LN">  287   </SPAN>      -100.0F : u);
+</SPAN><SPAN><SPAN CLASS="LN">  288   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  289   </SPAN>    <SPAN CLASS="CT">/* DataStoreWrite: '<A href="javascript:rtwHilite('nxtway_gs_controller:272:2')"><FONT color="#117755"><I>&lt;S23&gt;/Data Store Write</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  290   </SPAN>    ecrobot_set_motor_mode_speed(NXT_PORT_C, 1, rtb_DataTypeConversion);
+</SPAN><SPAN><SPAN CLASS="LN">  291   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  292   </SPAN>    <SPAN CLASS="CT">/* Switch: '<A href="javascript:rtwHilite('nxtway_gs_controller:119')"><FONT color="#117755"><I>&lt;S25&gt;/Switch3</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  293   </SPAN><SPAN CLASS="CT">     *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:106')"><FONT color="#117755"><I>&lt;S25&gt;/Constant5</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  294   </SPAN><SPAN CLASS="CT">     *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:107')"><FONT color="#117755"><I>&lt;S25&gt;/Constant6</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  295   </SPAN><SPAN CLASS="CT">     *  DataTypeConversion: '<A href="javascript:rtwHilite('nxtway_gs_controller:108')"><FONT color="#117755"><I>&lt;S25&gt;/Data Type Conversion2</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  296   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  297   </SPAN>    <SPAN CLASS="KW">if</SPAN> ((<A HREF="rtwtypes_h.html#type_int32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">int32_T</FONT></A>)rtb_IntegralGain != 0) <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  298   </SPAN>      rtb_DataStoreRead1_j = TRUE;
+</SPAN><SPAN><SPAN CLASS="LN">  299   </SPAN>    <B>}</B> <SPAN CLASS="KW">else</SPAN> <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  300   </SPAN>      rtb_DataStoreRead1_j = FALSE;
+</SPAN><SPAN><SPAN CLASS="LN">  301   </SPAN>    <B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">  302   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  303   </SPAN>    <SPAN CLASS="CT">/* Sum: '<A href="javascript:rtwHilite('nxtway_gs_controller:96')"><FONT color="#117755"><I>&lt;S29&gt;/Sum1</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  304   </SPAN>    rtb_DataTypeConversion3 -= rtb_DataTypeConversion4;
+</SPAN><SPAN><SPAN CLASS="LN">  305   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  306   </SPAN>    <SPAN CLASS="CT">/* Outputs for enable SubSystem: '<A href="javascript:rtwHilite('nxtway_gs_controller:92')"><FONT color="#117755"><I>&lt;S29&gt;/Set theta_offset</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  307   </SPAN><SPAN CLASS="CT">     *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:85')"><FONT color="#117755"><I>&lt;S32&gt;/Constant</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  308   </SPAN><SPAN CLASS="CT">     *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:86')"><FONT color="#117755"><I>&lt;S32&gt;/Constant1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  309   </SPAN><SPAN CLASS="CT">     *  EnablePort: '<A href="javascript:rtwHilite('nxtway_gs_controller:94')"><FONT color="#117755"><I>&lt;S33&gt;/Enable</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  310   </SPAN><SPAN CLASS="CT">     *  Logic: '<A href="javascript:rtwHilite('nxtway_gs_controller:87')"><FONT color="#117755"><I>&lt;S32&gt;/Logical Operator</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  311   </SPAN><SPAN CLASS="CT">     *  RelationalOperator: '<A href="javascript:rtwHilite('nxtway_gs_controller:88')"><FONT color="#117755"><I>&lt;S32&gt;/Relational Operator</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  312   </SPAN><SPAN CLASS="CT">     *  RelationalOperator: '<A href="javascript:rtwHilite('nxtway_gs_controller:89')"><FONT color="#117755"><I>&lt;S32&gt;/Relational Operator1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  313   </SPAN><SPAN CLASS="CT">     *  UnitDelay: '<A href="javascript:rtwHilite('nxtway_gs_controller:90')"><FONT color="#117755"><I>&lt;S32&gt;/Unit Delay</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  314   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  315   </SPAN>    <SPAN CLASS="KW">if</SPAN> ((!rtb_DataStoreRead1_j) &amp;&amp; <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.UnitDelay_DSTATE_c) <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  316   </SPAN>      <SPAN CLASS="CT">/* Inport: '<A href="javascript:rtwHilite('nxtway_gs_controller:93')"><FONT color="#117755"><I>&lt;S33&gt;/theta_diff</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  317   </SPAN>      <A HREF="nxtway_app_c.html#var_rtB" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtB');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtB</FONT></A>.theta_diff = rtb_DataTypeConversion3;
+</SPAN><SPAN><SPAN CLASS="LN">  318   </SPAN>    <B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">  319   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  320   </SPAN>    <SPAN CLASS="CT">/* end of Outputs for SubSystem: '<A href="javascript:rtwHilite('nxtway_gs_controller:92')"><FONT color="#117755"><I>&lt;S29&gt;/Set theta_offset</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  321   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  322   </SPAN>    <SPAN CLASS="CT">/* Switch: '<A href="javascript:rtwHilite('nxtway_gs_controller:118')"><FONT color="#117755"><I>&lt;S25&gt;/Switch2</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  323   </SPAN><SPAN CLASS="CT">     *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:105')"><FONT color="#117755"><I>&lt;S25&gt;/Constant1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  324   </SPAN><SPAN CLASS="CT">     *  Gain: '<A href="javascript:rtwHilite('nxtway_gs_controller:111')"><FONT color="#117755"><I>&lt;S25&gt;/Gain2</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  325   </SPAN><SPAN CLASS="CT">     *  Sum: '<A href="javascript:rtwHilite('nxtway_gs_controller:97')"><FONT color="#117755"><I>&lt;S29&gt;/Sum5</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  326   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  327   </SPAN>    <SPAN CLASS="KW">if</SPAN> (rtb_DataStoreRead1_j) <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  328   </SPAN>      rtb_DataTypeConversion4 = 0.0F;
+</SPAN><SPAN><SPAN CLASS="LN">  329   </SPAN>    <B>}</B> <SPAN CLASS="KW">else</SPAN> <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  330   </SPAN>      rtb_DataTypeConversion4 = (rtb_DataTypeConversion3 - <A HREF="nxtway_app_c.html#var_rtB" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtB');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtB</FONT></A>.theta_diff) *
+</SPAN><SPAN><SPAN CLASS="LN">  331   </SPAN>        0.35F;
+</SPAN><SPAN><SPAN CLASS="LN">  332   </SPAN>    <B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">  333   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  334   </SPAN>    <SPAN CLASS="CT">/* Sum: '<A href="javascript:rtwHilite('nxtway_gs_controller:117')"><FONT color="#117755"><I>&lt;S25&gt;/Sum2</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  335   </SPAN><SPAN CLASS="CT">     *  Sum: '<A href="javascript:rtwHilite('nxtway_gs_controller:116')"><FONT color="#117755"><I>&lt;S25&gt;/Sum1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  336   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  337   </SPAN>    rtb_DataTypeConversion4 += rtb_Sum_b - rtb_Gain2_d;
+</SPAN><SPAN><SPAN CLASS="LN">  338   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  339   </SPAN>    <SPAN CLASS="CT">/* Saturate: '<A href="javascript:rtwHilite('nxtway_gs_controller:114')"><FONT color="#117755"><I>&lt;S25&gt;/Saturation1</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  340   </SPAN>    rtb_DataTypeConversion4 = rtb_DataTypeConversion4 &gt;= 100.0F ? 100.0F :
+</SPAN><SPAN><SPAN CLASS="LN">  341   </SPAN>      rtb_DataTypeConversion4 &lt;= -100.0F ? -100.0F : rtb_DataTypeConversion4;
+</SPAN><SPAN><SPAN CLASS="LN">  342   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  343   </SPAN>    <SPAN CLASS="CT">/* DataTypeConversion: '<A href="javascript:rtwHilite('nxtway_gs_controller:232')"><FONT color="#117755"><I>&lt;S14&gt;/Data Type Conversion6</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  344   </SPAN>    rtb_DataTypeConversion6 = (<A HREF="rtwtypes_h.html#type_int8_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int8_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">int8_T</FONT></A>)rtb_DataTypeConversion4;
+</SPAN><SPAN><SPAN CLASS="LN">  345   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  346   </SPAN>    <SPAN CLASS="CT">/* DataStoreWrite: '<A href="javascript:rtwHilite('nxtway_gs_controller:273:2')"><FONT color="#117755"><I>&lt;S24&gt;/Data Store Write</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  347   </SPAN>    ecrobot_set_motor_mode_speed(NXT_PORT_B, 1, rtb_DataTypeConversion6);
+</SPAN><SPAN><SPAN CLASS="LN">  348   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  349   </SPAN>    <SPAN CLASS="CT">/* Sum: '<A href="javascript:rtwHilite('nxtway_gs_controller:172')"><FONT color="#117755"><I>&lt;S38&gt;/Sum</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  350   </SPAN><SPAN CLASS="CT">     *  Gain: '<A href="javascript:rtwHilite('nxtway_gs_controller:171')"><FONT color="#117755"><I>&lt;S38&gt;/Gain</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  351   </SPAN><SPAN CLASS="CT">     *  UnitDelay: '<A href="javascript:rtwHilite('nxtway_gs_controller:173')"><FONT color="#117755"><I>&lt;S38&gt;/Unit Delay</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  352   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  353   </SPAN>    rtb_DataTypeConversion3 = 0.004F * rtb_psidot + <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.UnitDelay_DSTATE_h;
+</SPAN><SPAN><SPAN CLASS="LN">  354   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  355   </SPAN>    <SPAN CLASS="CT">/* UnitDelay: '<A href="javascript:rtwHilite('nxtway_gs_controller:64')"><FONT color="#117755"><I>&lt;S16&gt;/Unit Delay</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  356   </SPAN>    rtb_UnitDelay_lv = <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.UnitDelay_DSTATE_k;
+</SPAN><SPAN><SPAN CLASS="LN">  357   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  358   </SPAN>    <SPAN CLASS="CT">/* Switch: '<A href="javascript:rtwHilite('nxtway_gs_controller:63')"><FONT color="#117755"><I>&lt;S16&gt;/Switch3</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  359   </SPAN><SPAN CLASS="CT">     *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:58')"><FONT color="#117755"><I>&lt;S16&gt;/Constant5</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  360   </SPAN><SPAN CLASS="CT">     *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:59')"><FONT color="#117755"><I>&lt;S16&gt;/Constant6</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  361   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  362   </SPAN>    <SPAN CLASS="KW">if</SPAN> (<A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.UnitDelay_DSTATE_k != 0) <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  363   </SPAN>      rtb_DataStoreRead2_i = FALSE;
+</SPAN><SPAN><SPAN CLASS="LN">  364   </SPAN>    <B>}</B> <SPAN CLASS="KW">else</SPAN> <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  365   </SPAN>      rtb_DataStoreRead2_i = TRUE;
+</SPAN><SPAN><SPAN CLASS="LN">  366   </SPAN>    <B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">  367   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  368   </SPAN>    <SPAN CLASS="CT">/* Outputs for enable SubSystem: '<A href="javascript:rtwHilite('nxtway_gs_controller:211')"><FONT color="#117755"><I>&lt;S14&gt;/Data Logging</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  369   </SPAN><SPAN CLASS="CT">     *  EnablePort: '<A href="javascript:rtwHilite('nxtway_gs_controller:215')"><FONT color="#117755"><I>&lt;S18&gt;/Enable</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  370   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  371   </SPAN>    <SPAN CLASS="KW">if</SPAN> (rtb_DataStoreRead2_i) <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  372   </SPAN>      <SPAN CLASS="CT">/* DataTypeConversion: '<A href="javascript:rtwHilite('nxtway_gs_controller:216')"><FONT color="#117755"><I>&lt;S18&gt;/Data Type Conversion2</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  373   </SPAN><SPAN CLASS="CT">       *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:222')"><FONT color="#117755"><I>&lt;S40&gt;/LSB</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  374   </SPAN><SPAN CLASS="CT">       *  Gain: '<A href="javascript:rtwHilite('nxtway_gs_controller:223')"><FONT color="#117755"><I>&lt;S40&gt;/rad2deg</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  375   </SPAN><SPAN CLASS="CT">       *  Product: '<A href="javascript:rtwHilite('nxtway_gs_controller:221')"><FONT color="#117755"><I>&lt;S40&gt;/Divide</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  376   </SPAN><SPAN CLASS="CT">       *  UnitDelay: '<A href="javascript:rtwHilite('nxtway_gs_controller:173')"><FONT color="#117755"><I>&lt;S38&gt;/Unit Delay</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  377   </SPAN><SPAN CLASS="CT">       */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  378   </SPAN>      rtb_Sum_b = 57.2957802F * <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.UnitDelay_DSTATE_h / 0.0009765625F;
+</SPAN><SPAN><SPAN CLASS="LN">  379   </SPAN>      <SPAN CLASS="KW">if</SPAN> ((rtb_Sum_b &lt; 8.388608E+6F) &amp;&amp; (rtb_Sum_b &gt; -8.388608E+6F)) <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  380   </SPAN>        rtb_Sum_b = floorf(rtb_Sum_b + 0.5F);
+</SPAN><SPAN><SPAN CLASS="LN">  381   </SPAN>      <B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">  382   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  383   </SPAN>      rtb_DataTypeConversion2_gl = (<A HREF="rtwtypes_h.html#type_int16_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int16_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">int16_T</FONT></A>)rtb_Sum_b;
+</SPAN><SPAN><SPAN CLASS="LN">  384   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  385   </SPAN>      <SPAN CLASS="CT">/* S-Function Block: <A href="javascript:rtwHilite('nxtway_gs_controller:218')"><FONT color="#117755"><I>&lt;S18&gt;/NXT GamePad  ADC Data Logger</I></FONT></A> */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  386   </SPAN>      ecrobot_bt_adc_data_logger(rtb_DataTypeConversion, rtb_DataTypeConversion6,
+</SPAN><SPAN><SPAN CLASS="LN">  387   </SPAN>        rtb_DataTypeConversion2_gl, 0, 0, 0);
+</SPAN><SPAN><SPAN CLASS="LN">  388   </SPAN>    <B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">  389   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  390   </SPAN>    <SPAN CLASS="CT">/* end of Outputs for SubSystem: '<A href="javascript:rtwHilite('nxtway_gs_controller:211')"><FONT color="#117755"><I>&lt;S14&gt;/Data Logging</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  391   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  392   </SPAN>    <SPAN CLASS="CT">/* Sum: '<A href="javascript:rtwHilite('nxtway_gs_controller:61')"><FONT color="#117755"><I>&lt;S16&gt;/Sum</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  393   </SPAN><SPAN CLASS="CT">     *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:55')"><FONT color="#117755"><I>&lt;S16&gt;/Constant1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  394   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  395   </SPAN>    rtb_UnitDelay_lv = (<A HREF="rtwtypes_h.html#type_uint8_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint8_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">uint8_T</FONT></A>)(1U + (<A HREF="rtwtypes_h.html#type_uint32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">uint32_T</FONT></A>)rtb_UnitDelay_lv);
+</SPAN><SPAN><SPAN CLASS="LN">  396   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  397   </SPAN>    <SPAN CLASS="CT">/* Switch: '<A href="javascript:rtwHilite('nxtway_gs_controller:62')"><FONT color="#117755"><I>&lt;S16&gt;/Switch1</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  398   </SPAN><SPAN CLASS="CT">     *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:56')"><FONT color="#117755"><I>&lt;S16&gt;/Constant2</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  399   </SPAN><SPAN CLASS="CT">     *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:57')"><FONT color="#117755"><I>&lt;S16&gt;/Constant3</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  400   </SPAN><SPAN CLASS="CT">     *  RelationalOperator: '<A href="javascript:rtwHilite('nxtway_gs_controller:60')"><FONT color="#117755"><I>&lt;S16&gt;/Relational Operator</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  401   </SPAN><SPAN CLASS="CT">     *  Update for UnitDelay: '<A href="javascript:rtwHilite('nxtway_gs_controller:64')"><FONT color="#117755"><I>&lt;S16&gt;/Unit Delay</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  402   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  403   </SPAN>    <SPAN CLASS="KW">if</SPAN> (25 == rtb_UnitDelay_lv) <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  404   </SPAN>      <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.UnitDelay_DSTATE_k = 0U;
+</SPAN><SPAN><SPAN CLASS="LN">  405   </SPAN>    <B>}</B> <SPAN CLASS="KW">else</SPAN> <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  406   </SPAN>      <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.UnitDelay_DSTATE_k = rtb_UnitDelay_lv;
+</SPAN><SPAN><SPAN CLASS="LN">  407   </SPAN>    <B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">  408   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  409   </SPAN>    <SPAN CLASS="CT">/* Update for UnitDelay: '<A href="javascript:rtwHilite('nxtway_gs_controller:198')"><FONT color="#117755"><I>&lt;S28&gt;/Unit Delay</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  410   </SPAN><SPAN CLASS="CT">     *  Gain: '<A href="javascript:rtwHilite('nxtway_gs_controller:196')"><FONT color="#117755"><I>&lt;S28&gt;/Gain</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  411   </SPAN><SPAN CLASS="CT">     *  Sum: '<A href="javascript:rtwHilite('nxtway_gs_controller:206')"><FONT color="#117755"><I>&lt;S17&gt;/Sum1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  412   </SPAN><SPAN CLASS="CT">     *  Sum: '<A href="javascript:rtwHilite('nxtway_gs_controller:197')"><FONT color="#117755"><I>&lt;S28&gt;/Sum</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  413   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  414   </SPAN>    <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.UnitDelay_DSTATE = (rtb_UnitDelay_l - rtb_theta) * 0.004F +
+</SPAN><SPAN><SPAN CLASS="LN">  415   </SPAN>      rtb_UnitDelay;
+</SPAN><SPAN><SPAN CLASS="LN">  416   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  417   </SPAN>    <SPAN CLASS="CT">/* Update for UnitDelay: '<A href="javascript:rtwHilite('nxtway_gs_controller:133')"><FONT color="#117755"><I>&lt;S34&gt;/Unit Delay</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  418   </SPAN><SPAN CLASS="CT">     *  Gain: '<A href="javascript:rtwHilite('nxtway_gs_controller:131')"><FONT color="#117755"><I>&lt;S34&gt;/Gain</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  419   </SPAN><SPAN CLASS="CT">     *  Sum: '<A href="javascript:rtwHilite('nxtway_gs_controller:132')"><FONT color="#117755"><I>&lt;S34&gt;/Sum</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  420   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  421   </SPAN>    <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.UnitDelay_DSTATE_j = 0.004F * rtb_Sum_g + rtb_UnitDelay_l;
+</SPAN><SPAN><SPAN CLASS="LN">  422   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  423   </SPAN>    <SPAN CLASS="CT">/* Update for UnitDelay: '<A href="javascript:rtwHilite('nxtway_gs_controller:144')"><FONT color="#117755"><I>&lt;S35&gt;/Unit Delay</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  424   </SPAN>    <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.UnitDelay_DSTATE_e = rtb_Sum_g;
+</SPAN><SPAN><SPAN CLASS="LN">  425   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  426   </SPAN>    <SPAN CLASS="CT">/* Update for UnitDelay: '<A href="javascript:rtwHilite('nxtway_gs_controller:173')"><FONT color="#117755"><I>&lt;S38&gt;/Unit Delay</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  427   </SPAN>    <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.UnitDelay_DSTATE_h = rtb_DataTypeConversion3;
+</SPAN><SPAN><SPAN CLASS="LN">  428   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  429   </SPAN>    <SPAN CLASS="CT">/* Update for UnitDelay: '<A href="javascript:rtwHilite('nxtway_gs_controller:181')"><FONT color="#117755"><I>&lt;S39&gt;/Unit Delay</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  430   </SPAN>    <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.UnitDelay_DSTATE_hp = rtb_Sum_a;
+</SPAN><SPAN><SPAN CLASS="LN">  431   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  432   </SPAN>    <SPAN CLASS="CT">/* Update for UnitDelay: '<A href="javascript:rtwHilite('nxtway_gs_controller:167')"><FONT color="#117755"><I>&lt;S37&gt;/Unit Delay</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  433   </SPAN>    <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.UnitDelay_DSTATE_m = rtb_Sum_a;
+</SPAN><SPAN><SPAN CLASS="LN">  434   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  435   </SPAN>    <SPAN CLASS="CT">/* Update for UnitDelay: '<A href="javascript:rtwHilite('nxtway_gs_controller:90')"><FONT color="#117755"><I>&lt;S32&gt;/Unit Delay</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  436   </SPAN>    <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.UnitDelay_DSTATE_c = rtb_DataStoreRead1_j;
+</SPAN><SPAN><SPAN CLASS="LN">  437   </SPAN>  <B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">  438   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  439   </SPAN>  <SPAN CLASS="CT">/* end of Outputs for SubSystem: '<A href="javascript:rtwHilite('nxtway_gs_controller:51')"><FONT color="#117755"><I>&lt;S7&gt;/Balance &amp; Drive Control</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  440   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  441   </SPAN>  <SPAN CLASS="CT">/* Outputs for enable SubSystem: '<A href="javascript:rtwHilite('nxtway_gs_controller:275')"><FONT color="#117755"><I>&lt;S7&gt;/Gyro Calibration</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  442   </SPAN><SPAN CLASS="CT">   *  EnablePort: '<A href="javascript:rtwHilite('nxtway_gs_controller:276')"><FONT color="#117755"><I>&lt;S15&gt;/Enable</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  443   </SPAN><SPAN CLASS="CT">   *  Logic: '<A href="javascript:rtwHilite('nxtway_gs_controller:284')"><FONT color="#117755"><I>&lt;S7&gt;/Logical Operator</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  444   </SPAN><SPAN CLASS="CT">   */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  445   </SPAN>  <SPAN CLASS="KW">if</SPAN> (!rtb_DataStoreRead) <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  446   </SPAN>    <SPAN CLASS="CT">/* DataStoreWrite: '<A href="javascript:rtwHilite('nxtway_gs_controller:278')"><FONT color="#117755"><I>&lt;S15&gt;/Data Store Write1</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  447   </SPAN><SPAN CLASS="CT">     *  DataStoreRead: '<A href="javascript:rtwHilite('nxtway_gs_controller:277')"><FONT color="#117755"><I>&lt;S15&gt;/Data Store Read2</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  448   </SPAN><SPAN CLASS="CT">     *  DataStoreRead: '<A href="javascript:rtwHilite('nxtway_gs_controller:282:1')"><FONT color="#117755"><I>&lt;S43&gt;/Data Store Read</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  449   </SPAN><SPAN CLASS="CT">     *  DataTypeConversion: '<A href="javascript:rtwHilite('nxtway_gs_controller:279')"><FONT color="#117755"><I>&lt;S15&gt;/Data Type Conversion2</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  450   </SPAN><SPAN CLASS="CT">     *  Gain: '<A href="javascript:rtwHilite('nxtway_gs_controller:280')"><FONT color="#117755"><I>&lt;S15&gt;/Gain1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  451   </SPAN><SPAN CLASS="CT">     *  Gain: '<A href="javascript:rtwHilite('nxtway_gs_controller:281')"><FONT color="#117755"><I>&lt;S15&gt;/Gain4</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  452   </SPAN><SPAN CLASS="CT">     *  Sum: '<A href="javascript:rtwHilite('nxtway_gs_controller:283')"><FONT color="#117755"><I>&lt;S15&gt;/Sum</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  453   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  454   </SPAN>    <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.gyro_offset = 0.8F * <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.gyro_offset + 0.2F * (<A HREF="rtwtypes_h.html#type_real32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">real32_T</FONT></A>)
+</SPAN><SPAN><SPAN CLASS="LN">  455   </SPAN>      ecrobot_get_gyro_sensor(NXT_PORT_S4);
+</SPAN><SPAN><SPAN CLASS="LN">  456   </SPAN>  <B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">  457   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  458   </SPAN>  <SPAN CLASS="CT">/* end of Outputs for SubSystem: '<A href="javascript:rtwHilite('nxtway_gs_controller:275')"><FONT color="#117755"><I>&lt;S7&gt;/Gyro Calibration</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  459   </SPAN><B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">  460   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  461   </SPAN><SPAN CLASS="CT">/* Output and update for exported function: task_ts2 */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  462   </SPAN><SPAN CLASS="DT">void</SPAN> <A NAME="fcn_task_ts2">task_ts2</A>(<SPAN CLASS="DT">void</SPAN>)
+</SPAN><SPAN><SPAN CLASS="LN">  463   </SPAN><B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  464   </SPAN>  <A HREF="rtwtypes_h.html#type_boolean_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_boolean_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">boolean_T</FONT></A> rtb_DataStoreRead2_j;
+</SPAN><SPAN><SPAN CLASS="LN">  465   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  466   </SPAN>  <SPAN CLASS="CT">/* S-Function (fcncallgen): '&lt;S3&gt;/expFcn' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  467   </SPAN><SPAN CLASS="CT">   *  SubSystem: '<A href="javascript:rtwHilite('nxtway_gs_controller:285')"><FONT color="#117755"><I>&lt;S5&gt;/task_ts2</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  468   </SPAN><SPAN CLASS="CT">   */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  469   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  470   </SPAN>  <SPAN CLASS="CT">/* Outputs for enable SubSystem: '<A href="javascript:rtwHilite('nxtway_gs_controller:287')"><FONT color="#117755"><I>&lt;S8&gt;/Autonomous Drive</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  471   </SPAN><SPAN CLASS="CT">   *  DataStoreRead: '<A href="javascript:rtwHilite('nxtway_gs_controller:307')"><FONT color="#117755"><I>&lt;S8&gt;/Data Store Read1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  472   </SPAN><SPAN CLASS="CT">   *  EnablePort: '<A href="javascript:rtwHilite('nxtway_gs_controller:288')"><FONT color="#117755"><I>&lt;S44&gt;/Enable</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  473   </SPAN><SPAN CLASS="CT">   */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  474   </SPAN>  <SPAN CLASS="KW">if</SPAN> (<A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.flag_mode) <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  475   </SPAN>    <SPAN CLASS="CT">/* DataStoreRead: '<A href="javascript:rtwHilite('nxtway_gs_controller:289')"><FONT color="#117755"><I>&lt;S44&gt;/Data Store Read2</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  476   </SPAN>    rtb_DataStoreRead2_j = <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.flag_avoid;
+</SPAN><SPAN><SPAN CLASS="LN">  477   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  478   </SPAN>    <SPAN CLASS="CT">/* Outputs for enable SubSystem: '<A href="javascript:rtwHilite('nxtway_gs_controller:290')"><FONT color="#117755"><I>&lt;S44&gt;/Forward Run</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  479   </SPAN><SPAN CLASS="CT">     *  EnablePort: '<A href="javascript:rtwHilite('nxtway_gs_controller:291')"><FONT color="#117755"><I>&lt;S46&gt;/Enable</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  480   </SPAN><SPAN CLASS="CT">     *  Logic: '<A href="javascript:rtwHilite('nxtway_gs_controller:298')"><FONT color="#117755"><I>&lt;S44&gt;/Logical Operator1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  481   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  482   </SPAN>    <SPAN CLASS="KW">if</SPAN> (!<A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.flag_avoid) <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  483   </SPAN>      <SPAN CLASS="CT">/* DataStoreWrite: '<A href="javascript:rtwHilite('nxtway_gs_controller:293')"><FONT color="#117755"><I>&lt;S46&gt;/Data Store Write1</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  484   </SPAN><SPAN CLASS="CT">       *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:292')"><FONT color="#117755"><I>&lt;S46&gt;/Constant</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  485   </SPAN><SPAN CLASS="CT">       *  DataStoreRead: '<A href="javascript:rtwHilite('nxtway_gs_controller:296:1')"><FONT color="#117755"><I>&lt;S49&gt;/Data Store Read</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  486   </SPAN><SPAN CLASS="CT">       *  RelationalOperator: '<A href="javascript:rtwHilite('nxtway_gs_controller:294')"><FONT color="#117755"><I>&lt;S46&gt;/Relational Operator</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  487   </SPAN><SPAN CLASS="CT">       */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  488   </SPAN>      <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.flag_avoid = (ecrobot_get_sonar_sensor(NXT_PORT_S2) &lt;= 20);
+</SPAN><SPAN><SPAN CLASS="LN">  489   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  490   </SPAN>      <SPAN CLASS="CT">/* DataStoreRead: '<A href="javascript:rtwHilite('nxtway_gs_controller:295:1')"><FONT color="#117755"><I>&lt;S48&gt;/Data Store Read</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  491   </SPAN>      <A HREF="nxtway_app_c.html#var_rtB" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtB');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtB</FONT></A>.RevolutionSensor_C = ecrobot_get_motor_rev(NXT_PORT_C);
+</SPAN><SPAN><SPAN CLASS="LN">  492   </SPAN>    <B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">  493   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  494   </SPAN>    <SPAN CLASS="CT">/* end of Outputs for SubSystem: '<A href="javascript:rtwHilite('nxtway_gs_controller:290')"><FONT color="#117755"><I>&lt;S44&gt;/Forward Run</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  495   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  496   </SPAN>    <SPAN CLASS="CT">/* Outputs for enable SubSystem: '<A href="javascript:rtwHilite('nxtway_gs_controller:299')"><FONT color="#117755"><I>&lt;S44&gt;/Rotate Right</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  497   </SPAN><SPAN CLASS="CT">     *  EnablePort: '<A href="javascript:rtwHilite('nxtway_gs_controller:301')"><FONT color="#117755"><I>&lt;S47&gt;/Enable</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  498   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  499   </SPAN>    <SPAN CLASS="KW">if</SPAN> (rtb_DataStoreRead2_j) <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  500   </SPAN>      <SPAN CLASS="CT">/* DataStoreWrite: '<A href="javascript:rtwHilite('nxtway_gs_controller:303')"><FONT color="#117755"><I>&lt;S47&gt;/Data Store Write1</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  501   </SPAN><SPAN CLASS="CT">       *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:302')"><FONT color="#117755"><I>&lt;S47&gt;/Constant1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  502   </SPAN><SPAN CLASS="CT">       *  DataStoreRead: '<A href="javascript:rtwHilite('nxtway_gs_controller:305:1')"><FONT color="#117755"><I>&lt;S50&gt;/Data Store Read</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  503   </SPAN><SPAN CLASS="CT">       *  RelationalOperator: '<A href="javascript:rtwHilite('nxtway_gs_controller:304')"><FONT color="#117755"><I>&lt;S47&gt;/Relational Operator1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  504   </SPAN><SPAN CLASS="CT">       *  Sum: '<A href="javascript:rtwHilite('nxtway_gs_controller:306')"><FONT color="#117755"><I>&lt;S47&gt;/Sum1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  505   </SPAN><SPAN CLASS="CT">       */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  506   </SPAN>      <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.flag_avoid = (ecrobot_get_motor_rev(NXT_PORT_C) -
+</SPAN><SPAN><SPAN CLASS="LN">  507   </SPAN>                            <A HREF="nxtway_app_c.html#var_rtB" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtB');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtB</FONT></A>.RevolutionSensor_C &lt;= 210);
+</SPAN><SPAN><SPAN CLASS="LN">  508   </SPAN>    <B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">  509   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  510   </SPAN>    <SPAN CLASS="CT">/* end of Outputs for SubSystem: '<A href="javascript:rtwHilite('nxtway_gs_controller:299')"><FONT color="#117755"><I>&lt;S44&gt;/Rotate Right</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  511   </SPAN>  <B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">  512   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  513   </SPAN>  <SPAN CLASS="CT">/* end of Outputs for SubSystem: '<A href="javascript:rtwHilite('nxtway_gs_controller:287')"><FONT color="#117755"><I>&lt;S8&gt;/Autonomous Drive</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  514   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  515   </SPAN>  <SPAN CLASS="CT">/* Outputs for enable SubSystem: '<A href="javascript:rtwHilite('nxtway_gs_controller:309')"><FONT color="#117755"><I>&lt;S8&gt;/Remote Control Drive</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  516   </SPAN><SPAN CLASS="CT">   *  DataStoreRead: '<A href="javascript:rtwHilite('nxtway_gs_controller:307')"><FONT color="#117755"><I>&lt;S8&gt;/Data Store Read1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  517   </SPAN><SPAN CLASS="CT">   *  EnablePort: '<A href="javascript:rtwHilite('nxtway_gs_controller:310')"><FONT color="#117755"><I>&lt;S45&gt;/Enable</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  518   </SPAN><SPAN CLASS="CT">   *  Logic: '<A href="javascript:rtwHilite('nxtway_gs_controller:308')"><FONT color="#117755"><I>&lt;S8&gt;/Logical Operator</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  519   </SPAN><SPAN CLASS="CT">   */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  520   </SPAN>  <SPAN CLASS="KW">if</SPAN> (!<A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.flag_mode) <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  521   </SPAN>    <SPAN CLASS="CT">/* DataStoreWrite: '<A href="javascript:rtwHilite('nxtway_gs_controller:312')"><FONT color="#117755"><I>&lt;S45&gt;/Data Store Write1</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  522   </SPAN><SPAN CLASS="CT">     *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:311')"><FONT color="#117755"><I>&lt;S45&gt;/Constant</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  523   </SPAN><SPAN CLASS="CT">     *  DataStoreRead: '<A href="javascript:rtwHilite('nxtway_gs_controller:314:1')"><FONT color="#117755"><I>&lt;S51&gt;/Data Store Read</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  524   </SPAN><SPAN CLASS="CT">     *  RelationalOperator: '<A href="javascript:rtwHilite('nxtway_gs_controller:313')"><FONT color="#117755"><I>&lt;S45&gt;/Relational Operator</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  525   </SPAN><SPAN CLASS="CT">     */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  526   </SPAN>    <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.flag_avoid = (ecrobot_get_sonar_sensor(NXT_PORT_S2) &lt;= 20);
+</SPAN><SPAN><SPAN CLASS="LN">  527   </SPAN>  <B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">  528   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  529   </SPAN>  <SPAN CLASS="CT">/* end of Outputs for SubSystem: '<A href="javascript:rtwHilite('nxtway_gs_controller:309')"><FONT color="#117755"><I>&lt;S8&gt;/Remote Control Drive</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  530   </SPAN><B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">  531   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  532   </SPAN><SPAN CLASS="CT">/* Start for exported function: task_ts3 */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  533   </SPAN><SPAN CLASS="DT">void</SPAN> <A NAME="fcn_task_ts3_Start">task_ts3_Start</A>(<SPAN CLASS="DT">void</SPAN>)
+</SPAN><SPAN><SPAN CLASS="LN">  534   </SPAN><B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  535   </SPAN>  <SPAN CLASS="CT">/* Start for S-Function (fcncallgen): '&lt;S4&gt;/expFcn' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  536   </SPAN><SPAN CLASS="CT">   *  Start for SubSystem: '<A href="javascript:rtwHilite('nxtway_gs_controller:315')"><FONT color="#117755"><I>&lt;S5&gt;/task_ts3</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  537   </SPAN><SPAN CLASS="CT">   */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  538   </SPAN><B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">  539   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  540   </SPAN><SPAN CLASS="CT">/* Output and update for exported function: task_ts3 */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  541   </SPAN><SPAN CLASS="DT">void</SPAN> <A NAME="fcn_task_ts3">task_ts3</A>(<SPAN CLASS="DT">void</SPAN>)
+</SPAN><SPAN><SPAN CLASS="LN">  542   </SPAN><B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  543   </SPAN>  <A HREF="rtwtypes_h.html#type_uint32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_uint32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">uint32_T</FONT></A> rtb_Sum1_i;
+</SPAN><SPAN><SPAN CLASS="LN">  544   </SPAN>  <A HREF="rtwtypes_h.html#type_boolean_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_boolean_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">boolean_T</FONT></A> rtb_RelationalOperator_e0;
+</SPAN><SPAN><SPAN CLASS="LN">  545   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  546   </SPAN>  <SPAN CLASS="CT">/* S-Function (fcncallgen): '&lt;S4&gt;/expFcn' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  547   </SPAN><SPAN CLASS="CT">   *  SubSystem: '<A href="javascript:rtwHilite('nxtway_gs_controller:315')"><FONT color="#117755"><I>&lt;S5&gt;/task_ts3</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  548   </SPAN><SPAN CLASS="CT">   */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  549   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  550   </SPAN>  <SPAN CLASS="CT">/* DataStoreWrite: '<A href="javascript:rtwHilite('nxtway_gs_controller:323')"><FONT color="#117755"><I>&lt;S9&gt;/Data Store Write1</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  551   </SPAN><SPAN CLASS="CT">   *  DataStoreRead: '<A href="javascript:rtwHilite('nxtway_gs_controller:317:1')"><FONT color="#117755"><I>&lt;S52&gt;/Data Store Read</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  552   </SPAN><SPAN CLASS="CT">   *  DataStoreRead: '<A href="javascript:rtwHilite('nxtway_gs_controller:321')"><FONT color="#117755"><I>&lt;S9&gt;/Data Store Read2</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  553   </SPAN><SPAN CLASS="CT">   *  DataTypeConversion: '<A href="javascript:rtwHilite('nxtway_gs_controller:325')"><FONT color="#117755"><I>&lt;S9&gt;/Data Type Conversion2</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  554   </SPAN><SPAN CLASS="CT">   *  Gain: '<A href="javascript:rtwHilite('nxtway_gs_controller:326')"><FONT color="#117755"><I>&lt;S9&gt;/Gain1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  555   </SPAN><SPAN CLASS="CT">   *  Gain: '<A href="javascript:rtwHilite('nxtway_gs_controller:327')"><FONT color="#117755"><I>&lt;S9&gt;/Gain2</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  556   </SPAN><SPAN CLASS="CT">   *  Sum: '<A href="javascript:rtwHilite('nxtway_gs_controller:336')"><FONT color="#117755"><I>&lt;S9&gt;/Sum</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  557   </SPAN><SPAN CLASS="CT">   */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  558   </SPAN>  <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.battery = 0.8F * <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.battery + 0.2F * (<A HREF="rtwtypes_h.html#type_real32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_real32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">real32_T</FONT></A>)
+</SPAN><SPAN><SPAN CLASS="LN">  559   </SPAN>    ecrobot_get_battery_voltage();
+</SPAN><SPAN><SPAN CLASS="LN">  560   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  561   </SPAN>  <SPAN CLASS="CT">/* Sum: '<A href="javascript:rtwHilite('nxtway_gs_controller:337')"><FONT color="#117755"><I>&lt;S9&gt;/Sum1</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  562   </SPAN><SPAN CLASS="CT">   *  DataStoreRead: '<A href="javascript:rtwHilite('nxtway_gs_controller:338:1')"><FONT color="#117755"><I>&lt;S54&gt;/Data Store Read</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  563   </SPAN><SPAN CLASS="CT">   *  DataStoreRead: '<A href="javascript:rtwHilite('nxtway_gs_controller:320')"><FONT color="#117755"><I>&lt;S9&gt;/Data Store Read1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  564   </SPAN><SPAN CLASS="CT">   */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  565   </SPAN>  rtb_Sum1_i = ecrobot_get_systick_ms() - <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.start_time;
+</SPAN><SPAN><SPAN CLASS="LN">  566   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  567   </SPAN>  <SPAN CLASS="CT">/* RelationalOperator: '<A href="javascript:rtwHilite('nxtway_gs_controller:333')"><FONT color="#117755"><I>&lt;S9&gt;/Relational Operator</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  568   </SPAN><SPAN CLASS="CT">   *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:318')"><FONT color="#117755"><I>&lt;S9&gt;/Constant</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  569   </SPAN><SPAN CLASS="CT">   */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  570   </SPAN>  rtb_RelationalOperator_e0 = (rtb_Sum1_i &gt;= 1000U);
+</SPAN><SPAN><SPAN CLASS="LN">  571   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  572   </SPAN>  <SPAN CLASS="CT">/* DataStoreWrite: '<A href="javascript:rtwHilite('nxtway_gs_controller:322')"><FONT color="#117755"><I>&lt;S9&gt;/Data Store Write</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  573   </SPAN>  <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.flag_start = rtb_RelationalOperator_e0;
+</SPAN><SPAN><SPAN CLASS="LN">  574   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  575   </SPAN>  <SPAN CLASS="CT">/* DataStoreWrite: '<A href="javascript:rtwHilite('nxtway_gs_controller:324')"><FONT color="#117755"><I>&lt;S9&gt;/Data Store Write2</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  576   </SPAN><SPAN CLASS="CT">   *  Constant: '<A href="javascript:rtwHilite('nxtway_gs_controller:319')"><FONT color="#117755"><I>&lt;S9&gt;/Constant3</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  577   </SPAN><SPAN CLASS="CT">   *  RelationalOperator: '<A href="javascript:rtwHilite('nxtway_gs_controller:334')"><FONT color="#117755"><I>&lt;S9&gt;/Relational Operator1</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  578   </SPAN><SPAN CLASS="CT">   */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  579   </SPAN>  <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.flag_auto = (rtb_Sum1_i &gt;= 5000U);
+</SPAN><SPAN><SPAN CLASS="LN">  580   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  581   </SPAN>  <SPAN CLASS="CT">/* Outputs for enable SubSystem: '<A href="javascript:rtwHilite('nxtway_gs_controller:328')"><FONT color="#117755"><I>&lt;S9&gt;/Make Sound</I></FONT></A>' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  582   </SPAN><SPAN CLASS="CT">   *  EnablePort: '<A href="javascript:rtwHilite('nxtway_gs_controller:329')"><FONT color="#117755"><I>&lt;S53&gt;/Enable</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  583   </SPAN><SPAN CLASS="CT">   *  RelationalOperator: '<A href="javascript:rtwHilite('nxtway_gs_controller:335')"><FONT color="#117755"><I>&lt;S9&gt;/Relational Operator2</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  584   </SPAN><SPAN CLASS="CT">   *  UnitDelay: '<A href="javascript:rtwHilite('nxtway_gs_controller:339')"><FONT color="#117755"><I>&lt;S9&gt;/Unit Delay</I></FONT></A>'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  585   </SPAN><SPAN CLASS="CT">   */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  586   </SPAN>  <SPAN CLASS="KW">if</SPAN> ((<A HREF="rtwtypes_h.html#type_int32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">int32_T</FONT></A>)rtb_RelationalOperator_e0 != (<A HREF="rtwtypes_h.html#type_int32_T" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'type_int32_T')" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">int32_T</FONT></A>)<A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.UnitDelay_DSTATE_a)
+</SPAN><SPAN><SPAN CLASS="LN">  587   </SPAN>  <B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  588   </SPAN>    <SPAN CLASS="CT">/* S-Function Block: <A href="javascript:rtwHilite('nxtway_gs_controller:332')"><FONT color="#117755"><I>&lt;S53&gt;/Sound Tone Write</I></FONT></A> */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  589   </SPAN>    ecrobot_sound_tone(440U, 500U, 70);
+</SPAN><SPAN><SPAN CLASS="LN">  590   </SPAN>  <B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">  591   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  592   </SPAN>  <SPAN CLASS="CT">/* end of Outputs for SubSystem: '<A href="javascript:rtwHilite('nxtway_gs_controller:328')"><FONT color="#117755"><I>&lt;S9&gt;/Make Sound</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  593   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  594   </SPAN>  <SPAN CLASS="CT">/* Update for UnitDelay: '<A href="javascript:rtwHilite('nxtway_gs_controller:339')"><FONT color="#117755"><I>&lt;S9&gt;/Unit Delay</I></FONT></A>' */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  595   </SPAN>  <A HREF="nxtway_app_c.html#var_rtDWork" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'var_rtDWork');" TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">rtDWork</FONT></A>.UnitDelay_DSTATE_a = rtb_RelationalOperator_e0;
+</SPAN><SPAN><SPAN CLASS="LN">  596   </SPAN><B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">  597   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  598   </SPAN><SPAN CLASS="CT">/* Model initialize function */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  599   </SPAN><SPAN CLASS="DT">void</SPAN> <A NAME="fcn_nxtway_app_initialize">nxtway_app_initialize</A>(<SPAN CLASS="DT">void</SPAN>)
+</SPAN><SPAN><SPAN CLASS="LN">  600   </SPAN><B>{</B>
+</SPAN><SPAN><SPAN CLASS="LN">  601   </SPAN>  <SPAN CLASS="CT">/* Start for S-Function (expFcnGen): '&lt;Root&gt;/__FcnCallGen__0' incorporates:</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  602   </SPAN><SPAN CLASS="CT">   *  Start for SubSystem: '&lt;Root&gt;/__ExpFcn__1'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  603   </SPAN><SPAN CLASS="CT">   *  Start for SubSystem: '&lt;Root&gt;/__ExpFcn__2'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  604   </SPAN><SPAN CLASS="CT">   *  Start for SubSystem: '&lt;Root&gt;/__ExpFcn__3'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  605   </SPAN><SPAN CLASS="CT">   *  Start for SubSystem: '&lt;Root&gt;/__ExpFcn__4'</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  606   </SPAN><SPAN CLASS="CT">   */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  607   </SPAN>  <A HREF="nxtway_app_c.html#fcn_task_ts1_Start" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_task_ts1_Start');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">task_ts1_Start</FONT></A>();
+</SPAN><SPAN><SPAN CLASS="LN">  608   </SPAN>  <A HREF="nxtway_app_c.html#fcn_task_ts3_Start" ONCLICK="if (top) if (top.docHiliteMe) top.docHiliteMe(window, 'fcn_task_ts3_Start');"  TARGET="rtwreport_document_frame"><FONT COLOR="#1122aa">task_ts3_Start</FONT></A>();
+</SPAN><SPAN><SPAN CLASS="LN">  609   </SPAN><B>}</B>
+</SPAN><SPAN><SPAN CLASS="LN">  610   </SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  611   </SPAN><SPAN CLASS="CT">/*</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  612   </SPAN><SPAN CLASS="CT"> * File trailer for Real-Time Workshop generated code.</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  613   </SPAN><SPAN CLASS="CT"> *</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  614   </SPAN><SPAN CLASS="CT"> * [EOF]</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  615   </SPAN><SPAN CLASS="CT"> */</SPAN>
+</SPAN><SPAN><SPAN CLASS="LN">  616   </SPAN>
+</SPAN></PRE>
+</TD></TR></TABLE>
+</P>
+</BODY>
+</HTML>

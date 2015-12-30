@@ -1,0 +1,44 @@
+M1=20000;
+M2=15000;
+F=62000;
+k=500000;
+d=800;
+m=0.007;
+g=9.8;
+
+M3=6000;
+
+A = [0 1 0 0;
+    -k/M1  -d/M1-m*g  k/M1  d/M1
+    0 0 0 1
+    k/(M2+M3)  d/(M2+M3)  -k/(M2+M3)  (-d/M2-m*g)/M3];
+B = [0; 1/M1; 0; 0];
+C = [0 1 0 0];
+
+% A=[ 0         1.0000    0         0;
+%   -25.0000   -0.1086   25.0000    0.0400;
+%     0         0         0         1.0000;
+%    23.8095    0.0381  -23.8095   -0.0000]
+% B=[0;
+%    0.5000*1.0e-04;
+%    0;
+%    0]
+% C=[0  1  0  0];
+
+sys=ss(A,B,C,0);
+
+% komplexne zdruzene poly odpovedaju korenom char. polynomu 
+% s OS 5% a Ts=100sek
+% -0.5 som si zvolil
+K=acker(A,B,[-0.0400+0.0419*i, -0.0400-0.0419*i, -0.5, 0])
+sysState=ss(A-B*K,B,C,0);
+
+step(sysState);
+% Stavovka s integralnym riadenim
+% Abig = [ A zeros(size(A, 1), 1); -C 0 ]
+% Bbig = [ B; 0 ]
+% K=acker(Abig,Bbig,[-0.0400+0.0419*i, -0.0400-0.0419*i, -0.5, -0.5, 0]);
+% sysState=ss([ A-B*K -B*Ki; -C 0 ], [0 1], [C 0],0);
+
+
+%step(sys)62000

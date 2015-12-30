@@ -1,0 +1,110 @@
+<HTML>
+<HEAD>
+<link rel="stylesheet" type="text/css" href="rtwreport.css" />
+<script language="JavaScript" type="text/javascript" defer="defer"> 
+    function rtwTableShrink(o, category, numFiles) 
+    {
+        var indent = document.getElementById(category + "_indent");
+        var fileTable = document.getElementById(category + "_table");
+        var catName = document.getElementById(category + "_name");
+        if (fileTable.style.display == "none") {
+            fileTable.style.display = "";
+            indent.style.display = "";
+            o.innerHTML = '<span style="font-family:monospace" id = "' + category + '_button">[-]</span>';
+            catName.innerHTML = '<b>' + category + '</b>';
+        } else {
+            fileTable.style.display = "none";
+            indent.style.display = "none";
+            o.innerHTML = '<span style="font-family:monospace" id = "' + category + '_button">[+]</span>';
+            catName.innerHTML = '<b>' + category + " (" + numFiles + ")" + '</b>';
+        } 
+    }
+</script>
+</HEAD>
+<BODY BGCOLOR="#eeeeee"  LINK="0033CC" VLINK="#666666">
+
+
+
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="4" WIDTH="100%" BGCOLOR="#ffffff">
+ <TR><TD><B><FONT COLOR="#000000">Contents</FONT></B></TD></TR>
+ <TR><TD><A HREF="nxtway_app_survey.html"  TARGET="rtwreport_document_frame" ID="rtwIdSummaryPage" ONCLICK="if (top) if (top.tocHiliteMe) top.tocHiliteMe(window, this, true);" NAME="TOC_List">Summary</A></TD></TR>
+
+  <TR><TD><A HREF="nxtway_app_subsystems.html"  TARGET="rtwreport_document_frame" ID="rtwIdSubsystem"  ONCLICK="if (top) if (top.tocHiliteMe) top.tocHiliteMe(window, this, true);" NAME="TOC_List">Subsystem Report</A></TD></TR>
+<TR><TD><A HREF="nxtway_app_interface.html" TARGET="rtwreport_document_frame" ID="rtwIdCodeInterface" ONCLICK="if (top) if (top.tocHiliteMe) top.tocHiliteMe(window, this, true);" NAME="TOC_List">Code Interface Report</A></TD></TR>
+
+
+  <TR><TD><A HREF="nxtway_app_trace.html" TARGET="rtwreport_document_frame" ID="rtwIdTraceability" ONCLICK="if (top) if (top.tocHiliteMe) top.tocHiliteMe(window, this, true);" NAME="TOC_List" >Traceability Report</A></TD></TR>
+
+
+<!--ADD_CODE_PROFILE_REPORT_LINK_HERE-->
+</TABLE>
+<hr /><table cellspacing="0" cellpadding="4" width="100%" bgcolor="#ffffff" border="0"><tr><td align="left"><b>Generated Files</b>
+</td>
+</tr>
+<tr><td align="left"><table cellspacing="0" cellpadding="1" width="100%" bgcolor="#ffffff" id="Model files" border="0"><tr><td width="0%" align="left"><span style="background-color:#ffffff;width:100%;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category" onclick="rtwTableShrink(this,'Model files','4')"><span style="font-family:monospace" id = "Model files_button">[-]</span></span></td>
+<td width="100%" align="left"><span id="Model files_name"><b>Model files</b></span></td>
+</tr>
+<tr><td width="0%" align="left"><span id="Model files_indent"></span></td>
+<td width="100%" align="left"><table cellspacing="0" cellpadding="4" width="100%" bgcolor="#ffffff" id="Model files_table" border="0"><tr><td align="left"><A HREF="nxtway_app_c.html" TARGET="rtwreport_document_frame" ONCLICK="if (top) if (top.tocHiliteMe) top.tocHiliteMe(window, this, false);" ID="nxtway_app_c.html" NAME="rtwIdGenFileLinks">nxtway_app.c</A>
+<span> </span></td>
+</tr>
+<tr><td align="left"><A HREF="nxtway_app_h.html" TARGET="rtwreport_document_frame" ONCLICK="if (top) if (top.tocHiliteMe) top.tocHiliteMe(window, this, false);" ID="nxtway_app_h.html" NAME="rtwIdGenFileLinks">nxtway_app.h</A>
+<span> </span></td>
+</tr>
+<tr><td align="left"><A HREF="nxtway_app_private_h.html" TARGET="rtwreport_document_frame" ONCLICK="if (top) if (top.tocHiliteMe) top.tocHiliteMe(window, this, false);" ID="nxtway_app_private_h.html" NAME="rtwIdGenFileLinks">nxtway_app_private.h</A>
+<span> </span></td>
+</tr>
+<tr><td align="left"><A HREF="nxtway_app_types_h.html" TARGET="rtwreport_document_frame" ONCLICK="if (top) if (top.tocHiliteMe) top.tocHiliteMe(window, this, false);" ID="nxtway_app_types_h.html" NAME="rtwIdGenFileLinks">nxtway_app_types.h</A>
+<span> </span></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td align="left"><table cellspacing="0" cellpadding="1" width="100%" bgcolor="#ffffff" id="Data files" border="0"><tr><td width="0%" align="left"><span style="background-color:#ffffff;width:100%;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category" onclick="rtwTableShrink(this,'Data files','1')"><span style="font-family:monospace" id = "Data files_button">[-]</span></span></td>
+<td width="100%" align="left"><span id="Data files_name"><b>Data files</b></span></td>
+</tr>
+<tr><td width="0%" align="left"><span id="Data files_indent"></span></td>
+<td width="100%" align="left"><table cellspacing="0" cellpadding="4" width="100%" bgcolor="#ffffff" id="Data files_table" border="0"><tr><td align="left"><A HREF="nxtway_app_data_c.html" TARGET="rtwreport_document_frame" ONCLICK="if (top) if (top.tocHiliteMe) top.tocHiliteMe(window, this, false);" ID="nxtway_app_data_c.html" NAME="rtwIdGenFileLinks">nxtway_app_data.c</A>
+<span> </span></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td align="left"><table cellspacing="0" cellpadding="1" width="100%" bgcolor="#ffffff" id="Utility files" border="0"><tr><td width="0%" align="left"><span style="background-color:#ffffff;width:100%;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category" onclick="rtwTableShrink(this,'Utility files','1')"><span style="font-family:monospace" id = "Utility files_button">[+]</span></span></td>
+<td width="100%" align="left"><span id="Utility files_name"><b>Utility files (1)</b></span></td>
+</tr>
+<tr><td width="0%" align="left"><span id="Utility files_indent"></span></td>
+<td width="100%" align="left"><table cellspacing="0" cellpadding="4" width="100%" bgcolor="#ffffff" id="Utility files_table" style="display:none" border="0"><tr><td align="left"><A HREF="rtwtypes_h.html" TARGET="rtwreport_document_frame" ONCLICK="if (top) if (top.tocHiliteMe) top.tocHiliteMe(window, this, false);" ID="rtwtypes_h.html" NAME="rtwIdGenFileLinks">rtwtypes.h</A>
+<span> </span></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td align="left"><table cellspacing="0" cellpadding="1" width="100%" bgcolor="#ffffff" id="Interface files" border="0"><tr><td width="0%" align="left"><span style="background-color:#ffffff;width:100%;cursor:pointer;white-space:nowrap" title="Click to shrink or expand category" onclick="rtwTableShrink(this,'Interface files','1')"><span style="font-family:monospace" id = "Interface files_button">[+]</span></span></td>
+<td width="100%" align="left"><span id="Interface files_name"><b>Interface files (1)</b></span></td>
+</tr>
+<tr><td width="0%" align="left"><span id="Interface files_indent"></span></td>
+<td width="100%" align="left"><table cellspacing="0" cellpadding="4" width="100%" bgcolor="#ffffff" id="Interface files_table" style="display:none" border="0"><tr><td align="left"><A HREF="autobuild_h.html" TARGET="rtwreport_document_frame" ONCLICK="if (top) if (top.tocHiliteMe) top.tocHiliteMe(window, this, false);" ID="autobuild_h.html" NAME="rtwIdGenFileLinks">autobuild.h</A>
+<span> </span></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr />
+<!--REPLACE_WITH_AUTOSAR_XML_FILES-->
+
+</BODY>
+</HTML>

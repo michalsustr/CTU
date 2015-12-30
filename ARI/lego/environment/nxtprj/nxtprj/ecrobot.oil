@@ -1,0 +1,140 @@
+/* OSEK OIL definition for nxtway_gs_controller */
+#include "implementation.oil"
+
+CPU ATMEL_AT91SAM7S256
+{
+  OS LEJOS_OSEK
+  {
+    STATUS = EXTENDED;
+    STARTUPHOOK = FALSE;
+    SHUTDOWNHOOK = FALSE;
+    PRETASKHOOK = FALSE;
+    POSTTASKHOOK = FALSE;
+    USEGETSERVICEID = FALSE;
+    USEPARAMETERACCESS = FALSE;
+    USERESSCHEDULER = FALSE;
+  };
+
+  APPMODE appmode1{};
+
+  /* Definition of Initialization Task */
+  TASK OSEK_Task_ECRobotInitialize
+  {
+    AUTOSTART = TRUE
+    {
+      APPMODE = appmode1;
+    };
+    PRIORITY = 5;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 512;
+  };
+
+  /* Definitions of a Periodical Task: task_ts1 */
+  TASK OSEK_Task_task_ts1
+  {
+    AUTOSTART = FALSE;
+    PRIORITY = 4;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 512;
+  };
+
+  ALARM OSEK_Alarm_task_ts1
+  {
+    COUNTER = SysTimerCnt;
+    ACTION = ACTIVATETASK
+    {
+      TASK = OSEK_Task_task_ts1;
+    };
+    AUTOSTART = TRUE
+    {
+      APPMODE = appmode1;
+      ALARMTIME = 1;
+      CYCLETIME = 4;
+    };
+  };
+
+  /* Definitions of a Periodical Task: task_ts2 */
+  TASK OSEK_Task_task_ts2
+  {
+    AUTOSTART = FALSE;
+    PRIORITY = 3;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 512;
+  };
+
+  ALARM OSEK_Alarm_task_ts2
+  {
+    COUNTER = SysTimerCnt;
+    ACTION = ACTIVATETASK
+    {
+      TASK = OSEK_Task_task_ts2;
+    };
+    AUTOSTART = TRUE
+    {
+      APPMODE = appmode1;
+      ALARMTIME = 1;
+      CYCLETIME = 20;
+    };
+  };
+
+  /* Definitions of a Periodical Task: task_ts3 */
+  TASK OSEK_Task_task_ts3
+  {
+    AUTOSTART = FALSE;
+    PRIORITY = 2;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 512;
+  };
+
+  ALARM OSEK_Alarm_task_ts3
+  {
+    COUNTER = SysTimerCnt;
+    ACTION = ACTIVATETASK
+    {
+      TASK = OSEK_Task_task_ts3;
+    };
+    AUTOSTART = TRUE
+    {
+      APPMODE = appmode1;
+      ALARMTIME = 1;
+      CYCLETIME = 100;
+    };
+  };
+
+  /* Definitions of LCD monitor Task */
+  TASK OSEK_Task_ECRobotLCDMonitor
+  {
+    AUTOSTART = FALSE;
+    PRIORITY = 1;
+    ACTIVATION = 1;
+    SCHEDULE = FULL;
+    STACKSIZE = 512;
+  };
+
+  ALARM OSEK_Alarm_ECRobotLCDMonitor
+  {
+    COUNTER = SysTimerCnt;
+    ACTION = ACTIVATETASK
+    {
+      TASK = OSEK_Task_ECRobotLCDMonitor;
+    };
+    AUTOSTART = TRUE
+    {
+      APPMODE = appmode1;
+      ALARMTIME = 1;
+      CYCLETIME = 500;
+    };
+  };
+
+  /* Definition of Alarm counter */
+  COUNTER SysTimerCnt
+  {
+    MINCYCLE = 1;
+    MAXALLOWEDVALUE = 10000;
+    TICKSPERBASE = 1;
+  };
+};

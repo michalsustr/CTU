@@ -1,0 +1,134 @@
+<HTML>
+<HEAD>
+<TITLE>RTW Report - Nonvirtual subsystems in nxtway_app</TITLE>
+<link rel="stylesheet" type="text/css" href="rtwreport.css" />
+  <SCRIPT language="JavaScript" type="text/javascript">
+<!--
+function rtwHilite(aBlock,aParentSID) {
+ aParentSID = "";
+ try {
+    window.location.href="matlab: if ~isempty(which('private/rtwbindmodel')), rtwprivate rtwbindmodel '/home/jirka/Plocha/nxt/nxtway_gs/models/nxtway_gs_controller.mdl' '/home/jirka/Plocha/nxt/ecrobotNXT/environment/nxtprj/nxtway_app_ert_rtw' '', end; rtwprivate code2model "+aBlock+" "+aParentSID+";"
+ } catch (e) { 
+ }
+} // end rtwHilite
+//-->
+</SCRIPT>
+
+</HEAD>
+<BODY BGCOLOR="#ffffff" LINK="0033CC" VLINK="#666666" ONLOAD="if (top) if (top.tocHiliteById) top.tocHiliteById('rtwIdSubsystem');">
+<FONT SIZE="+3" COLOR="#000066"> Nonvirtual subsystems in nxtway_app</FONT>
+<P CLASS="margin" />
+<A NAME="codemap"><FONT SIZE="+1" COLOR="#000066"> <B CLASS="midprod"> 
+ Code Mapping </B></FONT></A>
+<P CLASS="margin" />  
+The following table:
+<ul>
+
+<li> provides a mapping from the non-virtual subsystems in the model to
+functions or Reused functions in the generated code and </li>
+
+<li> notes exceptions that caused some non-virtual subsystems to not reuse code
+even though they were assigned a Reuse Setting ('RTW System Code' entry 
+on the Subsystem Block Dialog) of 'Auto' or 'Reused Function'.</li>
+
+</ul>
+<BR />
+   <TABLE BORDER="1" CELLPADDING="5" CELLSPACING="1">
+     <TR><TD><B>Subsystem</B></TD><TD><B>Reuse Setting</B></TD><TD><B>Reuse Outcome</B></TD><TD><B>Outcome Diagnostic</B></TD></TR>
+     <TR><TD><a href="javascript:rtwHilite('nxtway_gs_controller:344');"><FONT COLOR="blue"><I>&lt;S1&gt;</I></FONT></a></TD><TD>Function</TD><TD><A HREF="nxtway_app_c.html#fcn_task_init" TARGET="rtwreport_document_frame">Function(S1)</A></TD><TD><FONT COLOR="green">normal</FONT></TD></TR>
+     <TR><TD><a href="javascript:rtwHilite('nxtway_gs_controller:345');"><FONT COLOR="blue"><I>&lt;S2&gt;</I></FONT></a></TD><TD>Function</TD><TD><A HREF="nxtway_app_c.html#fcn_task_ts1" TARGET="rtwreport_document_frame">Function(S2)</A></TD><TD><FONT COLOR="green">normal</FONT></TD></TR>
+     <TR><TD><a href="javascript:rtwHilite('nxtway_gs_controller:346');"><FONT COLOR="blue"><I>&lt;S3&gt;</I></FONT></a></TD><TD>Function</TD><TD><A HREF="nxtway_app_c.html#fcn_task_ts2" TARGET="rtwreport_document_frame">Function(S3)</A></TD><TD><FONT COLOR="green">normal</FONT></TD></TR>
+     <TR><TD><a href="javascript:rtwHilite('nxtway_gs_controller:347');"><FONT COLOR="blue"><I>&lt;S4&gt;</I></FONT></a></TD><TD>Function</TD><TD><A HREF="nxtway_app_c.html#fcn_task_ts3" TARGET="rtwreport_document_frame">Function(S4)</A></TD><TD><FONT COLOR="green">normal</FONT></TD></TR>
+     <TR><TD><a href="javascript:rtwHilite('nxtway_gs_controller:35');"><FONT COLOR="blue"><I>&lt;S6&gt;</I></FONT></a></TD><TD>Auto</TD><TD>Inline</TD><TD><FONT COLOR="green">normal</FONT></TD></TR>
+     <TR><TD><a href="javascript:rtwHilite('nxtway_gs_controller:92');"><FONT COLOR="blue"><I>&lt;S33&gt;</I></FONT></a></TD><TD>Auto</TD><TD>Inline</TD><TD><FONT COLOR="green">normal</FONT></TD></TR>
+     <TR><TD><a href="javascript:rtwHilite('nxtway_gs_controller:211');"><FONT COLOR="blue"><I>&lt;S18&gt;</I></FONT></a></TD><TD>Auto</TD><TD>Inline</TD><TD><A HREF="nxtway_app_subsystems.html#S18blker"TARGET="rtwreport_document_frame"><FONT COLOR="red">[exceptions]</FONT></A></TD></TR>
+     <TR><TD><a href="javascript:rtwHilite('nxtway_gs_controller:51');"><FONT COLOR="blue"><I>&lt;S14&gt;</I></FONT></a></TD><TD>Auto</TD><TD>Inline</TD><TD><A HREF="nxtway_app_subsystems.html#S14blker"TARGET="rtwreport_document_frame"><FONT COLOR="red">[exceptions]</FONT></A></TD></TR>
+     <TR><TD><a href="javascript:rtwHilite('nxtway_gs_controller:275');"><FONT COLOR="blue"><I>&lt;S15&gt;</I></FONT></a></TD><TD>Auto</TD><TD>Inline</TD><TD><FONT COLOR="green">normal</FONT></TD></TR>
+     <TR><TD><a href="javascript:rtwHilite('nxtway_gs_controller:49');"><FONT COLOR="blue"><I>&lt;S7&gt;</I></FONT></a></TD><TD>Auto</TD><TD>Inline</TD><TD><A HREF="nxtway_app_subsystems.html#S7blker"TARGET="rtwreport_document_frame"><FONT COLOR="red">[exceptions]</FONT></A></TD></TR>
+     <TR><TD><a href="javascript:rtwHilite('nxtway_gs_controller:290');"><FONT COLOR="blue"><I>&lt;S46&gt;</I></FONT></a></TD><TD>Auto</TD><TD>Inline</TD><TD><FONT COLOR="green">normal</FONT></TD></TR>
+     <TR><TD><a href="javascript:rtwHilite('nxtway_gs_controller:299');"><FONT COLOR="blue"><I>&lt;S47&gt;</I></FONT></a></TD><TD>Auto</TD><TD>Inline</TD><TD><FONT COLOR="green">normal</FONT></TD></TR>
+     <TR><TD><a href="javascript:rtwHilite('nxtway_gs_controller:287');"><FONT COLOR="blue"><I>&lt;S44&gt;</I></FONT></a></TD><TD>Auto</TD><TD>Inline</TD><TD><FONT COLOR="green">normal</FONT></TD></TR>
+     <TR><TD><a href="javascript:rtwHilite('nxtway_gs_controller:309');"><FONT COLOR="blue"><I>&lt;S45&gt;</I></FONT></a></TD><TD>Auto</TD><TD>Inline</TD><TD><FONT COLOR="green">normal</FONT></TD></TR>
+     <TR><TD><a href="javascript:rtwHilite('nxtway_gs_controller:285');"><FONT COLOR="blue"><I>&lt;S8&gt;</I></FONT></a></TD><TD>Auto</TD><TD>Inline</TD><TD><FONT COLOR="green">normal</FONT></TD></TR>
+     <TR><TD><a href="javascript:rtwHilite('nxtway_gs_controller:328');"><FONT COLOR="blue"><I>&lt;S53&gt;</I></FONT></a></TD><TD>Auto</TD><TD>Inline</TD><TD><A HREF="nxtway_app_subsystems.html#S53blker"TARGET="rtwreport_document_frame"><FONT COLOR="red">[exceptions]</FONT></A></TD></TR>
+     <TR><TD><a href="javascript:rtwHilite('nxtway_gs_controller:315');"><FONT COLOR="blue"><I>&lt;S9&gt;</I></FONT></a></TD><TD>Auto</TD><TD>Inline</TD><TD><A HREF="nxtway_app_subsystems.html#S9blker"TARGET="rtwreport_document_frame"><FONT COLOR="red">[exceptions]</FONT></A></TD></TR>
+   </TABLE>
+<BR />
+<BR />
+<A NAME="codeexcepts"><FONT SIZE="+1" COLOR="#000066"> <B CLASS="midprod"> 
+ Code Reuse Exceptions</B></FONT></A>
+ <P CLASS="margin" />  
+
+The following section provides details on each exception that caused
+a non-virtual subsystem with a Reuse Setting of 
+<ul>
+
+<li> 'Auto' to become an inlined code segment, </li>
+
+<li> 'Auto' to become a non-reusable function without arguments, or</li>
+
+<li> 'Reused Function' to become a non-reusable function without arguments.</li>
+
+</ul>
+
+<B>Note</B>: This section does not report graphically identical non-virtual
+subsystems marked as 'Auto' that were not reused due to differences in their
+functional properties (such as dimensions, datatypes, work vectors, parameters,
+etc.).  You may identify reasons for non-reuse in such cases by
+inspecting the differences in the functional attributes of the
+subsystems in the model or in the inlined generated code.
+
+<BR />
+<BR />
+     <A NAME="S18blker"><B>Contents of <a href="javascript:rtwHilite('nxtway_gs_controller:211');"><FONT COLOR="blue"><I>&lt;S18&gt;</I></FONT></a> not reusable because:</B><BR />
+
+     <ul>
+
+     <li>The following block contains an S-Function that does not conform to Code Reuse restrictions. The S-Function block (a) should have a TLC implementation and (b) should set the option 'SS_OPTION_WORKS_WITH_CODE_REUSE'. [<a href="javascript:rtwHilite('nxtway_gs_controller:218');"><FONT COLOR="blue"><I>nxtway_app/nxtway_app/task_ts1/Balance &amp; Drive Control/Data Logging/NXT GamePad 
+ADC Data Logger</I></FONT></a>]</li>
+     </ul>
+
+     <A NAME="S14blker"><B>Contents of <a href="javascript:rtwHilite('nxtway_gs_controller:51');"><FONT COLOR="blue"><I>&lt;S14&gt;</I></FONT></a> not reusable because:</B><BR />
+
+     <ul>
+
+     <li>The following block contains an S-Function that does not conform to Code Reuse restrictions. The S-Function block (a) should have a TLC implementation and (b) should set the option 'SS_OPTION_WORKS_WITH_CODE_REUSE'. [<a href="javascript:rtwHilite('nxtway_gs_controller:53');"><FONT COLOR="blue"><I>nxtway_app/nxtway_app/task_ts1/Balance &amp; Drive Control/Bluetooth Rx Read</I></FONT></a>]</li>
+     </ul>
+
+     <ul>
+
+     <li>The following block contains an S-Function that does not conform to Code Reuse restrictions. The S-Function block (a) should have a TLC implementation and (b) should set the option 'SS_OPTION_WORKS_WITH_CODE_REUSE'. [<a href="javascript:rtwHilite('nxtway_gs_controller:218');"><FONT COLOR="blue"><I>nxtway_app/nxtway_app/task_ts1/Balance &amp; Drive Control/Data Logging/NXT GamePad 
+ADC Data Logger</I></FONT></a>]</li>
+     </ul>
+
+     <A NAME="S7blker"><B>Contents of <a href="javascript:rtwHilite('nxtway_gs_controller:49');"><FONT COLOR="blue"><I>&lt;S7&gt;</I></FONT></a> not reusable because:</B><BR />
+
+     <ul>
+
+     <li>The following block contains an S-Function that does not conform to Code Reuse restrictions. The S-Function block (a) should have a TLC implementation and (b) should set the option 'SS_OPTION_WORKS_WITH_CODE_REUSE'. [<a href="javascript:rtwHilite('nxtway_gs_controller:53');"><FONT COLOR="blue"><I>nxtway_app/nxtway_app/task_ts1/Balance &amp; Drive Control/Bluetooth Rx Read</I></FONT></a>]</li>
+     </ul>
+
+     <ul>
+
+     <li>The following block contains an S-Function that does not conform to Code Reuse restrictions. The S-Function block (a) should have a TLC implementation and (b) should set the option 'SS_OPTION_WORKS_WITH_CODE_REUSE'. [<a href="javascript:rtwHilite('nxtway_gs_controller:218');"><FONT COLOR="blue"><I>nxtway_app/nxtway_app/task_ts1/Balance &amp; Drive Control/Data Logging/NXT GamePad 
+ADC Data Logger</I></FONT></a>]</li>
+     </ul>
+
+     <A NAME="S53blker"><B>Contents of <a href="javascript:rtwHilite('nxtway_gs_controller:328');"><FONT COLOR="blue"><I>&lt;S53&gt;</I></FONT></a> not reusable because:</B><BR />
+
+     <ul>
+
+     <li>The following block contains an S-Function that does not conform to Code Reuse restrictions. The S-Function block (a) should have a TLC implementation and (b) should set the option 'SS_OPTION_WORKS_WITH_CODE_REUSE'. [<a href="javascript:rtwHilite('nxtway_gs_controller:332');"><FONT COLOR="blue"><I>nxtway_app/nxtway_app/task_ts3/Make Sound/Sound Tone Write</I></FONT></a>]</li>
+     </ul>
+
+     <A NAME="S9blker"><B>Contents of <a href="javascript:rtwHilite('nxtway_gs_controller:315');"><FONT COLOR="blue"><I>&lt;S9&gt;</I></FONT></a> not reusable because:</B><BR />
+
+     <ul>
+
+     <li>The following block contains an S-Function that does not conform to Code Reuse restrictions. The S-Function block (a) should have a TLC implementation and (b) should set the option 'SS_OPTION_WORKS_WITH_CODE_REUSE'. [<a href="javascript:rtwHilite('nxtway_gs_controller:332');"><FONT COLOR="blue"><I>nxtway_app/nxtway_app/task_ts3/Make Sound/Sound Tone Write</I></FONT></a>]</li>
+     </ul>
+
+
+ </BODY>
+</HTML>
+

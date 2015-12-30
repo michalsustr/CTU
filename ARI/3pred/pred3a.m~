@@ -1,0 +1,12 @@
+y = hw_3a_std();
+
+y_inf = y(sizeof(y,1)-5, end);
+y_inf = avg(y_inf);
+disp(y_inf);
+u_inf = 1; % odozva na jednotkovy skok
+k = y_inf/u_inf;
+
+% prechadzame cyklom a najdeme hodnotu ktora je najblizsie 0.6931*y_inf
+y
+
+asdf
