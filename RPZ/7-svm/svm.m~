@@ -1,0 +1,26 @@
+load data_separable.mat;
+
+%% GSMO:
+% min Q_P(x) = 0.5*x'*H*x + f'*x  Inf
+%      x                                      
+%  
+%     s.t.    a'*x = b 
+%             LB(i) <= x(i) <= UB(i)   for all i=1:n
+%
+% Call: gsmo(H,f,a,b,LB,UB,x0,Nabla0,options)
+%
+% We need to maximize, not minimize => min Q_P(x) = -max -Q_P(x)
+
+%% Hard margin
+data.X = X; data.y = y;
+options.C = Inf;
+model = svmperceptron(data, options);
+
+figure, hold on; axis square;
+ppatterns(X,y);
+plot(X(1, model.h ~= 0), X(2, model.h ~= 0), 'ro','MarkerSize',12); % highlight support vectors
+
+pline(model.w, model.b-1, 'k--'); 
+pline(model.w, model.b, 'k');
+pline(model.w, model.b+1, 'k--'); 
+

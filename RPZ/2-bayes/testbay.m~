@@ -1,0 +1,9 @@
+model = struct('Mean',[0 0],'Cov',[1 0.4],'Prior',[0.4 0.6]);
+   figure; hold on; 
+   h = pgmm(model,struct('comp_color',['r' 'g'])); 
+   legend(h,'P(x)','P(x|y=1)*P(y=1)','P(x|y=2)*P(y=2)');
+   [risk,eps1,eps2,interval] = bayeserr(model)
+   a = axis;
+   plot([interval(2) interval(2)],[a(3) a(4)],'k');untitled3.m
+   plot([interval(3) interval(3)],[a(3) a(4)],'k');
+ 

@@ -1,0 +1,98 @@
+load data_33rpz_cv03_minmax_fishes_pxi.mat;
+
+%% Approximate normal distributions
+
+[Sigma1, Mean1] = gaussfit(X,Px1);
+[Sigma2, Mean2] = gaussfit(X,Px2);
+
+range = min(X):100:max(X);
+y1 = pdf('normal', range, Mean1, Sigma1);
+y2 = pdf('normal', range, Mean2, Sigma2);
+
+DA = struct('Mean',Mean1,'Cov',Sigma1^2,'Sigma',Sigma1);
+DB = struct('Mean',Mean2,'Cov',Sigma2^2,'Sigma',Sigma2);
+
+figure, hold on;
+stem(X,Px1);
+stem(X,Px2, 'g');
+plot(range,y1/max(y1)*max(Px1)); 
+plot(range,y2/max(y1)*max(Px2), 'g');
+legend('fish A', 'fish B');
+
+%% Train fish classifier with minimax strategy
+
+%% Compute errors
+
+pA_array=0:0.01:1;
+error=zeros(length(pA_array), 3);
+for pA_index=1:length(pA_array)
+    pA=pA_array(pA_index);
+    pB = 1-pA;
+    
+    DA.Prior = pA;
+    DB.Prior = pB;
+    [risk,eps1,eps2]=bayeserror(DA,DB);
+    error(pA_index, :) = [risk,eps1,eps2];
+end
+
+%% Worst case risk
+worstCase = max([0;1]*(error(:,2)-error(:,3))'+[error(:,3), error(:,3)]');
+
+%% Find the minimax strategy and its risk
+[v,i]=min(worstCase); 
+disp('Risk of minimax strategy');
+disp(v);
+disp('Apriori probability');
+disp(pA_array(i));
+minimax = pA_array(i);
+
+%%
+load data_33rpz_cv03_minmax_fishes_images.mat;
+
+samples = images; % rename this variable so I don't have to rename the entire script
+
+DA.Prior = minimax; DB.Prior = 1-DA.Prior;
+[t1,t2] = bayesthresholds(DA,DB);
+
+% plot thresholds on the figure with Px1 and Px2
+a=axis; top=a(4);
+p1=plot([t1 t1], [0 top], 'r');
+
+for i=1:length(samples)
+    disp(strcat('Sample number #', int2str(i)));
+    images = samples{i};
+   
+    left_half  = 1:size(images,2)/2; % left half indices
+    right_half = size(images,2)/2+1:size(images,2);
+
+    x=sum(sum(images(:, left_half, :))) - sum(sum(images(:, right_half, :)));
+    x=permute(x, [3 2 1]); % rearrange to get a column vector
+
+    figure, hold on;
+    plot(range,y1/max(y1)*DA.Prior);
+    plot(range,y2/max(y1)*DB.Prior, 'g');
+    a=axis; top=max(DA.Prior, DB.Prior);
+    p1=plot([t1 t1], [0 top], 'r');
+    legend('fish A', 'fish B', 'threshold t1');
+   
+    [N, u] = hist(x);
+    N = N / ( sum(N) );          % normalizes to sum(N)=1
+    bar(u,N*top/max(N),'y'); % normalize to the top of the gaussian curves
+
+    [N, u] = hist(x( find(labels{i} == 1) ));
+    N = N / ( sum(N) );          % normalizes to sum(N)=1
+    b1=bar(u,N*top/max(N),'b'); % normalize to the top of the gaussian curves
+    
+    [N, u] = hist(x( find(labels{i} == 1) ));
+    N = N / ( sum(N) );          % normalizes to sum(N)=1
+    b2=bar(u,N*top/max(N),'b'); % normalize to the top of the gaussian curves
+    
+    posB=find(x > t1 | x < t2); % B is outside gaussian
+    posA=find(x < t1 & x > t2); % A is inside gaussian
+    labelsA = images(:,:, posA);
+    labelsB = images(:,:, posB);
+    
+    error=(length(find(labels{i}(posA) == 2)) + ... % wrongly classified B as A
+       length(find(labels{i}(posB) == 1))) ...      % wrongly classified A as B
+       /length(labels{i})
+end

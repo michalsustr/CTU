@@ -1,0 +1,77 @@
+%% Author: Michal Sustr
+% sustrmic@fel.cvut.cz
+
+%% Load data
+load data_33rpz_cv02.mat;
+
+%% Get thresholds
+% get intersections of the two gaussians
+mu_A = D1.Mean;
+s_A  = D1.Sigma;
+p_A  = D1.Prior;
+mu_C = D2.Mean;
+s_C  = D2.Sigma;
+p_C  = D2.Prior;
+
+% there are 2 solutions in this case of data, but could be also only one
+sol= solve('log(p_A)-(x-mu_A)^2/(2*s_A^2)-log(s_A*sqrt(2*pi))=log(p_C)-(x-mu_C)^2/(2*s_C^2)-log(s_C*sqrt(2*pi))', 'x')
+t1 = eval(sol(1));
+t2 = eval(sol(2));
+e^(-1/18 (-5+x)^2)/(3 sqrt(2 π))
+%% plot gaussians with thresholds
+figure; hold on;
+pgmm(D1);
+pgmm(D2);
+
+% top is where the mean is located, exponent is 0
+top1 = D1.Prior/(D1.Sigma*sqrt(2*pi));
+top2 = D2.Prior/(D2.Sigma*sqrt(2*pi));
+top = max(top1, top2); % could be also a=axis; top=a(4);
+plot([t1 t1], [0 top], 'g');
+plot([t2 t2], [0 top], 'r');
+
+%% Calculate x for one image
+
+posA=strfind(Alphabet, 'A');            % Get position of A
+posC=strfind(Alphabet, 'C');            % Get position of C
+indA=find(labels==posA);                % Get labels indices
+indC=find(labels==posC);                
+
+left_half  = 1:size(images,1)/2;
+right_half = size(images,1)/2+1:size(images,1);
+
+x_A=sum(sum(images(:,left_half,indA))) - sum(sum(images(:, right_half, indA)));
+x_C=sum(sum(images(:,left_half,indC))) - sum(sum(images(:, right_half, indC)));
+
+x_A=permute(x_A, [3 2 1]);
+x_C=permute(x_C, [3 2 1]);
+
+[N, u] = hist(x_A);
+N = N / ( sum(N) ); % normalizes to sum(N)=1
+bar(u,N*top1/max(N),'g');
+
+[N, u] = hist(x_C);
+N = N / ( sum(N) );
+bar(u,N*top2/max(N),'b');
+
+
+%% Classify each image as A or C
+x=sum(sum(images(:, left_half, :))) - sum(sum(images(:, right_half, :)));
+posA=find(x > t1 | x < t2); % letter A is outside gaussian
+posC=find(x < t1 & x > t2); % letter C is inside gaussian
+letters_C = images(:,:, posC);
+letters_A = images(:,:, posA);
+
+% display letters
+letters_A=permute(letters_A, [1 2 4 3]);
+figure;
+montage(letters_A, [0 255]);
+
+letters_C=permute(letters_C, [1 2 4 3]);
+figure;
+montage(letters_C, [0 255]);
+
+%% Calculate error
+error=(length(find(labels(posA) == 2)) + ... % wrongly classified letters C as A
+       length(find(labels(posC) == 1))) ...  % wrongly classified letters A as C
+       /length(labels);

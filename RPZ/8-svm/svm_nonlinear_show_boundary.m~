@@ -1,0 +1,9 @@
+function [ class ] = svm_nonlinear_show_boundary( X, model )
+    assert(strcmp(model.ker == 'rbf'), 'Only rbf kernel is supported for showing boundary');
+        
+    K = exp(-0.5*||a-b||^2/arg[1]^2
+    K = kernel(Y, model.options.ker, model.options.arg);
+    
+    class = sign( SUM(  alpha   ) + model.b );
+end
+

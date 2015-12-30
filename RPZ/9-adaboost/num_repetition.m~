@@ -1,0 +1,35 @@
+function [x,y] = num_repetition(A)
+%NUM_REPETITION 
+%   Return how many times y(i) number x(i) occured in matrix A
+A=sort(A(:));
+
+current=A(1);
+current_index=1;
+last_index=0;
+for(i=2:length(A))
+    if(current ~= A(i)) 
+        x(current_index)=current;
+        y(current_index)=current_index-last_index;
+        
+        current = A(i);
+        current_index=i;
+        last_index=current_index-1;
+    end
+    
+    current_index=current_index+1;
+end
+
+
+a = [1 2 2 3];
+count = zeros(max(a)-min(a),2);
+for i = min(a): max(a)
+    count(i,1) = i;
+    for j = 1: length(a)
+        count(i,2) = count(i,2) + 1;
+    end
+end
+end
+count
+
+end
+
