@@ -1,0 +1,134 @@
+package pal;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.Stack;
+
+public class Main {
+
+    private static int N, M;
+    private static Node[] points;
+    static int maxProfit = 0;
+
+    public static void main(String[] args) throws IOException {
+        loadInput();
+        findRegions();
+        loopRegions();
+
+        if(maxProfit > 0) {
+            System.out.println(maxProfit);
+        } else {
+            System.out.println("0");
+        }
+    }
+
+    private static void loadInput() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        // from forum
+        N = 0;
+        M = 0;
+        int price = 0, profit = 0, k;
+        String line;
+        k = 0;
+        line = br.readLine() + " ";      // add sentinel
+        while (line.charAt(k) != ' ') { // get N
+            N = N * 10 + line.charAt(k++) - 48;
+        }
+        while (line.charAt(++k) != ' ') {// get M
+            M = M * 10 + line.charAt(k) - 48;
+        }
+
+        points = new Node[N];
+        for (int i = 0; i < N; i++) {
+            k = 0;
+            price = 0;
+            profit = 0;
+            line = br.readLine() + " ";      // add sentinel
+            while (line.charAt(k) != ' ') { // get price
+                price = price * 10 + line.charAt(k++) - 48;
+            }
+            if (k != line.length() - 1) {
+                while (line.charAt(++k) != ' ') { // get profit
+                    profit = profit * 10 + line.charAt(k) - 48;
+                }
+            }
+            points[i] = new Node(i, price, profit);
+        }
+
+        int from, to;
+        for (int i = 0; i < M; i++) {
+            k = 0;
+            from = 0;
+            to = 0;
+            line = br.readLine() + " ";      // add sentinel
+            while (line.charAt(k) != ' ') { // get from
+                from = from * 10 + line.charAt(k++) - 48;
+            }
+            while (line.charAt(++k) != ' ') { // get to
+                to = to * 10 + line.charAt(k) - 48;
+            }
+            points[from - 1].addNeighbour(points[to - 1]);
+        }
+    }
+
+    // TARJAN
+    private static List<Region> regions;
+    private static Stack tarjanStack;
+    private static int tIndex = 0;
+    private static int topoIndex = 0;
+    private static void findRegions() {
+        tarjanStack = new Stack();
+        regions = new ArrayList<Region>();
+        for (int i = 0; i < N; i++) {
+            if (points[i].label == -1) {
+                tarjanAlgorithm(points[i]);
+            }
+        }
+    }
+    private static void tarjanAlgorithm(Node node) {
+        node.label = tIndex;
+        node.lowlink = tIndex;
+        tIndex++;
+        // add to to stack
+        tarjanStack.push(node);
+
+        for (Node neighbour : node.getNeighbours()) {
+            if (neighbour.label == -1) {
+                tarjanAlgorithm(neighbour);
+                // get the minimum value for lowlink
+                node.lowlink = node.lowlink < neighbour.lowlink ? node.lowlink : neighbour.lowlink;
+            } else if (tarjanStack.contains(neighbour)) {
+                // get the minimum value for lowlink
+                node.lowlink = node.lowlink < neighbour.lowlink ? node.lowlink : neighbour.lowlink;
+            }
+
+        }
+
+        if (node.lowlink == node.label) { // until we are in the root of component
+            Node n = null;
+            Region component = new Region(topoIndex++);
+            do {
+                n = (Node) tarjanStack.pop();
+                component.add(n);
+            } while (n.index != node.index); // until we are not in the root of component
+
+            // add to the list of regions
+            regions.add(component);
+        }
+    }
+
+    // LOOPING REGIONS
+    private static void loopRegions() {
+        ListIterator li = regions.listIterator(regions.size());
+        int i = 1;
+        // Iterate in reverse.of topological ordering
+        while (li.hasPrevious()) {
+            ((Region) li.previous()).searchRegion();
+        }
+    }
+}

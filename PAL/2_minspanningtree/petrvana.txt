@@ -1,0 +1,27 @@
+1. celková kostra
+2. pokud najdeš v A nějaké listy které jsou spojené ven z A, tak budou i ve výsledku listy (zakážu proto ostatní hrany)
+3. pokud není listů dost, tak nějaký prostě určím z A (zadefinuju najlacnejšiu hranu a ostatní zakážu) ... a opakuju první krok ... vždy expanduju kostru s nejmenší hodnotou
+
+u kostry máš počet listů, pokuď je menší než požadovaná hodnota, tak prostě něajkou vybereš a určíš ... zkusíš udělat kostru a pokud existuje vložíš jí zase do seznamu
+upozorňuju, že algoritmus končí až když nejlevnější kostra má dost listů... ne opačně (má dost listů > je nejlevnější neplatí, musíš vyzkoušet i všeny levnější, které ještě nemají dost listů)
+
+k = kostra;
+zakazOstatniHrany(k)
+seznam.add(k);
+while(seznam.isNotEmpty){
+  kostra k = seznem.top();
+  if (k.listy > pozadovany) return reseni k;
+  node n = A[k.hloubka++]  // vyber uzel ze ktereho budes delat list
+  if(n.pocetHran > 1){
+     seznam.add(k.copy()); // nezakazujes hranu
+     for(kazda hrana n){
+         zakaz ostatni hrany;
+         seznam.add(k.copy());
+     }
+  } else{
+     seznam.add(k.copy()) // je jenom jedna hrana u tohoto uzlu
+  }
+}
+
+... pri kazdem copy() je potřeba přepočítat kostru a zakázat hrany Listů v A
+

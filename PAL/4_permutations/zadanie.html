@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0069)https://cw.felk.cvut.cz/courses/a4m33pal/task.php?task=binomialheaps2 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2">
+  
+  <meta http-equiv="cache-control" content="no-cache">
+  <link rel="stylesheet" type="text/css" href="./zadanie_files/default.css">
+  <title>Programming assignment A4M33PAL</title>
+</head>
+<body>
+ <div class="main">
+
+<h2>Building Binomial Heaps</h2>
+
+
+For any permutation &#960; on set SET(Z) = {0, 1, 2, ..., Z&#8722;1}, Z &gt; 0, let us denote  by VAL(&#960;) the sequence &#960;(0), &#960;(1), ..., &#960;(Z&#8722;1). <br>
+Let <br>
+SEQP(Z) = &#960;<sub>0</sub>, &#960;<sub>1</sub>, &#960;<sub>2</sub>, ..., &#960;<sub>Z!&#8722;1</sub>
+<br>
+be a sequence of all permutations of the set SET(Z) and let SEQP(Z) be ordered in such way that VAL(&#960;<sub>k</sub>) is lexicographically smaller than VAL(&#960;<sub>k+1</sub>) for each k = 0, 1, ..., Z!&#8722;2. <br>
+For any permutation &#960; of set SET(Z) we define the <b>rank of permutation</b> &#960; to be the index of permutation &#960; in the sequence SEQP(Z), supposing the indices of permutations in SEQP(Z) start from 0. We denote the rank of permutation &#960; by symbol RANK(&#960;). Because there are exactly Z! permutations of SET(Z) the rank of any permutation of this set is at least 0 and at most Z!&#8722;1.<br>
+For example, rank of permutation (0, 1, 2, 3, ..., Z&#8722;4, Z&#8722;3, Z&#8722;1, Z&#8722;2) is 1, rank of permutation (Z&#8722;1, Z&#8722;2, ..., 5, 4, 3, 2, 0, 1) is Z!&#8722;2, rank of permutation (1, 0, 2, 3, 4, ..., Z&#8722;3, Z&#8722;2, Z&#8722;1) is (Z&#8722;1)!.
+<br> <br>
+
+Let &#960; be a permutation of set SET(M) = {0, 1, ..., M&#8722;1} , M &gt; 0. Let N be a positive integer divisible by M. <br>
+On the set SET(N) = {0, 1, ..., N&#8722;1} we define an <b>extended permutation</b> EP(&#960;, N) as follows <br>
+EP(&#960;,N)(<i>i</i>) = (<i>i</i> div M)×M + &#960;(<i>i</i> mod M), <i>i</i> = 0, 1, ..., N&#8722;1.
+
+<br> <br>
+
+Let BH be an unempty minimum (keeps track of its minimum elements) binomial heap consisting of binomial trees B(1), B(2), ..., B(<i>k</i>), <i>k</i> &#8805; 1. 
+Note that the index <i>i</i> of particular binomial tree B(<i>i</i>) in BH in this definition is not related to the order of B(<i>i</i>). For example, when <i>k</i> = 1 then the order of binomial tree B(1) might be any non-negative integer. <br>
+Let MAX(B(<i>i</i>)) be the maximum key value of all keys in the tree B(<i>i</i>), <i>i</i> = 1,2, ..., <i>k</i>. <br>
+Let ROOT(B(<i>i</i>)) be the value of the key in the root of tree B(<i>i</i>),  <i>i</i> = 1,2, ..., <i>k</i>. <br> Define
+DIFF(BH) = &#931; <sub> B(<i>i</i>) &#8712; BH</sub> (MAX(B(<i>i</i>)) &#8722; ROOT(B(<i>i</i>))). <br>
+When there is an input sequence S containing N (N &gt; 0) mutually distinct values then the binomial heap BH(S) is constructed  in the following way: <br>
+At first, the heap is empty. Next, the first element of S is inserted into the heap. Then the second element of S is inserted into the heap, then the third element and so on until finally the last element of S is inserted into the heap. Each time standard binomial heap operation Insert is used.<br>
+Let us denote by BH(&#960;, N) a binomial heap BH(VAL(EP(&#960;, N))), where EP(&#960;, N) is an extended permutation specified above.
+
+<br> <br>
+
+<b>The task</b><br>
+We are given an unempty set SETEP of extended permutations of the set SET(N) = {0, 1, ..., N&#8722;1}. We have to choose such permutation <br>
+&#960;<sub>MAX</sub> &#8712; SETEP which maximizes the value DIFF(BH(&#960;<sub>MAX</sub>, N)). <br>
+Formally stated: Find &#960;<sub>MAX</sub> &#8712; SETEP such that <br>
+(&#8704;&#960; &#8712; SETEP) (DIFF(BH(&#960;<sub>MAX</sub>, N)) &#8805; &nbsp; DIFF(BH(&#960;, N))).
+ 
+
+
+
+<i></i>
+<b></b>
+<sub></sub>
+<sup></sup>
+
+<br> <br>
+
+
+
+<h3>Input</h3>
+The first line of input contains two positive integers N, M  in this order separated by space. N specifies the size of the input sequence of which the binomial heap is built. M specifies set SET(M) = {0, 1, ..., M&#8722;1}. N is divisible by M. <br>
+It holds  0 &lt; M &#8804; &nbsp; 100, M &#8804; &nbsp; N &#8804; &nbsp; 2000000.
+
+The second line contains a permutation &#960;<sub>1</sub> of set SET(M) and the third line contains a permutation &#960;<sub>2</sub> of set SET(M). Permutation &#960;<sub>1</sub> resp. &#960;<sub>2</sub>  is given as a sequence VAL(&#960;<sub>1</sub>) resp. VAL(&#960;<sub>2</sub>). All elements in the sequence are separated by space.
+The set SETEP is a set of all extended permutations EP(&#960;, N) where rank of &#960; is greater of equal to the rank of &#960;<sub>1</sub> and less or equal to the rank of &#960;<sub>2</sub>. SETEP is always unempty.
+
+<h3>Output</h3>
+Output consists of two lines. The first line contains integer value
+DIFF(BH(&#960;<sub>MAX</sub>,N)), where &#960;<sub>MAX</sub> is the permutation specified above in the section "The task". The second line contains first M values of the sequence VAL(&#960;<sub>MAX</sub>), the elements of the sequence are separated by space. When there are more possibilities to choose &#960;<sub>MAX</sub>, output the permutation with lowest rank.
+
+<h3>Example 1</h3>
+Input:
+<pre>3 3
+0 1 2
+2 1 0
+</pre>
+
+Output:
+<pre>2
+0 2 1 
+</pre>
+
+<h3>Example 2</h3>
+Input:
+<pre>25 5
+0 2 4 1 3
+0 4 2 1 3
+</pre>
+
+Output:
+<pre>23
+0 2 4 1 3 
+</pre>
+
+<h3>Example 3</h3>
+Input:
+<pre>25000 10
+0 1 2 4 6 5 8 9 3 7
+0 1 2 4 7 3 9 6 5 8
+</pre>
+
+Output:
+<pre>25003
+0 1 2 4 6 9 3 5 7 8 
+</pre>
+
+
+</div>
+
+
+<iframe style="display: none !important; position: fixed !important; padding: 0px !important; margin: 0px !important; left: 0px !important; top: 0px !important; width: 100% !important; height: 100% !important; background-color: transparent !important; z-index: 2147483647 !important; border: none !important;"></iframe></body></html>

@@ -1,0 +1,6 @@
+DFS / silne suvisle / topologicke ocislovanie na detekciu (ne)konecnosti
+
+Najkratsia cesta pri nekonecnom -> v silne suvislej komponente hladat najkratsiu cestu zo vstupov do vystupov komponenty
+
+Najdlhsia cesta - odrezat cyklicke komponenty
+DFS a pamata si vzdialenost do finalneho uzlu pri spatnom krokovani, vyriesi problem s kombinatorickou exploziou

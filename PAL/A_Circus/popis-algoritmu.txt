@@ -1,0 +1,25 @@
+Vytvoríš si topologické očíslovanie regiónov.
+Orezávaš listové a koreňové regióny, ktoré nemajú žiadne mestá ktoré by generovali čistý zisk.
+
+Začínaš zo všetkých koreňových regiónov.
+V koreni si spravíš špeciálne upravené BFS. To funguje tak, že začne v meste, a počíta najlepšiu cenu akou sa môžeš dostať do každého uzlu. Pokiaľ narazíš na ďalšie mesto, tak si uložíš pre danú vetvu BFS, že už nemôžeš hrať v ďaľšom meste, lebo už máš za sebou dve mestá.
+Ak sa stane, že doterajšia celková cena je záporná, a prídeme na mesto, ktoré samostatne by malo kladné ohodnotenie, tak doterajšie nadradené regióny zahodíme.
+
+Príklad:
+########
+
+  (A)        (B)       (C)
+  [1] -> (2) -> [3] -> [4]
+  +100   -1000  +500   +100
+  -50           -100   -50
+(1)        patrí do regiónu (A),
+(2) a [3]  patrí do regiónu (B), a medzi [3] a (2) je spätná hrana,
+[4]        patrí do regiónu (C).
+
+Ideme z regiónu (A)->(B)->(C), začneme v meste [1], zisk 50. Ideme do (2), to je -1000 a teda -950 je záporné skóre. Ďalší uzol je mesto so ziskom +400 > -950, takže to zahodíme, a ideme od [3]. Pokračujeme ďalej na (C) do uzlu [4], takže riešenie je +500-100+100-50 = 450.
+
+Takto získaš ceny pre všetky uzly v rámci regiónu. Všetky výstupné uzly budeš ďalej prehľadávať.
+
+Keď ideš na nekoreňové regióny, tak sa uistíš že všetky topologicky nadradené regióny sú už prehľadané, a ich ceny z hraničných bodov si nakopíruješ do vstupných bodov v aktuálnom regióne. Spustíš znovu BFS s frontou, kde sú zaradené všetky ocenené vstupné body.
+
+Ak prídeme na región, ktorý je listom, tak sa pustí BFS iba zo vstupov do miest, neexistujú výstupné uzly samozrejme :)

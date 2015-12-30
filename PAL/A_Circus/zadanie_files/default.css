@@ -1,0 +1,50 @@
+body {
+   width: 100%;
+}
+
+pre
+{
+	background-color: #CCCCCC;	
+}
+
+p {
+   text-align: justify;
+}
+
+div.third {
+   width: 275px;
+   padding-right: 25px;
+   float: left;
+}
+
+div.thirde {
+   width: 275px;
+   float: left;
+}
+
+div.half {
+   width: 425px;
+   padding-right: 25px;
+   float: left;
+}
+
+div.halfe {
+   width: 425px;
+   float: left;
+}
+
+div.main {
+   width: 875px;
+   margin-left: auto ;
+   margin-right: auto ;
+}
+
+div.full {
+   width: 875px;
+   float: left;
+   clear: both;
+}
+
+.important {
+   color: #ff0000;
+}

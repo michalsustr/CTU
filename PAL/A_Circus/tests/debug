@@ -1,0 +1,115 @@
+== Region 3
+Node: 2 []
+	Playing town
+	Investigation #1
+
+Node: 1 []
+	Playing town
+Propagating to region 1 to node 11 with rank 10
+	Investigation #2
+
+Node: 0 [2play]
+	Passing node
+Propagating to region 2 to node 4 with rank 35
+Propagating to region 2 to node 3 with rank 35
+	Investigation #3
+
+Node: 2 [1play]
+	Playing town
+	Investigation #4
+
+Node: 1 [2play]
+	Playing town
+Propagating to region 1 to node 11 with rank 45
+	Passing town
+	Investigation #5
+
+Node: 0 [1play, 2play]
+	Passing node
+Propagating to region 2 to node 4 with rank 45
+Propagating to region 2 to node 3 with rank 45
+	Investigation #6
+
+Node: 2 [2play, 1pass]
+	Investigation #7
+
+== Region 2
+Node: 4 []
+	Playing town
+	Passing town
+	Investigation #8
+
+Node: 3 []
+	Passing node
+	Investigation #9
+
+Node: 3 [4play]
+	Passing node
+	Investigation #10
+
+Node: 5 []
+	Passing node
+	Investigation #11
+
+Node: 5 [4play]
+	Passing node
+	Investigation #12
+
+Node: 4 []
+	Playing town
+	Passing town
+	Investigation #13
+
+Node: 6 []
+	Passing node
+Propagating to region 0 to node 8 with rank 15
+	Investigation #14
+
+Node: 6 [4play]
+	Passing node
+	Investigation #15
+
+== Region 1
+Node: 11 []
+	Passing node
+Propagating to region 0 to node 10 with rank 40
+	Restarting region with towns
+	Investigation #16
+
+== Region 0
+Node: 8 []
+	Passing node
+	Investigation #17
+
+Node: 10 []
+	Playing town
+	Passing town
+	Investigation #18
+
+Node: 7 []
+	Playing town
+	Passing town
+	Investigation #19
+
+Node: 9 [10play]
+	Passing node
+	Investigation #20
+
+Node: 9 [10pass]
+	Investigation #21
+
+Node: 10 [7play]
+	Playing town
+	Investigation #22
+
+Node: 8 [10play]
+	Investigation #23
+
+Node: 9 [7play, 10play]
+	Passing node
+	Investigation #24
+
+Node: 8 [7play, 10play]
+	Passing node
+	Investigation #25
+

@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0061)https://cw.felk.cvut.cz/courses/a4m33pal/task.php?task=circus -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2">
+  
+  <meta http-equiv="cache-control" content="no-cache">
+  <link rel="stylesheet" type="text/css" href="./zadanie_files/default.css">
+  <title>Programming assignment A4M33PAL</title>
+</head>
+<body>
+ <div class="main">
+
+<h2>Travelling circus</h2>
+The management of the internationally acclaimed Directed Stars Circus is planning a tour in the newly established republic of Algoritmistan in mountainous part of central Asia. Political and geographical conditions in the republic are notoriously difficult and the planning committee of the circus has to prepare the tour in detail. 
+<br> <br>
+
+There are towns and villages in the republic. The planning committee chooses to call them points, for simplicity. The only difference between the villages and the towns is that the towns have enough infrastructure and therefore only in towns, and in fact in any town, it is possible for the circus to give a performance. All performances are expected to be sold out and the committee has quite good idea of the average income of the inhabitants in various areas, therefore they have calculated different ticket prices for different towns. 
+
+Each day the circus will travel from one point to another neighbouring point and stay there overnight. Each point has its own specific price for staying there (including transport, accommodations etc.) which is called a point price by the planning committee. If a point is visited more than once the price has to be paid each time.  
+
+The distances between points are big, it would be too risky to travel through one or more transit points in a single day. Also, the circus will not stay in any point for two or more consecutive nights because of security concerns.
+<br> <br>
+
+The committee is able to calculate the precise cost of the tour for any particular sequence of visited points and performances. It can be done simply by summing up the incomes of all performances and subtracting the point prices of all points visited. It remains to choose the most profitable journey.
+<br> <br>
+
+Due to complex logistic of transporting the equipment and due to mostly adverse conditions on the mountain roads, it finally appeared to the planning committee that all roads in the republic must be considered only as one way roads. 
+Studying further layout and topography of the republic and the now one-way roads the committee discovered that from the point of view of a travelling circus the whole republic can be divided into regions with very specific properties. Each point belongs to exactly one region.
+Being in a region the circus can travel from any of its points to any other point in this region despite the fact that the roads are effectively unidirectional. On the other hand, once the circus leaves a region, there is no road leading back to any of its points from the next region. There also might be regions from which there is no unidirectional road to other region and there also might be regions to which leads no unidirectional road from any other region.
+<br> <br>
+
+The management of the Circus has decided that they will give a performance at most two times in any region to spare their own somehow limited resources. Also they will never give a performance twice in any town.
+
+<br> <br>
+
+<b>The task</b><br>
+The task is to find the most profitable tour through the republic. Each village or town can be visited many times, each road can be used many times. It is supposed that the journey will begin and end in some town, not necessarily the same one. It is not necessary, and it even might be impossible, to visit all regions. The circus will leave the republic next day after their last performance.
+
+<i></i>
+<b></b>
+<sub></sub>
+<sup></sup>
+
+<h3>Input</h3>
+The first line of input contains two positive integers N, M  in this order separated by space. N specifies number of points (villages and towns) in the republic, M specifies number of roads in the republic. Points are labelled by integers from 1 to N.
+Next, there are N lines, each specifies one point in ascending order of labels. Line contains one or two integers separated by space. When a  point is a village then there is only one positive integer specifying the point price. When the point is a town then there are two integers and the first integer is the point price and the second is the expected performance profit in this town.
+Following points specification are M text lines. Each of these lines specifies one road by two integers representing (in this order) the label of the beginning and the ending point of the road. For any two points <i>a</i>, <i>b</i> there is at most one road from <i>a</i> to <i>b</i>.   <br>
+There are no more than 10000 points and no more than 500000 roads.
+All prices and profits are positive integers not exceeding 10000.
+
+
+
+<h3>Output</h3>
+Output consists of single text line. The line contains one integer representing the maximum profit which can be generated by a tour which satisfies the conditions given above. If no tour would generate a positive profit then the output value should be 0.
+  
+
+<h3>Example 1</h3>
+Input:
+<pre>12 18
+10
+10 20
+20 65
+5
+30 30
+15
+10
+15 65
+5
+30
+45 40
+5
+1 2
+2 3
+3 1
+1 5
+1 4
+5 4
+4 6
+6 5
+6 7
+7 4
+7 9
+9 8
+8 11
+10 9
+10 8
+11 10
+12 11
+2 12
+</pre>
+
+Output:
+<pre>60
+</pre>
+
+The tour which genereates the profit 60 is characterized by the sequence of points 2, 3, 1, 4, 6, 7, 9, 8.
+<br> <br>
+
+
+&nbsp; 
+&nbsp; 
+&nbsp; <table border="0" width="680" align="center"><tbody><tr><td align="center">
+<img style="width: 355px; height: 245px;" src="./zadanie_files/getdata.php"><br><br>
+
+<b>Image 1.</b> Scheme illustrating the republic in Example 1, the towns are highlighted in gray and the regions are marked. Village point prices are denoted at points, town point prices and performance incomes are denoted in format price/income. 
+  </td></tr>
+</tbody></table> 
+
+  
+
+
+<h3>Example 2</h3>
+Input:
+<pre>12 14
+30 85
+5
+15 40
+10
+10 35
+10 15
+10
+5
+5 55
+40
+20 45
+10
+1 2
+4 2
+3 2
+2 7
+8 3
+9 4
+6 5
+7 6
+7 8
+8 9
+9 10
+6 11
+11 12
+12 6
+
+</pre>
+
+Output:
+<pre>100
+</pre>
+
+The tour which genereates the profit 100 is characterized by the sequence of points 1, 2, 7, 8, 3, 2, 7, 8, 9, 4, 2, 7, 6, 11, 12, 6, 5. 
+<br> <br>
+
+
+&nbsp; 
+&nbsp; 
+&nbsp; <table border="0" width="680" align="center"><tbody><tr><td align="center">
+<img style="width: 446px; height: 226px;" src="./zadanie_files/getdata(1).php"><br><br>
+
+<b>Image 2.</b> Scheme illustrating the republic in Example 2, the towns are highlighted in gray and the regions are marked. Village point prices are denoted at points, town point prices and performance incomes are denoted in format price/income. 
+  </td></tr>
+</tbody></table> 
+
+<h3>Example 3</h3>
+Input:
+<pre>7 10
+10 20
+15
+20
+10 20
+20 
+20 60
+15
+1 5
+1 2
+5 6
+2 6
+3 2
+6 7
+6 3
+3 7
+7 4
+4 3
+</pre>
+
+
+Output:
+<pre>40
+</pre>
+
+The tour genereating the profit 40 consists of a single visit to town 6.
+<br> <br>
+
+
+&nbsp; 
+&nbsp; 
+&nbsp; <table border="0" width="680" align="center"><tbody><tr><td align="center">
+<img style="width: 318px; height: 163px;" src="./zadanie_files/getdata(2).php"><br><br>
+
+<b>Image 3.</b> Scheme illustrating the republic in Example 3, the towns are highlighted in gray and the regions are marked. Village point prices are denoted at points, town point prices and performance incomes are denoted in format price/income. 
+  </td></tr>
+</tbody></table> 
+
+<h3>Example 4</h3>
+Input:
+<pre>6 9
+10 5
+10
+20 10
+5
+40 11
+15
+1 2
+1 3
+2 3
+3 4
+3 5
+4 5
+5 1
+5 6
+6 1
+</pre>
+
+
+Output:
+<pre>0
+</pre>
+
+There is no tour generating a positive profit in this example.
+<br> <br>
+
+
+&nbsp; 
+&nbsp; 
+&nbsp; <table border="0" width="680" align="center"><tbody><tr><td align="center">
+<img style="width: 202px; height: 203px;" src="./zadanie_files/getdata(3).php"><br><br>
+
+<b>Image 4.</b> Scheme illustrating the republic in Example 4, the towns are highlighted in gray, the whole scheme comprises a single region. Village point prices are denoted at points, town point prices and performance incomes are denoted in format price/income. 
+  </td></tr>
+</tbody></table> 
+
+
+</div>
+
+
+<iframe style="display: none !important; position: fixed !important; padding: 0px !important; margin: 0px !important; left: 0px !important; top: 0px !important; width: 100% !important; height: 100% !important; background-color: transparent !important; z-index: 2147483647 !important; border: none !important;"></iframe></body></html>

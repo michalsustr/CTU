@@ -1,0 +1,244 @@
+-----------------------------
+Region 0 with nodes:
+  #2 has index 3
+  #3 has index 2
+  #4 has index 1
+  #5 has index 0
+Start nodes:
+  3 with rank -
+  2 with rank -
+  1 with rank -
+  0 with rank -
+Playing town 3
+==
+Playing town 3
+Depth: 0
+	[c=3	t1=3	t2=-1	n=0	r=0]
+	{r: 	-	-	-	-	-	-}
+Rank: 	-	-	-	-	-	-
+Played: 	-	-	10	-	-	-
+/==
+New max10
+Current: Depth: 0
+	[c=3	t1=-1	t2=-1	n=0	r=0]
+	{r: 	-	-	10	-	-	-}
+
+Playing town 2
+==
+Playing town 2
+Depth: 0
+	[c=2	t1=2	t2=-1	n=0	r=0]
+	{r: 	-	-	-	-	-	-}
+Rank: 	-	-	-	-	-	-
+Played: 	-	-	-	90	-	-
+/==
+New max90
+Current: Depth: 0
+	[c=2	t1=-1	t2=-1	n=0	r=0]
+	{r: 	-	-	-	90	-	-}
+
+Playing town 1
+==
+Playing town 1
+Depth: 0
+	[c=1	t1=1	t2=-1	n=0	r=0]
+	{r: 	-	-	-	-	-	-}
+Rank: 	-	-	-	-	-	-
+Played: 	-	-	-	-	10	-
+/==
+Current: Depth: 0
+	[c=1	t1=-1	t2=-1	n=0	r=0]
+	{r: 	-	-	-	-	10	-}
+
+Playing town 0
+==
+Playing town 0
+Depth: 0
+	[c=0	t1=0	t2=-1	n=0	r=0]
+	{r: 	-	-	10	-	-	-}
+Rank: 	-	-	10	-	-	-
+Played: 	-	-	10	-	-	90
+/==
+Current: Depth: 0
+	[c=0	t1=-1	t2=-1	n=0	r=0]
+	{r: 	-	-	10	-	-	90}
+
+----
+Playing town 0
+==
+Playing town 0
+Depth: 1
+	[c=0	t1=3	t2=0	n=1	r=2]
+	{r: 	-	-	10	-	-	90}
+Rank: 	-	100	10	-	-	90
+Played: 	-	100	10	-	-	90
+/==
+New max100
+Current: Depth: 1
+	[c=0	t1=3	t2=-1	n=1	r=2]
+	{r: 	-	100	10	-	-	90}
+
+Playing town 3
+==
+Playing town 3
+Depth: 1
+	[c=3	t1=2	t2=3	n=1	r=3]
+	{r: 	-	-	10	90	-	-}
+Rank: 	-	100	10	90	-	-
+Played: 	-	100	10	90	-	-
+/==
+Passing town 3
+  Prev rank: 90 Curr rank90 Price10 Profit:20
+  Passing rank 	-	100	10	90	-	- rankIndex3
+Current: Depth: 1
+	[c=3	t1=2	t2=-1	n=1	r=3]
+	{r: 	-	100	10	80	-	-}
+
+Playing town 2
+==
+Playing town 2
+Depth: 1
+	[c=2	t1=1	t2=2	n=1	r=4]
+	{r: 	-	-	-	90	10	-}
+Rank: 	-	100	-	90	10	-
+Played: 	-	100	-	90	10	-
+/==
+Current: Depth: 1
+	[c=2	t1=1	t2=-1	n=1	r=4]
+	{r: 	-	100	-	90	10	-}
+
+Playing town 1
+Passing town 1
+  Prev rank: 90 Curr rank90 Price10 Profit:20
+  Passing rank 	-	100	-	-	10	90 rankIndex5
+Current: Depth: 1
+	[c=1	t1=0	t2=-1	n=1	r=5]
+	{r: 	-	100	-	-	10	80}
+
+----
+Passing node 1
+Current: Depth: 2
+	[c=1	t1=3	t2=0	n=2	r=1]
+	{r: 	-	90	-	-	10	80}
+
+Passing node 0
+Current: Depth: 2
+	[c=0	t1=2	t2=3	n=2	r=1]
+	{r: 	-	90	10	80	-	90}
+
+Playing town 0
+==
+Playing town 0
+Depth: 2
+	[c=0	t1=2	t2=0	n=1	r=3]
+	{r: 	-	90	10	80	-	90}
+Rank: 	-	180	10	80	-	90
+Played: 	-	180	10	80	-	90
+/==
+New max180
+Passing town 0
+  Prev rank: 80 Curr rank80 Price10 Profit:100
+  Passing rank 	-	180	10	80	-	90 rankIndex3
+Current: Depth: 2
+	[c=0	t1=2	t2=-1	n=1	r=3]
+	{r: 	-	180	10	70	-	90}
+
+Passing node 3
+Current: Depth: 2
+	[c=3	t1=1	t2=2	n=2	r=1]
+	{r: 	-	90	10	80	-	-}
+
+Passing node 2
+Current: Depth: 2
+	[c=2	t1=0	t2=1	n=2	r=1]
+	{r: 	-	80	-	90	10	80}
+
+Playing town 2
+==
+Playing town 2
+Depth: 2
+	[c=2	t1=0	t2=2	n=1	r=5]
+	{r: 	-	80	-	90	10	80}
+Rank: 	-	170	-	90	10	80
+Played: 	-	170	-	90	10	80
+/==
+Passing town 2
+  Prev rank: 80 Curr rank80 Price10 Profit:100
+  Passing rank 	-	170	-	90	10	80 rankIndex5
+Current: Depth: 2
+	[c=2	t1=0	t2=-1	n=1	r=5]
+	{r: 	-	170	-	90	10	70}
+
+----
+Passing node 2
+Current: Depth: 3
+	[c=2	t1=3	t2=0	n=2	r=1]
+	{r: 	-	160	-	90	10	70}
+
+Passing node 1
+Current: Depth: 3
+	[c=1	t1=2	t2=3	n=2	r=1]
+	{r: 	-	170	-	70	10	80}
+
+Passing node 1
+Current: Depth: 3
+	[c=1	t1=2	t2=0	n=2	r=1]
+	{r: 	-	160	-	70	10	80}
+
+Playing town 1
+Passing town 1
+  Prev rank: 70 Curr rank70 Price10 Profit:20
+  Passing rank 	-	160	-	70	10	80 rankIndex3
+Current: Depth: 3
+	[c=1	t1=2	t2=-1	n=1	r=3]
+	{r: 	-	160	-	60	10	80}
+
+Passing node 3
+Current: Depth: 3
+	[c=3	t1=0	t2=2	n=2	r=1]
+	{r: 	-	160	10	80	-	70}
+
+Playing town 3
+Passing town 3
+  Prev rank: 70 Curr rank70 Price10 Profit:20
+  Passing rank 	-	160	10	80	-	70 rankIndex5
+Current: Depth: 3
+	[c=3	t1=0	t2=-1	n=1	r=5]
+	{r: 	-	160	10	80	-	60}
+
+----
+Passing node 2
+Current: Depth: 4
+	[c=2	t1=2	t2=3	n=2	r=1]
+	{r: 	-	150	-	60	10	70}
+
+Passing node 2
+Current: Depth: 4
+	[c=2	t1=2	t2=0	n=2	r=1]
+	{r: 	-	140	-	60	10	70}
+
+Passing node 2
+Current: Depth: 4
+	[c=2	t1=2	t2=1	n=2	r=1]
+	{r: 	-	130	-	60	10	70}
+
+Not doing anything in 2
+Current: Depth: 4
+	[c=2	t1=2	t2=-1	n=1	r=3]
+	{r: 	-	130	-	60	10	70}
+
+Passing node 0
+Current: Depth: 4
+	[c=0	t1=0	t2=2	n=2	r=1]
+	{r: 	-	150	10	70	-	60}
+
+Passing node 0
+Current: Depth: 4
+	[c=0	t1=0	t2=3	n=2	r=1]
+	{r: 	-	140	10	70	-	60}
+
+Not doing anything in 0
+Current: Depth: 4
+	[c=0	t1=0	t2=-1	n=1	r=5]
+	{r: 	-	140	10	70	-	60}
+

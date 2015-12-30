@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0075)https://cw.felk.cvut.cz/courses/a4m33pal/task.php?task=makefile_refactoring -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-2">
+  
+  <meta http-equiv="cache-control" content="no-cache">
+  <link rel="stylesheet" type="text/css" href="./zadanie_files/default.css">
+  <title>Programming assignment A4M33PAL</title>
+</head>
+<body>
+
+
+
+  
+  <meta http-equiv="cache-control" content="no-cache">
+  <link rel="stylesheet" type="text/css" href="./zadanie_files/default.css">
+  <title>Programming assignment A4M33PAL</title>
+
+
+<div class="main">
+ 
+<h2>Task: Refactoring of a Simplified Makefile</h2>
+<p>
+Consider a slightly simplified version of the well-known UNIX <tt>make</tt> utility.
+Such simplified <tt>make</tt> writes to standard output (instead of execution) a sequence of commands that are necessary to achieve the first target in Makefile according to rules inside Makefile as described below. Makefile is represented by standard input.
+Every rule has the following format:
+</p>
+<p><i>
+target: subtarget<sub>1</sub> subtarget<sub>2</sub> ...<br>
+&lt;TAB&gt;command<sub>1</sub><br>
+&lt;TAB&gt;command<sub>2</sub><br>
+...<br>
+</i></p>
+<p>
+Each rule begins with a textual dependency line which defines <i>target</i> followed by a colon (:) and optionally an enumeration of <i>subtarget</i>s on which the <i>target</i> depends. The dependency line is arranged so that the <i>target</i> depends on <i>subtarget</i>s. 
+After each dependency line, a sequence of command lines may follow which define how to transform the <i>subtarget</i>s into the target. The sequence of command lines of the <i>target</i> has been written after all <i>subtarget</i>s of the <i>target</i> had been written. The <i>subtarget</i>s are written by the same algorithm as the <i>target</i>.
+Each command line must begin with a tab character to be recognized as a command. The tab is a whitespace character, but the space character does not have the same special meaning. <i>Subtarget</i>s are separated by space and the ordering, in which they are written to the standard output, is not defined.
+For every target holds that it need not contain either subtargets or command lines. 
+</p>
+<p>
+Your task is to write a program for refactoring of Makefile for the above described <tt>make</tt> utility. This refactoring program must identify all "dead code" and mark it as comment.
+</p>
+<p>
+The input of this program will be the same as that of our simplified <tt>make</tt>.
+The output will be almost the same as input with only one difference, that all lines that are not necessary to achieve of the first target of the input, will
+be mark as comment. The comment line is the line with added <tt>#</tt> character at the beginning of that line.
+</p>
+<p>
+If our simplified <tt>make</tt> utility could not be done due to unsatisfiability of one of its undead targets, then the refactoring program writes only one line output of the following form:
+</p><pre>ERROR
+</pre>
+You can assume that the format of the input is syntactically correct.
+Please note that the input can be huge, as large as hundreds of megabytes.
+<p></p>
+
+<h3>Example:</h3>
+
+<a href="https://cw.felk.cvut.cz/courses/a4m33pal/getdata.php?task=makefile_refactoring&item=example.in"><h3>Input:</h3></a>
+<pre>all: hello
+hello: main.o hello.o
+	g++ main.o hello.o -o hello
+main.o: main.cpp functions.h
+	g++ -c main.cpp
+hello.o: hello.cpp functions.h
+	g++ -c hello.cpp
+hello2.o: hello2.cpp functions.h
+	g++ -c hello2.cpp
+hello.cpp:
+	echo '#include <iostream.h>' &gt; hello.cpp
+	echo '#include "functions.h"' &gt;&gt; hello.cpp
+	echo 'void print_hello(void){ cout &lt;&lt; "Hello World!"; }' &gt;&gt; hello.cpp
+main.cpp:
+	echo '#include <iostream.h>' &gt; main.cpp
+	echo '#include "functions.h"' &gt;&gt; main.cpp
+	echo 'int main() { print_hello();' &gt;&gt; main.cpp
+	echo 'cout &lt;&lt; endl; return 0; } ' &gt;&gt; main.cpp
+hello2.cpp:
+	echo '#include <iostream.h>' &gt; hello2.cpp
+	echo '#include "functions.h"' &gt;&gt; hello2.cpp
+	echo 'void print_hello(void){ cout &lt;&lt; "Hello All!"; }' &gt;&gt; hello2.cpp
+functions.h:
+	echo 'void print_hello(void);' &gt; functions.h
+</iostream.h></iostream.h></iostream.h></pre>
+
+<a href="https://cw.felk.cvut.cz/courses/a4m33pal/getdata.php?task=makefile_refactoring&item=example.out"><h3>Output:</h3></a>
+<pre>all: hello
+hello: main.o hello.o
+	g++ main.o hello.o -o hello
+main.o: main.cpp functions.h
+	g++ -c main.cpp
+hello.o: hello.cpp functions.h
+	g++ -c hello.cpp
+#hello2.o: hello2.cpp functions.h
+#	g++ -c hello2.cpp
+hello.cpp:
+	echo '#include <iostream.h>' &gt; hello.cpp
+	echo '#include "functions.h"' &gt;&gt; hello.cpp
+	echo 'void print_hello(void){ cout &lt;&lt; "Hello World!"; }' &gt;&gt; hello.cpp
+main.cpp:
+	echo '#include <iostream.h>' &gt; main.cpp
+	echo '#include "functions.h"' &gt;&gt; main.cpp
+	echo 'int main() { print_hello();' &gt;&gt; main.cpp
+	echo 'cout &lt;&lt; endl; return 0; } ' &gt;&gt; main.cpp
+#hello2.cpp:
+#	echo '#include <iostream.h>' &gt; hello2.cpp
+#	echo '#include "functions.h"' &gt;&gt; hello2.cpp
+#	echo 'void print_hello(void){ cout &lt;&lt; "Hello All!"; }' &gt;&gt; hello2.cpp
+functions.h:
+	echo 'void print_hello(void);' &gt; functions.h
+</iostream.h></iostream.h></iostream.h></pre>
+
+<h3>Here is the output of the simplified <tt>make</tt> utility:</h3>
+<pre>echo '#include <iostream.h>' &gt; main.cpp
+echo '#include "functions.h"' &gt;&gt; main.cpp
+echo 'int main() { print_hello();' &gt;&gt; main.cpp
+echo 'cout &lt;&lt; endl; return 0; } ' &gt;&gt; main.cpp
+echo 'void print_hello(void);' &gt; functions.h
+g++ -c main.cpp
+echo '#include <iostream.h>' &gt; hello.cpp
+echo '#include "functions.h"' &gt;&gt; hello.cpp
+echo 'void print_hello(void){ cout &lt;&lt; "Hello World!"; }' &gt;&gt; hello.cpp
+g++ -c hello.cpp
+g++ main.o hello.o -o hello
+</iostream.h></iostream.h></pre>
+
+</div>
+
+
+
+
+<iframe style="display: none !important; position: fixed !important; padding: 0px !important; margin: 0px !important; left: 0px !important; top: 0px !important; width: 100% !important; height: 100% !important; background-color: transparent !important; z-index: 2147483647 !important; border: none !important;"></iframe></body></html>

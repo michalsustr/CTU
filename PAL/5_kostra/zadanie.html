@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0078)https://cw.felk.cvut.cz/courses/a4m33pal/task.php?task=counting_spanning_trees -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  
+  <meta http-equiv="cache-control" content="no-cache">
+  <link rel="stylesheet" type="text/css" href="./zadanie_files/default.css">
+  <title>Programming assignment A4M33PAL</title>
+</head>
+<body>
+<div class="main">
+ 
+<h2>Task: Counting Spanning Trees</h2>
+<p>
+Consider an undirected graph <i>G</i> consists of edges connecting vertices. 
+A <i>tree</i> is a connected graph containing no cycles. 
+A <i>spanning tree</i> is a subgraph of a graph that contains all its vertices and is itself a tree.
+</p>
+<p>
+Your task is to count all different spanning trees for an input graph <i>G</i>.
+Two spanning trees are considered different if they differ in at least one edge.
+</p>
+<h3>The Input</h3>
+<p>
+The input contains description of the input graph <i>G</i>.
+</p><p>
+The first line consists of a single positive integer <i>N</i> (0 &lt; <i>N</i> ≤ 1000) showing the number of vertices
+of the graph <i>G</i>.
+</p>
+<p>
+The next lines contain a description of edges of the graph <i>G</i> in the following format:
+Every line is a couple of two integers separated by one space. Every integer is
+in range from 0 to <i>N</i>-1. These two integers represent one undirected edge in the graph <i>G</i>.
+We suppose that the vertices of the graph are labeled uniquely by integers 0, 1, ...,<i>N</i>-1.
+</p>
+<p>
+The description of edges is terminated by the last line which has always two zeros separated by one space.
+</p>
+<h3>The Output</h3>
+<p>
+The output is always only one line with one nonnegative integer that represents the number of 
+all spanning trees of the input graph.
+</p>
+<p>
+You can assume that the output integer does not exceed 10^9.
+</p>
+
+<h3>Example 1:</h3>
+
+<a href="https://cw.felk.cvut.cz/courses/a4m33pal/getdata.php?task=counting_spanning_trees&item=example.in"><h3>Input:</h3></a>
+<pre>4
+3 0
+3 1
+3 2
+0 1
+1 2
+2 0
+0 0
+</pre>
+
+<a href="https://cw.felk.cvut.cz/courses/a4m33pal/getdata.php?task=counting_spanning_trees&item=example.out"><h3>Output:</h3></a>
+<pre>16
+</pre>
+
+<h3>Spanning trees:</h3>
+<p>The graphs below enumerate all spanning trees of the example above:</p>
+<table>
+<tbody><tr>
+<td><img src="./zadanie_files/getdata.php" height="170" width="154"></td>
+<td><img src="./zadanie_files/getdata(1).php" height="170" width="154"></td>
+<td><img src="./zadanie_files/getdata(2).php" height="170" width="154"></td>
+<td><img src="./zadanie_files/getdata(3).php" height="170" width="154"></td>
+</tr>
+<tr>
+<td><img src="./zadanie_files/getdata(4).php" height="170" width="154"></td>
+<td><img src="./zadanie_files/getdata(5).php" height="170" width="154"></td>
+<td><img src="./zadanie_files/getdata(6).php" height="170" width="154"></td>
+<td><img src="./zadanie_files/getdata(7).php" height="170" width="154"></td>
+</tr>
+<tr>
+<td><img src="./zadanie_files/getdata(8).php" height="170" width="154"></td>
+<td><img src="./zadanie_files/getdata(9).php" height="170" width="154"></td>
+<td><img src="./zadanie_files/getdata(10).php" height="170" width="154"></td>
+<td><img src="./zadanie_files/getdata(11).php" height="170" width="154"></td>
+</tr>
+<tr>
+<td><img src="./zadanie_files/getdata(12).php" height="170" width="154"></td>
+<td><img src="./zadanie_files/getdata(13).php" height="170" width="154"></td>
+<td><img src="./zadanie_files/getdata(14).php" height="170" width="154"></td>
+<td><img src="./zadanie_files/getdata(15).php" height="170" width="154"></td>
+</tr>
+</tbody></table>
+
+<h3>Example 2:</h3>
+
+<a href="https://cw.felk.cvut.cz/courses/a4m33pal/getdata.php?task=counting_spanning_trees&item=example01.in"><h3>Input:</h3></a>
+<pre>5
+0 1
+1 2
+2 3
+3 0
+4 0
+4 1
+0 0
+</pre>
+
+<a href="https://cw.felk.cvut.cz/courses/a4m33pal/getdata.php?task=counting_spanning_trees&item=example01.out"><h3>Output:</h3></a>
+<pre>11
+</pre>
+
+<h3>Example 3:</h3>
+
+<a href="https://cw.felk.cvut.cz/courses/a4m33pal/getdata.php?task=counting_spanning_trees&item=example02.in"><h3>Input:</h3></a>
+<pre>10
+0 1
+1 2
+2 3
+3 4
+4 5
+5 6
+6 7
+7 8
+8 9
+9 0
+0 0
+</pre>
+
+<a href="https://cw.felk.cvut.cz/courses/a4m33pal/getdata.php?task=counting_spanning_trees&item=example02.out"><h3>Output:</h3></a>
+<pre>10
+</pre>
+
+
+<h3>Example 4:</h3>
+
+<a href="https://cw.felk.cvut.cz/courses/a4m33pal/getdata.php?task=counting_spanning_trees&item=example03.in"><h3>Input:</h3></a>
+<pre>16
+0 1
+1 2
+2 3
+3 4
+4 5
+5 6
+6 7
+7 8
+8 9
+9 10
+10 11
+11 12
+12 13
+13 14
+14 0
+15 0
+15 1
+15 2
+15 3
+15 4
+15 5
+15 6
+15 7
+15 8
+15 9
+15 10
+15 11
+15 12
+15 13
+15 14
+0 0
+</pre>
+
+<a href="https://cw.felk.cvut.cz/courses/a4m33pal/getdata.php?task=counting_spanning_trees&item=example03.out"><h3>Output:</h3></a>
+<pre>1860496
+</pre>
+
+
+
+
+
+
+</div><iframe style="display: none !important; position: fixed !important; padding: 0px !important; margin: 0px !important; left: 0px !important; top: 0px !important; width: 100% !important; height: 100% !important; background-color: transparent !important; z-index: 2147483647 !important; border: none !important;"></iframe></body></html>
