@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_1.dtd'><nta><declaration>
+/*
+
+Předpokládejte, že navrhujete řízení výtahu pro čtyřpodlažní dům s patry: P, 1, 2, 3. 
+Toto řízení má být schopno provádět následující činnosti: 
+	přivolání výtahu do patra, 
+	přesun kabiny do požadovaného patra dle nastavení uvnitř kabiny výtahu. 
+
+Pro výtah platí následující omezení:
+1) Zastavení výtahu s výstupem a nástupem (přesně v tomto pořadí) cestujících trvá minimálně 3s a maximálně 20s.
+2) Přejezd výtahu mezi dvěma sousedními patry trvá minimálně 5s a maximálně 8s.
+3) Kapacita výtahu je 2 osoby.
+4) Pokud je výtah již plný, nemůže do něj již nikdo další nastoupit.
+5) Každá osoba musí ihned po nástupu do výtahu stisknout právě jednou tlačítko cílového patra.
+6) Pokud se osoba nachází ve svém cílovém patře, musí vystoupit.
+7) V patře nemůže nikdy čekat na výtah více jak jedna osoba. Osoby, které vystoupily, se do tohoto čísla nezapočítávají.
+8) Tlačítka ve výtahu fungují tak, jak je to ve výtahu obvyklé.  Výtah si pamatuje všechny různé a zatím nesplněné požadavky na cílové patro.
+9) Pokud nějaká osoba čeká v patře na svůj přivolaný výtah déle než 5 minut, říkáme, že je výtah nedostupný. 
+10) Pokud nějaká osoba čeká uvnitř výtahu na svoje cílové patro (potom, co jej stisknula příslušným tlačítkem) déle jak 2 minuty, říkáme,
+    že je výtah nebezpečný.
+
+Navrhněte řídicí systém výše specifikovaného výtahu a namodelujte jeho provoz pomocí TA časových automatů (Timed Automaton) tak, 
+abyste mohli vhodným dotazem zjistit posloupnost událostí, které vedou k možné nebezpečnosti výtahu a k možné nedostupnosti výtahu. 
+Tyto dotazy popište. U tohoto TA nesmí dojít k deadlocku. Pro návrh a znázornění automatu můžete používat rozšíření systému UPPAAL.
+
+*/
+
+// Place global declarations here.
+const int MAX_DOBA_CEKANI_NA_VYTAH = 300;
+const int MAX_DOBA_CEKANI_VE_VYTAHU = 120;
+const int MIN_DOBA_NASTUPU_A_VYSTUPU = 3;
+const int MAX_DOBA_NASTUPU_A_VYSTUPU = 20;
+const int MIN_DOBA_PREJEZDU = 5;
+const int MAX_DOBA_PREJEZDU = 8;
+const int POCET_PATER = 3;
+const int POCATECNI_PATRO = 0;
+const int MAX_POCET_OSOB_VE_VYTAHU = 1;
+
+int aktualni_patro = POCATECNI_PATRO;
+int prubezne_patro = POCATECNI_PATRO;
+int cilove_patro = POCET_PATER-1;
+int cilove_patro_osoby[MAX_POCET_OSOB_VE_VYTAHU];
+
+
+int sign(int x)
+{
+  if (x &lt; 0) return -1;
+  if (x &gt; 0) return 1;
+  return 0; 
+}
+
+void inicializace ()
+{
+  for (i : int[0,MAX_POCET_OSOB_VE_VYTAHU-1]) 
+  {
+    cilove_patro_osoby[i] = -1;
+  }
+}
+</declaration><template><name x="8" y="8">Osoba_v_patre</name><parameter>int moje_patro, chan &amp; privolani_vytahu, int &amp; volane_patro, broadcast chan &amp; vytah_prijel, chan &amp; nastup, broadcast chan &amp; vytah_odjel, int &amp; volna_mista</parameter><declaration>// Place local declarations here.
+clock t;
+
+</declaration><location id="id0" x="112" y="-168"><urgent/></location><location id="id1" x="-160" y="-168"></location><location id="id2" x="112" y="96"><name x="136" y="88">vytah_je_nedostupny</name></location><location id="id3" x="112" y="-32"><name x="128" y="-40">osoba_ceka_na_vytah</name><label kind="invariant" x="128" y="-56">t &lt;= MAX_DOBA_CEKANI_NA_VYTAH</label></location><location id="id4" x="-160" y="-32"><name x="-320" y="-40">osoba_stoji_v_patre</name></location><init ref="id4"/><transition><source ref="id0"/><target ref="id1"/><label kind="guard" x="-112" y="-240">aktualni_patro == moje_patro
+&amp;&amp; volna_mista &gt; 0</label><label kind="synchronisation" x="-112" y="-208">nastup!</label></transition><transition><source ref="id0"/><target ref="id3"/><label kind="guard" x="-40" y="-120">aktualni_patro != 
+moje_patro ||
+! volna_mista &gt; 0</label><nail x="80" y="-96"/></transition><transition><source ref="id3"/><target ref="id0"/><label kind="synchronisation" x="128" y="-112">vytah_prijel?</label></transition><transition><source ref="id1"/><target ref="id4"/><label kind="synchronisation" x="-248" y="-112">vytah_odjel?</label></transition><transition><source ref="id3"/><target ref="id2"/><label kind="guard" x="128" y="24">t &gt;= MAX_DOBA_CEKANI_NA_VYTAH</label></transition><transition><source ref="id4"/><target ref="id3"/><label kind="synchronisation" x="-104" y="-24">privolani_vytahu!</label><label kind="assignment" x="-104" y="-8">volane_patro=moje_patro,
+t=0</label></transition></template><template><name>Vytah</name><parameter>broadcast chan &amp; vytah_prijel, broadcast chan &amp; vystup, broadcast chan &amp; vytah_odjel</parameter><declaration>clock t;
+</declaration><location id="id5" x="216" y="-128"><label kind="invariant" x="238" y="-145">t &lt;= 
+MAX_DOBA_NASTUPU_A_VYSTUPU</label></location><location id="id6" x="216" y="0"><name x="232" y="-8">vytah_zastavil</name><urgent/></location><location id="id7" x="-128" y="0"><label kind="invariant" x="-336" y="-8">t &lt;= MAX_DOBA_PREJEZDU</label></location><init ref="id7"/><transition><source ref="id6"/><target ref="id5"/><label kind="synchronisation" x="156" y="-79">vystup!</label></transition><transition><source ref="id5"/><target ref="id7"/><label kind="guard" x="-72" y="-152">t &gt; MIN_DOBA_NASTUPU_A_VYSTUPU</label><label kind="synchronisation" x="-72" y="-128">vytah_odjel!</label><label kind="assignment" x="-72" y="-112">t=0</label><nail x="-80" y="-128"/></transition><transition><source ref="id7"/><target ref="id7"/><label kind="guard" x="-360" y="-208">t &gt; MIN_DOBA_PREJEZDU &amp;&amp; 
+cilove_patro != prubezne_patro</label><label kind="assignment" x="-360" y="-176">prubezne_patro += 
+sign(cilove_patro-prubezne_patro),
+t=0</label><nail x="-128" y="-128"/><nail x="-392" y="-128"/></transition><transition><source ref="id7"/><target ref="id6"/><label kind="guard" x="-88" y="-24">cilove_patro == prubezne_patro</label><label kind="synchronisation" x="-88" y="0">vytah_prijel!</label><label kind="assignment" x="-88" y="16">t=0,
+aktualni_patro=prubezne_patro</label><nail x="56" y="0"/><nail x="56" y="0"/></transition></template><template><name>Osoba_ve_vytahu</name><parameter>chan &amp; nastup, broadcast chan &amp; vytah_prijel, broadcast chan &amp; vystup, int &amp; moje_cilove_patro, int &amp; volna_mista</parameter><declaration>clock t;</declaration><location id="id8" x="-168" y="-24"><committed/></location><location id="id9" x="112" y="-256"><name x="128" y="-264">vytah_je_nebezpecny</name></location><location id="id10" x="-168" y="-256"><name x="-224" y="-288">osoba_je_ve_vytahu</name><label kind="invariant" x="-224" y="-344">t &lt;= MAX_DOBA_CEKANI_VE_VYTAHU
+&amp;&amp;
+aktualni_patro != moje_cilove_patro</label></location><location id="id11" x="-424" y="-256"><name x="-592" y="-264">osoba_neni_ve_vytahu</name></location><init ref="id11"/><transition><source ref="id10"/><target ref="id8"/><label kind="synchronisation" x="-160" y="-152">vytah_prijel?</label></transition><transition><source ref="id8"/><target ref="id10"/><label kind="guard" x="-336" y="-160">aktualni_patro != 
+moje_cilove_patro</label><nail x="-216" y="-72"/><nail x="-216" y="-200"/></transition><transition><source ref="id8"/><target ref="id11"/><label kind="guard" x="-400" y="-88">aktualni_patro == 
+moje_cilove_patro</label><label kind="synchronisation" x="-400" y="-48">vystup?</label><label kind="assignment" x="-400" y="-24">moje_cilove_patro = -1,
+volna_mista++</label><nail x="-424" y="-24"/></transition><transition><source ref="id10"/><target ref="id9"/><label kind="guard" x="-144" y="-256">t &gt; 
+MAX_DOBA_CEKANI_VE_VYTAHU</label></transition><transition><source ref="id11"/><target ref="id10"/><label kind="select" x="-400" y="-296">i:int[0,POCET_PATER-1]</label><label kind="guard" x="-400" y="-280">i != aktualni_patro</label><label kind="synchronisation" x="-400" y="-256">nastup?</label><label kind="assignment" x="-400" y="-240">moje_cilove_patro=i,
+t=0, volna_mista--</label></transition></template><template><name>Rizeni_vytahu_ala_pater_noster</name><parameter> chan &amp; privolani_vytahu,  int &amp; volane_patro, broadcast chan &amp; naplanuj_vytah</parameter><location id="id12" x="-352" y="-120"><urgent/></location><location id="id13" x="-352" y="32"></location><init ref="id12"/><transition><source ref="id12"/><target ref="id13"/><label kind="assignment" x="-344" y="-56">inicializace()</label></transition><transition><source ref="id13"/><target ref="id13"/><label kind="synchronisation" x="-624" y="8">naplanuj_vytah?</label><label kind="assignment" x="-624" y="32">cilove_patro = 
+(aktualni_patro + 1) % 
+POCET_PATER</label><nail x="-632" y="32"/><nail x="-632" y="144"/></transition><transition><source ref="id13"/><target ref="id13"/><label kind="synchronisation" x="-264" y="8">privolani_vytahu?</label><nail x="-80" y="32"/><nail x="-80" y="152"/></transition></template><system>broadcast chan  vytah_prijel;
+broadcast chan  vystup;
+broadcast chan vytah_odjel;
+chan privolani_vytahu;
+chan nastup;
+int volane_patro = -1;
+int volna_mista = MAX_POCET_OSOB_VE_VYTAHU;
+
+// Place template instantiations here.
+vytah = Vytah(vytah_prijel, vystup, vytah_odjel);
+patro(const int[0,POCET_PATER-1] i) = Osoba_v_patre(i, privolani_vytahu, volane_patro, 
+                                                    vytah_prijel, nastup, vytah_odjel, volna_mista);
+osoba(const int[0,MAX_POCET_OSOB_VE_VYTAHU-1] i)=Osoba_ve_vytahu(nastup, 
+                                                                 vytah_prijel, 
+                                                                 vystup, 
+                                                                 cilove_patro_osoby[i],
+                                                                 volna_mista);
+rizeni =  Rizeni_vytahu_ala_pater_noster(privolani_vytahu, volane_patro, vytah_odjel);
+
+// List one or more processes to be composed into a system.
+system rizeni, vytah, patro, osoba;</system></nta>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_1.dtd'><nta><declaration>// Place global declarations here.
+const int CREATURES = 3;
+const int CAPACITY = 2;
+const int WOLF = 0;
+const int CABBAGE = 1;
+const int GOAT = 2;
+const int SHIP = 0;
+const int LEFT = 1;
+const int RIGHT = 2;
+
+int creature[CREATURES];
+int passengers;
+
+void unload(int bank_side)
+{
+  int i;
+  for(i=0;i&lt;CREATURES;i++)
+    if (creature[i] == SHIP) {
+        creature[i] = bank_side;
+        passengers--;
+    }
+}
+
+void init_system()
+{
+  int i;
+  for(i=0;i&lt;CREATURES;i++) {
+     creature[i] = LEFT;
+  }
+  passengers = 0;
+}
+
+bool ship(int c)
+{
+  return creature[c] == SHIP;
+}
+
+bool task_condition()
+{ 
+  return 
+  (ship(WOLF) &amp;&amp; ship(GOAT)) ||
+  (ship(CABBAGE) &amp;&amp; ship(GOAT)) ||
+  (passengers &gt; 2) ||
+  (passengers &lt;= 0);   
+}
+
+bool final_condition()
+{ 
+  int i; 
+  for(i=0;i&lt;CREATURES;i++)
+    if (creature[i] != RIGHT) return false;
+  return true;   
+}
+
+
+</declaration><template><name x="5" y="5">Template</name><declaration>// Place local declarations here.
+</declaration><location id="id0" x="16" y="208"></location><location id="id1" x="208" y="208"><name x="224" y="192">finish</name></location><location id="id2" x="208" y="40"></location><location id="id3" x="16" y="40"></location><init ref="id0"/><transition><source ref="id0"/><target ref="id3"/><label kind="assignment" x="-80" y="152">init_system()</label></transition><transition><source ref="id2"/><target ref="id2"/><label kind="select" x="312" y="-24">i : int[0,CREATURES-1]</label><label kind="guard" x="328" y="8">creature[i]==RIGHT</label><label kind="assignment" x="312" y="48">creature[i]=SHIP,
+passengers++</label><nail x="296" y="-32"/><nail x="296" y="96"/></transition><transition color="#0000ff"><source ref="id3"/><target ref="id3"/><label kind="select" x="-256" y="-24">i : int [0,CREATURES-1]</label><label kind="guard" x="-264" y="16">creature[i] == LEFT</label><label kind="assignment" x="-312" y="64">creature[i] = SHIP, passengers++</label><nail x="-88" y="-24"/><nail x="-88" y="112"/></transition><transition><source ref="id2"/><target ref="id1"/><label kind="guard" x="224" y="128">final_condition()</label></transition><transition><source ref="id2"/><target ref="id3"/><label kind="guard" x="64" y="120">! task_condition()</label><label kind="assignment" x="72" y="144">unload(LEFT)</label><nail x="120" y="120"/></transition><transition><source ref="id3"/><target ref="id2"/><label kind="guard" x="64" y="-88">! task_condition()</label><label kind="assignment" x="72" y="-64">unload(RIGHT)</label><nail x="104" y="-40"/></transition></template><system>// Place template instantiations here.
+Process = Template();
+
+// List one or more processes to be composed into a system.
+system Process;</system></nta>
