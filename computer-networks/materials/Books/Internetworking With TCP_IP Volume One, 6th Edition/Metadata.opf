@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="uuid_id">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:identifier opf:scheme="calibre" id="calibre_id">1427</dc:identifier>
+        <dc:identifier opf:scheme="uuid" id="uuid_id">d2eeeffc-9f9f-414f-9b6d-c3f677abb7c2</dc:identifier>
+        <dc:title>Internetworking With TCP/IP Volume One</dc:title>
+        <dc:creator opf:file-as="Comer, Douglas E." opf:role="aut">Douglas E. Comer</dc:creator>
+        <dc:contributor opf:file-as="calibre" opf:role="bkp">calibre (0.9.42) [http://calibre-ebook.com]</dc:contributor>
+        <dc:date>2013-04-24T14:00:00+00:00</dc:date>
+        <dc:description>&lt;div&gt;&lt;p&gt;An internationally best-selling, conceptual introduction to the TCP/IP protocols and Internetworking, this book interweaves a clear discussion of fundamentals and scientific principles with details and examples drawn from the latest technologies. Leading author Douglas Comer covers layering and packet formats for all the Internet protocols, includingTCP, IPv4, IPv6, DHCP, and DNS.  In addition, the text explains new trends in Internet systems, including packet classification, Software Defined Networking (SDN), and mesh protocols used in The Internet of Things.&lt;br&gt;&lt;/p&gt;&lt;p&gt;The text is appropriate for individuals interested in learning more about TCP/IP protocols, Internet architecture, and current networking technologies, as well as engineers who build network systems. It is suitable for junior to graduate-level courses in Computer Networks, Data Networks, Network Protocols, and Internetworking.&lt;/p&gt;&lt;h3&gt;About the Author&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Dr. Douglas Comer,&lt;/strong&gt; Distinguished Professor of Computer Science at Purdue University and former VP of Research at Cisco, is an internationally recognized expert on computer networking, the TCP/IP protocols, and the Internet. The author of numerous refereed articles and technical books, he is a pioneer in the development of curriculum and laboratories for research and education. &lt;/p&gt;&lt;p&gt;A prolific author, Comer’s popular books have been translated into over 15 languages, and are used in industry as well as computer science, engineering, and business departments around the world. His landmark three-volume series &lt;em&gt;Internetworking With TCP/IP &lt;/em&gt;revolutionized networking and network education. His textbooks and innovative laboratory manuals have and continue to shape graduate and undergraduate curricula.&lt;/p&gt;&lt;p&gt;The accuracy and insight of Dr. Comer’s books reflect his extensive background in computer systems. His research spans both hardware and software. He has created a complete operating system, written device drivers, and implemented network protocol software for conventional computers as well as network processors. The resulting software has been used by industry in a variety of products.  &lt;/p&gt;&lt;p&gt;Comer has created and teaches courses on network protocols and computer technologies for a variety of audiences, including courses for engineers as well as academic audiences. His innovative educational laboratories allow him and his students to design and implement working prototypes of large, complex systems, and measure the performance of the resulting prototypes. He continues to teach at industries, universities, and conferences around the world. In addition, Comer consults for industry on the design of computer networks and systems.&lt;/p&gt;&lt;p&gt;For over eighteen years, Professor Comer served as editor-in-chief of the research journal &lt;em&gt;Software — Practice and Experience&lt;/em&gt;. He is a Fellow of the ACM, a Fellow of the Purdue Teaching Academy, and a recipient of numerous awards, including a Usenix Lifetime Achievement award.  &lt;/p&gt;&lt;p&gt;Additional information can be found at: www.cs.purdue.edu/people/comer &lt;/p&gt;&lt;p&gt;Information about Comer’s books can be found at: www.comerbooks.com &lt;/p&gt;&lt;/div&gt;</dc:description>
+        <dc:publisher>Addison-Wesley</dc:publisher>
+        <dc:identifier opf:scheme="AMAZON">013608530X</dc:identifier>
+        <dc:identifier opf:scheme="GOOGLE">TFXSmwEACAAJ</dc:identifier>
+        <dc:identifier opf:scheme="ISBN">9780136085300</dc:identifier>
+        <dc:language>eng</dc:language>
+        <dc:subject>Computers</dc:subject>
+        <dc:subject>Networking</dc:subject>
+        <dc:subject>Network Protocols</dc:subject>
+        <meta content="{&quot;Douglas E. Comer&quot;: &quot;&quot;}" name="calibre:author_link_map"/>
+        <meta content="6.0" name="calibre:rating"/>
+        <meta content="2014-02-08T08:23:18+00:00" name="calibre:timestamp"/>
+        <meta content="Internetworking With TCP/IP Volume One" name="calibre:title_sort"/>
+    </metadata>
+    <guide>
+        <reference href="Internetworking With TCP_IP Volume One - Douglas E. Comer.jpg" title="Cover" type="cover"/>
+    </guide>
+</package>

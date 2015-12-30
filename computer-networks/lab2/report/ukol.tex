@@ -1,0 +1,105 @@
+%% Vloženie rôznych nastavení
+\input{header-before}
+
+\def \nazovUlohy{Lab 2 - Simple, flawed Server}
+\def \skola{\textbf{Chalmers university - Computer science}}
+\def \tema{Homework from computer networks}
+\def \author{\textbf{Michal Šustr}, \textbf{Arnaud D'Artigues}}
+\def \email{\href{mailto:michal.sustr@gmail.com}{\texttt{michal.sustr@gmail.com}} \\ \href{mailto:arnaud.dartigues@gmail.com}{\texttt{arnaud.dartigues@gmail.com}}}
+\def \date{8. 9. 2014}
+
+%% Pokračovanie nastavení
+\input{header-after}
+
+\begin{document}
+
+%% Úvodná stránka
+\input{firstpage}
+
+\section{Answers to lab questions}
+\subsection*{Question I.a.1}
+The symbolic name of the address in the code is \texttt{INADDR\_ANY} and it is \texttt{0.0.0.0}.
+
+\subsection*{Question I.a.2}
+From the manual of \texttt{recv}:
+\begin{quote}
+Return  the  number  of bytes received, or -1 if an error occurred.  The return value will be 0 when the peer  has  performed  an orderly shutdown.
+\end{quote}
+This answers the cases a), b) and c). The last case d) \texttt{ret=kTransferBufferSize} means that the buffer is completely filled. 
+
+\texttt{cd.buffer} is defined to be of size \texttt{kTransferBufferSize+1} because in C we need to include the \texttt{NULL} terminating character.
+
+\subsection*{Question I.a.3}
+The connection is closed/reset if the return value is -1 and error code of value \texttt{ECONNRESET}.
+
+\texttt{MSG\_NOSIGNAL} flag stops generating \texttt{SIGPIPE} signals on stream oriented sockets when the other end breaks the connection, the \texttt{EPIPE} signal is still generated indicating if the  local  end  has  been  shut  down  on a connection oriented socket.
+ 
+\subsection*{Question I.c.1}
+When we connect with the first client, it can send and receive messages. Once a second connection with another client is established, it can send a message but gets blocked until the first client disconnects. When we do a netstat, we can see that for both clients, the connection with the server is \texttt{ESTABLISHED}, which means their sockets are truly connected.
+
+\subsection*{Question I.c.2}
+Once the first client gets disconnected, it receives response from the server. The server is iterative, so it can handle requests only from one client at a time until it disconnects. Then the next client can be served.
+
+\subsection*{Question I.c.3}
+The round trip time on the same machine depends on the length of the message, it varies from $0.1ms$ to $0.0001ms$. If the message length is the same as \texttt{kTransferBufferSize}, the 5 measured times are:
+$0.000212 ms$, $0.000189 ms$, $0.000205 ms$, $0.000172 ms$, $0.000222 ms$ with average $\overline{T_{same}} = 0.0002 ms$.
+
+We connected to different machine, and the measured round trip times are $185.15 ms$, $236.51 ms$, $231.71 ms$, $544.55 ms$ and $269.42 ms$, with average $\overline{T_{different}} = 293.46 ms$.
+
+\subsection*{Question I.d.1}
+We ran the command \texttt{./client-multi localhost 31336 7 255} with following measurements:
+\begin{verbatim}
+Establishing 7 connections... 
+  successfully initiated 7 connection attempts!
+Connect timing results for 7 successful connections
+  - min time: 0.366060 ms
+  - max time: 0.549235 ms
+  - average time: 0.461344 ms
+ (0 connections failed!)
+Roundtrip timing results for 7 connections for 255 round trips
+  - min time: 10159.585865 ms
+  - max time: 71119.216374 ms
+  - average time: 40639.376403 ms
+\end{verbatim}
+
+Some other records:
+\begin{verbatim}
+Establishing 10 connections... 
+  successfully initiated 10 connection attempts!
+Connect timing results for 10 successful connections
+  - min time: 0.103116 ms
+  - max time: 0.218299 ms
+  - average time: 0.138663 ms
+ (0 connections failed!)
+Roundtrip timing results for 10 connections for 255 round trips
+  - min time: 10160.063502 ms
+  - max time: 101603.979012 ms
+  - average time: 55882.432563 ms
+\end{verbatim}
+
+\begin{verbatim}
+Establishing 15 connections... 
+  successfully initiated 15 connection attempts!
+Connect timing results for 15 successful connections
+  - min time: 0.382923 ms
+  - max time: 3001.949394 ms
+  - average time: 333.608482 ms
+ (0 connections failed!)
+Roundtrip timing results for 15 connections for 255 round trips
+  - min time: 10158.026511 ms
+  - max time: 151399.968558 ms
+  - average time: 80944.698838 ms
+\end{verbatim}
+
+\subsection*{Question I.d.3}
+We measured the time from beginning of the connection until error in $recv$ was obtained as a difference of timestamps from \texttt{get\_time\_stamp()}. On average, the time is $\overline{T_{timeout}}=34371.25 ms$.
+
+
+%\begin{thebibligraphy}{5}
+%\textsc{	\bibitem{ari}
+%		\emph{Polynomiální metody - Michael Šebek} \\
+%		\url{http://www.polyx.com/_ari/slajdy/Pr-ARI-19-Polynom.pdf}
+%}
+%\end{thebibliography}
+
+\end{document}
