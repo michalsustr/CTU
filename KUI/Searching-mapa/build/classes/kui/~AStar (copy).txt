@@ -1,0 +1,108 @@
+package kui;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class AStar extends InformedSearchingAlgorithm {
+
+    public List<Node> findWay(Node startNode, Node endNode) {
+        LinkedList<Node> open = new LinkedList<Node>();
+		LinkedList<Node> closed = new LinkedList<Node>();
+		HashMap<Node, Node> hierarchy = new HashMap<Node, Node>();
+		LinkedList<Node> way = new LinkedList<Node>();
+
+		HashMap<Node, Double> fScore = new HashMap<Node, Double>();
+		HashMap<Node, Double> gScore = new HashMap<Node, Double>();
+		HashMap<Node, Double> hScore = new HashMap<Node, Double>();
+
+		Iterator<Node> it;
+
+		// prevent recursion
+		int cycle = 0;
+		Node next;
+		double minValue; Node minNode = null;
+		double cost, currentCost;
+
+		boolean addToHierarchy;
+
+		// starting node = end node
+		if(startNode.isTarget()) {
+			return null;
+		}
+
+		// start open list with start node
+		open.add(startNode);
+
+		while(!open.isEmpty()) {
+			// take the node with the least value of the f-function
+			it = open.iterator();
+			minValue = Double.MAX_VALUE;
+			while(it.hasNext()) {
+				next = it.next();
+				// f = g + h
+				cost = fScore.get(next);
+				if(cost < minValue) {
+					minValue = fScore.get(next);
+					minNode = next;
+				}
+			}
+			current = minNode;
+			currentCost = open.get(current); // cost g
+
+			closed.add(current);
+			open.remove(current);
+
+			// target has been found
+			if(current.isTarget()) {
+				// backtrack the tree
+				track = current;
+				way.add(track);
+
+				while(!track.equals(startNode)) {
+					track = hierarchy.get(track);
+					way.push(track);
+				}
+				return way;
+			}
+
+			expand = current.expand();
+			it = expand.iterator();
+			while(it.hasNext()) {
+				next = it.next();
+				if(closed.contains(next)) {
+					continue;
+				}
+
+				// value of g function
+				cost = currentCost +
+					Math.sqrt(Math.pow(next.getX()-current.getX(), 2)+ Math.pow(next.getY()-current.getY(), 2));
+
+				addToHierarchy = true;
+				if(!open.containsKey(next)) {
+					open.put(next, cost);
+				} else if(open.get(next) > cost) {
+					open.put(next, cost);
+				} else {
+					addToHierarchy = false;
+				}
+
+				if(addToHierarchy) {
+					hierarchy.put(next, current);
+				}
+			}
+
+			cycle++;
+			if(cycle > 1E8) {
+				System.err.println("too many cycles, ending");
+				break;
+			}
+		}
+
+		// could not find the way
+		return null;
+    }
+}

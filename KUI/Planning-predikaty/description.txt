@@ -1,0 +1,74 @@
+blackbox version 43
+command line:  ./blackbox -o monkeyDomain.pddl -f monkeyProblem2.pddl -g result.txt
+
+Begin solver specification
+    -maxint        0   -maxsec 10.000000  graphplan
+    -maxint        0   -maxsec 0.000000  chaff
+End solver specification
+Loading domain file: monkeyDomain.pddl
+Loading fact file: monkeyProblem2.pddl
+Problem name: monkey1
+Facts loaded.
+time: 1, 8 facts and 3 exclusive pairs.
+time: 2, 11 facts and 16 exclusive pairs.
+time: 3, 11 facts and 8 exclusive pairs.
+time: 4, 13 facts and 17 exclusive pairs.
+Goals reachable at 4 steps but mutually exclusive.
+time: 5, 13 facts and 13 exclusive pairs.
+Goals reachable at 5 steps but mutually exclusive.
+time: 6, 13 facts and 9 exclusive pairs.
+Goals reachable at 6 steps but mutually exclusive.
+time: 7, 13 facts and 8 exclusive pairs.
+Goals first reachable in 7 steps.
+264 nodes created.
+
+####################################################
+goals at time 8:
+  hasfruit_monkeyjudy_bananas hasfruit_monkeyjudy_kiwi 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Unsat
+Iteration was 9
+
+----------------------------------------------------
+Can't solve in 7 steps
+time: 8, 13 facts and 8 exclusive pairs.
+44 new nodes added.
+
+####################################################
+goals at time 9:
+  hasfruit_monkeyjudy_bananas hasfruit_monkeyjudy_kiwi 
+
+
+----------------------------------------------------
+Invoking solver graphplan
+Result is Sat
+Iteration was 51
+Performing plan justification:
+   0 actions were pruned in 0.00 seconds
+
+----------------------------------------------------
+Begin plan
+1 (goto monkeyjudy locx locy)
+2 (push monkeyjudy boxa locy locx)
+3 (climb monkeyjudy boxa locx)
+4 (grab-fruit monkeyjudy boxa kiwi locx)
+5 (descend monkeyjudy boxa)
+6 (push monkeyjudy boxa locx locz)
+7 (climb monkeyjudy boxa locz)
+8 (grab-fruit monkeyjudy boxa bananas locz)
+End plan
+----------------------------------------------------
+
+8 total actions in plan
+3 entries in hash table, 2 hash hits, avg set size 4
+12 total set-creation steps (entries + hits + plan length - 1)
+10 actions tried
+
+####################################################
+Total elapsed time:   0.02 seconds
+Time in milliseconds: 24
+
+####################################################

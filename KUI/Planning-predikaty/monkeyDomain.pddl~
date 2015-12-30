@@ -1,0 +1,51 @@
+;; A very simple classical STRIPS domain
+;; by Radek Marik, 2011.04.18
+
+(define (domain MONKEY)
+  (:requirements :strips :typing)
+  (:types monkey box location fruit)
+  (:predicates
+    (isClear ?b - box)
+    (onBox ?m - monkey ?b - box)
+    (onFloor ?monkey)
+    (atM ?monkey ?location)
+    (atB ?b - box    ?loc - location)
+    (atF ?f - fruit  ?loc - location)
+    (hasFruit ?m - monkey ?fruit)
+  )
+  
+  ;; movement and climbing
+  (:action GOTO
+    :parameters (?m - monkey ?loc1 ?loc2 - location)
+    :precondition (and (onFloor ?m) (atM ?m ?loc1))
+    :effect (and (atM ?m ?loc2) (not (atM ?m ?loc1)))
+  )
+  
+  (:action PU_SH
+    :parameters (?m - monkey ?b - box ?loc1 ?loc2 - location)
+    :precondition (and (onFloor ?m) (atM ?m ?loc1) (atB ?b ?loc1) (isClear ?b))
+    :effect (and (atM ?m ?loc2) (atB ?b ?loc2) 
+                 (not (atM ?m ?loc1))
+                 (not (atB ?b ?loc1)))
+  )
+  
+  (:action CLIMB
+    :parameters (?m - monkey ?b - box ?loc1 - location)
+    :precondition (and (onFloor ?m) (atM ?m ?loc1) (atB ?b ?loc1) (isClear ?b))
+    :effect (and (onBox ?m ?b) (not (isClear ?b)) (not (onFloor ?m)))
+  )
+  
+  (:action DESCEND
+    :parameters (?m - monkey ?b - box)
+    :precondition (and (onBox ?m ?b))
+    :effect (and (not (onBox ?m ?b)) (isClear ?b) (onFloor ?m))
+  )
+  
+  (:action GRAB-FRUIT
+    :parameters (?m - monkey ?b - box ?f - fruit ?loc1 - location)
+    :precondition (and (onBox ?m ?b) (atB ?b ?loc1) (atF ?f ?loc1))
+    :effect (and (hasFruit ?m ?f))
+  )
+  
+
+)

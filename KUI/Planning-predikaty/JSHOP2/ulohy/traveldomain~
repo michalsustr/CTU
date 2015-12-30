@@ -1,0 +1,112 @@
+;; A very simple classical STRIPS domain
+;; by Radek Marik, 2011.04.18
+
+(defdomain traveldomain (
+	(:operator (!MOVE_LOADED_TRUCK ?object ?from ?to ?truck)
+		((truckAt ?truck ?from) (objectAt ?object ?from) (road ?from ?to))
+		((objectAt ?g ?from) (truckAt ?t ?from))
+		((objectAt ?g ?to) (truckAt ?t ?to))
+	)
+
+	(:operator (!MOVE_EMPTY_TRUCK ?from ?to ?truck)
+		((truckAt ?truck ?from) (road ?from ?to))
+		((truckAt ?truck ?from))
+		((truckAt ?truck ?to))
+	)
+
+	(:operator (!MOVE_LOADED_AIRPLANE ?object ? from ?to ?airplane)
+		((airplaneAt ?a ?from) (objectAt ?g ?from) (flight ?from ?to))
+		((objectAt ?g ?from) (airplaneAt ?a ?from))
+		((objectAt ?g ?to) (airplaneAt ?a ?to))
+	)
+
+
+	(:operator (!MOVE_EMPTY_AIRPLANE ?from ?to ?airplane)
+		((airplaneAt ?a ?from) (flight ?from ?to))
+		((airplaneAt ?a ?from))
+		((airplaneAt ?a ?to))
+	)
+  
+  (:operator (!GOTO ?monkey ?loc1 ?loc2)
+    (and (onFloor ?monkey) (atM ?monkey ?loc1))		; preconditions
+    ((atM ?monkey ?loc1))				; NOTS
+    ((atM ?monkey ?loc2))				; POSIT
+  )
+  
+  (:operator (!PUSH ?monkey ?box ?loc1 ?loc2)
+    ((onFloor ?monkey) (atM ?monkey ?loc1) (atB ?box ?loc1) (isClear ?box))
+    ((atM ?monkey ?loc1) (atB ?box ?loc1))
+    ((atM ?monkey ?loc2) (atB ?box ?loc2))
+  )
+  
+  (:operator (!CLIMB ?monkey ?box ?loc1)
+    ((onFloor ?monkey) (atM ?monkey ?loc1) (atB ?box ?loc1) (isClear ?box))
+    ((isClear ?box) (onFloor ?monkey))
+    ((onBox ?monkey ?box))
+  )
+  
+  (:operator (!DESCEND ?monkey ?box)
+    ((onBox ?monkey ?box))
+    ((onBox ?monkey ?box))
+    ((isClear ?box) (onFloor ?monkey))
+  )
+  
+  (:operator (!GRAB-FRUIT ?monkey ?box ?fruit ?loc1)
+    ((onBox ?monkey ?box) (atB ?box ?loc1) (atF ?fruit ?loc1))
+    ()
+    ((hasFruit ?monkey ?fruit))
+  )
+
+  (:method (getFruit ?monkey ?fruit)
+    search-fruit
+      ((atF ?fruit ?loc2))		; preconditions
+      ((gotoBox ?monkey ?box)		; actions
+       (pushBox ?monkey ?box ?loc2)
+       (reachFruit ?monkey ?box ?fruit)
+      )
+  )
+
+  (:method (gotoBox ?monkey ?box)
+    stayInPlace
+      ((atM ?monkey ?loc1) (atB ?box ?loc1))
+      ()
+    moveMonkey
+      ((atM ?monkey ?loc1) (atB ?box ?loc3))
+      ((!GOTO ?monkey ?loc1 ?loc3))
+  )
+
+  (:method (pushClearBox ?monkey ?box ?loc2)
+    ((atB ?box ?loc2) (isClear ?box))
+    ()
+    ((atM ?monkey ?loc1) (atB ?box ?loc1) (isClear ?box))
+    ((!PUSH ?monkey ?box ?loc1 ?loc2))
+  )
+
+  (:method (makeBoxClear ?box)
+    alreadyClearBox
+    ((isClear ?box))
+    ()
+    clearTakenBox
+    ((onBox ?monkey ?box))
+    ((!DESCEND ?monkey ?box))
+  )
+
+  (:method (pushBox ?monkey ?box ?loc2)
+    pushClearBox
+    ((isClear ?box))
+    ((pushClearBox ?monkey ?box ?loc2))
+    pushTakenBox
+    ((onBox ?monkey2 ?box))
+    (
+      (makeBoxClear ?box)
+      (pushClearBox ?monkey ?box ?loc2)
+    )
+  )
+
+  (:method (reachFruit ?monkey ?box ?fruit)
+    ((atM ?monkey ?loc) (atB ?box ?loc) (atF ?fruit ?loc))
+    ((!CLIMB ?monkey ?box ?loc)
+     (!GRAB-FRUIT ?monkey ?box ?fruit ?loc)
+    )
+  )
+))

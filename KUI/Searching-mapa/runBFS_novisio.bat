@@ -1,0 +1,1 @@
+java -classpath libs\kui_distribuce.jar kui.Application kui.example.BFS -noVisio

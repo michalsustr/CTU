@@ -1,0 +1,22 @@
+;; A very simple classical STRIPS domain
+;; by Radek Marik, 2011.04.18
+
+(defproblem monkeyproblem monkeydomain
+ (
+   (atM monkeyJudy locX)
+   (onFloor        monkeyJudy)
+   (atM monkeyGiGi locZ)
+   (onFloor        monkeyGiGi)
+   (atB woodenBox    locY)
+   (isClear woodenBox)
+   (atF bananas    locZ)
+ )
+ (
+   ;(!GOTO monkeyJudy locX locY)
+   ;(gotoBox monkeyJudy woodenBox)
+   ;(getFruit monkeyJudy bananas)
+   ;(pushBox monkeyGigi woodenBox locY)
+   ((getFruit monkeyJudy bananas) (getFruit monkeyGiGi bananas))
+   ;(:unordered (getFruit monkeyJudy bananas) (getFruit monkeyGiGi bananas))
+ )
+)

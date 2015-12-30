@@ -1,0 +1,1 @@
+java -classpath libs\kui_distribuce.jar;libs\vecmath.jar;libs\alite-1.0-20120306.124728-9.jar;libs\log4j-1.2.16.jar kui.Application kui.example.BFS 
