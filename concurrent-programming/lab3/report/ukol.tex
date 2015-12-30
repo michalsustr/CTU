@@ -1,0 +1,59 @@
+%% Vloženie rôznych nastavení
+\input{header-before}
+
+\def \nazovUlohy{Lab 3 - Improving the flawed server}
+\def \skola{\textbf{Chalmers university - Computer science}}
+\def \tema{Homework from computer networks}
+\def \author{\textbf{Michal Šustr}, \textbf{Arnaud D'Artigues}}
+\def \email{\href{mailto:michal.sustr@gmail.com}{\texttt{michal.sustr@gmail.com}} \\ \href{mailto:arnaud.dartigues@gmail.com}{\texttt{arnaud.dartigues@gmail.com}}}
+\def \date{13. 10. 2014}
+
+%% Pokračovanie nastavení
+\input{header-after}
+
+\begin{document}
+
+%% Úvodná stránka
+\input{firstpage}
+
+\section{Answers to lab questions}
+\subsection*{Question I.a.1}
+The response to messages from 2 clients connected at the same time are immediate. Both clients have the the state ESTABLISHED in netstat:
+\begin{verbatim}
+tcp        0      0 localhost:53286         localhost:5703          ESTABLISHED
+tcp        0      0 localhost:5703          localhost:53284         ESTABLISHED
+tcp        0      0 localhost:5703          localhost:53286         ESTABLISHED
+tcp        0      0 localhost:53284         localhost:5703          ESTABLISHED
+\end{verbatim}
+
+\subsection*{Question I.a.2}
+The result of the simulation is 
+\begin{verbatim}
+Simulating 100 clients.
+Establishing 100 connections... 
+  successfully initiated 100 connection attempts!
+Connect timing results for 100 successful connections
+  - min time: 0.798271 ms
+  - max time: 4.469441 ms
+  - average time: 2.405017 ms
+ (0 connections failed!)
+Roundtrip timing results for 100 connections for 10000 round trips
+  - min time: 3269.909818 ms
+  - max time: 3971.980467 ms
+  - average time: 3803.638460 ms
+\end{verbatim}
+
+Just 7 connections with 255 round trips took on average $40639ms$ last time, which is a significant performance improvement.
+
+\subsection*{Question I.a.3}
+We managed to create DOS attack by modifying the client-multi file, there are too many connections for the server to handle. However, we couldn't do it by just one simple client connecting to the server, even if it requested the server many times.
+
+
+%\begin{thebibligraphy}{5}
+%\textsc{	\bibitem{ari}
+%		\emph{Polynomiální metody - Michael Šebek} \\
+%		\url{http://www.polyx.com/_ari/slajdy/Pr-ARI-19-Polynom.pdf}
+%}
+%\end{thebibliography}
+
+\end{document}

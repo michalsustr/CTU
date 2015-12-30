@@ -1,0 +1,19 @@
+Placement of the sensors
+------------------------
+We placed the sensors before and after each critical sections (shared railway) and at the train stations for stopping the arriving train. In total we have 20 sensors.
+
+Choice of critical sections
+---------------------------
+There are 6 critical sections - 2 shared railway tracks, 1 crossing of railways, 1 shorter  distance for two parallel tracks and 2 for stations.
+Each of them is represented with a binary semaphore. 
+
+Maximum train speed and the reason for it
+-----------------------------------------
+We tested the simulation for speeds in range of <1; 22>. Higher speeds are not possible, because the trains have some inertia when they are about to stop and could crash into the other train even though they know about it's presence in the critical section.
+
+How you tested your solution
+----------------------------
+
+
+
+

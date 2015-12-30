@@ -1,0 +1,66 @@
+\documentclass[pdftex,12pt,a4paper]{article}
+
+%% Zoznam použitých balíčkov
+\usepackage[slovak]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\hypersetup{pdfborder={0 0 0}}
+\usepackage[final]{pdfpages}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{subfigure}
+\usepackage[top=3cm, bottom=3cm, right=2.5cm, left=2.5cm]{geometry}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{textcomp}
+
+%% Nastavenie zvýrazňovača syntaxe vo výpise kódov
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.95,0.95,0.95}
+\lstset{
+	backgroundcolor=\color{lbcolor},
+	tabsize=4,
+	rulecolor=,
+	language=matlab,
+        basicstyle=\scriptsize,
+        upquote=true,
+        aboveskip={0.3\baselineskip},
+        columns=fixed,
+        showstringspaces=false,
+        extendedchars=true,
+        breaklines=true,
+        prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+        frame=single,
+        showtabs=false,
+        showspaces=false,
+        showstringspaces=false,
+        identifierstyle=\ttfamily,
+        keywordstyle=\color[rgb]{0,0,1},
+        commentstyle=\color[rgb]{0.133,0.545,0.133},
+        stringstyle=\color[rgb]{0.627,0.126,0.941},
+}
+
+%% Stĺpce matíc
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+%% Vlastné príkazy
+% norm - norma vektora ||x||
+\newcommand{\norm}[1]{\left|\left|#1\right|\right|}
+% adj - adjungovaná matica 
+\newcommand{\adj}{\operatorname{adj}}
+% rank - hodnosť matice
+\newcommand{\rank}{\operatorname{rank}}
+% m - skratka na výpis tučného písma v rovniciach (pre matice)
+\newcommand{\m}[1]{\mathbf{#1}} 
+
+\usepackage{tikz}
+
+\setlength{\parskip}{10pt plus 1pt minus 1pt}
+\setlength{\parindent}{0in}

@@ -1,0 +1,17 @@
+Report Assignment 1
+
+In our program, we have the class Lab1, which contains an other class, Train, which controls the trains and all the events which occurs when a train arrives on a sensor.
+
+We have implemented 20 Sensors and 6 Semaphores. There are two sensors for each part of every track, corresponding with the entrance and the end of the track. The Sensors are implemented in a table and converted to a number, which makes it easier to use than to use their coordinates.
+
+In our solution, we choose 3 critical sections, which are the places where two trains cannot meet. We put one Semaphore on each of these parts, the three other Semaphores corresponding to non critical sections but which are the shortest ways : the two tracks where the trains are at the beginning and also the upper part of the track in the middle.
+
+The maximum train speed we choose is 22. It correspond to the maximum speed for the trains to stop depending on where we put the Sensors, in order to avoid collision on a switch.
+
+We tested our solution at different speeds for each train, during several minutes, in order to see if the traffic was fluid and if there was no bug due to malfunction for a particular case.
+
+Each sensor requires different handling of the situation -- it acquires and releases different semaphores, and reacts differently if it is passed by a train in forward or backward direction. This is why we listed all the possible combinations and proper reactions to these situations. This could be generalized to more abstract solution by creating some kind of class which handles the shared railway (critical section) with listed entrance points (sensors). However, this approach would not bring much simplification on a simple map like the one for this assignment, but it could help a lot in debugging more complex maps.
+
+The solution we propose is correct for given range of speeds because each critical section is handled properly. The semaphores are acquired and released depending on the movement of trains, and if there is a train passing a critical section the other one that wants to share it as well has to wait until proper semaphore is released. The proper function for higher speeds cannot be guaranteed, because the trains take some time to come to a full stop after they pass a sensor.
+
+In the case where the track is not a critical section, there is no polling as the train will choose the other track. In the case of a critical section, there is no polling also as the thread stops until a permit is available.

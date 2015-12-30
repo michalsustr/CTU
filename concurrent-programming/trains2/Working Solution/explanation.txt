@@ -1,0 +1,3 @@
+I changed the map and the java code and it's now working !!
+
+We now have to test with all the speeds possible :p
