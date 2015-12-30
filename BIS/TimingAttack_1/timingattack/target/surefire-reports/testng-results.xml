@@ -1,0 +1,10 @@
+<testng-results>
+  <reporter-output>
+  </reporter-output>
+  <suite name="cz.cvut.keyczar.homework.MessageVerifierTest">
+    <groups>
+    </groups>
+    <test name="Command line test">
+    </test>
+  </suite>
+</testng-results>

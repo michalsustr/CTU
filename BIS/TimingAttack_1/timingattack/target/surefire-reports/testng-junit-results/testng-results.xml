@@ -1,0 +1,104 @@
+<testng-results>
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite">
+    <groups>
+    </groups>
+    <test name="Command line test">
+      <class name="cz.cvut.keyczar.KeyczarToolTest">
+        <test-method status="PASS" signature="testRevoke()" name="testRevoke" duration-ms="19" started-at="2013-10-21T22:01:58Z" finished-at="2013-10-21T22:01:58Z">
+        </test-method>
+        <test-method status="PASS" signature="testPromote()" name="testPromote" duration-ms="18" started-at="2013-10-21T22:01:58Z" finished-at="2013-10-21T22:01:58Z">
+        </test-method>
+        <test-method status="PASS" signature="testPublicKeys()" name="testPublicKeys" duration-ms="376" started-at="2013-10-21T22:01:58Z" finished-at="2013-10-21T22:01:58Z">
+        </test-method>
+        <test-method status="PASS" signature="testCreate()" name="testCreate" duration-ms="1" started-at="2013-10-21T22:01:58Z" finished-at="2013-10-21T22:01:58Z">
+        </test-method>
+        <test-method status="PASS" signature="testAddKeySizeFlag()" name="testAddKeySizeFlag" duration-ms="18" started-at="2013-10-21T22:01:58Z" finished-at="2013-10-21T22:01:58Z">
+        </test-method>
+        <test-method status="PASS" signature="testDemote()" name="testDemote" duration-ms="20" started-at="2013-10-21T22:01:58Z" finished-at="2013-10-21T22:01:58Z">
+        </test-method>
+        <test-method status="PASS" signature="testAddKey()" name="testAddKey" duration-ms="23" started-at="2013-10-21T22:01:58Z" finished-at="2013-10-21T22:01:58Z">
+        </test-method>
+      </class>
+      <class name="cz.cvut.keyczar.SignerTest">
+        <test-method status="PASS" signature="testDsaSignerVerify()" name="testDsaSignerVerify" duration-ms="55" started-at="2013-10-21T22:01:58Z" finished-at="2013-10-21T22:01:58Z">
+        </test-method>
+        <test-method status="PASS" signature="testHmacUnversionedSignAndVerify()" name="testHmacUnversionedSignAndVerify" duration-ms="10" started-at="2013-10-21T22:01:58Z" finished-at="2013-10-21T22:01:58Z">
+        </test-method>
+        <test-method status="PASS" signature="testDsaSignAndVerify()" name="testDsaSignAndVerify" duration-ms="32" started-at="2013-10-21T22:01:58Z" finished-at="2013-10-21T22:01:58Z">
+        </test-method>
+        <test-method status="PASS" signature="testRsaSignerVerify()" name="testRsaSignerVerify" duration-ms="32" started-at="2013-10-21T22:01:58Z" finished-at="2013-10-21T22:01:58Z">
+        </test-method>
+        <test-method status="PASS" signature="testRsaSignAndVerify()" name="testRsaSignAndVerify" duration-ms="81" started-at="2013-10-21T22:01:58Z" finished-at="2013-10-21T22:01:58Z">
+        </test-method>
+        <test-method status="PASS" signature="testRsaUnversionedSignAndVerify()" name="testRsaUnversionedSignAndVerify" duration-ms="17" started-at="2013-10-21T22:01:58Z" finished-at="2013-10-21T22:01:58Z">
+        </test-method>
+        <test-method status="PASS" signature="testDsaUnversionedSignAndVerify()" name="testDsaUnversionedSignAndVerify" duration-ms="20" started-at="2013-10-21T22:01:58Z" finished-at="2013-10-21T22:01:58Z">
+        </test-method>
+        <test-method status="PASS" signature="testBadDsaVerify()" name="testBadDsaVerify" duration-ms="24" started-at="2013-10-21T22:01:58Z" finished-at="2013-10-21T22:01:58Z">
+        </test-method>
+        <test-method status="PASS" signature="testBadRsaVerify()" name="testBadRsaVerify" duration-ms="9" started-at="2013-10-21T22:01:58Z" finished-at="2013-10-21T22:01:58Z">
+        </test-method>
+        <test-method status="PASS" signature="testHmacVerify()" name="testHmacVerify" duration-ms="13" started-at="2013-10-21T22:01:58Z" finished-at="2013-10-21T22:01:58Z">
+        </test-method>
+        <test-method status="PASS" signature="testHmacSignAndVerify()" name="testHmacSignAndVerify" duration-ms="17" started-at="2013-10-21T22:01:58Z" finished-at="2013-10-21T22:01:58Z">
+        </test-method>
+        <test-method status="PASS" signature="testHmacBadSigs()" name="testHmacBadSigs" duration-ms="5" started-at="2013-10-21T22:01:58Z" finished-at="2013-10-21T22:01:58Z">
+        </test-method>
+        <test-method status="PASS" signature="testBadHmacVerify()" name="testBadHmacVerify" duration-ms="11" started-at="2013-10-21T22:01:58Z" finished-at="2013-10-21T22:01:58Z">
+        </test-method>
+      </class>
+      <class name="cz.cvut.keyczar.experimental.UriSignerTest">
+        <test-method status="PASS" signature="testSignAndVerifyUri()" name="testSignAndVerifyUri" duration-ms="46" started-at="2013-10-21T22:01:58Z" finished-at="2013-10-21T22:01:58Z">
+        </test-method>
+        <test-method status="PASS" signature="testCanonicalUri()" name="testCanonicalUri" duration-ms="6" started-at="2013-10-21T22:01:58Z" finished-at="2013-10-21T22:01:58Z">
+        </test-method>
+      </class>
+      <class name="cz.cvut.keyczar.TimeoutSignerTest">
+        <test-method status="PASS" signature="testHmac()" name="testHmac" duration-ms="1014" started-at="2013-10-21T22:01:58Z" finished-at="2013-10-21T22:01:59Z">
+        </test-method>
+        <test-method status="PASS" signature="testDsa()" name="testDsa" duration-ms="1019" started-at="2013-10-21T22:01:59Z" finished-at="2013-10-21T22:02:01Z">
+        </test-method>
+        <test-method status="PASS" signature="testRsa()" name="testRsa" duration-ms="1038" started-at="2013-10-21T22:02:01Z" finished-at="2013-10-21T22:02:02Z">
+        </test-method>
+      </class>
+      <class name="cz.cvut.keyczar.CrypterTest">
+        <test-method status="PASS" signature="testAesEncryptedKeyDecrypt()" name="testAesEncryptedKeyDecrypt" duration-ms="32" started-at="2013-10-21T22:02:02Z" finished-at="2013-10-21T22:02:02Z">
+        </test-method>
+        <test-method status="PASS" signature="testAesDecrypt()" name="testAesDecrypt" duration-ms="80" started-at="2013-10-21T22:02:02Z" finished-at="2013-10-21T22:02:02Z">
+        </test-method>
+        <test-method status="PASS" signature="testAesEncryptAndDecrypt()" name="testAesEncryptAndDecrypt" duration-ms="11" started-at="2013-10-21T22:02:02Z" finished-at="2013-10-21T22:02:02Z">
+        </test-method>
+        <test-method status="PASS" signature="testShortAesEncryptAndDecrypt()" name="testShortAesEncryptAndDecrypt" duration-ms="132" started-at="2013-10-21T22:02:02Z" finished-at="2013-10-21T22:02:02Z">
+        </test-method>
+        <test-method status="PASS" signature="testRsaDecrypt()" name="testRsaDecrypt" duration-ms="63" started-at="2013-10-21T22:02:02Z" finished-at="2013-10-21T22:02:02Z">
+        </test-method>
+        <test-method status="PASS" signature="testBadAesCiphertexts()" name="testBadAesCiphertexts" duration-ms="15" started-at="2013-10-21T22:02:02Z" finished-at="2013-10-21T22:02:02Z">
+        </test-method>
+        <test-method status="PASS" signature="testRsaEncryptAndDecrypt()" name="testRsaEncryptAndDecrypt" duration-ms="21" started-at="2013-10-21T22:02:02Z" finished-at="2013-10-21T22:02:02Z">
+        </test-method>
+      </class>
+      <class name="cz.cvut.keyczar.I18nTest">
+        <test-method status="PASS" signature="testJapanese()" name="testJapanese" duration-ms="3" started-at="2013-10-21T22:01:58Z" finished-at="2013-10-21T22:01:58Z">
+        </test-method>
+        <test-method status="PASS" signature="testHindi()" name="testHindi" duration-ms="3" started-at="2013-10-21T22:01:58Z" finished-at="2013-10-21T22:01:58Z">
+        </test-method>
+        <test-method status="PASS" signature="testEnglish()" name="testEnglish" duration-ms="2" started-at="2013-10-21T22:01:58Z" finished-at="2013-10-21T22:01:58Z">
+        </test-method>
+        <test-method status="PASS" signature="testPortguese()" name="testPortguese" duration-ms="1" started-at="2013-10-21T22:01:58Z" finished-at="2013-10-21T22:01:58Z">
+        </test-method>
+      </class>
+      <class name="cz.cvut.keyczar.CrossCompatibilityTest">
+        <test-method status="PASS" signature="testRsaDecrypt()" name="testRsaDecrypt" duration-ms="14" started-at="2013-10-21T22:02:02Z" finished-at="2013-10-21T22:02:02Z">
+        </test-method>
+        <test-method status="PASS" signature="testDsaVerify()" name="testDsaVerify" duration-ms="6" started-at="2013-10-21T22:02:02Z" finished-at="2013-10-21T22:02:02Z">
+        </test-method>
+        <test-method status="PASS" signature="testHmacVerify()" name="testHmacVerify" duration-ms="6" started-at="2013-10-21T22:02:02Z" finished-at="2013-10-21T22:02:02Z">
+        </test-method>
+        <test-method status="PASS" signature="testAesDecrypt()" name="testAesDecrypt" duration-ms="14" started-at="2013-10-21T22:02:02Z" finished-at="2013-10-21T22:02:02Z">
+        </test-method>
+      </class>
+    </test>
+  </suite>
+</testng-results>

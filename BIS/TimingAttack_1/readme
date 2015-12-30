@@ -1,0 +1,8 @@
+HmacKey
+VerificationServer
+
+code.google.com keytzar wiki
+-> outputheader 
+[0; 4B hash; key]
+
+MessageVerifierTest

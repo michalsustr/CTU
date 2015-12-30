@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Command line test" failures="0" tests="40" time="4.351" errors="0">
+  <properties/>
+  <testcase name="testPublicKeys" time="0.376" classname="cz.cvut.keyczar.KeyczarToolTest"/>
+  <testcase name="testDemote" time="0.02" classname="cz.cvut.keyczar.KeyczarToolTest"/>
+  <testcase name="testRevoke" time="0.019" classname="cz.cvut.keyczar.KeyczarToolTest"/>
+  <testcase name="testCreate" time="0.001" classname="cz.cvut.keyczar.KeyczarToolTest"/>
+  <testcase name="testAddKey" time="0.023" classname="cz.cvut.keyczar.KeyczarToolTest"/>
+  <testcase name="testAddKeySizeFlag" time="0.018" classname="cz.cvut.keyczar.KeyczarToolTest"/>
+  <testcase name="testPromote" time="0.018" classname="cz.cvut.keyczar.KeyczarToolTest"/>
+  <testcase name="testEnglish" time="0.002" classname="cz.cvut.keyczar.I18nTest"/>
+  <testcase name="testHindi" time="0.003" classname="cz.cvut.keyczar.I18nTest"/>
+  <testcase name="testJapanese" time="0.003" classname="cz.cvut.keyczar.I18nTest"/>
+  <testcase name="testPortguese" time="0.001" classname="cz.cvut.keyczar.I18nTest"/>
+  <testcase name="testSignAndVerifyUri" time="0.046" classname="cz.cvut.keyczar.experimental.UriSignerTest"/>
+  <testcase name="testCanonicalUri" time="0.006" classname="cz.cvut.keyczar.experimental.UriSignerTest"/>
+  <testcase name="testHmacVerify" time="0.013" classname="cz.cvut.keyczar.SignerTest"/>
+  <testcase name="testHmacSignAndVerify" time="0.017" classname="cz.cvut.keyczar.SignerTest"/>
+  <testcase name="testBadHmacVerify" time="0.011" classname="cz.cvut.keyczar.SignerTest"/>
+  <testcase name="testDsaSignAndVerify" time="0.032" classname="cz.cvut.keyczar.SignerTest"/>
+  <testcase name="testDsaSignerVerify" time="0.055" classname="cz.cvut.keyczar.SignerTest"/>
+  <testcase name="testBadDsaVerify" time="0.024" classname="cz.cvut.keyczar.SignerTest"/>
+  <testcase name="testRsaSignAndVerify" time="0.081" classname="cz.cvut.keyczar.SignerTest"/>
+  <testcase name="testRsaSignerVerify" time="0.032" classname="cz.cvut.keyczar.SignerTest"/>
+  <testcase name="testBadRsaVerify" time="0.009" classname="cz.cvut.keyczar.SignerTest"/>
+  <testcase name="testHmacUnversionedSignAndVerify" time="0.01" classname="cz.cvut.keyczar.SignerTest"/>
+  <testcase name="testDsaUnversionedSignAndVerify" time="0.02" classname="cz.cvut.keyczar.SignerTest"/>
+  <testcase name="testRsaUnversionedSignAndVerify" time="0.017" classname="cz.cvut.keyczar.SignerTest"/>
+  <testcase name="testHmacBadSigs" time="0.005" classname="cz.cvut.keyczar.SignerTest"/>
+  <testcase name="testHmac" time="1.014" classname="cz.cvut.keyczar.TimeoutSignerTest"/>
+  <testcase name="testDsa" time="1.019" classname="cz.cvut.keyczar.TimeoutSignerTest"/>
+  <testcase name="testRsa" time="1.038" classname="cz.cvut.keyczar.TimeoutSignerTest"/>
+  <testcase name="testAesDecrypt" time="0.08" classname="cz.cvut.keyczar.CrypterTest"/>
+  <testcase name="testAesEncryptedKeyDecrypt" time="0.032" classname="cz.cvut.keyczar.CrypterTest"/>
+  <testcase name="testRsaDecrypt" time="0.063" classname="cz.cvut.keyczar.CrypterTest"/>
+  <testcase name="testAesEncryptAndDecrypt" time="0.011" classname="cz.cvut.keyczar.CrypterTest"/>
+  <testcase name="testRsaEncryptAndDecrypt" time="0.021" classname="cz.cvut.keyczar.CrypterTest"/>
+  <testcase name="testShortAesEncryptAndDecrypt" time="0.132" classname="cz.cvut.keyczar.CrypterTest"/>
+  <testcase name="testBadAesCiphertexts" time="0.015" classname="cz.cvut.keyczar.CrypterTest"/>
+  <testcase name="testHmacVerify" time="0.006" classname="cz.cvut.keyczar.CrossCompatibilityTest"/>
+  <testcase name="testDsaVerify" time="0.006" classname="cz.cvut.keyczar.CrossCompatibilityTest"/>
+  <testcase name="testAesDecrypt" time="0.014" classname="cz.cvut.keyczar.CrossCompatibilityTest"/>
+  <testcase name="testRsaDecrypt" time="0.014" classname="cz.cvut.keyczar.CrossCompatibilityTest"/>
+</testsuite>

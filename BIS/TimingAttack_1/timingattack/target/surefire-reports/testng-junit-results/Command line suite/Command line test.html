@@ -1,0 +1,278 @@
+<html>
+<head>
+<title>TestNG:  Command line test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Command line test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>40/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Oct 21 22:01:58 CEST 2013</td>
+</tr>
+<tr><td>Total time:</td><td>4 seconds (4351 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='3' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td width="30%"><b>Exception</b></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.KeyczarToolTest.testAddKey()'>testAddKey</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.KeyczarToolTest.testAddKeySizeFlag()'>testAddKeySizeFlag</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.CrypterTest.testAesDecrypt()'>testAesDecrypt</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.CrossCompatibilityTest.testAesDecrypt()'>testAesDecrypt</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.CrypterTest.testAesEncryptAndDecrypt()'>testAesEncryptAndDecrypt</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.CrypterTest.testAesEncryptedKeyDecrypt()'>testAesEncryptedKeyDecrypt</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.CrypterTest.testBadAesCiphertexts()'>testBadAesCiphertexts</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.SignerTest.testBadDsaVerify()'>testBadDsaVerify</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.SignerTest.testBadHmacVerify()'>testBadHmacVerify</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.SignerTest.testBadRsaVerify()'>testBadRsaVerify</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.experimental.UriSignerTest.testCanonicalUri()'>testCanonicalUri</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.KeyczarToolTest.testCreate()'>testCreate</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.KeyczarToolTest.testDemote()'>testDemote</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.TimeoutSignerTest.testDsa()'>testDsa</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.SignerTest.testDsaSignAndVerify()'>testDsaSignAndVerify</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.SignerTest.testDsaSignerVerify()'>testDsaSignerVerify</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.SignerTest.testDsaUnversionedSignAndVerify()'>testDsaUnversionedSignAndVerify</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.CrossCompatibilityTest.testDsaVerify()'>testDsaVerify</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.I18nTest.testEnglish()'>testEnglish</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.I18nTest.testHindi()'>testHindi</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.TimeoutSignerTest.testHmac()'>testHmac</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.SignerTest.testHmacBadSigs()'>testHmacBadSigs</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.SignerTest.testHmacSignAndVerify()'>testHmacSignAndVerify</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.SignerTest.testHmacUnversionedSignAndVerify()'>testHmacUnversionedSignAndVerify</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.SignerTest.testHmacVerify()'>testHmacVerify</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.CrossCompatibilityTest.testHmacVerify()'>testHmacVerify</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.I18nTest.testJapanese()'>testJapanese</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.I18nTest.testPortguese()'>testPortguese</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.KeyczarToolTest.testPromote()'>testPromote</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.KeyczarToolTest.testPublicKeys()'>testPublicKeys</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.KeyczarToolTest.testRevoke()'>testRevoke</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.TimeoutSignerTest.testRsa()'>testRsa</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.CrypterTest.testRsaDecrypt()'>testRsaDecrypt</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.CrossCompatibilityTest.testRsaDecrypt()'>testRsaDecrypt</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.CrypterTest.testRsaEncryptAndDecrypt()'>testRsaEncryptAndDecrypt</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.SignerTest.testRsaSignAndVerify()'>testRsaSignAndVerify</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.SignerTest.testRsaSignerVerify()'>testRsaSignerVerify</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.SignerTest.testRsaUnversionedSignAndVerify()'>testRsaUnversionedSignAndVerify</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.CrypterTest.testShortAesEncryptAndDecrypt()'>testShortAesEncryptAndDecrypt</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td title='cz.cvut.keyczar.experimental.UriSignerTest.testSignAndVerifyUri()'>testSignAndVerifyUri</td>
+<td>0</td>
+<td></td>
+</tr>
+</table><p>
+</body>
+</html>

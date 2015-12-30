@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/359/trunk/java/code/tests/org/keyczar
+END
+I18nTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/315/trunk/java/code/tests/org/keyczar/I18nTest.java
+END
+CrossCompatibilityTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/357/trunk/java/code/tests/org/keyczar/CrossCompatibilityTest.java
+END
+KeyczarToolTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/315/trunk/java/code/tests/org/keyczar/KeyczarToolTest.java
+END
+SignerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/357/trunk/java/code/tests/org/keyczar/SignerTest.java
+END
+CrypterTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/315/trunk/java/code/tests/org/keyczar/CrypterTest.java
+END
+AllTests.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/315/trunk/java/code/tests/org/keyczar/AllTests.java
+END
+SymmetricPerformanceTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/315/trunk/java/code/tests/org/keyczar/SymmetricPerformanceTest.java
+END
+TimeoutSignerTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/359/trunk/java/code/tests/org/keyczar/TimeoutSignerTest.java
+END
